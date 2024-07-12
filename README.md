@@ -24,7 +24,9 @@ All I did was type in the input and output folder paths.
 I went on to ask for a similar script to process earlier html-formatted blog posts, using the following prompts:
 
 - that worked very well, and the result looks good. i also have a collection of older blog posts that i wrote in html instead of markdown. could you please write a similar script to chunk up the html blog posts in a similar way to the same json format?
-- that script worked fine for a few of the files, but then it produced the following error: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 4049: invalid continuation byte
-- i'm afraid that made things worse. now it produces an error in the very first file, saying: File "/Users/jta/a/src/python/tbcchunk/tbcchunk3.py", line 34, in chunk_html: `for elem in soup.body.children`: AttributeError: 'NoneType' object has no attribute 'children'
+- that script worked fine for a few of the files, but then it produced the following error:
+    - UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 4049: invalid continuation byte`
+- i'm afraid that made things worse. now it produces an error in the very first file, saying:
+    - File "/Users/jta/a/src/python/tbcchunk/tbcchunk3.py", line 34, in chunk_html: `for elem in soup.body.children`: AttributeError: 'NoneType' object has no attribute 'children'
 
 After that, all was well, all 2046 blog posts processed and chunked.
