@@ -10,8 +10,9 @@ I asked claude.ai to chunk The Building Coder blog posts for LLM RAG with the fo
 - that sounds good. how would you handle the same task automatically for 2046 blog posts?
 - could you suggest how to code this in Python, please?
 - actually, please improve the script as follows: split the input MD files into chunks using all headers as separators, and store the output in JSON files. each JSON should contain the following fields: original filename, header text, local header href, and chunk text.
-- the script you provided misses many of the section headers, because they have a href html tag directly joined to the markup header hash characters, like this: `####<a name=\"2\"></a>` Personalised Material Asset Properties
-- it generated 696 json files, one for each blog posts from number 1351 to today's number 2046.
+- the script you provided misses many of the section headers, because they have a href html tag directly joined to the markup header hash characters, like this: `####<a name="2"></a> Personalised Material Asset Properties`
+
+The script generated 696 json files, one for each blog posts from number 1351 to today's number 2046
 
 The earlier blog posts until number 1350 were written in HTML, so they require a different script for chunking.
 
