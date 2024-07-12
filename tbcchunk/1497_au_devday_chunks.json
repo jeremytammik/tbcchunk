@@ -1,0 +1,56 @@
+[
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nDevDay Conference at Autodesk University #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge #AU2016\n\nYesterday afternoon, I checked into the Venetian hotel for AU and the preceding DevDay conference\n&ndash; Desert day and night versus hotel morning\n&ndash; DevDay general session and Forge\n&ndash; AEC breakout\n&ndash; Revit API news, roadmap and idea station\n&ndash; BIM 360\n&ndash; InfraWorks 360 and Civil 3D\n&ndash; Forge's first birthday party...\n\n-->"
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "DevDay Conference at Autodesk University",
+    "local_header_href": "#devday-conference-at-autodesk-university",
+    "chunk_text": "### DevDay Conference at Autodesk University\n\nYesterday afternoon, I checked into the Venetian hotel for AU and the preceding DevDay conference:\n\n- [Desert day and night versus hotel morning](#1)\n- [DevDay general session and Forge](#2)\n- [AEC breakout](#3)\n    - [Revit API news, roadmap and idea station](#4)\n    - [BIM 360](#5)\n    - [InfraWorks 360 and Civil 3D](#6)\n- [Forge's first birthday party](#7)\n\nI am not expecting to emerge again from the hotel and the Sands conference centre into the outside world until the flight taking me back to Europe leaves on Thursday afternoon."
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"1\"></a>Desert Day and Night versus Hotel Morning",
+    "local_header_href": "#a-name1adesert-day-and-night-versus-hotel-morning",
+    "chunk_text": "#### <a name=\"1\"></a>Desert Day and Night versus Hotel Morning\n\nAt least I spent some time beforehand acclimatising out in nature enjoying fresh air, peace and quiet, and lots of open space in the Calico Basin right next door to the Red Rock canyon.\n\nHere are [some pictures](https://flic.kr/s/aHskNF4GKZ) showing basically nothing special:\n\n<center>\n<!--- Nevada Desert -- Night and Day in Calico Basin -- Pictures from spending a day (and night) or two in the Calico Basin in the Nevada desert... --->\n<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/jeremytammik/albums/72157676535234815\" title=\"Nevada Desert\"><img src=\"https://c6.staticflickr.com/6/5688/30968024645_9ed6b55519_n.jpg\" width=\"320\" height=\"240\" alt=\"Nevada Desert\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>\n</center>\n\nI slept well out in the desert.\n\nHere in the hotel, I woke up at four in the morning. My view looks like this:\n\n<center>\n<img src=\"/p/2016/2016-11-14_au_devday/034_four_am.jpg\" alt=\"Four AM\" width=\"320\">\n</center>\n\nUnfortunately, the visual effect is severely marred by the noise from a bunch of air conditioning units just down below."
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"2\"></a>DevDay General Session and Forge",
+    "local_header_href": "#a-name2adevday-general-session-and-forge",
+    "chunk_text": "#### <a name=\"2\"></a>DevDay General Session and Forge\n\nDevDays introduction: Jim Quanci explaining what Forge is about and showing an impressive series of demos, both quickly built custom-built code samples and real live customer implementations demonstrating how powerful and useful this is today.\n\n<center>\n<img src=\"/p/2016/2016-11-14_au_devday/038_jim_quanci.jpg\" alt=\"Jim Quanci\" width=\"320\">\n</center>\n\nDon't miss this boat.\n\nIt happens all too easily, convincingly illustrated by Kodak, who patented the first digital camera, worked hard to shift their business from analogue chemical processing to digital technologies, reached the position of number one digital camera manufacturer just before the first iPhone was introduced, missed some important basic understanding of what they were actually doing, and filed for bankruptcy five years later:\n\n<center>\n<img src=\"/p/2016/2016-11-14_au_devday/042_demise_of_kodak.jpg\" alt=\"Demise of Kodak\" width=\"320\">\n</center>\n\nJim's pep talk, demos and motivational talk was followed by Shawn Gilmour, director of Forge product management, discussing current status and future plans for specific Forge APIs.\n\n<center>\n<img src=\"/p/2016/2016-11-14_au_devday/045_shawn_gilmour.jpg\" alt=\"Shawn Gilmour\" width=\"320\">\n</center>\n\nMy camera is too weak, the light too low, and the people on the stage wiggle too much.\nHere are [some more pictures](https://flic.kr/s/aHskNKxNsk) anyway.\nThe only nice one I got was of Stephen Preston sitting next to me:\n\n<center>\n<img src=\"/p/2016/2016-11-14_au_devday/046_stephen_preston.jpg\" alt=\"Stephen Preston\" width=\"320\">\n</center>\n\nDigging deeper into further technical details with Cyrille Fauvel:\n\nSwagger definition of all Forge RESTful APIs, so you can generate a wrapper for any API you need for any programming language you want, e.g., managed C++, Python, Ruby, iOS, Java, etc.\n\nTwo- and three-legged OAuth.\n\nAugusto Goncalves on Data Management API.\n\nJim presented more Forge case stories, followed by a panel discussion with:\n\n- Ben Tytonovich, Project Manager, hooking up Forge with IoT via [Seebo](http://seebo.com/).\n- Rob Oud, Inspirator, [Collaborea](http://collaborea.nl/en/), building supermodels, [BLDNG360](https://bldng360.com/). YouTube for buildings. Tried Unity, but not viable; Forge worked. Present models in public, harvest data.\n- Sandip Jadhav, [simulationHub](https://www.simulationhub.com/), cloud-based CFD, democratizing computational fluid dynamics.\n- Igor Tsinman, [AMCBridge](https://amcbridge.com/) and [openBOM](http://www.openbom.com/).\n\nKean Walmsley presented an overview of and an experiment using Forge for HoloLens VR and AR.\n\nCyrille Fauvel demonstrated another strategy and running sample for easily passing in and interacting with Forge model data in HoloLens.\n\nJim came back and explained the [Forge pricing plans](https://developer.autodesk.com/en/pricing), based on cloud credits or 'cc', currently roughly equivalent to a USD:\n\n- Viewing is free, regardless of numbers\n- Model derivative: cc 0.2 for a simple job, 1.5 for a complex one\n- Design automation: cc 4 per processing hour\n\nHe illustrated with various examples, e.g.:\n\n- 500 DWG files per month: $400\n- Create IFC file from 10 RVT projects per day, 300 jobs per month: 300 * 1.5 = ca. $450 per month\n- Extract BOM from 1000 solidworks models per day (5000 jobs per week, 20k jobs per month): ca. 20000 * 0.2 = $4000 per month\n\nThese plans were drawn up based on interviews with existing partners.\n\nTrial includes 500 cc for the first year.\n\nNote that almost every single Forge demonstration presented on stage today included Revit models integrated with CAD data and database properties from other, completely different sources.\n\nWhatever use you are currently making of Revit, you can expect your models to end up being combined with other data and viewed through the Forge platform very soon indeed.\n\nThink about what you do!\n\nAs a developer, think ahead.\n\nForget the noun = app.\n\nThink of a verb = web service!"
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"3\"></a>AEC Breakout",
+    "local_header_href": "#a-name3aaec-breakout",
+    "chunk_text": "#### <a name=\"3\"></a>AEC Breakout\n\nI cannot speak openly about everything discussed in the afternoon AEC breakout session, since it deals with unpublished desktop applications."
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"4\"></a>Revit API News, Roadmap and Idea Station",
+    "local_header_href": "#a-name4arevit-api-news-roadmap-and-idea-station",
+    "chunk_text": "#### <a name=\"4\"></a>Revit API News, Roadmap and Idea Station\n\nSasha Crotty presented news about the Revit API, and also pointed out once again\nthe [public Revit roadmap](http://forums.autodesk.com/t5/revit-roadmaps/the-first-ever-public-revit-roadmap/ba-p/6633199).\n\nWe are looking very closely at implementing Forge design automation functionality for Revit.\n\nThis is where we are headed when talking about 'headless' Revit.\n\nVery important: [Revit Idea Station](http://forums.autodesk.com/t5/revit-ideas/idb-p/302/).\n\nExtensive Q &amp; A.\n\nThe answer to a large number of requests: again and again: [Revit Idea Station](http://forums.autodesk.com/t5/revit-ideas/idb-p/302/).\n\nWill we move away from Revit towards C4R?\n\nNo way, C4R is just a way to store the Revit model in the cloud. Future: more access through Forge to the cloud hosted models."
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"5\"></a>BIM 360",
+    "local_header_href": "#a-name5abim-360",
+    "chunk_text": "#### <a name=\"5\"></a>BIM 360\n\nMikako Harada discussed BIM 360 with a special focus on docs.\n\nWe had an overwhelming number of requests for APIs.\n\nThere is no BIM 360 API; rather, we implemented APIs that we use to build BIM 360 Docs.\n\nThis is a good example of Forge being used within Autodesk.\n\n2-legged OAuth B2B...\nA360 only has files...\nBIM360 also has non-file documents, e.g., sheets within Revit RVT files...\nDM sample...\nmodel derivatives...\n\nBrilliant demo of Mikako's new node.js based test harness Forge API navigator. ForgeDbg? ForgeLookup?\n\nSummary:\n\n- Visit [developer.autodesk.com](https://developer.autodesk.com/)\n- Come to the [Forge DevCon 2017](https://forge.autodesk.com/DevCon)\n- Say hi to us in the Forge booth\n- Tweet to [@autodeskforge](https://twitter.com/AutodeskForge)"
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"6\"></a>InfraWorks 360 and Civil 3D",
+    "local_header_href": "#a-name6ainfraworks-360-and-civil-3d",
+    "chunk_text": "#### <a name=\"6\"></a>InfraWorks 360 and Civil 3D\n\nThe AEC session was rounded off by Augusto Goncalves discussing InfraWorks 360 and Civil 3D news.\n\n<!--- Infraworks REST API has been shut down, JavaScript API ??? --->"
+  },
+  {
+    "original_filename": "1497_au_devday",
+    "header_text": "<a name=\"7\"></a>Forge's First Birthday Party",
+    "local_header_href": "#a-name7aforges-first-birthday-party",
+    "chunk_text": "#### <a name=\"7\"></a>Forge's First Birthday Party\n\nTomorrow, Tuesday, we celebrate Forge's first birthday!\n\nParty: 19:00 at the Forge booth.\n\nCake and bubbly will be provided!"
+  }
+]

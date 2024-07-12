@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0771_sect_view_type_hide",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0771_sect_view_type_hide",
+    "header_text": "Change Section View Type and Hide Cut Line",
+    "local_header_href": "#change-section-view-type-and-hide-cut-line",
+    "chunk_text": "<h3>Change Section View Type and Hide Cut Line</h3><p>Leo raised a couple of questions on\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/07/section-view-creation.html\">\nsection view creation</a> \n\nin his\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/07/section-view-creation.html?cid=6a00e553e168978833016766a448ba970b#comment-6a00e553e168978833016766a448ba970b\">\ncomment</a> which \n\nRudolf Honke very kindly answers thus:\n\n<p><strong>1. Hide view:</strong> \nTo hide the cutting line in a plan view, you can use this parameter:\n\n<pre class=\"code\">\n  viewSection.get_Parameter( <span class=\"teal\">BuiltInParameter</span>\n    .SECTION_COARSER_SCALE_PULLDOWN_METRIC )\n      .Set( 1 );\n</pre>\n<p><strong>2. Generate section view:</strong> \nIn Revit 2013, you can use the static method\n \n<pre class=\"code\">\n  <span class=\"blue\">public</span> <span class=\"blue\">static</span> <span class=\"teal\">ViewSection</span> CreateSection(\n    Document document,\n    <span class=\"teal\">ElementId</span> viewFamilyTypeId,\n    BoundingBoxXYZ sectionBox\n  )\n</pre>\n<p>In Revit 2012, you can use document.Create.NewViewSection( BoundingBoxXYZ );\n \n<p><strong>3. Change the type of a detail view:</strong> \nEach view has a view type, e.g. a section view symbol.\nThese symbols have no category to help identify them, they are  just generic ElementType instances.\nThe types can be retrieved using their name, e.g. \"Section\" etc.\nOnce you have a view symbol, you can change the view type by simply setting its type id:\n\n<pre class=\"code\">\n  viewSection.ChangeTypeId( symbolSection.Id ); \n</pre>\n<p>Since section symbols are identified by name, they are language dependent and there is no guarantee to find them at all, depending on the template being used.\n\n<p>Many thanks to Rudolf for these important hints!\n</p></p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0786_aec_devcamp_mat",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0786_aec_devcamp_mat",
+    "header_text": "AEC DevCamp 2012 Material",
+    "local_header_href": "#aec-devcamp-2012-material",
+    "chunk_text": "<h3>AEC DevCamp 2012 Material</h3><p>Both the AEC and Manufacturing\n\n<a href=\"https://projectpoint.buzzsaw.com/DevCamp2012/AEC?public\">\nDevCamp 2012 material</a> is\n\nnow publicly available.\n\n<p>The top-level node provides access to the overviews and the five main tracks, i.e.</p>\n<ul>\n<li>Revit Beginner\n<li>Revit Advanced\n<li>Infrastructure\n<li>Cloud/Mobile and Other\n<li>Business\n</li></li></li></li></li></ul>\n<center>\n<img alt=\"AEC DevCamp 2012 Material\" src=\"img/aec_devcamp_2012_1.png\"/>\n</center>\n<p>For completeness' sake, here is the list of are the Revit beginner sessions:</p>\n<center>\n<img alt=\"Revit Beginner\" src=\"img/aec_devcamp_2012_2.png\"/>\n</center>\n<p>These are the Revit advanced topics:</p>\n<center>\n<img alt=\"Revit Advanced\" src=\"img/aec_devcamp_2012_3.png\"/>\n</center>\n<p>I presented some details from a number of the advanced Revit API session in my reports from \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/06/devcamp-day-one.html\">\nDevCamp day one</a> and\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/06/devcamp-day-two.html\">\nDevCamp day two</a>.\n\n<p>In conjunction with the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/10/getting-started-with-the-revit-2012-api.html\">\ngetting started material</a> available from the \n\n<a href=\"http://www.autodesk.com/developrevit\">Revit developer centre</a>,\n\nthis material just about touches on all important aspects of the Revit API.\n\n<p>Please note that the material is still not completely finalised.\nSome items will still be updated.\nThe location specified above is only temporary and will change, so don't use it for any long-term links, or be ready to update thm once the final archival location is in place.\n\n\n<p><strong>Addendum:</strong> Here is a pointer to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/06/obj-model-exporter-take-one.html#2\">\nfinalised AEC DevCamp 2012 material download</a>.\n\n\n<a name=\"2\"></a>\n<h4>ARCxl Detail Library</h4>\n<p>I am normally not very concerned about Revit content, although that aspect is often of equal or greater importance than the API.\n\n<p>Here is a little item that happened to catch my attention anyway:\n\n<p>A \n\n<a href=\"http://www.arcxl.com/architects\">\nlibrary of non-proprietary generic construction details</a> containing \n\nover 120,000 entries in native Revit, DWG and PDF file formats is now publicly available.\nIt was built in 2008-2009 to an agreed set of standards within a single office, providing consistency throughout. \nThe library also includes over 1,000 Revit components to modify the details. \nBeing provided in RFA, RFT and DWG format, the details and components can easily be modified.\n</p></p></p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0786_aec_devcamp_mat",
+    "header_text": "ARCxl Detail Library",
+    "local_header_href": "#arcxl-detail-library",
+    "chunk_text": "<h4>ARCxl Detail Library</h4><p>I am normally not very concerned about Revit content, although that aspect is often of equal or greater importance than the API.\n\n<p>Here is a little item that happened to catch my attention anyway:\n\n<p>A \n\n<a href=\"http://www.arcxl.com/architects\">\nlibrary of non-proprietary generic construction details</a> containing \n\nover 120,000 entries in native Revit, DWG and PDF file formats is now publicly available.\nIt was built in 2008-2009 to an agreed set of standards within a single office, providing consistency throughout. \nThe library also includes over 1,000 Revit components to modify the details. \nBeing provided in RFA, RFT and DWG format, the details and components can easily be modified.\n</p></p></p>"
+  }
+]

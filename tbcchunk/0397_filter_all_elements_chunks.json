@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0397_filter_all_elements",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0397_filter_all_elements",
+    "header_text": "Do Not Filter For All Elements",
+    "local_header_href": "#do-not-filter-for-all-elements",
+    "chunk_text": "<h3>Do Not Filter For All Elements</h3><p>One question that has come up several times is how to retrieve all elements from the Revit database.\nThis was the default behaviour in previous releases of the Revit API.\n\n<p>In the Revit 2011 API, the filtered element collectors have been intentionally designed to warn you if you try to retrieve all elements in a project, since this is not something that the Revit API designers expect a normal application ever to have to do. However, there are some special types of applications which do indeed require this kind of functionality, and it is very easy to work around this  limitation. \n\n<p>One way to do so is simply to create two filtered element collector instances, one of them using any quick filter that you like, the other using the negation of it, and then creating the union of the results. \n\n<p>One example of doing so, and also a legitimate need for obtaining all Revit database elements is presented by the RevitLookup sample. The code it uses for that is located in the method InitializeTreeView and looks like this:\n\n<pre class=\"code\">\n  <span class=\"teal\">FilteredElementCollector</span> coll \n    = <span class=\"blue\">new</span> <span class=\"teal\">FilteredElementCollector</span>(\n      m_app.ActiveUIDocument.Document );\n \n  coll.WherePasses(\n    <span class=\"blue\">new</span> <span class=\"teal\">LogicalOrFilter</span>(\n      <span class=\"blue\">new</span> <span class=\"teal\">ElementIsElementTypeFilter</span>( <span class=\"blue\">false</span> ), \n      <span class=\"blue\">new</span> <span class=\"teal\">ElementIsElementTypeFilter</span>( <span class=\"blue\">true</span> ) ) );\n</pre>\n<p><strong>Addendum</strong> from Scott Conover, Revit Software Development Manager:\n\n<p>Related to this post, I would like to point out even stronger NOT to iterate over all elements, for any reason whatsoever...  \n\n<p>\"Because the old API used to do it and my code was already written this way\" is not a good reason.\nThat is simply an excuse for not making the application code cleaner and better.\nIt is very possible that misusing the new collector facility to iterate over all elements the new way will result in a larger memory footprint and poorer performance than in 2010.   \n\n<p>We have found internally that all of the iterations performed at the UI level could take advantage of at least one, and often several, filters to improve performance and reduce the number of items to process.\n</p></p></p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0121_install_2010_sdk",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n</style>"
+  },
+  {
+    "original_filename": "0121_install_2010_sdk",
+    "header_text": "Installing the Revit 2010 SDK",
+    "local_header_href": "#installing-the-revit-2010-sdk",
+    "chunk_text": "<h3>Installing the Revit 2010 SDK</h3>"
+  },
+  {
+    "original_filename": "0121_install_2010_sdk",
+    "header_text": "Compiling the SDK samples",
+    "local_header_href": "#compiling-the-sdk-samples",
+    "chunk_text": "<h4>Compiling the SDK samples</h4><p>As discussed previously, you can \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/09/the-sdk-samples.html\">\nuse SDKSamples2010.sln to compile</a>\n\nall the samples in one fell swoop. \nThe various sample projects in this solution expect you to have all three flavours of Revit installed in the default locations, otherwise compilation will fail for some of the samples.</p><p>So far, I installed only Revit Architecture 2010, not MEP or Structure. \nIn order to easily compile all the samples anyway, I simply copied the same RevitAPI.dll to the other two locations, so I now have three copies of it on my hard disk:</p><ul>\n<li>C:\\Program Files\\Autodesk Revit Architecture 2010\\Program\\RevitAPI.dll</li>\n<li>C:\\Program Files\\Autodesk Revit MEP 2010\\Program\\RevitAPI.dll</li>\n<li>C:\\Program Files\\Autodesk Revit Structure 2010\\Program\\RevitAPI.dll</li>\n</ul><p>Once this was done, I was immediately able to compile all the samples in one go using SDKSamples2010.sln.</p><p>I noticed one little omission in the solution file, which you will notice if you try to run the Ribbon sample: the Ribbon sample commands are implemented in a separate assembly using the project file AddInCommands.csproj located in a subdirectory of the Ribbon one, and I had to add that to SDKSamples2010.sln myself.</p>"
+  },
+  {
+    "original_filename": "0121_install_2010_sdk",
+    "header_text": "Loading the SDK samples",
+    "local_header_href": "#loading-the-sdk-samples",
+    "chunk_text": "<h4>Loading the SDK samples</h4><p>I use the Revit SDK sample external application RvtSamples to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/09/loading-sdk-sam.html\">\nload all Revit SDK external command samples</a>.</p><p>To set this up for Revit 2010, I performed the following steps:</p><ul>\n<li>I edited RvtSamples.txt in the SDK/Samples/RvtSamples folder and replaced Z:\\SDK2010\\Samples by my local SDK samples path.</li>\n<li>I compiled the RvtMgdDbg for 2010.</li>\n<li>I added an ExternalApplications section to Revit.ini in the Revit Program folder, with entries for the external applications RvtMgdDbg and RvtSamples:</li>\n</ul><pre>\n[ExternalApplications]\nEACount=2\n\nEAAssembly1=C:\\Program Files\\Autodesk Revit Architecture 2010\\Program\\RvtMgdDbg.dll\nEAClassName1=RvtMgdDbg.App\n\nEAAssembly2=C:\\a\\lib\\revit\\2010\\SDK\\Samples\\RvtSamples\\CS\\RvtSamples.dll\nEAClassName2=RvtSamples.Application\n</pre><p>That's it, I am done and can now start up Revit.\nThe Add-Ins menu item is available and the corresponding panel displayed even in zero document state:</p><img alt=\"RvtMgdDbg and RvtSamples in Add-Ins panel\" src=\"img/2010_RvtSamples.gif\"/><p>RvtMgdDbg is up and running in its own panel:</p><img alt=\"RvtMgdDbg Add-Ins panel\" src=\"img/RvtMgdDbg_panel.png\"/><p>RvtSamples now displays the samples sorted by category only, there are no longer any multiple menu hierarchies by various different classifications.\nEven though it is displayed in the zero document state, the menu entries are not active until a document has been opened:</p><img alt=\"RvtSamples pulldown buttons\" src=\"img/2010_RvtSamples_2.gif\"/>"
+  },
+  {
+    "original_filename": "0121_install_2010_sdk",
+    "header_text": "Updating the ADN training material",
+    "local_header_href": "#updating-the-adn-training-material",
+    "chunk_text": "<h4>Updating the ADN training material</h4><p>The next thing I am interested in is updating the Revit API introduction labs and all the rest of our training material to 2010.\nOne looming deadline is the upcoming \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/item?siteID=123112&amp;id=6364883\">\nwebcast on the Revit API</a>\n\non April 29<sup>th</sup>, one of our ADN \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_sched.php\">\ntraining classes</a>,\n\nwhich will require this material.</p><p>By the way, our webcast plans for this year are more elaborate than in previous years.\nWe are thinking of holding this first webcast to cover the basics and discuss new API areas, and following it up with several dedicated sessions focusing in more depth on various areas affected by the new API functionality, such as:</p><ul>\n<li>Family editor user interface features</li>\n<li>Family API</li>\n<li>Conceptual design API and form creation</li>\n<li>Revit MEP API</li>\n</ul><p>I'll keep you posted as these plans mature.</p>"
+  }
+]

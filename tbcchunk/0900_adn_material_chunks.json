@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0900_adn_material",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0900_adn_material",
+    "header_text": "ADN Revit API Training Material Update and Vacation",
+    "local_header_href": "#adn-revit-api-training-material-update-and-vacation",
+    "chunk_text": "<h3>ADN Revit API Training Material Update and Vacation</h3><p>After cleaning up the usage of\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/02/eliminating-compiler-warnings-and-deprecated-calls.html\">\ndeprecated Revit API calls</a> in\n\nThe Building Coder samples, I decided to clean up the ADN training material as well.\n\n<p>My original plan was to remove all warnings about deprecated API usage, only I quickly discovered there were none to remove  :-) </p>\n<p>In the MEP sample application\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/05/the-adn-mep-sample-adnrme-for-revit-mep-2013.html\">\nAdnRme</a>,\n\nI just updated the year listed in the copyright message to 2013 and produced AdnRme version 2013.0.2.0.\n\n<p>I then did the same for the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/04/xtra-adn-revit-2013-api-training-labs.html\">\nADN Revit API Training labs</a> and the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/06/the-revit-2013-structure-api.html\">\nRevit Structure API samples</a>.\n\n<p>Here is the result of that,\n\n<a href=\"zip/adn_src_2013-02-15.zip\">adn_src_2013-02-15.zip</a>,\n\ncontaining the following solutions and projects:</p>\n<ul>\n<li>lab\n<ul>\n<li>1_Revit_API_Intro\n<li>2_Revit_UI_API\n<li>3_Revit_Family_API\n<li>XtraCs\n<li>XtraVb\n</li></li></li></li></li></ul>\n<li>rme\n<ul>\n<li>AdnRme\n</li></ul>\n<li>rst\n<ul>\n<li>labs\n<li>link\n<li>NewRstLab\n<li>RstAvfDmu\n</li></li></li></li></ul>\n</li></li></li></ul>\n<a name=\"2\"></a>\n<h4>Vacation Time</h4>\n<p>This is the last post before my vacation.\nWell, actually, this is already during my vacation.</p>\n<p>I am hopping on a train in a minute and departing for Italy with unknown itinerary and goals.\nA possible candidate is Lecce, in the far south.</p>\n<p>I'll be back in two and a half week's time, and keep you posted, maybe.</p>\n<p>Bye!</p>\n</p></p></p>"
+  },
+  {
+    "original_filename": "0900_adn_material",
+    "header_text": "Vacation Time",
+    "local_header_href": "#vacation-time",
+    "chunk_text": "<h4>Vacation Time</h4><p>This is the last post before my vacation.\nWell, actually, this is already during my vacation.</p><p>I am hopping on a train in a minute and departing for Italy with unknown itinerary and goals.\nA possible candidate is Lecce, in the far south.</p><p>I'll be back in two and a half week's time, and keep you posted, maybe.</p><p>Bye!</p>"
+  }
+]

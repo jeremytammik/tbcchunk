@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0372_param_scheduling",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0372_param_scheduling",
+    "header_text": "Parameter Access and Scheduling",
+    "local_header_href": "#parameter-access-and-scheduling",
+    "chunk_text": "<h3>Parameter Access and Scheduling</h3><p>Here is a quite typical general inquiry about API access to Revit parameters which comes up in various incarnations from time to time and seems worthwhile sharing:\n\n<p><strong>Question:</strong> I would like to pre-populate Revit objects with schedule data, e.g. time to order, time to ship, time to manufacture, time to install, etc. \nI then need to be able to extract this schedule information from a model and feed it into some external project management databases. \n\n<p>I need to know:\n\n<ul>\n<li>Can one manually or programmatically add this kind of data to objects and have it automatically picked up by the schedule?\n<li>Is there an API or a product feature which allows schedule data to be extracted and used elsewhere?\n<ul>\n<li>If so, could you please point me to the relevant classes in the API I should be looking at?\n</li></ul>\n</li></li></ul>\n<p><strong>Answer:</strong> This is definitely doable via the Revit API plus standard shared parameter user interface features. \nFor instance, one can create a tool that dumps a Revit model into an MSProject file and exports the shared parameters into MSProject user data, or into an Excel spreadsheet.\nExamples are provided by several Revit SDK samples such as FireRating and RDBLink.\nSo it is all definitely doable.\n\n<p>While there is no API for interacting with schedules, based on your description it sounds like what you want to do can be accomplished by creating and extracting parameter data through the API. \nThe Parameter class is where to look in the API, and Chapter 8 of the Developer's Guide covers these topics pretty well.\n\n<p>Many detailed aspect of this topic are discussed in the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/parameters\">\nparameters category</a>.\n\n<!-- <p>Many thanks to Stephen Preston, Miroslav Schonauer and Harry Mattison for this overview and background information. -->\n</p></p></p></p></p></p>"
+  }
+]

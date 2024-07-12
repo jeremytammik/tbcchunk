@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0312_connector_orientation",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0312_connector_orientation",
+    "header_text": "Connector Orientation",
+    "local_header_href": "#connector-orientation",
+    "chunk_text": "<h3>Connector Orientation</h3><p>I am still looking through all the interesting cases my colleagues dealt with during my absence.\nHere is another one handled by Joe Ye on the width and height orientation of a Revit MEP connector:\n\n<p><strong>Question:</strong> Given an Autodesk.Revit.DB.Connector object, is it possible to know where the height and width dimensions are relative to the Connector.CoordinateSystem? \nThe width and height directions do seem to be aligned to either the coordinate system X or Y axis, but not consistently one way or the other. \nI need a way of knowing which axis of the coordinate system the width and height align with.\n\n<p><strong>Answer:</strong> The width is relative to the x axis and the height is relative to the y axis of the coordinate system of the connector. \n\nThere is a difference between the width and height of the connector and the width and height that is exposed in the user interface options bar. \nThe UI is based upon the orientation of the element in the current view. \nThe normal of the MEP element's underlying curve object and the family instance Z axis is used to determine this. \nExtra checks need to be made for fittings based upon the z axis of the family, because they can be oriented not only relative to plan. \nTypically, if the family's z axis is 0,0,1, you can assume the width and height is correct.\nIf it is not, the width and height need to be swapped when the rotation is greater than 45 degrees from vertical. \nThe connector is bound to the face of the family, so it does not rotate independently.\n\n<p>Many thanks to Harry Mattison and Joe for this explanation!\n</p></p></p></p>"
+  }
+]

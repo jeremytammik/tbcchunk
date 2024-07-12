@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "1201_rvt_server_thumbnail",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<script src=\"http://thebuildingcoder.typepad.com/google-code-prettify/run_prettify.js\"></script>\n</head>"
+  },
+  {
+    "original_filename": "1201_rvt_server_thumbnail",
+    "header_text": "Revit Server Thumbnail Requires Redistributable",
+    "local_header_href": "#revit-server-thumbnail-requires-redistributable",
+    "chunk_text": "<h3>Revit Server Thumbnail Requires Redistributable</h3><p>Here is a quick answer to a simple Revit Server question to close for this week:</p><p><strong>Question:</strong> My application retrieves thumbnails of models stored on Revit Server 2014 via REST calls using the following code:</p><pre class=\"prettyprint\">\n  WebRequest request = WebRequest.Create(\n    \"http://&lt;ServerName&gt;\"\n    + \"/RevitServerAdminRESTService2014\"\n    + \"/AdminRESTService.svc/&lt;folder&gt;\"\n    + \"|demorevitserver_ab.rvt/thumbnail\"\n    + \"?width=200&amp;height=200\" );\n\n  request.Method = \"GET\";\n\n  request.Headers.Add( \"User-Name\",\n    \"d5783faa-3548-4e6e-be9a-aeca05c59352\" );\n\n  request.Headers.Add( \"User-Machine-Name\",\n    \"MyComputerXyz\" );\n\n  request.Headers.Add( \"Operation-GUID\",\n    Guid.NewGuid().ToString() );\n\n  // Next line fails\n  // The remote server returned an error:\n  // (500) Internal Server Error.\n\n  WebResponse response = request.GetResponse();\n</pre><p>I checked the log file AdminRESTService.log on the server and do not see what the problem could be there.</p><p>How can I solve this, please?</p><p><strong>Answer:</strong> In this case, the log file does not reveal the exact cause of the failure.</p><p>However, we analysed a similar case in the past.\nThe problem there turned out to be that the 'Microsoft Visual C++ 2010 Redistributable (x64)' was not installed on the server.</p><p>Please check whether this is also the cause in your case.</p><p>The installer has meanwhile been updated to include the required component.</p><p><strong>Response:</strong> I finally found a solution that works for me: installing both the 'Microsoft Visual C++ 2010 Redistributable x64’ and the 'Microsoft Visual C++ 2012 Redistributable x64’ solves the problem.</p><p>So not only the 2010 version as you suggested, but both the 2010 and 2012 versions.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1201_rvt_server_thumbnail",
+    "header_text": "Stop Suffering",
+    "local_header_href": "#stop-suffering",
+    "chunk_text": "<h4>Stop Suffering</h4><p>Let's end the week with another quick answer to an apparently not-so-simple question, some sound non-technical advice.</p><p>If you are suffering from anything at all that is not of a physical nature,\n\n<a href=\"http://en.wikipedia.org/wiki/Bob_Newhart\">\nBob Newhart</a> has\n\nthe following simple and effective remedial advice to offer –\n\n<a href=\"https://www.youtube.com/watch?v=Ow0lr63y4Mw\">Stop It</a>:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/Ow0lr63y4Mw\" width=\"420\"></iframe>\n</center><p>Some professional friends of mine tell me that they do indeed keep this advice in mind when offering support for their clients.</p>"
+  }
+]

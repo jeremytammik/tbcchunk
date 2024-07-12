@@ -1,0 +1,56 @@
+[
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "The Building Coder wishes you a Merry Christmas!",
+    "local_header_href": "#the-building-coder-wishes-you-a-merry-christmas",
+    "chunk_text": "<h3>The Building Coder wishes you a Merry Christmas!</h3><p>Christmas arrived already, and here I am, still wrapping up for the winter break.</p><p>Let me share a couple of Christmas greetings from my friends and colleagues in the Autodesk Developer Network ADN and elsewhere:</p><ul>\n<li><a href=\"#2\">Kevin Vandecar</a></li>\n<li><a href=\"#3\">Balaji Ramamoorthy</a></li>\n<li><a href=\"#4\">Jaime Rosales Duque</a></li>\n<li><a href=\"#5\">Claude Karfiol</a></li>\n<li><a href=\"#6\">Aaron Lu</a></li>\n<li><a href=\"#7\">The Building Coder wishes you a Merry Christmas!</a></li>\n<li><a href=\"#8\">Final Words from Roland Zelles and Victor Hugo</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Kevin Vandecar",
+    "local_header_href": "#kevin-vandecar",
+    "chunk_text": "<h4>Kevin Vandecar</h4><p>Happy holidays to everyone!</p><p>Have a great time off!</p><p>I had a chance to learn something new in 3DS Max recently when someone asked if I could make something with an image file list showing animated clouds.</p><p>I also realized that I could export from Camtasia as GIF. So took the 3DS Max file and ran it through that. Quality is similar, but might be a little degraded… also, file size jumped I guess because there is only compression per frame in the GIF, rather than overall file.</p><p>Here is the result of learning how that works (you may need to click the image to see the animation):</p><center>\n<img alt=\"Kevin's Christmas tree\" src=\"img/xmas-2014-c-proj.gif\" width=\"400\"/>\n</center><p>The tree in the video is a typical artificial tree.</p><p>Saving the planet, and completed my cloud learning.</p><p>Hahaha, HO, HO, HO!</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Balaji Ramamoorthy",
+    "local_header_href": "#balaji-ramamoorthy",
+    "chunk_text": "<h4>Balaji Ramamoorthy</h4><p>ADN wishes you a Merry Christmas and Happy New Year!</p><p>Here is an\n\n<a href=\"http://adndevblog.typepad.com/cloud_and_mobile/2014/12/var-renderer-scene.html\">\nanimated JavaScript WebGL Christmas tree with lots of gifts</a> for you.</p><p>(Jeremy adds: I initially placed it inline in this post, but it does not scroll well, so please look at it on Balaji's original page instead :-)</p><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Jaime Rosales Duque",
+    "local_header_href": "#jaime-rosales-duque",
+    "chunk_text": "<h4>Jaime Rosales Duque</h4><p>I was inspired by Balaji's pretty cool post and created\n\n<a href=\"http://adndevblog.typepad.com/aec/2014/12/adn-wishes-you-a-merry-little-christmas.html\">\na merry little Christmas tree</a> for the AEC blog:</p><center>\n<iframe allowfullscreen=\"true\" frameborder=\"0\" height=\"400\" mozallowfullscreen=\"true\" src=\"https://autodesk634.autodesk360.com/shares/public/SH7f1edQT22b515c761e43b2d1e7ee6e0a3f?mode=embed\" webkitallowfullscreen=\"true\" width=\"400\"></iframe>\n</center><p>Hope you guys like it.</p><p>Merry Christmas and Happy New Year to all of you.</p><p>Enjoy the time with your love ones and can’t wait for 2015!</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Claude Karfiol",
+    "local_header_href": "#claude-karfiol",
+    "chunk_text": "<h4>Claude Karfiol</h4><p>My friend Claude sent me his Shabbat Shalom greeting last Friday.\nIt is quite provocative – and funny, in an English sort of way – as well as providing some food for thought.\nIt turned out to be one of the Christmas messages that touched me most.</p><p>Claude, in turn, attributes it to his friend Josh.</p><p>Please skip this if you prefer not being provoked:</p><center>\n<img alt=\"Burning armchair\" src=\"img/burning_armchair.jpeg\" width=\"317\"/>\n</center><blockquote>\n<p>May your Christmas tree burn brightly and remind you of other places in the world lacking a cease-fire.\n\nMay your heating break down and let you feel how much warmth a human being requires.\n\nMay the stench of your decomposing neighbour remind you how quickly it can be too late for many things in life.\n\nMay terrorists abduct you and let you feel how much you love life and how much you are wasting it daily with useless stuff.\n\nMay your Facebook account be deleted on New Year's Eve and show you the meaning of real friends.\n\nMay all this help open your heart and deepen your compassion, wisdom, humility and gratitude.\n</p></blockquote><p>Thank you, dear Josh. So sad you are fictional.\nStill, your good wishes definitely reached and touched us.</p><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Aaron Lu",
+    "local_header_href": "#aaron-lu",
+    "chunk_text": "<h4>Aaron Lu</h4><p>The biggest Christmas gift for Revit API add-in developers comes from Aaron Lu.</p><p>Aaron only recently joined the ADN team, jumped right into supporting the Revit API, and published a whole ream of helpful solutions on the AEC DevBlog:</p><ul>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/revitapi-align-2-pipes-through-center-lines.html\">\nAlign two pipes through centre lines</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/revitapi-rebarcreatefromcurves-throws-unable-to-create-a-rebarshape-based-on-the-given-curves.html\">\nRebar.CreateFromCurves throws: Unable to create a RebarShape based on the given curves</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/types-not-supported-by-elementclassfilter.html\">\nTypes not supported by ElementClassFilter</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/revitapi-those-exceptions.html\">\nThose Exceptions</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/code-formatting-in-typepad-blog.html\">\nCode formatting in TypePad blog</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/revitapi-how-to-get-switch-system-from-familyinstance.html\">\nHow to get switch system from FamilyInstance</a></li>\n<li><a href=\"http://adndevblog.typepad.com/aec/2014/12/revitapi-how-to-get-dwgexportoptions.html\">\nHow to get DWGExportOptions</a></li>\n</ul><p>Thank you, Aaron, and congratulations!</p><a name=\"7\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "The Building Coder wishes you a Merry Christmas!",
+    "local_header_href": "#the-building-coder-wishes-you-a-merry-christmas",
+    "chunk_text": "<h4>The Building Coder wishes you a Merry Christmas!</h4><p>I wish you a Very Merry Christmas and a Happy New Year!</p><p>Thank you very much for all your inspiring interest and appreciation.</p><p>I look forward to exploring and sharing many new exciting Revit API topics and projects with you in the year to come!</p><p>Even more exciting, we have a whole new universe to discover, enabled by\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/12/back-from-the-conference-tour-and-wrapping-up.html#7\">\nubiquitous 3D in the web</a>!</p><a name=\"8\"></a>"
+  },
+  {
+    "original_filename": "1263_merry_xmas",
+    "header_text": "Final Words from Roland Zelles and Victor Hugo",
+    "local_header_href": "#final-words-from-roland-zelles-and-victor-hugo",
+    "chunk_text": "<h4>Final Words from Roland Zelles and Victor Hugo</h4><blockquote>\n<p>The future has several names.\nFor the weak, it is the impossible;\nfor the fainthearted, it is the unknown;\nbut for the valiant, it is the opportunity.</p>\n<p style=\"text-align: right\"><i>Victor Hugo, Les Misérables</i></p>\n</blockquote>"
+  }
+]

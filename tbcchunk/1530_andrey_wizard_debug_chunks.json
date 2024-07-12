@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1530_andrey_wizard_debug",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nAdd-In Templates Supporting Edit and Continue #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge\n\nLast week, I presented Andrey Bushman's new Visual Studio templates for Revit add-ins.\nFurthermore, we discussed many aspects of edit and continue in the past, including the solution to use the Add-in Manager.\nThese two topics have now met and united, because Andrey added support for that and a bunch of other new functionality in his commit...\n\n-->"
+  },
+  {
+    "original_filename": "1530_andrey_wizard_debug",
+    "header_text": "Add-In Templates Supporting Edit and Continue",
+    "local_header_href": "#add-in-templates-supporting-edit-and-continue",
+    "chunk_text": "### Add-In Templates Supporting Edit and Continue\n\nLast week, I presented Andrey\nBushman's [new Visual Studio templates for Revit add-ins](http://thebuildingcoder.typepad.com/blog/2017/02/new-visual-studio-2015-templates-for-revit-add-ins.html).\n\nFurthermore, we discussed many aspects\nof [edit and continue](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.49) in\nthe past, including the solution to use\nthe [Add-in Manager](http://thebuildingcoder.typepad.com/blog/2016/10/ai-edit-and-continue.html#2).\n\nThese two topics have now met and united, because Andrey added support for that and a bunch of other new functionality in\nhis [commit](https://github.com/Andrey-Bushman/Revit2017AddInTemplateSet/commit/e1a3ceb811717929b5d758cacd41e9f46917758f):\n\n- Revit 2017 class library (C# project template).\n- Revit 2017 new class (C# item template).\n- The `Revit 2017 External Application` contains a special additional configuration &ndash; `Debug via Revit Add-In Manager`. It enables you to edit and debug your external command code without restarting Revit.\n- Templates of all projects include a search engine to search for missing .NET assemblies. You can use the `AssemblyResolves.xml` configuration file for managing where your missing assemblies might be located.\n- Video tutorial on [Debugging using the Add-In Manager](https://www.youtube.com/watch?v=QFFwG6rz0gc).\n\nPlease refer to\nthe [Revit2017AddInTemplateSet documentation](https://github.com/Andrey-Bushman/Revit2017AddInTemplateSet) to\nsee the full context and list of other video tutorials.\n\nMany thanks to Andrey for setting up and maintaining these powerful and full-fledged templates!"
+  }
+]

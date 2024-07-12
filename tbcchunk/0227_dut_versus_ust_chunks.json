@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0227_dut_versus_ust",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0227_dut_versus_ust",
+    "header_text": "DUT versus UST",
+    "local_header_href": "#dut-versus-ust",
+    "chunk_text": "<h3>DUT versus UST</h3><p>After a wonderful weekend in the Swiss alps climbing the \n\n<a href=\"http://www.heinzkarrer.ch/BergtourenUrner/Diechterhorn.html\">\nDiechterhorn</a>, here is a \n\nfollow-up explanation by Jeremy Sawicki of Autodesk on the difference between DisplayUnitType and UnitSymbolType\n\nin continuation of our last discussion on the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/10/unit-suffix-and-the-projectunit-sdk-sample.html\">\nunit suffix</a>.\n\n<p><strong>Question:</strong> What is the exact difference between DisplayUnitType and UnitSymbolType, please?\n\n<p>For instance, the default project unit settings on my system for a length are DUT_Millimetres and UST_None ... I wonder what exactly that means?\n\n<p>Also, can you suggest a way to obtain the display string representation shown in the user interface for either of these?\n\n<p><strong>Answer:</strong> The simplest answer is based on the UI.  \nIn the Format dialog box, DisplayUnitType corresponds to the \u001cUnits\u001d dropdown:\n\n<center>\n<img alt=\"DisplayUnitType\" src=\"img/DisplayUnitType.png\"/>\n</center>\n<p>And UnitSymbolType corresponds to the \u001cUnit symbol\u001d dropdown:\n\n<center>\n<img alt=\"UnitSymbolType\" src=\"img/UnitSymbolType.png\"/>\n</center>\n<p>In most cases, the DisplayUnitType determines the actual unit, for example feet vs. meters, with a different conversion factor applying to each DisplayUnitType.  UnitSymbolType affects how the units are indicated on the screen, usually with a suffix.  For example, square feet can use a suffix of either \u001cSF\u001d or \u001cft²\u001d or no suffix at all.  UnitSymbolType used to be called UnitSuffixType until we introduced a currency unit type, which uses prefixes in some cases, like \u001c$\u001d.\n\n<p>The above applies to most \u001cnormal\u001d units which are displayed as a number followed by a suffix, but there are various special cases.  For example, DisplayUnitType is also used to select certain kinds of units with special formatting, like \u001cFeet and fractional inches\u001d or \u001cDegrees minutes seconds\u001d.\n\n<p>I don't believe there is currently any API that can get the names of display unit types or unit symbol types.\n\n<p>Many thanks to Jeremy for this helpful clarification!</p></p></p></p></p></p></p></p></p></p>"
+  }
+]

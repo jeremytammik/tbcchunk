@@ -1,0 +1,44 @@
+[
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<!-- https://highlightjs.org/#usage\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js\"></script>\n<script>hljs.highlightAll();</script>\n-->\n\n<!-- https://prismjs.com -->\n<link href=\"https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css\" rel=\"stylesheet\" />\n<script src=\"https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js\"></script>\n<style> code[class*=language-], pre[class*=language-] { font-size : 90%; } </style>\n</head>\n\n<!---\n\ninstall revit 2025\ntbc samples zero warnings no deprecated api usage\nremove all deprecated api usage\ncompile with zero warnings\nupdate visual studio 2022 to 17.9.5\nupgrade to .net core\nhttps://duckduckgo.com/?q=upgrade+to+.net+core\nupdated the seven assembly DLL references:\n\ntwitter:\n\nMigrating The Building Coder samples to Revit 2025: compilation environment, .NET upgrade assistant, Revit API assemblies, errors and warnings in the #RevitAPI @AutodeskRevit #BIM @DynamoBIM https://autode.sk/tbcsamples2025\n\nI migrated The Building Coder samples to Revit 2025\n&ndash; Compilation environment\n&ndash; .NET upgrade assistant\n&ndash; Revit API assemblies\n&ndash; Errors and warnings\n&ndash; Conclusion...\n\nlinkedin:\n\nMigrating The Building Coder samples to Revit 2025 #RevitAPI:\n\nhttps://autode.sk/tbcsamples2025\n\n- Compilation environment\n- .NET upgrade assistant\n- Revit API assemblies\n- Errors and warnings\n- Conclusion...\n\n#BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk\n\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread\n\n<center>\n<img src=\"img/\" alt=\"\" title=\"\" width=\"600\"/>\n<p style=\"font-size: 80%; font-style:italic\"></p>\n</center>\n\n-->"
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "The Building Coder Samples 2025",
+    "local_header_href": "#the-building-coder-samples-2025",
+    "chunk_text": "### The Building Coder Samples 2025\n\nI migrated The Building Coder samples to Revit 2025:\n\n- [Compilation environment](#2)\n- [.NET upgrade assistant](#3)\n- [Revit API assemblies](#4)\n- [Errors and warnings](#5)\n- [Conclusion](#6)"
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "Compilation Environment",
+    "local_header_href": "#2",
+    "chunk_text": "####<a name=\"2\"></a> Compilation Environment\n\nBefore starting with the migration per se, I installed Revit 2025 and ensured that my compilation environment is up to date:\n\n- Revit 2025\n- Parallels Desktop 19.3.0\n- Visual Studio 2022 17.9.5\n\nNext, I recompiled The Building Coder samples for Revit 2024 and eliminated all remaining deprecated API usage to ensure zero errors and zero warnings, creating a final\n[release 2024.0.153.1](https://github.com/jeremytammik/the_building_coder_samples/releases/tag/2024.0.153.1) for that."
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": ".NET Upgrade Assistant",
+    "local_header_href": "#3",
+    "chunk_text": "####<a name=\"3\"></a> .NET Upgrade Assistant\n\nI used the [.NET Upgrade Assistant](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview) to move from the .NET Framework 4.8 to .NET Core 8:\n\n<center>\n<img src=\"img/tbc2025upgrade_01.png\" alt=\".NET Upgrade Assistant\" title=\".NET Upgrade Assistant\" width=\"400\"/> <!-- Pixel Height: 678 Pixel Width: 848 -->\n<p style=\"font-size: 80%; font-style:italic\">.NET Upgrade Assistant</p>\n<img src=\"img/tbc2025upgrade_02.png\" alt=\"Upgrade assistant target\" title=\"Upgrade assistant target\" width=\"400\"/> <!-- Pixel Height: 1,092 Pixel Width: 844 -->\n<p style=\"font-size: 80%; font-style:italic\">Upgrade assistant target</p>\n<img src=\"img/tbc2025upgrade_03.png\" alt=\"Upgrade assistant components\" title=\"Upgrade assistant components\" width=\"400\"/> <!-- Pixel Height: 678 Pixel Width: 848 -->\n<p style=\"font-size: 80%; font-style:italic\">Upgrade assistant components</p>\n<img src=\"img/tbc2025upgrade_04.png\" alt=\"Upgrade assistant result\" title=\"Upgrade assistant result\" width=\"400\"/> <!-- Pixel Height: 1,360 Pixel Width: 840 -->\n<p style=\"font-size: 80%; font-style:italic\">Upgrade assistant result</p>\n</center>"
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "Revit API Assemblies",
+    "local_header_href": "#4",
+    "chunk_text": "####<a name=\"4\"></a> Revit API Assemblies\n\nThe .NET Upgrade Assistant successfully upgraded almost everything.\n\nHowever, the seven Revit 2024 API assemblies that we reference in this project cannot be upgraded, since they are hardwired to the .NET Framework 4.8:\n\n- AdWindows\n- RevitAPI\n- RevitAPIIFC\n- RevitAPIMacros\n- RevitAPIUl\n- RevitAPIUIMacros\n- UlFrameworkServices\n\nThey need to be manually redefined to use the Revit 2025 API assemblies instead."
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "Errors and Warnings",
+    "local_header_href": "#5",
+    "chunk_text": "####<a name=\"5\"></a> Errors and Warnings\n\nWith the new Revit API assembly references in place, the first compilation attempt\nproduced [12 errors and 2 warnings](doc/tbc_samples_2025_migr_01.txt).\n\nMost errors and the two warnings are trivial to fix:\n\n- Error CS0104 `TaskDialog` is an ambiguous reference between *System.Windows.Forms.TaskDialog* and *Autodesk.Revit.UI.TaskDialog*\n- Warning CS8073 The result of the expression is always `true` since a value of type `Guid` is never equal to `null`  in CmdFamilyParamGuid.cs\n\nThe remaining three errors in the module CmdDeleteMacros.cs are due to the removal of document-level macros in Revit 2025 and are equally easily eliminated by commenting out the code section causing them:\n\n- Error CS1503 Argument 1: cannot convert from 'Autodesk.Revit.UI.UIDocument' to 'Autodesk.Revit.UI.UIApplication'\n- Error CS1503 Argument 1: cannot convert from 'Autodesk.Revit.DB.Document' to 'Autodesk.Revit.ApplicationServices.Application'\n- Error CS1061 `MacroModule` does not contain a definition for `RemoveMacro`\n\nAfter removing the `TaskDialog` ambiguity, comparison of Parameter.GUID property with null and support for document-level macros, The Building Coder samples compile for Revit 2025 with zero errors and zero warnings."
+  },
+  {
+    "original_filename": "2033_tbc_2025",
+    "header_text": "Conclusion",
+    "local_header_href": "#6",
+    "chunk_text": "####<a name=\"6\"></a> Conclusion\n\nNext, I updated BcSamples.txt with the new binary output path */bin/Debug/net8.0-windows*.\n\nThe result is published\nas [The Building Coder samples release 2025.0.153.0](https://github.com/jeremytammik/the_building_coder_samples/releases/tag/2025.0.153.0)\n\nThe detailed migration steps taken are listed in\nthe [comparison with the preceding release](https://github.com/jeremytammik/the_building_coder_samples/compare/2024.0.153.1...2025.0.153.0)\n\nI have not tested the result yet, since I am still in the process of installing the Revit SDK samples and setting up the RvtSamples external application that I use to load both the SDK and The Building Coder samples.\n\nGood luck, have fun and much success with your own migrations!\n\nStay tuned for further news."
+  }
+]

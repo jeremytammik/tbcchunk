@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0563_ashrae_viewer_potm",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0563_ashrae_viewer_potm",
+    "header_text": "ASHRAE Viewer Plugin of the Month",
+    "local_header_href": "#ashrae-viewer-plugin-of-the-month",
+    "chunk_text": "<h3>ASHRAE Viewer Plugin of the Month</h3><p>We recently published our first ever Revit plugin of the month, for March, Adam's \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/03/room-renumbering-plugin-of-the-month.html\">\nRoom Renumbering</a> add-in.\n\n<p>Now the second one is already available on Autodesk Labs as well, for April, an \n\n<a href=\"http://labs.blogs.com/its_alive_in_the_lab/2011/03/april-adn-plugin-of-the-month-ashrae-viewer-for-revit-now-available.html\">\nASHRAE Viewer for Revit MEP</a> by\n\nMartin Schmid of Autodesk's AEC Industry Success team:</p>\n<center>\n<img alt=\"ASHRAE Viewer\" src=\"img/ashrae_viewer.png\"/>\n</center>\n<p>The download includes ready compiled versions for both Revit 2011 and 2012, a complete user manual, and full source code, so you can use it as is, tweak it for your specific needs, or freely integrate the functionality into your workflow in other ways.\n\n<p>Check it out on the labs!\n</p></p></p>"
+  }
+]

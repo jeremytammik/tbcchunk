@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1771_searchable_docs",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\n- Gui Talarico\n  @gtalarico\n  Who doesn't love *Searchbable* Docs?\n  Only took me 3 years to catch this\n  https://twitter.com/gtalarico/status/1163345696038109184\n  <blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Who doesn&#39;t love *Searchbable* Docs?<br>Only took me 3 years to catch this<br>Thanks guys 🔎🤦‍♂️ <a href=\"https://t.co/4wXK3Re2Mw\">pic.twitter.com/4wXK3Re2Mw</a></p>&mdash; Gui Talarico (@gtalarico) <a href=\"https://twitter.com/gtalarico/status/1163345696038109184?ref_src=twsrc%5Etfw\">August 19, 2019</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n  revit_api_docs_full_text_search.jpeg\n\ntwitter:\n\nHappy eleventh birthday to The Building Coder! The online Revit API documentation now supports full text search and Dynamo implements a new ViewCone functionality #RevitAPI @AutodeskForge @AutodeskRevit #bim #DynamoBim #ForgeDevCon http://bit.ly/apidocsearch\n\nHappy Birthday to The Building Coder!\nThe online Revit API documentation now supports full text search.\nDynamo implements a new <code>ViewCone</code> functionality...\n\nlinkedin:\n\nHappy eleventh birthday to The Building Coder!\n\nThe online Revit API documentation now supports full text search and Dynamo implements a new ViewCone functionality #RevitAPI\n\nhttp://bit.ly/apidocsearch\n\n#bim #DynamoBim #ForgeDevCon #Revit #API #IFC #SDK #AI #VisualStudio #Autodesk #AEC #adsk\n\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread\n\n<p style=\"font-size: 80%; font-style:italic\"></p>\n\nDynamo Zero Touch CS#Node Element Wrapper\n\n-->"
+  },
+  {
+    "original_filename": "1771_searchable_docs",
+    "header_text": "11 Years and Revit API Docs Full Text Search",
+    "local_header_href": "#11-years-and-revit-api-docs-full-text-search",
+    "chunk_text": "### 11 Years and Revit API Docs Full Text Search\n\nHappy Birthday to The Building Coder!\n\nThe online Revit API documentation now supports full text search.\n\nDynamo implements a new `ViewCone` functionality:\n\n- [Happy Birthday to The Building Coder](#2)\n- [Revit API Docs Full Text Search](#3)\n- [Dynamo `ViewCone`](#4)\n\n<center>\n<img src=\"img/saikat_birthday_cake_cropped_550.jpg\" alt=\"Birthday cake with candles\" width=\"300\">\n</center>"
+  },
+  {
+    "original_filename": "1771_searchable_docs",
+    "header_text": "Happy Birthday to The Building Coder",
+    "local_header_href": "#2",
+    "chunk_text": "####<a name=\"2\"></a> Happy Birthday to The Building Coder\n\nToday is The Building Coder's eleventh birthday!\n\nThe Building Coder published its first article this day eleven years ago, August 22, 2008.\n\nMany happy returns of the day!"
+  },
+  {
+    "original_filename": "1771_searchable_docs",
+    "header_text": "Revit API Docs Full Text Search",
+    "local_header_href": "#3",
+    "chunk_text": "####<a name=\"3\"></a> Revit API Docs Full Text Search\n\nGui [@gtalarico](https://twitter.com/gtalarico) Talarico, the author of\nthe [online Revit API documentation revitapidocs.com](https://www.revitapidocs.com),\nannounced [new invaluable search functionality](https://twitter.com/gtalarico/status/1163345696038109184):\n\n> Who doesn't love *Searchable* Docs?\n\n> Only took me 3 years to catch this\n\n<center>\n<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Who doesn&#39;t love *Searchbable* Docs?<br>Only took me 3 years to catch this<br>Thanks guys 🔎🤦‍♂️ <a href=\"https://t.co/4wXK3Re2Mw\">pic.twitter.com/4wXK3Re2Mw</a></p>&mdash; Gui Talarico (@gtalarico) <a href=\"https://twitter.com/gtalarico/status/1163345696038109184?ref_src=twsrc%5Etfw\">August 19, 2019</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n</center>\n\nHere is an example of a sample query:\n\n<center>\n<img src=\"img/revitapidocs_search.png\" alt=\"Revitapidocs full text search\" width=\"550\">\n</center>"
+  },
+  {
+    "original_filename": "1771_searchable_docs",
+    "header_text": "Dynamo ViewCone",
+    "local_header_href": "#4",
+    "chunk_text": "####<a name=\"4\"></a> Dynamo ViewCone\n\nKean Walmsley pointed out a new piece of Dynamo functionality that may come in useful for field-of-view analysis, in his article \non [using a view cone for targeted visibility in Dynamo with Space Analysis](https://www.keanw.com/2019/08/using-a-view-cone-for-targeted-visibility-in-dynamo-with-space-analysis.html):\n\n> This post is about a new visibility-related capability: the ViewCone.\nThis is an object that allows you to perform a more limited visibility analysis within a particular cone of view (i.e., from a point towards a direction with a specified field of view).\nThis is very handy when analysing the view someone has from their desk, for instance.\n\nUnfortunately for us here, this is probably only available in Dynamo, not in the pure Revit API underlying it."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0252_new_project_doc",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0252_new_project_doc",
+    "header_text": "New Project Document",
+    "local_header_href": "#new-project-document",
+    "chunk_text": "<h3>New Project Document</h3><p>A short and simple \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/09/detail-lines.html?cid=6a00e553e168978833012875c7c99d970c#comment-6a00e553e168978833012875c7c99d970c\">\nquestion</a> from Nadim on the NewProjectDocument method:\n\n<p><strong>Question:</strong> I am using \n\n<pre class=\"code\">\n<span class=\"teal\">Document</span> doc = app.NewProjectDocument( \n  <span class=\"blue\">string</span> templateFile );\n</pre>\n<p>Revit shows that it is loading the template as it does usually when it creates a new document; however, it does not really create the new document.\n\n<p>Any idea why?\n\n<p><strong>Answer:</strong> I implemented a sample external command CmdNewProjectDoc to test it for you and it works fine for me:\n\n<pre class=\"code\">\n<span class=\"blue\">const</span> <span class=\"blue\">string</span> _template_file_path \n  = <span class=\"maroon\">\"C:/Documents and Settings/All Users\"</span>\n  + <span class=\"maroon\">\"/Application Data/Autodesk/RAC 2010\"</span>\n  + <span class=\"maroon\">\"/Metric Templates/DefaultMetric.rte\"</span>;\n \n<span class=\"blue\">public</span> <span class=\"teal\">IExternalCommand</span>.<span class=\"teal\">Result</span> Execute(\n  <span class=\"teal\">ExternalCommandData</span> commandData,\n  <span class=\"blue\">ref</span> <span class=\"blue\">string</span> message,\n  <span class=\"teal\">ElementSet</span> elements )\n{\n  <span class=\"teal\">Application</span> app = commandData.Application;\n \n  <span class=\"teal\">Document</span> doc = app.NewProjectDocument( \n    _template_file_path );\n \n  doc.SaveAs( <span class=\"maroon\">\"C:/tmp/new_project.rvt\"</span> );\n \n  <span class=\"blue\">return</span> <span class=\"teal\">CmdResult</span>.Failed;\n}\n</pre>\n<p>After running the command, the new project file is created and saved in the expected location:\n\n<pre>\n2009-11-23  12:26  2,056,192 new_project.rvt\n</pre>\n</p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0510_robot_api",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0510_robot_api",
+    "header_text": "Optimisation using Robot Structural Analysis API",
+    "local_header_href": "#optimisation-using-robot-structural-analysis-api",
+    "chunk_text": "<h3>Optimisation using Robot Structural Analysis API</h3><p>After mentioning a very simple example of using the Revit Structural analytical model to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/01/finding-connected-structural-elements.html\">\nfind connected structural elements</a> two days ago,\n\nhere is a presentation of some more advanced structural optimisation in case you are interested in going further in this area, beyond the pure Revit API:\n\n<p>Al Fisher and Shrikant Sharma of UK-based Buro Happold Engineers published a whitepaper on \n\n<a href=\"http://images.autodesk.com/adsk/files/autodeskrobot_structuralanalysisprofessional_whitepaper_final.pdf\">\nexploiting the Autodesk Robot Structural Analysis Professional API for structural optimisation</a>. \nIts introduction says: \n\n<span style=\"color:darkblue\">\n<p>Access to an open API (application programming\ninterface) can assist in the automation of common\nand repetitive tasks, helping to save time and\ncosts. The open API provided with Autodesk Robot\nStructural Analysis Professional software enables\nprogrammatic control of Robot, through which\nsophisticated bespoke tools for structural design\noptimization can be developed.\n\n<p>Within the construction industry, there is constant pressure to deliver projects more\neffectively on multiple fronts. This is most notable in the desire to reduce project time\nscales, while also consistently increasing capability and design quality.\n\n<p>This double-edged challenge leads designers to continually seek more effective ways\nof working. In this white paper, we demonstrate the use of Robot Structural Analysis\nProfessional API to increase efficiency through automation of design processes, which\ncan help reduce time scales and simplify workflow.\n\n<p>Furthermore, with this automation capability, innovative design processes such as\nrationalization, standardization, and design optimization become possible.\n\n</p></p></p></p></span>\n<p>The whitepaper covers the following topics:\n\n<ul>\n<li>Overview of Robot Structural Analysis Professional API\n<li>Introduction to Optimization\n<li>Analysis Automation and Optimization\n<li>Implementation and Case Studies\n<li>Summary\n<li>About the Authors\n</li></li></li></li></li></li></ul>\n</p></p></p>"
+  }
+]

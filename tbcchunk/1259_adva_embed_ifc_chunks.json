@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1259_adva_embed_ifc",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1259_adva_embed_ifc",
+    "header_text": "Embedding an Interactive View and Data IFC Model",
+    "local_header_href": "#embedding-an-interactive-view-and-data-ifc-model",
+    "chunk_text": "<h3>Embedding an Interactive View and Data IFC Model</h3><p>Here is an interactive 3D sample embedding of an IFC file uploaded to A360 to answer a question in this morning's DevDays conference here in Munich:</p><center>\n<iframe allowfullscreen=\"true\" frameborder=\"0\" height=\"236\" mozallowfullscreen=\"true\" src=\"https://myhub.autodesk360.com/ue29d734b/shares/public/SHabee1QT1a327cf2b7afabd44699b0ccf4b?mode=embed\" webkitallowfullscreen=\"true\" width=\"420\"></iframe>\n</center><p>Click to navigate, rotate, pan and zoom as you like.</p><p>I was prompted to upload and test the IFC file format translation by Adam Nagy, sitting together in the back row, after taking neat pictures of\n\n<a href=\"https://twitter.com/AdamTheNagy/status/544450180888952832\">\nCyrille's new headset</a>:</p><center>\n<img alt=\"Cyrille's new headset\" src=\"img/cyrille_new_headset.jpg\" width=\"300\"/>\n</center><p>I simply grabbed an old sample IFC file (6.5 MB) I had sitting on the disk, uploaded it to A360 and embedded it here into this post.</p><p>It only took a handful of minutes to complete the whole process.</p><p>Here are some other samples of developers experimenting with similar things in the past few days:</p><ul>\n<li><a href=\"http://jimreis.tumblr.com\">A large detailed MEP model on Jim Reis' MEP Tech blog</a></li>\n<li><a href=\"http://blogs.ssi-corporate.com/waveform/2014/technology/autodesk-university-another-great-event\">Denis Morais report on Autodesk University, Another Great Event, on the Waveform blog</a> &gt; Something Cool</li>\n</ul>"
+  }
+]

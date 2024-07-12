@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0693_rest_copy_model",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0693_rest_copy_model",
+    "header_text": "Copy a Model from a Revit Server",
+    "local_header_href": "#copy-a-model-from-a-revit-server",
+    "chunk_text": "<h3>Copy a Model from a Revit Server</h3><p>Yesterday evening we had dinner together with developer partners at \n\n<a href=\"http://www.heaven23.se\">Heaven 23</a> again, \n\nthe same place we visited \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/12/vsta-to-stay-and-updater-to-go.html\">\nlast year</a>,\n\nwith its unique reflection-accessible cloud.\n\n<p>Today we are holding a DevLab here in the Autodesk office in Gothenburg in Sweden, providing an opportunity for developers to come visit us with their day-to-day work in progress and current issues.\n\n<p>Meanwhile, here is a question related to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/11/revit-server-rest-api.html\">\nRevit Server and its API</a>:\n\n<p><strong>Question:</strong> How can I copy a Revit file out of Revit server 2012 to a network location?\nI need something similar to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/11/revit-server-rest-api.html\">\nRevitServerViewer sample</a>, \n\nbut instead of just relaying the information of the file I would like to get the actual file definition, assign it to an object in .NET, and use standard I/O operations to copy it to multiple other servers.\n\n<p><strong>Answer:</strong> Look at the Application.CopyModel method.\n\n<pre>\n  public void CopyModel(\n    ModelPath sourceModelPath,\n    string destFilePath,\n    bool overwrite )\n</pre>\n<p>It copies an existing model to a new file, which can then be copied elsewhere as needed.\n\n<p>It takes the path of the file and does not require opening the file. \nIt accepts the path of the server (or file) based source file and the destination path, besides a Boolean specifying whether you wish to overwrite the destination file or not.\n\n<p>If you have to copy multiple files, you can call this method multiple times specifying different source and destination information for each file. \n\n<p>This method is a Revit API method, so it does require Revit to be up and running and must be called in a valid Revit API context. \nAs you can see in the \"Revit Server REST API Reference.pdf\" in the Revit Server SDK, the REST API supports copying or moving a specified folder or model to another folder within the Revit Server without starting up Revit, but not copying a model to a network location outside of the server.\n\n<h4>Addendum</h4>\n<p>Please note that <a href=\"http://thebuildingcoder.typepad.com/blog/2017/09/download-from-revit-server-and-hide-a-point-cloud-scan.html#2\">downloading from Revit Server requires an <code>RSN.INI</code> entry.</a></p>\n</p></p></p></p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0693_rest_copy_model",
+    "header_text": "Addendum",
+    "local_header_href": "#addendum",
+    "chunk_text": "<h4>Addendum</h4><p>Please note that <a href=\"http://thebuildingcoder.typepad.com/blog/2017/09/download-from-revit-server-and-hide-a-point-cloud-scan.html#2\">downloading from Revit Server requires an <code>RSN.INI</code> entry.</a></p>"
+  }
+]

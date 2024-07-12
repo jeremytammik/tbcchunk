@@ -1,0 +1,8 @@
+[
+  {
+    "original_filename": "0095_bolt_out_of_the_red",
+    "header_text": "Bolt out of the Red",
+    "local_header_href": "#bolt-out-of-the-red",
+    "chunk_text": "<h3>Bolt out of the Red</h3><p>Here is a short note to point out that Guy Robinson has posted some interesting Revit API solutions on his blog \n\n<a href=\"http://redbolts.com/blog\">\nBolt out of the Red</a>.\n\nOne that I found especially useful is on how to get a \n\n<a href=\"http://redbolts.com/blog/post/2008/12/01/Getting-your-Revit-thumbnails.aspx\">\nbitmap or thumbnail from a Revit project or family</a>.\n\nNow he started a series on \n\n<a href=\"http://redbolts.com/blog/post/2009/02/10/Static-in-your-commands-User-settings-part-1.aspx\">\nsaving user specific configuration data</a>\n\nfor Revit commands using standard .NET functionality from the System.Configuration namespace, which has a number of pitfalls and requires some understanding of how Revit add-ins are loaded into the Revit AppDomain etc.</p>"
+  }
+]

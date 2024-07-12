@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0194_family_template_path",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0194_family_template_path",
+    "header_text": "Default Family Template Path",
+    "local_header_href": "#default-family-template-path",
+    "chunk_text": "<h3>Default Family Template Path</h3><p><strong>Question:</strong>\nIs any API exposed to read and write the default family template path?\nIt is displayed under 'Default path for family template files' in the RAC 2010 options dialogue:</p><center>\n<img alt=\"Default family template path\" src=\"img/family_template_path_4.png\"/>\n</center><p><strong>Answer:</strong>\nUnfortunately, there is currently no way to set the path in the options dialog at runtime through the Revit API.\nYou can read it from the Revit.ini file, though.\nIt is stored under the FamilyTemplatePath key in the [Directories] section.</p>"
+  }
+]

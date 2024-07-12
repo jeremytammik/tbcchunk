@@ -1,0 +1,50 @@
+[
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "User MEP Calculation Sample",
+    "local_header_href": "#user-mep-calculation-sample",
+    "chunk_text": "<h3>User MEP Calculation Sample</h3><p>One of the main new features in the Revit 2014 API is the possibility to make use of external services to redefine the algorithms used for certain MEP related calculations.</p><p>The\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/05/the-revit-2013-mep-api-and-external-services.html#3\">\nexternal services framework</a> was introduced in Revit 2013, but\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/08/updated-revit-mep-2013-material.html#7\">\nnot used</a> in\n\nthat version.</p><p>The recent listing of\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/07/revit-2014-obj-exporter-and-new-sdk-samples.html#3\">\nRevit 2014 API functionality and SDK samples</a> points\n\nout that this is one of the highlights of the new API, and yet no sample using it has been published yet.</p><p>Let's rectify that right here and now.</p><a name=\"1\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Built-in External Services",
+    "local_header_href": "#built-in-external-services",
+    "chunk_text": "<h4>Built-in External Services</h4><p>Revit MEP 2014 makes use of the external services itself.\nThe service implementations live in the MEPCalculation sub-folder of 'C:\\Program Files\\Autodesk\\Revit 2014\\AddIns'.</p><p>It contains the following add-in manifests and .NET assemblies, with the DLLs listed under the add-in manifests loading them:</p><ul>\n<li>FittingAndAccessoryCalculationManaged.dll</li>\n<li>FittingAndAccessoryCalculationUIServers.addin</li>\n<ul>\n<li>FittingAndAccessoryCalculationUIServers.dll</li>\n</ul>\n<li>MEPCalculation.addin</li>\n<ul>\n<li>FittingAndAccessoryCalculationServers.dll</li>\n<li>StraightSegmentCalculationServers.dll</li>\n</ul>\n<li>PressureLossReport.addin</li>\n<ul>\n<li>PressureLossReport.dll</li>\n</ul>\n</ul><p>A very similar structure was extracted and released in a pre-release API sample on the Revit beta site as an example of implementing a custom external service, but never made it into the final release.</p><p>Prompted and supported by our MEP expert Martin Schmid, I now took a look at that and adapted it to the current Revit 2014 API.</p><p>Here are the steps and results:</p><ul>\n<li><a href=\"#2\">The UserMepCalculation sample</a></li>\n<li><a href=\"#3\">Concepts and Use Cases</a></li>\n<li><a href=\"#4\">Migration of the pre-alpha version</a></li>\n<li><a href=\"#5\">Test run</a></li>\n<li><a href=\"#6\">Download</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "The UserMepCalculation Sample",
+    "local_header_href": "#the-usermepcalculation-sample",
+    "chunk_text": "<h4>The UserMepCalculation Sample</h4><p>The UserMepCalculation add-in is an external application implementing user-defined MEP calculation solver external services that override Revit’s default MEPCalculation solvers and reports listed above, in particular:</p><ul>\n<li>System pressure loss report</li>\n<li>Straight segment calculation</li>\n<li>Fitting and accessory calculation</li>\n</ul><p>The UserMepCalculation Visual Studio solution contains the following four C# projects:</p><ul>\n<li>FittingAndAccessoryCalculationServers</li>\n<li>FittingAndAccessoryCalculationUIServers</li>\n<li>PressureLossReport</li>\n<li>StraightSegmentCalculationServers</li>\n</ul><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Concepts and Use Cases",
+    "local_header_href": "#concepts-and-use-cases",
+    "chunk_text": "<h4>Concepts and Use Cases</h4><p>Actually, digging in deeper, the sample addresses these six separate concepts:</p><ol>\n<li>Pipe segment pressure loss calculation</li>\n<li>Pipe fitting/accessory pressure loss calculation</li>\n<li>Pipe fixture units to volume flow conversion calculation</li>\n<li>Duct segment pressure loss calculation</li>\n<li>Duct fitting/accessory pressure loss calculation</li>\n<li>Pressure loss report</li>\n</ol><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Migration of the Pre-alpha Version",
+    "local_header_href": "#migration-of-the-pre-alpha-version",
+    "chunk_text": "<h4>Migration of the Pre-alpha Version</h4><p>Compiling the original pre-alpha version of this add-in produced the following initial list of <a href=\"zip/mep_calculations_migr_a.txt\">3 errors and 6 warnings</a>.</p><p>I applied the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/07/recursively-disable-architecture-mismatch-warning.html\">\ndisable architecture mismatch warning utility DisableMismatchWarning.exe</a>, removing the warnings, leaving just <a href=\"zip/mep_calculations_migr_b.txt\">3 errors</a>.</p><p>All three are similar, complaining that the three server implementations for pipe plumbing fixture flow and duct and pipe pressure drop, derived from the three interfaces IPipePressureDropServer, IDuctPressureDropServer and IPipePlumbingFixtureFlowServer, are not fulfilling their contract that requires them to implement the GetHtmlDescription member method.</p><p>Once the three methods were added, the compilation proceeded one step further and reported the next <a href=\"zip/mep_calculations_migr_c.txt\">4 errors</a>, all referring to an erroneous call to an InnerDiameter method.\nThat property was since renamed to InsideDiameter.\nAfter fixing that as well, the sample builds with zero errors and warnings.</p><p>It makes use of some unnecessary internal project settings that I cleaned up and removed as far as possible.\nSome remnants are still left, though.\nAmong other things, the projects are set up to build specific 32 and 64 bit versions, although they are all identical, being standard .NET IL assemblies.</p><p>Once this was cleaned up, compiled and installed, it could be tested.</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Test Run",
+    "local_header_href": "#test-run",
+    "chunk_text": "<h4>Test Run</h4><p>To use and test, build and install the add-in.\nNote that the new user defined alternate calculation methods are now available and can be selected via Manage &gt; MEP Settings &gt; Mechanical Settings &gt; Duct Settings and Pipe Settings &gt; Calculation.</p><p>User duct pressure drop:</p><center>\n<img alt=\"User duct pressure drop\" src=\"img/mep_calc_user_duct_pressure_drop.png\" width=\"400\"/>\n</center><p>User pipe pressure drop:</p><center>\n<img alt=\"User pipe pressure drop\" src=\"img/mep_calc_user_pipe_pressure_drop.png\" width=\"400\"/>\n</center><p>User plumbing fixture flow:</p><center>\n<img alt=\"User plumbing fixture flow\" src=\"img/mep_calc_user_plumbing_fixture_flow.png\" width=\"400\"/>\n</center><p>Let's examine a system pressure-loss report.\nNote that the project-defined user interface now appears after launching Analyze &gt; Reports &amp; Schedules &gt; Pipe Pressure Loss Report.</p><p>I copied the default pressure loss report transformation PressureLossReport.xslt from the above-mentioned MEPCalculation folder and renamed it to UserPressureLossReport.xslt.</p><p>The standard Revit pressure loss command now picks up my redefined calculation rules and created this\n\n<a href=\"zip/jeremy.html\">pressure loss report</a> from\n\nthe Revit MEP basic sample project rme_basic_sample_project.rvt.</p><center>\n<img alt=\"Pressure loss report\" src=\"img/mep_calc_user_pressure_loss_report.png\" width=\"400\"/>\n</center><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "0986_mep_calculation",
+    "header_text": "Download",
+    "local_header_href": "#download",
+    "chunk_text": "<h4>Download</h4><p>Here is\n\n<a href=\"zip/UserMepCalculation.zip\">UserMepCalculation.zip</a> containing\n\nthe complete source code, Visual Studio solution, add-in manifest and some documentation on the custom calculation and report add-in.</p><p>I am off to Australia Sunday evening to hold a Revit API training there next week, and want to do some climbs in the Furka pass this weekend before leaving, so wish me luck!</p>"
+  }
+]

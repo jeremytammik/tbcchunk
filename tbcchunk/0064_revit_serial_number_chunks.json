@@ -1,0 +1,8 @@
+[
+  {
+    "original_filename": "0064_revit_serial_number",
+    "header_text": "Revit Serial Number",
+    "local_header_href": "#revit-serial-number",
+    "chunk_text": "<h3>Revit Serial Number</h3><p>Here is a short and simple question with a simple answer.</p><p><strong>Question:</strong> How can I determine the Revit product's serial number?</p><p><strong>Answer:</strong> The Revit serial number is available in the Licpath.lic file, which is a text file located in the Revit program folder.\nThe content of the file is something similar to the following, where the string after # SN is the serial number:</p><pre>\n## Autodesk Revit\n## License Information\n# SN 123-45678910\n# NSN 000-00000000\n# Standalone\n</pre>"
+  }
+]

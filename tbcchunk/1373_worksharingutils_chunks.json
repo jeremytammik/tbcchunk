@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1373_worksharingutils",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- blog about rtc and desktop-cloud\n\n#dotnet #csharp #geometry\n#fsharp #python\n#grevit\n#responsivedesign #typepad\n#ah8 #augi #dotnet\n#stingray #adsklabs #rendering\n#3dweb #3dviewapi #html5 #threejs #webgl #3d #apis #mobile #vr #ecommerce\n#Markdown #Fusion360 #Fusion360Hackathon #revitapi #3dwebcoder\n#javascript\n#RestSharp #restapi\n#mongoosejs #mongodb #nodejs\n#au2015 #rtceur\n#adskdevnetwrk\n\nRevit API, Jeremy Tammik, akn_include\n\nWorksharingUtils #revitapi #bim #aec #3dwebcoder #au2015 #rtceur #cloud #svg\n\nRudolf 'Revitalizer' Honke frequently requested better documentation of the Revit API `*Utils` classes, e.g., when he pointed out the handy utility classes back in 2013. This is still an interesting and somewhat poorly documented area in the Revit API, as we can see from the discussion below\n&ndash; WorksharingUtils and the WorksharingTooltipInfo class\n&ndash; Ten interesting C# features\n&ndash; A new acronym – TL;DR...\n\n-->"
+  },
+  {
+    "original_filename": "1373_worksharingutils",
+    "header_text": "WorksharingUtils",
+    "local_header_href": "#worksharingutils",
+    "chunk_text": "### WorksharingUtils\n\nRudolf [Revitalizer](http://forums.autodesk.com/t5/user/viewprofilepage/user-id/1103138) Honke\nhas frequently requested better documentation of the Revit API `*Utils` classes, e.g., when he pointed out\nthe [handy utility classes](http://thebuildingcoder.typepad.com/blog/2013/04/handy-utility-classes.html) back in 2013.\n\nThis is still an interesting and somewhat poorly documented area in the Revit API, as we can see from the discussion below:\n\n- [WorksharingUtils and the WorksharingTooltipInfo class](#2)\n- [Ten interesting C# features](#3)\n- [A new acronym &ndash; TL;DR](#4)"
+  },
+  {
+    "original_filename": "1373_worksharingutils",
+    "header_text": "<a name=\"2\"></a>WorksharingUtils and the WorksharingTooltipInfo Class",
+    "local_header_href": "#a-name2aworksharingutils-and-the-worksharingtooltipinfo-class",
+    "chunk_text": "#### <a name=\"2\"></a>WorksharingUtils and the WorksharingTooltipInfo Class\n\nThe development team answered the following recent Revit API forum thread\non [API access to the workshared element user history](http://forums.autodesk.com/t5/revit-api/workshared-element-user-history/m-p/5896907):\n\n**Question:** Is there any access at all to Workshared Element User History?\n\nIf I turn on one of the worksharing display modes and hover my mouse over any element, I get a popup like this advising me of who that element was originally created by and who last updated it in the central model:\n\n<center>\n<img src=\"img/worksharing_tooltip.png\" alt=\"Worksharing tooltip\" width=\"490\">\n</center>\n\nIs it possible to programmatically access these fields?\n\n**Answer:** I was unable to find any information about this, so I passed on the question to the Revit development team.\n\nTheir answer is short, succinct and to the point: this is in the `WorksharingTooltipInfo` class acquired from the `WorksharingUtils.GetWorksharingTooltipInfo` method.\n\nSo we are saved once again by our beloved `Utils` classes.\n\nThey and the important functionality they provide are apparently still hard to find.\n\nMany thanks to Scott and Arnošt for pointing this out, and the importance of improving their visibility."
+  },
+  {
+    "original_filename": "1373_worksharingutils",
+    "header_text": "<a name=\"3\"></a>Ten Interesting C# Features",
+    "local_header_href": "#a-name3aten-interesting-c-features",
+    "chunk_text": "#### <a name=\"3\"></a>Ten Interesting C# Features\n\nMy colleague [Augusto Gonçalves](http://adndevblog.typepad.com/aec/augusto-goncalves.html) recently pointed out an article\non [10 features in C# that you really should learn (and use!)](http://www.codeaddiction.net/articles/15/10-features-in-c-that-you-really-should-learn-and-use).\n\nWhile I do not totally agree with them all, similarly to some of the options voiced in\nthe comments section, it is still definitely an interesting and worthwhile quick read.\n\n**Addendum:** In\nhis [comment](http://thebuildingcoder.typepad.com/blog/2015/11/worksharingutils.html#comment-2350844009) below,\nGuy Robinson points out another interesting related link to the MSDN article\non [new features in C# 6](http://blogs.msdn.com/b/csharpfaq/archive/2014/11/20/new-features-in-c-6.aspx),\nwhich is actually more structured and in-depth than the former."
+  },
+  {
+    "original_filename": "1373_worksharingutils",
+    "header_text": "<a name=\"4\"></a>A New Acronym &ndash; TL;DR",
+    "local_header_href": "#a-name4aa-new-acronym-ndash-tldr",
+    "chunk_text": "#### <a name=\"4\"></a>A New Acronym &ndash; TL;DR\n\nI really dislike acronyms that I do not know the meaning of.\n\nI quite like them when I do, though, and I am certain that my communication partner knows them as well.\n\nI just discovered this one that I like, since it expresses a sentiment I often share: TL;DR &ndash; too long; didn't read.\n\nOf course, this leads back to the first topic again: the `*Utils` classes are all documented in the Revit API help file RevitAPI.chm... all you have to do is read it &nbsp; :-)"
+  }
+]

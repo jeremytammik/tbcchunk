@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1260_nfc",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1260_nfc",
+    "header_text": "Milano Meetups and My New NFC Business Card",
+    "local_header_href": "#milano-meetups-and-my-new-nfc-business-card",
+    "chunk_text": "<h3>Milano Meetups and My New NFC Business Card</h3><p>We completed the DevDays conference and Meetup in Munich and now arrived in Milano, bella Italia.</p><p>Tonight we are holding our\n\n<a href=\"http://www.meetup.com/I-love3Dmilano/events/214758572\">Inaugural 3D Lovers Meetup</a> here at\n\n<a href=\"http://www.coworkinglogin.it\">Coworking LOGIN</a>,\n\n<a href=\"http://maps.google.com/maps?f=q&amp;hl=en&amp;q=Via+Stefanardo+da+Vimercate+28%2C+Milano%2C+MI%2C+it\">Via Stefanardo da Vimercate 28, Milano</a>.</p><center>\n<img alt=\"Coworking LOGIN\" src=\"img/coworking_login_telephones.jpeg\" width=\"300\"/>\n</center><p>We only just noticed that another interesting inaugural meetup is taking place in the same location at the same time, the\n\n<a href=\"http://www.meetup.com/MM-MeanMilan/events/218926426\">First MEAN Event: Break the Ice</a>.</p><p><a href=\"http://mean.io\">MEAN</a> stands for MongoDB, Express, Angular.js and Node.js, so you can see how well it fits.</p><p>Main topic for today: new functionality of\n\n<a href=\"https://en.wikipedia.org/wiki/ECMAScript\">ECMAScript 6</a>,\n\nthe base for the next release of JavaScript et al, scheduled for release in the middle of 2015.</p><p>Here is the <a href=\"http://linkme.it/MM/es6/#/2/4\">slide deck</a>.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1260_nfc",
+    "header_text": "My New Near Field Communication Business Card",
+    "local_header_href": "#my-new-near-field-communication-business-card",
+    "chunk_text": "<h4>My New Near Field Communication Business Card</h4><p>We have been handing out Google cardboard boxes at our meetup events.</p><p>Each box includes an\n\n<a href=\"http://en.m.wikipedia.org/wiki/Near_field_communication\">\nNFC</a> card.\n\nSimply hold it against the back of your NFC-enabled phone and it will take you straight to the <a href=\"http://www.dodocase.com\">Dodocase</a> web site.</p><center>\n<img alt=\"Dodocase NFC card\" src=\"img/dodocase_nfc_card.jpeg\" width=\"300\"/>\n</center><p>You can easily reprogram it to take you to any other URL you like, in just 60 seconds, e.g. using the free\n\n<a href=\"http://www.tagstand.com\">Tagstand NFC Writer</a>.\n\nThere are lots of other free NFC write apps in the mobile stores as well.</p><p>I grabbed a card and set it up to link to\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/about-the-author.html\">\nAbout the Author</a> on\n\nThe Building Coder.</p><p>No more paper business cards for me, just a few electrons.</p><p>Sustainable.</p><p>And cool   :-)</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1260_nfc",
+    "header_text": "Cloud Accelerator Workshop Web Site Live",
+    "local_header_href": "#cloud-accelerator-workshop-web-site-live",
+    "chunk_text": "<h4>Cloud Accelerator Workshop Web Site Live</h4><p>Talking about cool web oriented technology, the\n\n<a href=\"http://www.autodeskcloudaccelerator.com\">Autodesk Cloud Accelerator web site</a> is\n\nnow live – I already mentioned the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/11/cloud-accelerator-vdc-and-transaction-groups.html#2\">\ncloud accelerator workshop invitation</a> a\n\ncouple of weeks ago.</p>"
+  }
+]

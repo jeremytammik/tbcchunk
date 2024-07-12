@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0270_revit_ribbon_tab",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0270_revit_ribbon_tab",
+    "header_text": "Create a Real Revit Ribbon Tab",
+    "local_header_href": "#create-a-real-revit-ribbon-tab",
+    "chunk_text": "<h3>Create a Real Revit Ribbon Tab</h3><p>We made it to Paris on Friday after all, arriving a ten in the morning instead of the Thursday evening as planned.\nStill, we were able to successfully present the DevDays conference, so that was good.\nThat was also the last day of my working year, at least officially.\nI spent the evening in Paris and had a nice train ride through the snow back to Switzerland on Saturday.\n\n<p>I have a number of Christmas presents collecting here in my inbox.\nThe latest addition is a little note from \n\nGuy Robinson \n\nwishing us all a Merry Christmas and pointing out that my post on creating a \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/custom-ribbon-tab.html\">\ncustom ribbon tab</a> can \n\neasily be enhanced to \n\n<a href=\"http://redbolts.com/blog/post/2009/12/21/Merry-Christmas-e28093-Ribbonstabs-and-Panels.aspx\">\ncreate a real Revit ribbon tab</a>\n\ncontaining a real Revit ribbon panel.\nWith that in hand, the standard Revit API commands can be used to create ribbon buttons which can \n\n<a href=\"http://redbolts.com/blog/post/2009/12/21/Merry-Christmas-e28093-Ribbonstabs-and-Panels.aspx\">\nlaunch Revit external commands</a> as usual.\n\n<p>I am hoping to find time in the next few days to present some more of the goodies I am sitting on before I head off into a real break.\n\n</p></p></p>"
+  }
+]

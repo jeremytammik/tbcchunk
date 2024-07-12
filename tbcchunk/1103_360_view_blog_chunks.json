@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1103_360_view_blog",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "1103_360_view_blog",
+    "header_text": "The 360 View",
+    "local_header_href": "#the-360-view",
+    "chunk_text": "<h3>The 360 View</h3><p>There is a new kid on the block!</p><p><a href=\"http://the360view.typepad.com\">\nThe 360 View</a>\n\nis a blog providing technical resources about BIM 360 product families, including Glue and Field,  including API coverage, by\n\n<a href=\"http://the360view.typepad.com/blog/manu-venugopal.html\">\nManu Venugopal</a>,\n\nIntegration Expert in Autodesk Consulting and our ADN API liaison to the BIM 360 Glue product team.</p><center>\n<img alt=\"The 360 View\" src=\"img/the_360_view_blog_banner.png\" width=\"483\"/>\n</center><p>Manu and\n\n<a href=\"http://adndevblog.typepad.com/aec/mikako-harada.html\">Mikako Harada</a>,\n\nADN AEC technical lead, worked together closely on the BIM 360 Glue API.\nManu is the behind the scenes 'brain' for ADN support in this area and helped a lot preparing the last two Developer Days presentations about BIM 360.\n\n<p>As Mikako already\n\n<a href=\"http://adndevblog.typepad.com/aec/2013/10/bim-360-glue-api-pilot-and-updated-samples.html\">pointed out</a>,\n\nthe Glue API is still in a pilot stage and the number of people who can actually use it is currently very limited.\nWe are actively discussing ways to expand the audience and I hope you will find\n\n<a href=\"http://the360view.typepad.com\">\nThe 360 View</a> a\n\ngood source to learn about and keep eyes on the progress of BIM 360.\nHere is an overview of the first few posts:</p>\n<ul>\n<li><a href=\"http://the360view.typepad.com/blog/2013/11/welcome.html\">Welcome!</a></li>\n<li><a href=\"http://the360view.typepad.com/blog/2013/12/devdays-2013-and-bim-360.html\">DevDays 2013 and BIM 360</a></li>\n<li><a href=\"http://the360view.typepad.com/blog/2013/12/bim-360-sdk-part-1-bim-360-field-api.html\">BIM 360 SDK: Part 1 – BIM 360 Field API</a></li>\n<li><a href=\"http://the360view.typepad.com/blog/2013/12/bim-360-sdk-part-2-bim-360-glue-api.html\">BIM 360 SDK: Part 2 – BIM 360 Glue API</a></li>\n<li><a href=\"http://the360view.typepad.com/blog/2014/01/bim-360-sdk-part-3-bim-360-viewer-component.html\">BIM 360 SDK: Part 3 – BIM 360 Viewer Component</a></li>\n<li><a href=\"http://the360view.typepad.com/blog/2014/02/energizing-bim-in-the-cloud-one-block-at-a-time.html\">Energizing BIM in the Cloud – one block at a time!</a></li>\n</ul>\n<hr/>\n<h1>Cloud and Mobile</h1>\n<h3>The 360 View</h3>\n<p>By\n\n<a href=\"http://adndevblog.typepad.com/cloud_and_mobile/jeremy-tammik.html\">\nJeremy</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/about-the-author.html\">\nTammik</a>.</p>\n</p>"
+  },
+  {
+    "original_filename": "1103_360_view_blog",
+    "header_text": "Cloud and Mobile",
+    "local_header_href": "#cloud-and-mobile",
+    "chunk_text": "<h1>Cloud and Mobile</h1>"
+  },
+  {
+    "original_filename": "1103_360_view_blog",
+    "header_text": "The 360 View",
+    "local_header_href": "#the-360-view",
+    "chunk_text": "<h3>The 360 View</h3><p>By\n\n<a href=\"http://adndevblog.typepad.com/cloud_and_mobile/jeremy-tammik.html\">\nJeremy</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/about-the-author.html\">\nTammik</a>.</p>"
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- /a/doc/revit/tbc/bak/1403_stallman_fsf.txt\n\n#dotnet #csharp\n#fsharp #python\n#grevit\n#responsivedesign #typepad\n#ah8 #augi #dotnet\n#stingray #rendering\n#3dweb #3dviewAPI #html5 #threejs #webgl #3d #mobile #vr #ecommerce\n#Markdown #Fusion360 #Fusion360Hackathon\n#javascript\n#RestSharp #restAPI\n#mongoosejs #mongodb #nodejs\n#rtceur\n#xaml\n#3dweb #a360 #3dwebaccel #webgl @adskForge\n@AutodeskReCap @Adsk3dsMax\n#revitAPI #bim #aec #3dwebcoder #adsk #adskdevnetwrk @jimquanci @keanw\n#au2015 #rtceur\n#eraofconnection\n\nRevit API, Jeremy Tammik, akn_include\n\nRichard Stallman on a Free Digital Society #revitAPI #3dwebcoder @AutodeskRevit @adskForge #3dwebaccel #a360 #bim #RMS @researchdigisus\n\nI attended the presentation by Richard M. Stallman of the Free Software Foundation FSF for a free digital society in the University of Bern yesterday\n&ndash; Ground Rules\n&ndash; Threats to our Freedom in the Digital Society\n&ndash; DRM – Digital Management of Rights or Restrictions?\n&ndash; GNU and Linux\n&ndash; JavaScript\n&ndash; Software as a Service\n&ndash; Open Source versus Free Software\n&ndash; Free Software Evangelism\n&ndash; Surveillance\n&ndash; Censorship\n&ndash; Voting Systems\n&ndash; The War on Sharing\n&ndash; Sharing Art\n&ndash; Issues in Switzerland\n&ndash; Digital Freedom of Speech\n&ndash; Auction of an Adorable GNU\n&ndash; Recording of the Entire Presentation...\n\n-->"
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "Richard Stallman for a Free Digital Society",
+    "local_header_href": "#richard-stallman-for-a-free-digital-society",
+    "chunk_text": "### Richard Stallman for a Free Digital Society\n\nI attended the presentation\nby [Richard M. Stallman](https://en.wikipedia.org/wiki/Richard_Stallman) of\nthe [Free Software Foundation FSF](https://www.fsf.org)\n[for a free digital society](http://www.digitale-nachhaltigkeit.unibe.ch/veranstaltungen/richard_m_stallman/index_ger.html) in\nthe University of Bern yesterday.\n\nStallman is controversial and provocative.\n\nI found it very interesting and agree with him on many points, as you probably already noticed from my focus on open source software and avoidance of proprietary solutions &ndash; within the limits imposed by my employment by a major commercial software vendor, of course &nbsp; :-)\n\nRegardless:\n\nAll the opinions expressed below are Stallman's and not mine, within the limitations of my abilities to capture and reproduce them accurately.\n\nOh, and I did indeed meet my\ncolleague [Kean Walmsley](http://through-the-interface.typepad.com/through_the_interface/about-the-author.html) there,\njust as I had hoped and expected, and a very pleasant meeting it turned out to be.\n\nHere are a very few [pictures from the event](https://flic.kr/s/aHsktNZPcA), of the beautiful lecture hall, Rms, the [adorable GNU](#17), Kean and me:\n\n<center>\n<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/jeremytammik/albums/72157664154229412\" title=\"Richard Stallman in Bern\"><img src=\"https://farm2.staticflickr.com/1689/24838060235_2cc3d015da_n.jpg\" width=\"320\" height=\"180\" alt=\"Richard Stallman in Bern\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>\n</center>\n\nThese are the somewhat haphazard notes I took from Richard's talk &ndash; I'll call him Rms from now on:\n\n- [Ground Rules](#2)\n- [Threats to our Freedom in the Digital Society](#3)\n- [GNU and Linux](#4)\n- [JavaScript](#5)\n- [Software as a Service](#6)\n- [Open Source versus Free Software](#7)\n- [Free Software Evangelism](#8)\n- [Surveillance](#9)\n- [Censorship](#10)\n- [Voting Systems](#11)\n- [The War on Sharing](#12)\n- [DRM &ndash; Digital Management of Rights or Restrictions?](#13)\n- [Sharing Art](#14)\n- [Issues in Switzerland](#15)\n- [Digital Freedom of Speech](#16)\n- [Auction of an Adorable GNU](#17)\n- [Recording of the Entire Presentation](#18)"
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"2\"></a>Ground Rules",
+    "local_header_href": "#a-name2aground-rules",
+    "chunk_text": "#### <a name=\"2\"></a>Ground Rules\n\nRms started out by defining some ground rules on representing him and his speech:\n\n- There is a significant difference between open source and free software.\nRms supports free software, not open source, and does not wish to be associated with the latter.\n- Do not post pictures of Rms on Instagram, Facebook, or any other social media or Internet platform the tracks people.\nYou should not post pictures of any friends at all.\nDoing so reveals information about them without their consent.\n- Turn off geolocation on your device when taking any pictures.\n- DO not use any proprietary file formats to publish pictures.\nUse only free formats such as [OGG](https://en.wikipedia.org/wiki/Ogg) and [WEBM](https://en.wikipedia.org/wiki/WebM).\nThe [MP3](https://en.wikipedia.org/wiki/MP3) and other MP formats are not free according to legislation in some countries.\n- Especially avoid the [Flash](https://en.wikipedia.org/wiki/Adobe_Flash) format.\nThe Flash player is malware.\nThis is a fact.\nDo not support Windows Media player, RealPlayer or QuickTime.\n- All recordings of this speech must be downloadable using non-free software and equipped with\nthe [Creative Commons No Derivatives](https://creativecommons.org/licenses/by-nd/3.0/legalcode) license."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"3\"></a>Threats to our Freedom in the Digital Society",
+    "local_header_href": "#a-name3athreats-to-our-freedom-in-the-digital-society",
+    "chunk_text": "#### <a name=\"3\"></a>Threats to our Freedom in the Digital Society\n\nParticipation in a digital society can be good or bad.\nIt depends: is the society just or unjust?\nIf unjust, extract yourself.\n\nThreats arise from software that the user does not control, i.e. is not free.\n\nFree means 'supporting the freedom of the user, not free of cost.\n\nIn French, 'libre' versus 'gratuit'.\n\nPayment is a minor detail.\nEither way is fine.\nThe issue is not how you obtain the software, but what you get.\n\nDoes your software preserve and support your freedom, or attack it?\n\nDoes the user control the program?\n\nOr does the program control the user?\n\nOur goal is for you to retain control over your life and activities.\n\nFree software must satisfy the following basic criteria:\n\n- Freedom to run the program.\n- Freedom to study and modify the program, i.e., access to source code.\n- Collective control, enabling users to participate in and affect the development, either as programmers or just with ideas, needs and wishes.\n- Redistribution rights, including optional modifications, for free or for a charge.\n\nProprietary software is a scheme to enslave people.\n\nActually, it's worse... that is what it was like 30 years ago.\n\nNowadays, the proprietary owners are fully aware of their power and are willing to use this power to hurt their users.\n\nNon-free software is often malware, intentionally designed to hurt the user, e.g., spy on him or her.\n\nComputer systems and most portable phones are equipped with a universal backdoor that enables them to be accessed, manipulated and exploited without the user's consent or knowledge.\n\n[gnu.org/proprietary](http://www.gnu.org/proprietary) provides a list of other proprietary malware.\n\nThe only known defence against proprietary malware is free software."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"4\"></a>GNU and Linux",
+    "local_header_href": "#a-name4agnu-and-linux",
+    "chunk_text": "#### <a name=\"4\"></a>GNU and Linux\n\n[GNU](https://en.wikipedia.org/wiki/GNU) is a completely\nfree [OS](https://en.wikipedia.org/wiki/Operating_system).\n\nIt was completed in 1992 by adding\nthe [Linux](https://en.wikipedia.org/wiki/Linux) kernel.\n\nInitially proprietary software, Linux was implemented, converted to free software, and integrated into the GNU OS\nby [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) in 1992.\n\nPlease give GNU equal mention and always show a GNU together with the Linux penguin.\n\nMany GNU distributions nowadays are only partially free.\n\n[gnu.org/distros](http://www.gnu.org/distros) provides a list of them.\n\nUbuntu is a non-free distro."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"5\"></a>JavaScript",
+    "local_header_href": "#a-name5ajavascript",
+    "chunk_text": "#### <a name=\"5\"></a>JavaScript\n\nJavaScript programs can be free or non-free.\n\nThe [libre.js]() library detects and blocks non-free JavaScript programs."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"6\"></a>Software as a Service",
+    "local_header_href": "#a-name6asoftware-as-a-service",
+    "chunk_text": "#### <a name=\"6\"></a>Software as a Service\n\nSoftware as a service gives up control completely.\n\nNever use SaaS instead of a local program on your own system, except for communication activities, e.g., distinguish between your own computing and joint activities.\n\nSaaS obviously enables even easier spying on the user; SaaS makes all user data available to the service provider.\n\nSaaS opens up an even greater universal back door, of course, and new software beyond your control can be installed at any time."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"7\"></a>Open Source versus Free Software",
+    "local_header_href": "#a-name7aopen-source-versus-free-software",
+    "chunk_text": "#### <a name=\"7\"></a>Open Source versus Free Software\n\nOpen source is a different idea.\n\nFree software is about giving users freedom.\n\nOpen source  started in 1998 to disconnect the FSF achievements from the FSF philosophy.\n\nThe open source proponents talk about practical aspects only, no philosophy.\n\nOpen source  is not a movement and not based on principles.\n\nRsm is often associated with open source; he objects to that, and quips:\n\n> If I am the father of open source, it was through artificial insemination with stolen sperm and without my knowledge or consent."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"8\"></a>Free Software Evangelism",
+    "local_header_href": "#a-name8afree-software-evangelism",
+    "chunk_text": "#### <a name=\"8\"></a>Free Software Evangelism\n\nSchools should teach reverse engineering.\n\nSchools should teach free software only.\n\nTeaching is about sharing knowledge, which is sabotaged by proprietary software.\n\nGovernments must also move to free software.\n\nAnything else attacks the computational sovereignty of the nation.\n\nIt is the government's duty to the population.\n\nHere are some [measures governments can use to promote free software](http://www.gnu.org/philosophy/government-free-software.html).\n\nHuman rights depend on each other, e.g., speech, association, press, assembly, free software, etc.\n\nRestricting any one of these rights will undermine all the others as well.\n\nHow to help?\n\n- Write free software\n- Become an activist\n- Persuade schools and governments\n- Help other users\n- Use the term 'free software'"
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"9\"></a>Surveillance",
+    "local_header_href": "#a-name9asurveillance",
+    "chunk_text": "#### <a name=\"9\"></a>Surveillance\n\nAnother threat is surveillance.\n\nWe are subject to a lot of surveillance.\n\nThat threatens democracy.\n\nSurveillance should be allowed only for a specific purpose for a specific limited period of time and by a court order.\n\nCameras in public locations should not be permitted to be accessible through the Internet. Otherwise, it becomes all too easy to implement automatic continuous global surveillance. Face recognition, even just from a picture of the back of a person's head.\n\nInternet purchasing should be anonymous.\n\nIt should be illegal to collect the amounts of data being collected today.\n\nFor more background information, please refer\nto [gnu.org/philosophy/surveillance-vs-democracy](http://www.gnu.org/philosophy/surveillance-vs-democracy).\n\nWhistle-blowers like Edward Snowden are needed."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"10\"></a>Censorship",
+    "local_header_href": "#a-name10acensorship",
+    "chunk_text": "#### <a name=\"10\"></a>Censorship\n\nCensorship is another threat to freedom.\n\nThe Internet can be censored, and it is.\n\nLots of concrete examples from Finland, Turkey, UK, Australia, India, etc.\n\n<!--\ne.g. finland blocks porn sites\nan individual studied which sites were blocked\nhe published his results\nas a result, his site was blocked\nhe took the case to supreme court and they ruled that he could indeed be censored... violating the law?\nturkey censors the internet, poeople protested and were ignored\nthe uk censors the internet\naustralia censors individual links\nindia censors heavily when religions are addressed\n-->\n\n[Icecat](https://en.wikipedia.org/wiki/GNU_IceCat) is a variant of Firefox protecting user privacy.\n\nServe the user instead of the web sites.\n\nAvoid all services that offer to hold your data for you, now being incorporated into mobile devices.\n\nYou can protect yourself by encrypting all your data with free software on your own machine before placing it on any site that you do not control yourself."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"11\"></a>Voting Systems",
+    "local_header_href": "#a-name11avoting-systems",
+    "chunk_text": "#### <a name=\"11\"></a>Voting Systems\n\nVoting systems are designed to prevent fraud and collect all data required.\n\nIf this is managed by a computer, only experts can control it.\n\nIn a computer based system, there is no way to audit the results.\n\nIt becomes just as easy to commit a big fraud as a small one.\n\nInternet voting is even worse, of course.\n\n[Stallman.org](https://stallman.org) includes a page on [flaws in Internet voting and computer voting](https://stallman.org/evoting.html) of any kind."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"12\"></a>The War on Sharing",
+    "local_header_href": "#a-name12athe-war-on-sharing",
+    "chunk_text": "#### <a name=\"12\"></a>The War on Sharing\n\nDigital technology makes it easy to share.\n\nThe copyright industry is waging war on users to stop this.\n\nFirst it was just propaganda, e.g. labelling sharing as 'piracy'.\n\nPirates do really bad things.\n\nSharing things with you fellow human beings is good."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"13\"></a>DRM &ndash; Digital Management of Rights or Restrictions?",
+    "local_header_href": "#a-name13adrm-ndash-digital-management-of-rights-or-restrictions",
+    "chunk_text": "#### <a name=\"13\"></a>DRM &ndash; Digital Management of Rights or Restrictions?\n\nNow copyright issues are perverting the software using tools like DRM, Digital Restrictions Management (Ed: more commonly used as an acronym for [Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)).\n\nThe USA adopted the [Digital Millennium Copyright Act](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act),\nselling out to business.\n\nSharing is a right that we need to have."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"14\"></a>Sharing Art",
+    "local_header_href": "#a-name14asharing-art",
+    "chunk_text": "#### <a name=\"14\"></a>Sharing Art\n\nCopying is not stealing from the artists... publishing often is.\n\nCompensation to an artist is due when they do something for you, live.\n\nWe do not have a debt to anybody for appreciating a copy of something they once did.\n\nThe rights holders are often the publishers, not the artists.\n\nThought on fair ways to distribute income to artists using the cube root of their popularity..."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"15\"></a>Issues in Switzerland",
+    "local_header_href": "#a-name15aissues-in-switzerland",
+    "chunk_text": "#### <a name=\"15\"></a>Issues in Switzerland\n\nSwitzerland is planning to surrender to the aristocrats again and impose an unjust copyright rule.\n\nMandatory Internet filtering for Switzerland is under discussion, and requiring ISPs to block access to Internet sites.\n\nThe [DMCA Takedown system](http://www.dmca.com/FAQ/What-is-a-DMCA-Takedown),\na USA law, a platform has to take down Internet content accused of being copyrighted for ten days, even if the accusation is false.\n\nGoogle set up a content identification system, checks each posting and tries to match all material against anything that anyone ever complained about copyright infringement.\n\nSwitzerland is considering making a content id required for all platforms.\n\nThey are even talking to making public libraries pay for people borrowing books.\n\nISPs may be forced to reveal the identities of their users.\n\nThey also plan to violate the human rights by distributing the right to collecting societies to license and charge for everything, including other peoples work, even when published under a creative commons license: Urheberrechtsemission (?)\n\nRegarding censorship, a law is being discussed in parliament next month planning censorship of online gaming.\n\nBy the way, 'intellectual property' is a confusing term to use, because it lumps together completely different things, e.g. patents, copyrights, trademarks, etc.\n\nYou should never use that term. It spreads confusion. Keep the separate aspects in your mind."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"16\"></a>Digital Freedom of Speech",
+    "local_header_href": "#a-name16adigital-freedom-of-speech",
+    "chunk_text": "#### <a name=\"16\"></a>Digital Freedom of Speech\n\nAnyone can paint a sign and walk up and down the streets displaying an opinion to fellow citizens.\n\nThis right must be guaranteed in the digital society as well.\n\nHowever, publishing anything on the Internet requires the cooperation of your ISP, web hosting provider and other companies.\n\nThey can and do cut you off arbitrarily at any time.\n\nWikileaks has not violated any laws and never been prosecuted.\n\nHowever, Amazon arbitrarily reinterpreted their own terms of service to cut them off.\n\nThe Swiss domain [wikileaks.ch](https://wikileaks.ch) still exists, even though the USA government tried to block it.\n\nPayments were blocked by credit card companies. In Iceland, this blocking was declared illegal by law and revoked.\n\nWe have to make it impossible to cut off controversial services."
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"17\"></a>Auction of an Adorable GNU",
+    "local_header_href": "#a-name17aauction-of-an-adorable-gnu",
+    "chunk_text": "#### <a name=\"17\"></a>Auction of an Adorable GNU\n\nThe presentation was closed with the public auction of an adorable GNU for the benefit of the FSF, opening at chf 25 and closing at chf 250.\n\n<center>\n<img src=\"/p/2016/2016-02-05_bern/904_rms_adorable_gnu_cropped_600x580.jpg\" alt=\"Richard Stallman and the adorable GNU\" width=\"600\">\n</center>"
+  },
+  {
+    "original_filename": "1403_stallman_fsf",
+    "header_text": "<a name=\"18\"></a>Addendum &ndash; Recording of the Entire Presentation",
+    "local_header_href": "#a-name18aaddendum-ndash-recording-of-the-entire-presentation",
+    "chunk_text": "#### <a name=\"18\"></a>Addendum &ndash; Recording of the Entire Presentation\n\nThe Bern University digital sustainability group *Forschungsstelle Digitale Nachhaltigkeit* published\na [summary and two-hour recording](http://www.digitale-nachhaltigkeit.unibe.ch/veranstaltungen/richard_m_stallman/index_ger.html) or Rms' presentation:\n\n<center>\n<iframe width=\"450\" height=\"253\" src=\"https://www.youtube.com/embed/7ZSPf7YnGfE?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n</center>"
+  }
+]

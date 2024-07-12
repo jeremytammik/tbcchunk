@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0511_ps_video",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0511_ps_video",
+    "header_text": "84 Second Product Support Overview",
+    "local_header_href": "#84-second-product-support-overview",
+    "chunk_text": "<h3>84 Second Product Support Overview</h3><p>As you know, I work in the AEC workgroup of the ADN or\n\n<a href=\"http://www.autodesk.com/joinadn\">\nAutodesk Developer Network</a> DevTech \n\norganisation, providing support to developers making use of Autodesk products and their application programming interfaces (APIs).\n\nADN is part of the Autodesk support organisation.\nAnother, much larger part of the support organisation is the product support team, which resolves end user issues.\n\n<p>For a really quick overview of the E-Services provided by Autodesk Product Support, you can have a look at this new \n\n<a href=\"http://www.youtube.com/watch?v=Ylj0o-R_Zn0\">\n84 second YouTube video</a> by\n\nRoberto Sigona, Vice President of Autodesk Product Support.</p>\n<object height=\"385\" width=\"640\"><param name=\"movie\" value=\"http://www.youtube.com/v/Ylj0o-R_Zn0?fs=1&amp;hl=en_US\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"385\" src=\"http://www.youtube.com/v/Ylj0o-R_Zn0?fs=1&amp;hl=en_US\" type=\"application/x-shockwave-flash\" width=\"640\"/></object>\n<p>Roberto speaks about available options for self-help technical support including Autodesk knowledgebase, blogs and community forums. \nTo learn more about these support services, please visit \n\n<a href=\"http://www.autodesk.com/support\">\nwww.autodesk.com/support</a>.\n</p></p>"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<script src=\"http://thebuildingcoder.typepad.com/google-code-prettify/run_prettify.js\"></script>\n</head>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "The Developer Guide is Back on WikiHelp",
+    "local_header_href": "#the-developer-guide-is-back-on-wikihelp",
+    "chunk_text": "<h3>The Developer Guide is Back on WikiHelp</h3><p>Let's look at a couple of topics today, in order of decreasing relevance to the Revit API:</p><ul>\n<li><a href=\"#2\">The Revit API developer's guide on Autodesk help</a></li>\n<li><a href=\"#3\">Using Dynamic Update and Extensible Storage in family documents</a></li>\n<li><a href=\"#4\">3D modelling in a browser</a></li>\n<li><a href=\"#5\">3D access to Smithsonian historic artefacts</a></li>\n<li><a href=\"#6\">Comet ISON may be visible in daylight soon</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "The Revit API Developer's Guide is Live on Autodesk Help",
+    "local_header_href": "#the-revit-api-developers-guide-is-live-on-autodesk-help",
+    "chunk_text": "<h4>The Revit API Developer's Guide is Live on Autodesk Help</h4><p>The title says it all.</p><p>Here is the link to the\n\n<a href=\"http://help.autodesk.com/view/RVT/2014/ENU/?guid=GUID-F0A122E0-E556-4D0D-9D0F-7E72A9315A42\">\nRevit 2014 API Developers Guide table of contents</a>.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "Using Dynamic Update and Extensible Storage in Family Documents",
+    "local_header_href": "#using-dynamic-update-and-extensible-storage-in-family-documents",
+    "chunk_text": "<h4>Using Dynamic Update and Extensible Storage in Family Documents</h4><p><strong>Question:</strong> Is it possible to use the Dynamic Update and Extensible Storage at family document level, so tracking can be performed automatically, e.g. adding timestamp information for each modification of that family?</p><p><strong>Answer:</strong> Yes, absolutely.\nThere is no difference between a project and a family document in this regard.\nHere is a complete list of The Building Coder\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.23\">\nextensible storage related topics</a>.\n\n<p>One of the extensible storage samples in the AU class demonstrates how to transfer extensible storage information from a family definition to the family instances placed in the project environement.</p>\n<a name=\"4\"></a>\n<h4>Autodesk Provides 3D Design in a Browser</h4>\n<p>Here is an interesting forward-looking article on Autodesk's collaboration to\n\n<a href=\"http://www.revitcommunity.com/feature_full_guest.php?cpfeatureid=78218\">\nenable powerful 3D modelling in any browser</a>.</p>\n<p>The next nice-to-have step for Revit add-in developers would obviously be to offload all heavy processing to a cloud based instance of Revit, use the modelling technology to drive the cloud based Revit instance and return the results to the desktop.</p>\n<p>The future will tell.</p>\n<a name=\"5\"></a>\n<h4>3D Access to Smithsonian Historic Artefacts</h4>\n<p>Sticking with the theme of cloud-based modelling and viewing, the Smithsonian is now collaborating with Autodesk to upload and provide access to it’s most iconic historic artefacts on the Internet in 3D, ranging from the fossil of a woolly mammoth to the 1903 'Wright Flyer' first flown by the Wright Brothers, using the\n\n<a href=\"http://3d.si.edu/browser\">\nX3D Explorer</a>.</p>\n<center>\n<img alt=\"Smithsonian artefact\" src=\"img/smithsonian1.jpeg\" width=\"400\"/>\n</center>\n<p>For more details, here are articles on this from\n\n<a href=\"http://www.forbes.com/sites/ericmack/2013/11/13/smithsonian-now-allows-anyone-to-3d-print-some-historic-artifacts\">Forbes</a>,\n\n<a href=\"http://gizmodo.com/the-smithsonian-is-uploading-its-lost-treasures-to-the-1462571440\">Gizmodo</a>,\n\n<a href=\"http://news.cnet.com/8301-1023_3-57612120-93/smithsonian-now-lets-you-view-artifacts-in-3d\">CNET</a>,\n\n<a href=\"http://www.fastcoexist.com/3021626/explore-the-smithsonians-best-exhibits-in-3-d-from-your-couch\">Fast Company</a> and\n\n<a href=\"http://www.buzzfeed.com/autodesk/visit-the-smithsonian-from-your-couch-or-classroo-b3y4\">BuzzFeed</a>.</p>\n<center>\n<img alt=\"Smithsonian artefact\" src=\"img/smithsonian2.jpeg\" width=\"400\"/>\n</center>\n<a name=\"6\"></a>\n<h4>Comet ISON</h4>\n<p>Let's end off by returning back from the digital world to Mother Nature, and getting ready to admire the\n\n<a href=\"http://www.cinemablend.com/pop/Comet-ISON-May-Visible-Daylight-2013-50858.html\">comet ISON</a>,\n\nwhich may soon be visible in daylight in 2013.</p>\n<p>This is a chance in a lifetime.</p>\n<p>Pray for a clear sky.</p>\n</p>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "Autodesk Provides 3D Design in a Browser",
+    "local_header_href": "#autodesk-provides-3d-design-in-a-browser",
+    "chunk_text": "<h4>Autodesk Provides 3D Design in a Browser</h4><p>Here is an interesting forward-looking article on Autodesk's collaboration to\n\n<a href=\"http://www.revitcommunity.com/feature_full_guest.php?cpfeatureid=78218\">\nenable powerful 3D modelling in any browser</a>.</p><p>The next nice-to-have step for Revit add-in developers would obviously be to offload all heavy processing to a cloud based instance of Revit, use the modelling technology to drive the cloud based Revit instance and return the results to the desktop.</p><p>The future will tell.</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "3D Access to Smithsonian Historic Artefacts",
+    "local_header_href": "#3d-access-to-smithsonian-historic-artefacts",
+    "chunk_text": "<h4>3D Access to Smithsonian Historic Artefacts</h4><p>Sticking with the theme of cloud-based modelling and viewing, the Smithsonian is now collaborating with Autodesk to upload and provide access to it’s most iconic historic artefacts on the Internet in 3D, ranging from the fossil of a woolly mammoth to the 1903 'Wright Flyer' first flown by the Wright Brothers, using the\n\n<a href=\"http://3d.si.edu/browser\">\nX3D Explorer</a>.</p><center>\n<img alt=\"Smithsonian artefact\" src=\"img/smithsonian1.jpeg\" width=\"400\"/>\n</center><p>For more details, here are articles on this from\n\n<a href=\"http://www.forbes.com/sites/ericmack/2013/11/13/smithsonian-now-allows-anyone-to-3d-print-some-historic-artifacts\">Forbes</a>,\n\n<a href=\"http://gizmodo.com/the-smithsonian-is-uploading-its-lost-treasures-to-the-1462571440\">Gizmodo</a>,\n\n<a href=\"http://news.cnet.com/8301-1023_3-57612120-93/smithsonian-now-lets-you-view-artifacts-in-3d\">CNET</a>,\n\n<a href=\"http://www.fastcoexist.com/3021626/explore-the-smithsonians-best-exhibits-in-3-d-from-your-couch\">Fast Company</a> and\n\n<a href=\"http://www.buzzfeed.com/autodesk/visit-the-smithsonian-from-your-couch-or-classroo-b3y4\">BuzzFeed</a>.</p><center>\n<img alt=\"Smithsonian artefact\" src=\"img/smithsonian2.jpeg\" width=\"400\"/>\n</center><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "1058_wikihelp_is_back",
+    "header_text": "Comet ISON",
+    "local_header_href": "#comet-ison",
+    "chunk_text": "<h4>Comet ISON</h4><p>Let's end off by returning back from the digital world to Mother Nature, and getting ready to admire the\n\n<a href=\"http://www.cinemablend.com/pop/Comet-ISON-May-Visible-Daylight-2013-50858.html\">comet ISON</a>,\n\nwhich may soon be visible in daylight in 2013.</p><p>This is a chance in a lifetime.</p><p>Pray for a clear sky.</p>"
+  }
+]

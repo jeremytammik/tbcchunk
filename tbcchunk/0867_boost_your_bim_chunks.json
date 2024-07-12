@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0867_boost_your_bim",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0867_boost_your_bim",
+    "header_text": "Boost Your BIM and Dance with an Elephant",
+    "local_header_href": "#boost-your-bim-and-dance-with-an-elephant",
+    "chunk_text": "<h3>Boost Your BIM and Dance with an Elephant</h3><p>Advent, advent!\nYet another Revit API focused blog is born!\n\n<p>Harry Mattison, ex Revit API development team, has initiated\n\n<a href=\"http://boostyourbim.wordpress.com\">\nBoost Your BIM</a> and\n\nkicked it off with a series on using the built-in\n\n<a href=\"http://www.icsharpcode.net/OpenSource/SD/Default.aspx\">\nSharpDevelop</a> development\n\nenvironment Revit macros to resolve duplicate tags:\n\n<ol>\n<li><a href=\"http://boostyourbim.wordpress.com/2012/12/03/resolving-duplicate-tags-step-1-finding-elements\">Finding elements</a>\n<li><a href=\"http://boostyourbim.wordpress.com/2012/12/03/resolving-duplicate-tags-step-2\">Finding only family instances</a>\n<li><a href=\"http://boostyourbim.wordpress.com/2012/12/03/resolving-duplicate-tags-step-3-get-set-parameter-values\">Get &amp; set parameter values</a>\n<li><a href=\"http://boostyourbim.wordpress.com/2012/12/04/resolving-duplicate-tags-step-4-transactions-and-wrapping-up\">Transactions and wrapping up</a>\n</li></li></li></li></ol>\n<p>Thank you, Harry, and the best of luck to you and your new blog!</p>\n<a name=\"2\"></a>\n<h4>Dances with Elephants</h4>\n<p>Also, for a more high-level strategic vision of things, don't forget to take a look now and then at Jim Quanci's\n\n<a href=\"http://dances-with-elephants.typepad.com\">\nDances with Elephants</a>.\n\n<p>Jim analyses how small companies can leverage big ones to help build their business, useful tactics eminently applicable to many Revit add-in developers.\n\n<p>He recently posted a number of exciting new essays, so I encourage you to go take a\n\n<a href=\"http://en.wiktionary.org/wiki/take_a_gander\">gander</a>.</p>\n</p></p></p></p>"
+  },
+  {
+    "original_filename": "0867_boost_your_bim",
+    "header_text": "Dances with Elephants",
+    "local_header_href": "#dances-with-elephants",
+    "chunk_text": "<h4>Dances with Elephants</h4><p>Also, for a more high-level strategic vision of things, don't forget to take a look now and then at Jim Quanci's\n\n<a href=\"http://dances-with-elephants.typepad.com\">\nDances with Elephants</a>.\n\n<p>Jim analyses how small companies can leverage big ones to help build their business, useful tactics eminently applicable to many Revit add-in developers.\n\n<p>He recently posted a number of exciting new essays, so I encourage you to go take a\n\n<a href=\"http://en.wiktionary.org/wiki/take_a_gander\">gander</a>.</p>\n</p></p>"
+  }
+]

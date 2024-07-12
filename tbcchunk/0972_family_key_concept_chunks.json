@@ -1,0 +1,206 @@
+[
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Key Concepts of the Family Editor",
+    "local_header_href": "#key-concepts-of-the-family-editor",
+    "chunk_text": "<h3>Key Concepts of the Family Editor</h3><p>Today I am returning back home from the very successful\n\n<a href=\"http://www.autodesk.ru/adsk/servlet/pc/index?id=21516340&amp;siteID=871736\">\nRevit API DevCamp in Moscow</a>.</p><p>We received very good feedback from the participating developers who were so excited to learn about Revit programming that they ignored the hot environment, the unbearable sound of the false fire alarm and crazy running down the exterior staircase and back up again to the Autodesk offices on the 17<sup>th</sup> floor.</p><p>Here is Артур Кураков (Artur Kurakov) teaching one of the Revit API beginner sessions:</p><center>\n<img alt=\"\" src=\"file:////j/photo/jeremy/2013/2013-06-25_moscow/p6240127.jpg\" width=\"400\"/>\n</center><p>I presented in three sessions, on the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/03/revit-2014-api-and-room-plan-view-boundary-polygon-loops.html#2\">\nRevit 2014 API</a>,\n\nmy\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/05/my-cloud-based-2d-editor-implementation-status.html\">\n2D round-trip cloud-based Revit model editor</a>,\n\nand, together with my colleague Steven Campbell, Revit Content Project Manager and our resident Revit family expert, on the <i>Key Concepts of the Family Editor</i>.</p><p>Steve demonstrates the basics and some advanced aspects of the manual creation of a Revit family, key concepts that you as a Revit add-in developer absolutely must be aware of.</p><p>I had the honour and pleasure of helping out by implementing some sample add-in commands that I am rather happy with, showing how to drive families and their instances programmatically in the Revit project environment.\nWe'll get to those in a moment.</p><p>Let's start out with Steve's presentations:</p><ul>\n<li><a href=\"#2\">Key family concepts</a></li>\n<li><a href=\"#2b\">Building your first parametric Revit family</a></li>\n<li><a href=\"#3\">Key family concepts slide deck bullets</a></li>\n<li><a href=\"#3b\">Building your first parametric Revit family slide deck bullets</a></li>\n<li><a href=\"#4\">Complete illustrated slide decks</a></li>\n<li><a href=\"#5\">Family API topics</a></li>\n<!--\n<li><a href=\"#5\">Load family and place instances</a></li>\n<li><a href=\"#6\">Pick interaction and modify instances</a></li>\n<li><a href=\"#7\">Instance and symbol retrieval, nested type modification</a></li>\n-->\n</ul><p>Here are the two class descriptions, to define the context:</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "1-4 – Key Concepts of the Family Editor – Steve Campbell (Стив Кэмпбелл)",
+    "local_header_href": "#1-4-key-concepts-of-the-family-editor-steve-campbell-стив-кэмпбелл",
+    "chunk_text": "<h4>1-4 – Key Concepts of the Family Editor – Steve Campbell (Стив Кэмпбелл)</h4><p>Mastering Revit family creation is a key to the success when using Revit.\nThe same is true for Revit programmers.\nThe use of Family API is largely analogous to the UI.\nCreating a family without fully understanding how Revit families work may lead to a bumpy road later on with your tasks.\nKnowing how much you can get through proper use of families opens infinite possibilities.\nThis session offers an effective opportunity to learn directly from the family content expert, covering the following topics:</p><ul>\n<li>Best practices</li>\n<li>Constraints – bone, muscle and skin analogy</li>\n<li>Types versus instances</li>\n<li>Family template selection</li>\n</ul><a name=\"2b\"></a>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "1-5 – Building Your First Parametric Revit Family – Steve Campbell and Jeremy Tammik (Стив Кэмпбелл и Джереми Тэммик)",
+    "local_header_href": "#1-5-building-your-first-parametric-revit-family-steve-campbell-and-jeremy-tammik-стив-кэмпбелл-и-джереми-тэммик",
+    "chunk_text": "<h4>1-5 – Building Your First Parametric Revit Family – Steve Campbell and Jeremy Tammik (Стив Кэмпбелл и Джереми Тэммик)</h4><p>This is the continuation of the basic class on the key concepts of the family editor, presenting the following topics:\n\n<ul>\n<li>Building your first parametric Revit family</li>\n<li>Driving nested families</li>\n<li>Programmatic use of families: place and modify instances, etc.</li>\n</ul>\n<p>To give you a rough idea of the presentation contents, here is quick run-down of the slide deck bullet points:</p>\n<a name=\"3\"></a>\n<h4>Key Concepts of the Family Editor – Slide Deck Bullets</h4>\n<h5>Families</h5>\n<p>What is a family?</p>\n<p>A family is a group of elements with a common set of properties, called parameters, constraints, and a related graphical representations.</p>\n<h5>Types of Families:</h5>\n<p>System vs. Standalone vs. In Place</p>\n<p>System Families:</p>\n<p>Typically assemblies that are constructed on the construction site</p>\n<p>Wall, Floors, Roofs, Ceiling, with some exceptions...</p>\n<p>They only exist in a project or template file.</p>\n<p>Standalone or \"Loadable\" Families:</p>\n<p>Typically are manufactured pieces that are delivered to the construction site ready to install. They are intended to be used across many projects. Example: Windows, Doors, Light Fixtures, etc…</p>\n<p>They are individual .rfa files.</p>\n<p>In Place Families:</p>\n<p>Project unique, built on site items that is stored only in the project.</p>\n<h5>Bone, Muscle and Skin:</h5>\n<p>So what is the best, most reliable way to build a family?</p>\n<p>Build with the Bone, Muscle and Skin method.</p>\n<p>Why?</p>\n<p>Highest level of constraint is a labeled dimension attached to a reference plane.</p>\n<p>The Bones, Muscle and Skin method describes the family as:</p>\n<p>Bones = Reference Planes &amp; Reference Lines</p>\n<p>Muscle = Dimension, Label Parameters, Automatic Sketch Dimensions</p>\n<p>Skin = Solids/Voids and Symbolic Linework</p>\n<p>Blog Post by Steve Stafford:\n\n<a href=\"http://revitoped.blogspot.de/2009/04/family-editor-bones-muscle-skin.html\">\nThe Family Editor: Bones, Muscle &amp; Skin</a></p>\n<h5>The Bones: Workplanes</h5>\n<p>A work plane is a virtual 2-dimensional surface.</p>\n<p>A work plane is used in the following ways:</p>\n<ul>\n<li>as the origin for a view</li>\n<li>for sketching elements on</li>\n<li>for placing work plane-based components on</li>\n</ul>\n<p>Reference planes are the bones of a family</p>\n<ul>\n<li>They are a defined infinite plane in space</li>\n<li>They are intended to drive the geometric constraints</li>\n</ul>\n<p>They have the added capability of defining the origin in a family, dimensioning to a family in a project, control snapping behavior and provide the availability of instance based shape handles.</p>\n<p>Reference Lines are 3D lines with a start and end point that contains 4 workplanes.</p>\n<p>They were designed to specifically for driving angular constraints.</p>\n<h5>The Muscles: Constraints and Parameters</h5>\n<h5>Constraints</h5>\n<p>Constraints are a method of limiting or restricting an elements movement.</p>\n<p>4 Types of constraints in Revit</p>\n<ul>\n<li>Dimensions</li>\n<li>Labeled Parameters</li>\n<li>Automatic Sketch Dimensions</li>\n<li>Pins</li>\n</ul>\n<p>Constraints don't have to be static, they can be driven by a parameter value. Additionally a parameter’s value can also be driven by a formula.</p>\n<h5>Parameters:</h5>\n<p>A Parameter is a setting that determines the appearance or behavior of an element, type, or view.</p>\n<p>Parameters store and communicate information about all elements in a model. Parameters are used to define and modify elements, as well as to communicate model information in tags and schedules.</p>\n<p>Parameter Types:</p>\n<p>3 basic types:</p>\n<p>System, Family and Shared parameters…</p>\n<p>System Parameters:</p>\n<p>Are built in parameters defined in the software, they can't be removed or renamed, but they do schedule.</p>\n<p>Note: when the parameter is selected in the Family Types dialog modify button is greyed out.</p>\n<p>Family Parameters:</p>\n<p>Are user based parameters that don't schedule.</p>\n<p>Shared Parameters:</p>\n<p>Are user based parameter with a shared definition and GUID that do schedule. The definition is stored in a shared parameter file, so the parameter can be loaded into many families.</p>\n<h5>Parameter Data:</h5>\n<p>Type Based Parameters:</p>\n<p>Predefined size typical that can be found in a manufactures catalog.</p>\n<p>Instance Based Parameters:</p>\n<p>Variable based user input parameters used on items the can come in any length, like a wide flange beam is manufactured to any length the structure engineer requires. In this case the length of the beam is instance based.</p>\n<p>Reporting Parameter:</p>\n<p>Instance based parameter that can extract a value from a generic condition. This type of parameter can only be a length or angle.</p>\n<h5>The Skin: Elements</h5>\n<p>There are 4 types of elements:</p>\n<ul>\n<li>Model</li>\n<li>View specific</li>\n<li>View element</li>\n<li>Datum elements</li>\n</ul>\n<p>Model Elements: (available in all views)</p>\n<ul>\n<li>Solids and Voids</li>\n<li>Extrusions, Blend, Revolve, Sweep and Swept Blend</li>\n<li>Model Lines</li>\n</ul>\n<p>View Specific: (available in the views created in)</p>\n<ul>\n<li>Symbolic Lines</li>\n<li>Detail Lines</li>\n</ul>\n<p>Each have element properties, for example:</p>\n<p>Model Elements:</p>\n<ul>\n<li>Subcategory</li>\n<li>Material</li>\n<li>Visible</li>\n<li>Visibility/Graphics</li>\n</ul>\n<p>These properties can be used to control how an element looks and is displayed, along with other properties of that element.</p>\n<h5>Where do I start?</h5>\n<h5>Family Templates:</h5>\n<p>How do I decide which template to start from?</p>\n<p>Don't select a template just based on the category, thinking about the functionality first will give you more options.</p>\n<p>Functionality is not tied to the category but is tied to the template.</p>\n<p>The category adds the family parameters, built in parameters and subcategories required for that category. Also this selection will effect how the family schedules.</p>\n<p>Note: It does take some learning all the special cases in Revit.</p>\n<p>Family Templates:</p>\n<p>Decision tree</p>\n<p>2D vs. 3D family?</p>\n<p>2D – What is the use?</p>\n<ul>\n<li>Detail Item</li>\n<li>Profile</li>\n<li>Annotation</li>\n<li>Titleblock</li>\n</ul>\n<p>3D – Does the family require specific functionality?</p>\n<p>Yes – What is the special functionality for?</p>\n<ul>\n<li>Baluster</li>\n<li>Structural Framing</li>\n<li>Rebar</li>\n<li>Pattern Based</li>\n</ul>\n<p>No – Does the family require a host?</p>\n<p>Yes – Which host?</p>\n<ul>\n<li>Wall Based</li>\n<li>Ceiling Based</li>\n<li>Floor Based</li>\n<li>Roof Based</li>\n<li>Face Based</li>\n</ul>\n<p>No – Then chose from:</p>\n<ul>\n<li>Standalone (Level Based)</li>\n<li>2 Level Based (Column)</li>\n<li>Line Based</li>\n<li>Adaptive</li>\n</ul>\n<p>Then choose a category.</p>\n<p>Many of the family template are open to multiple categories giving you different functionality depending on your choices.</p>\n<p>Example:</p>\n<p>User wants to build an escalator</p>\n<p>If they follow the category first, the user will have adjust the escalator height on placement and any time the floor to floor height changes.</p>\n<p>If they follow the functionality first you can end up with a 2 level aware escalator that re-adjust its size automatically when the floor to floor height changes.</p>\n<p>Template behaviors vs. category behaviors</p>\n<p>Template have behaviors built in in relation to hosting, placement methods or even special editors</p>\n<p>While categories have behaviors that are controlled by the settings in the Family Parameters under Family Category and Parameters dialog.</p>\n<p>Changing the category changes the options available in the Family Parameters list. Some of the options include \"Always Vertical\", \"Cut with Voids When Loaded\" and \"Shared\"</p>\n<p>Additionally setting the category changes the available built in sub-categories and parameters.</p>\n<p>Visual example – Generic Model to Doors</p>\n<h5>The Process:</h5>\n<p>The “process” for building families is the most important aspect of family creation that one needs to learn.</p>\n<h5>Process order:</h5>\n<ol>\n<li>Pick your template</li>\n<li>Plan (Insertion Point, Parametric Origin, etc.)</li>\n<li>Layout Reference Planes (add The Bones)</li>\n<li>Add Parameters and Constraints (add The Muscles)</li>\n<li>Add multiple host thickness types (for testing hosted families)</li>\n<li>Add 2 or more types</li>\n<li>Flex Types and Host (Testing Procedure)</li>\n<li>Add a Single Level of Geometry ( add The Skin)</li>\n<li>Repeat until you are satisfied with the results</li>\n<li>Test in Project Environment (create testing project)</li>\n</ol>\n<h5>Tips for Success:</h5>\n<p>A successful piece of content meets all the users needs for BIM.</p>\n<p>Build not only for the user but how the information will be use along the whole BIM life cycle.</p>\n<p>Ask yourself</p>\n<ul>\n<li>What is your use case? And how will it be used?</li>\n<li>What is the proper level of detail and or level of development for this piece of content?</li></ul></p><p>Additionally try to meet all requirements for: </p><ul>\n<li>Proper graphic representation in all view types.</li>\n<li>Enough information provided to support the down stream applications.</li>\n<li>Good parametrics for the expected use cases.</li>\n<li>Good performance</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Key Concepts of the Family Editor – Slide Deck Bullets",
+    "local_header_href": "#key-concepts-of-the-family-editor-slide-deck-bullets",
+    "chunk_text": "<h4>Key Concepts of the Family Editor – Slide Deck Bullets</h4>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Families",
+    "local_header_href": "#families",
+    "chunk_text": "<h5>Families</h5><p>What is a family?</p><p>A family is a group of elements with a common set of properties, called parameters, constraints, and a related graphical representations.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Types of Families:",
+    "local_header_href": "#types-of-families",
+    "chunk_text": "<h5>Types of Families:</h5><p>System vs. Standalone vs. In Place</p><p>System Families:</p><p>Typically assemblies that are constructed on the construction site</p><p>Wall, Floors, Roofs, Ceiling, with some exceptions...</p><p>They only exist in a project or template file.</p><p>Standalone or \"Loadable\" Families:</p><p>Typically are manufactured pieces that are delivered to the construction site ready to install. They are intended to be used across many projects. Example: Windows, Doors, Light Fixtures, etc…</p><p>They are individual .rfa files.</p><p>In Place Families:</p><p>Project unique, built on site items that is stored only in the project.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Bone, Muscle and Skin:",
+    "local_header_href": "#bone-muscle-and-skin",
+    "chunk_text": "<h5>Bone, Muscle and Skin:</h5><p>So what is the best, most reliable way to build a family?</p><p>Build with the Bone, Muscle and Skin method.</p><p>Why?</p><p>Highest level of constraint is a labeled dimension attached to a reference plane.</p><p>The Bones, Muscle and Skin method describes the family as:</p><p>Bones = Reference Planes &amp; Reference Lines</p><p>Muscle = Dimension, Label Parameters, Automatic Sketch Dimensions</p><p>Skin = Solids/Voids and Symbolic Linework</p><p>Blog Post by Steve Stafford:\n\n<a href=\"http://revitoped.blogspot.de/2009/04/family-editor-bones-muscle-skin.html\">\nThe Family Editor: Bones, Muscle &amp; Skin</a></p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "The Bones: Workplanes",
+    "local_header_href": "#the-bones-workplanes",
+    "chunk_text": "<h5>The Bones: Workplanes</h5><p>A work plane is a virtual 2-dimensional surface.</p><p>A work plane is used in the following ways:</p><ul>\n<li>as the origin for a view</li>\n<li>for sketching elements on</li>\n<li>for placing work plane-based components on</li>\n</ul><p>Reference planes are the bones of a family</p><ul>\n<li>They are a defined infinite plane in space</li>\n<li>They are intended to drive the geometric constraints</li>\n</ul><p>They have the added capability of defining the origin in a family, dimensioning to a family in a project, control snapping behavior and provide the availability of instance based shape handles.</p><p>Reference Lines are 3D lines with a start and end point that contains 4 workplanes.</p><p>They were designed to specifically for driving angular constraints.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "The Muscles: Constraints and Parameters",
+    "local_header_href": "#the-muscles-constraints-and-parameters",
+    "chunk_text": "<h5>The Muscles: Constraints and Parameters</h5>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Constraints",
+    "local_header_href": "#constraints",
+    "chunk_text": "<h5>Constraints</h5><p>Constraints are a method of limiting or restricting an elements movement.</p><p>4 Types of constraints in Revit</p><ul>\n<li>Dimensions</li>\n<li>Labeled Parameters</li>\n<li>Automatic Sketch Dimensions</li>\n<li>Pins</li>\n</ul><p>Constraints don't have to be static, they can be driven by a parameter value. Additionally a parameter’s value can also be driven by a formula.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Parameters:",
+    "local_header_href": "#parameters",
+    "chunk_text": "<h5>Parameters:</h5><p>A Parameter is a setting that determines the appearance or behavior of an element, type, or view.</p><p>Parameters store and communicate information about all elements in a model. Parameters are used to define and modify elements, as well as to communicate model information in tags and schedules.</p><p>Parameter Types:</p><p>3 basic types:</p><p>System, Family and Shared parameters…</p><p>System Parameters:</p><p>Are built in parameters defined in the software, they can't be removed or renamed, but they do schedule.</p><p>Note: when the parameter is selected in the Family Types dialog modify button is greyed out.</p><p>Family Parameters:</p><p>Are user based parameters that don't schedule.</p><p>Shared Parameters:</p><p>Are user based parameter with a shared definition and GUID that do schedule. The definition is stored in a shared parameter file, so the parameter can be loaded into many families.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Parameter Data:",
+    "local_header_href": "#parameter-data",
+    "chunk_text": "<h5>Parameter Data:</h5><p>Type Based Parameters:</p><p>Predefined size typical that can be found in a manufactures catalog.</p><p>Instance Based Parameters:</p><p>Variable based user input parameters used on items the can come in any length, like a wide flange beam is manufactured to any length the structure engineer requires. In this case the length of the beam is instance based.</p><p>Reporting Parameter:</p><p>Instance based parameter that can extract a value from a generic condition. This type of parameter can only be a length or angle.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "The Skin: Elements",
+    "local_header_href": "#the-skin-elements",
+    "chunk_text": "<h5>The Skin: Elements</h5><p>There are 4 types of elements:</p><ul>\n<li>Model</li>\n<li>View specific</li>\n<li>View element</li>\n<li>Datum elements</li>\n</ul><p>Model Elements: (available in all views)</p><ul>\n<li>Solids and Voids</li>\n<li>Extrusions, Blend, Revolve, Sweep and Swept Blend</li>\n<li>Model Lines</li>\n</ul><p>View Specific: (available in the views created in)</p><ul>\n<li>Symbolic Lines</li>\n<li>Detail Lines</li>\n</ul><p>Each have element properties, for example:</p><p>Model Elements:</p><ul>\n<li>Subcategory</li>\n<li>Material</li>\n<li>Visible</li>\n<li>Visibility/Graphics</li>\n</ul><p>These properties can be used to control how an element looks and is displayed, along with other properties of that element.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Where do I start?",
+    "local_header_href": "#where-do-i-start",
+    "chunk_text": "<h5>Where do I start?</h5>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Family Templates:",
+    "local_header_href": "#family-templates",
+    "chunk_text": "<h5>Family Templates:</h5><p>How do I decide which template to start from?</p><p>Don't select a template just based on the category, thinking about the functionality first will give you more options.</p><p>Functionality is not tied to the category but is tied to the template.</p><p>The category adds the family parameters, built in parameters and subcategories required for that category. Also this selection will effect how the family schedules.</p><p>Note: It does take some learning all the special cases in Revit.</p><p>Family Templates:</p><p>Decision tree</p><p>2D vs. 3D family?</p><p>2D – What is the use?</p><ul>\n<li>Detail Item</li>\n<li>Profile</li>\n<li>Annotation</li>\n<li>Titleblock</li>\n</ul><p>3D – Does the family require specific functionality?</p><p>Yes – What is the special functionality for?</p><ul>\n<li>Baluster</li>\n<li>Structural Framing</li>\n<li>Rebar</li>\n<li>Pattern Based</li>\n</ul><p>No – Does the family require a host?</p><p>Yes – Which host?</p><ul>\n<li>Wall Based</li>\n<li>Ceiling Based</li>\n<li>Floor Based</li>\n<li>Roof Based</li>\n<li>Face Based</li>\n</ul><p>No – Then chose from:</p><ul>\n<li>Standalone (Level Based)</li>\n<li>2 Level Based (Column)</li>\n<li>Line Based</li>\n<li>Adaptive</li>\n</ul><p>Then choose a category.</p><p>Many of the family template are open to multiple categories giving you different functionality depending on your choices.</p><p>Example:</p><p>User wants to build an escalator</p><p>If they follow the category first, the user will have adjust the escalator height on placement and any time the floor to floor height changes.</p><p>If they follow the functionality first you can end up with a 2 level aware escalator that re-adjust its size automatically when the floor to floor height changes.</p><p>Template behaviors vs. category behaviors</p><p>Template have behaviors built in in relation to hosting, placement methods or even special editors</p><p>While categories have behaviors that are controlled by the settings in the Family Parameters under Family Category and Parameters dialog.</p><p>Changing the category changes the options available in the Family Parameters list. Some of the options include \"Always Vertical\", \"Cut with Voids When Loaded\" and \"Shared\"</p><p>Additionally setting the category changes the available built in sub-categories and parameters.</p><p>Visual example – Generic Model to Doors</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "The Process:",
+    "local_header_href": "#the-process",
+    "chunk_text": "<h5>The Process:</h5><p>The “process” for building families is the most important aspect of family creation that one needs to learn.</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Process order:",
+    "local_header_href": "#process-order",
+    "chunk_text": "<h5>Process order:</h5><ol>\n<li>Pick your template</li>\n<li>Plan (Insertion Point, Parametric Origin, etc.)</li>\n<li>Layout Reference Planes (add The Bones)</li>\n<li>Add Parameters and Constraints (add The Muscles)</li>\n<li>Add multiple host thickness types (for testing hosted families)</li>\n<li>Add 2 or more types</li>\n<li>Flex Types and Host (Testing Procedure)</li>\n<li>Add a Single Level of Geometry ( add The Skin)</li>\n<li>Repeat until you are satisfied with the results</li>\n<li>Test in Project Environment (create testing project)</li>\n</ol>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Tips for Success:",
+    "local_header_href": "#tips-for-success",
+    "chunk_text": "<h5>Tips for Success:</h5><p>A successful piece of content meets all the users needs for BIM.</p><p>Build not only for the user but how the information will be use along the whole BIM life cycle.</p><p>Ask yourself</p><ul>\n<li>What is your use case? And how will it be used?</li>\n<li>What is the proper level of detail and or level of development for this piece of content?</li></ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Additional Topics:",
+    "local_header_href": "#additional-topics",
+    "chunk_text": "<h5>Additional Topics:</h5><ul>\n<li>Type Catalogs</li>\n<li>Is Reference</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Type Catalogs:",
+    "local_header_href": "#type-catalogs",
+    "chunk_text": "<h5>Type Catalogs:</h5><p>Type Catalogs are an external group of types or catalog of a family in a delimited text format. Type catalog allow the user to selectively load a type from a long list.</p><p>The type catalog name must match the family name but with a .txt extension.</p><p>Tip:</p><p>The simplest way to create a type catalog is to export the current types by:</p><p>Click \"R\" &gt; Export &gt; (Family Types).</p><p>Open the file in a text editor and modify as needed.</p><pre>\n,Manufacturer##other##,Length##length##centimeters,Width##length##centimeters, Height##length##centimeters\nMA36x30,Revit,36.5,2.75,30\nMA40x24,Revit,40.5,3.25,24\n</pre><p>The first line defines the delimiter and the parameters in the type catalog.</p><p>The first character of the first line is the delimiter, in this case a comma ','.</p><p>The schema:</p><pre>\n&lt;parameter name&gt;##&lt;parameter type&gt;##&lt;units&gt;,\n</pre><p>The next lines are the catalog entries:</p><pre>\n&lt;type name1&gt;,&lt;parameter1&gt;,&lt;parameter2&gt;,&lt;parameter3&gt;,&lt;parameter4&gt;\n</pre><p>Parameter Declaration Table</p>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Is Reference:",
+    "local_header_href": "#is-reference",
+    "chunk_text": "<h5>Is Reference:</h5><p>Reference planes have a property called “Is Reference”. By setting this property, you specify that the reference plane can be dimensioned or snapped to when you place a family into a project.</p><p>Additionally labeled instance parameters attached to reference planes with weak or strong “Is Reference” will allow shape handles for the user to control.</p><p>A “strong reference” has the highest priority for dimensioning and snapping.</p><p>For example, you create a window family and place it into a project. As you are placing the family, temporary dimensions snap to any strong references in the family. When you select the family in the project, temporary dimensions appear at the strong references. If you place a permanent dimension, the strong references in the window geometry highlight first. A strong reference takes precedence over a wall reference point (such as its centerline).</p><p>A “Weak reference” has the lowest priority for dimensioning and snapping. When you place the family into the project and dimension to it, you may need to press Tab to select a weak reference, as any strong references highlight first.</p><p>A “Not a reference” is not visible in the project environment so you cannot dimension or snap to those locations in a project.</p><p>All named “Is Reference”: Left, Right, Top… are considered strong references.</p><p>But the “Name” of the reference plane has no relation to the function of the “Is Reference” parameter.</p><a name=\"3b\"></a>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Building Your First Parametric Revit Family – Slide Deck Bullets",
+    "local_header_href": "#building-your-first-parametric-revit-family-slide-deck-bullets",
+    "chunk_text": "<h4>Building Your First Parametric Revit Family – Slide Deck Bullets</h4>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Building Your First Parametric Revit Family",
+    "local_header_href": "#building-your-first-parametric-revit-family",
+    "chunk_text": "<h5>Building Your First Parametric Revit Family</h5><p>What are we going to do in this class?</p><ol>\n<li>Build a simple table</li>\n<ul>\n<li>Plan it first</li>\n<li>Build the Bones, Muscles and Skin</li>\n</ul>\n<li>Drive Families from the API – Part 1</li>\n<ul>\n<li>Load</li>\n<li>Place</li>\n<li>Create new type</li>\n<li>Select</li>\n<li>Modify</li>\n</ul>\n<li>Discuss and show Nesting in the Family Editor</li>\n<ul>\n<li>Parameter Linking</li>\n<li>Shared families</li>\n<li>Show examples</li>\n</ul>\n<li>Drive Families from the API – Part 2</li>\n<ul>\n<li>Select all instances</li>\n<li>Modify nested family type</li>\n</ul>\n</ol>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "The Simple Table",
+    "local_header_href": "#the-simple-table",
+    "chunk_text": "<h5>The Simple Table</h5><p>Planning questions to answer:</p><ol>\n<li>Which template?</li>\n<ul>\n<li>M_Generic Model.rft</li>\n</ul>\n<li>Which category?</li>\n<ul>\n<li>Furniture</li>\n</ul>\n<li>Placement?</li>\n<ul>\n<li>Origin to be centered Front/Back and Left/Right, on the Level</li>\n</ul>\n<li>Parametrics?</li>\n<ul>\n<li>How to grow, equal Front/Back and Left/Right, up from Level</li>\n</ul>\n<li>Special behaviour?</li>\n<ul>\n<li>None</li>\n</ul>\n<li>Types to create?</li>\n<ul>\n<li>1500x650x720mm</li>\n<li>800x800x760mm</li>\n</ul>\n</ol>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Process of building The Simple Table",
+    "local_header_href": "#process-of-building-the-simple-table",
+    "chunk_text": "<h5>Process of building The Simple Table</h5><p>Build in levels of detail or complexity using the Bones, Muscle and Skin methodology.</p><p>Process (short version):</p><ul>\n<li>Layout Reference Planes (The Bones)</li>\n<li>Add Parameters and Constraints (The Muscles)</li>\n<li>Flex Types and Host (Testing Procedure)</li>\n<li>Add a Single Level of Geometry (The Skin)</li>\n<li>Flex Types and Host (Testing Procedure)</li>\n<li>Repeat for every level of detail or complexity</li>\n<li>Test in project environment</li>\n</ul><p>Order of Complexity:</p><ul>\n<li>Table Top</li>\n<li>Legs</li>\n<li>Apron</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Driving Families From API – Part 1",
+    "local_header_href": "#driving-families-from-api-part-1",
+    "chunk_text": "<h5>Driving Families From API – Part 1</h5><p>Table family:</p><ul>\n<li>Load family</li>\n<li>Place instances</li>\n<li>Create new type</li>\n<li>Select instances</li>\n<li>Modify instance symbol</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Nesting",
+    "local_header_href": "#nesting",
+    "chunk_text": "<h5>Nesting</h5><p>Nesting enables the use of reusable parts in the family editor.</p><ul>\n<li>The Parts can be driven from the host family.</li>\n<li>They can schedule separately (with limitations).</li>\n<li>They can be swappable.</li>\n</ul><p>Example:</p><ul>\n<li>A swappable panel door family that is fully parametric.</li>\n<li>One family with 3 door panel families nested into the host.</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Nesting Topics",
+    "local_header_href": "#nesting-topics",
+    "chunk_text": "<h5>Nesting Topics</h5><p>Parameter Linking:</p><ul>\n<li>Parameters can be linked from the host family to the nested families.</li>\n<li>Use the “Associate Family Parameter” button to link the 2 parameters.</li>\n</ul><p>Shared Families:</p><ul>\n<li>Allow a family to be scheduled in a project.</li>\n<li>Limitation: Only instance based parameters can be linked.</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Nesting Examples",
+    "local_header_href": "#nesting-examples",
+    "chunk_text": "<h5>Nesting Examples</h5><ul>\n<li>Open Web Joist that the web resize and array based on the depth and length</li>\n<li>Window grill pattern that can define number of spacing bars needed</li>\n<li>Kitchen cabinets with swappable door and drawer fronts</li>\n<li>Modular playground equipment</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Driving Families From API – Part 2",
+    "local_header_href": "#driving-families-from-api-part-2",
+    "chunk_text": "<h5>Driving Families From API – Part 2</h5><p>Kitchen cabinets:</p><ul>\n<li>Multiple select all instances</li>\n<li>Modify nested family type</li>\n</ul>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Additional Resources",
+    "local_header_href": "#additional-resources",
+    "chunk_text": "<h5>Additional Resources</h5><ul>\n<li>Blogs</li>\n<ul>\n<li><a href=\"http://thebuildingcoder.typepad.com\">The Building Coder</a></li>\n<li><a href=\"http://revitoped.blogspot.com\">Revit OpEd – Steve Stafford</a></li>\n<li><a href=\"http://do-u-revit.blogspot.com\">do-u-revit.blogspot.com</a></li>\n</ul>\n<li>Newsgroups:</li>\n<ul>\n<li>AUGI – <a href=\"http://www.augi.com\">www.augi.com</a></li>\n<li><a href=\"http://www.revitforum.org/forum.php\">www.revitforum.org/forum.php</a></li>\n</ul>\n<li>Books:</li>\n<ul>\n<li><a href=\"http://paulaubin.com\">Paul Aubin</a></li>\n</ul>\n</ul><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Complete Slide Decks",
+    "local_header_href": "#complete-slide-decks",
+    "chunk_text": "<h4>Complete Slide Decks</h4><p>In order to provide the associated images, here are the complete illustrated\n\n<a href=\"file:////a/j/adn/devcamp/2013/doc/1-4_key_family_concepts.pdf\">Key Family Concepts</a> and\n\n<a href=\"file:////a/j/adn/devcamp/2013/doc/1-5_5_parametric_family.pdf\">Parametric Family</a> slide decks.</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "0972_family_key_concept",
+    "header_text": "Family API Topics",
+    "local_header_href": "#family-api-topics",
+    "chunk_text": "<h4>Family API Topics</h4><p>Steve's presentations above cover the key family editor concepts from a user point of view.</p><p>How to make use of this functionality programmatically is a large important topic that has been frequently discussed here in the past, e.g. looking at:</p><ul>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/the-revit-family-api.html\">The Revit Family API</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/creating-and-inserting-an-extrusion-family.html\">Creating and inserting an extrusion family</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/family\">All family API related posts</a></li>\n</ul><p>To supplement the existing blog posts and Steve's product usage presentation for add-in developers, we decided to add new improved demonstrations of the following fundamental programming concepts to this overview:</p><ol>\n<li>Load family and place instances</li>\n<li>Pick interaction and modify instances</li>\n<li>Instance and symbol retrieval, nested type modification</li>\n</ol><p>This is where it gets really interesting for you, I hope.</p><p>Here is a snapshot of the current fully functional state of my\n\n<a href=\"file:////a/j/adn/devcamp/2013/zip/FamilyApi09.zip\">FamilyApi</a> sample add-in\n\nimplementing the following three external commands providing a nice clean implementation of those concepts, plus an external application wrapper defining a compact user interface to access and launch them:</p><ol>\n<li>CmdTableLoadPlace</li>\n<li>CmdTableNewTypeModify</li>\n<li>CmdKitchenUpdate</li>\n</ol><p>The detailed explanation of these three commands is still forthcoming, hopefully tomorrow, so keep your eyes peeled.</p>"
+  }
+]

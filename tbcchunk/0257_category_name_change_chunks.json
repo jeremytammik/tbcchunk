@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0257_category_name_change",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0257_category_name_change",
+    "header_text": "Handle Category Name Change",
+    "local_header_href": "#handle-category-name-change",
+    "chunk_text": "<h3>Handle Category Name Change</h3><p>Here is a little note I wrote sitting in Washington Dulles airport and did not get around to posting until now, to point out the importance of using language independent category comparisons:\n\n<p><strong>Question:</strong> Apparently at least one category name changed in the German version of Revit from 2009 to 2010: \n\n<ul>\n<li>Revit 2009: \"Tragende Stützen\" \n<li>Revit 2010: \"Tragwerksstützen\" \n</li></li></ul>\n<p>We rely on category names for mapping purposes. \nIn this case we discovered the change that was causing problems for us, but I am worried that there may be other similar changes that I also need to be aware of.\nIs there any way to use a language independent identifier that will never change? \nI very much hope to find a way to identify categories in a language independent fashion.\n\n<p><strong>Answer:</strong> You can use the built-in category enumeration to make your code language independent when working with categories.\nWe looked at this and related topics in the discussions on \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/01/category-comparison.html\">\ncategory comparison</a> and\n\nlater explored it further for the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/06/category-comparison-and-model-element-selection-revisited.html\">\nmodel element selection</a>,\n\nwhich we recently enhanced to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/11/select-model-elements-2.html\">\nhandle a set of multiple categories</a> using \n\na list of built-in category enumeration values stored in _bics_to_skip and the helper method SkipThisBic to compare them all with a given value from a candidate element.\n</p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1041_dynamo_unit_test",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1041_dynamo_unit_test",
+    "header_text": "The Dynamo Revit Unit Test Framework",
+    "local_header_href": "#the-dynamo-revit-unit-test-framework",
+    "chunk_text": "<h3>The Dynamo Revit Unit Test Framework</h3><p>I have repeatedly underlined the importance of unit testing, and recently presented the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/07/revit-add-in-unit-testing.html#3\">\nRvtUnit project</a> enabling the use of the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/07/revit-add-in-unit-testing.html\">\nNUnit unit testing tool for Revit add-ins</a>.</p><p>The Dynamo team now presents another one; in case you have not already heard of and explored it, Dynamo is an exciting visual programming tool on top of Revit.</p><p>The best explanation of Dynamo is provided in the\n\n<a href=\"https://github.com/ikeough/Dynamo\">\nDynamo GitHub repository</a>.\n\nMuch of the discussion and suggestions for new features etc., is happening on the github issues page, but there are also interesting discussions, links to the downloads, and blog posts by the Dynamo team on\n\n<a href=\"http://www.dynamobim.org\">www.dynamobim.org</a>.</p><p>The Dynamo team just released a new interesting piece of functionality that can provide a huge benefit to all developers writing code against the Revit API.</p><p>It's called the\n\n<a href=\"https://github.com/ikeough/Dynamo/wiki/Dynamo-Revit-Test-Framework\">\nDynamo Revit Test Framework</a> and\n\nenables automated testing of Revit API functionality using isolated Revit sessions.\nIt is used internally for Dynamo testing on top of Revit.\nGiven a bit more love, it could be extended as a generic Revit automation framework.\nAnd, because all work being done on Dynamo is open source, the source is available and it's completely free!</p><p>To learn more, please visit the\n\n<a href=\"https://github.com/ikeough/Dynamo/wiki/Dynamo-Revit-Test-Framework\">\nDynamo Revit Test Framework</a> GitHub wiki page.</p><p>The Dynamo team really appreciates all feedback on Dynamo as a tool for both developers and non-developers striving to automate Revit.\nPlease let them know if you have any questions about the project.</p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0561_change_element_colour",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0561_change_element_colour",
+    "header_text": "Change Element Colour",
+    "local_header_href": "#change-element-colour",
+    "chunk_text": "<h3>Change Element Colour</h3><p>We once looked at \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/01/model-and-detail-curve-colour.html\">\nchanging the colour of model or detail curves</a> by \n\nsetting their category line style.\n\n<p>Here is another simple little question, on setting the colour of an element, with a clear and simple answer, also by Joe Ye:\n\n<p><strong>Question:</strong> How can I programmatically change the colour of an annotation symbol, e.g. a tag, in a Revit project? \n\n<p><strong>Answer:</strong> You can change the colour of individual elements in a specified view using the View class ProjColorOverrideByElement property.\nIt takes a collection of elements as an argument and overrides their projection lines' colour in the given view.\n\n<p>Here is a VSTA code snippet showing how it can be used:\n\n<pre class=\"code\">\n<span class=\"blue\">public</span> <span class=\"blue\">void</span> ChangeElementColor()\n{\n  <span class=\"teal\">Application</span> app = <span class=\"blue\">this</span>.ActiveUIDocument\n    .Application.Application;\n \n  <span class=\"teal\">UIDocument</span> uidoc = <span class=\"blue\">this</span>.ActiveUIDocument;\n  <span class=\"teal\">Document</span> doc = uidoc.Document;\n \n  <span class=\"teal\">Color</span> color = app.Create.NewColor();\n  color.Blue = ( <span class=\"blue\">byte</span> ) 150;\n  color.Red = ( <span class=\"blue\">byte</span> ) 200;\n  color.Green = ( <span class=\"blue\">byte</span> ) 200;\n \n  <span class=\"teal\">Selection</span> sel = uidoc.Selection;\n \n  <span class=\"teal\">Reference</span> ref1 = sel.PickObject( \n    <span class=\"teal\">ObjectType</span>.Element, \n    <span class=\"maroon\">\"Pick element to change its colour\"</span> );\n \n  <span class=\"teal\">Element</span> elem = ref1.Element;\n \n  <span class=\"teal\">List</span>&lt;<span class=\"teal\">ElementId</span>&gt; ids = <span class=\"blue\">new</span> <span class=\"teal\">List</span>&lt;<span class=\"teal\">ElementId</span>&gt;( 1 );\n  ids.Add( elem.Id );\n \n  <span class=\"teal\">Transaction</span> trans = <span class=\"blue\">new</span> <span class=\"teal\">Transaction</span>( doc );\n  trans.Start( <span class=\"maroon\">\"ChangeColor\"</span> );\n \n  doc.ActiveView.set_ProjColorOverrideByElement( \n    ids, color );\n \n  trans.Commit();\n}\n</pre>\n<p>Many thanks to Joe for providing this solution!\n</p></p></p></p></p></p>"
+  }
+]

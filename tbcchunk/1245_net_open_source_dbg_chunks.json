@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1245_net_open_source_dbg",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1245_net_open_source_dbg",
+    "header_text": ".NET Open Source and Visual Studio Community",
+    "local_header_href": "#net-open-source-and-visual-studio-community",
+    "chunk_text": "<h3>.NET Open Source and Visual Studio Community</h3><p>Steve Mycynek of the Revit Development team pointed out an important update on .NET and Visual Studio:</p><p>As you may know, one frustration faced by Revit API developers is the lack of debugging support in the free Express versions of Visual Studio.</p><p>They do not support debugging DLLs against an EXE host or attaching to a process, which is exactly what we require to debug a Revit add-in loaded into Revit.exe (except by\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/08/visual-studio-c-and-vb-express.html\">resorting to tricks</a>,\n\nused, e.g., for the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/07/football-and-space-adjacency-for-heat-load-calculation.html#3\">\nspace adjacency for heat load calculation add-in</a>).</p><p>This meant that if you wanted official support to debug a Revit add-in, you had to buy an expensive Visual Studio License – until now!</p><p>Last week, Microsoft presented a large set of free and open source announcements, including Visual Studio Community Edition, which is free and supports many more advanced features.</p><p>I just tried it out, and, as you can see, it also supports Revit add-in debugging:</p><center>\n<img alt=\"Debugging in Visual Studio Community Edition\" src=\"img/vs_community.png\" width=\"670\"/>\n</center><p>Learn more at <a href=\"http://www.visualstudio.com\">www.visualstudio.com</a> and from the article by Scott Hanselman on\n\n<a href=\"http://www.hanselman.com/blog/AnnouncingNET2015NETasOpenSourceNETonMacandLinuxandVisualStudioCommunity.aspx\">\n.NET as open source, on Mac, on Linux and Visual Studio Community</a>.\n\n<p>Many thanks to Steve for exploring this and letting us know!</p>\n</p>"
+  }
+]

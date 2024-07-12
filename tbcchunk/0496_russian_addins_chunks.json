@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0496_russian_addins",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0496_russian_addins",
+    "header_text": "Дополнения для Ревит – Add-ins for Revit",
+    "local_header_href": "#дополнения-для-ревит-add-ins-for-revit",
+    "chunk_text": "<h3>Дополнения для Ревит – Add-ins for Revit</h3><p>If you can read Russian, you may be interested in \n\n<a href=\"http://kartautodeskuser.blogspot.com\">\nArthur Kurakov's blog</a>.\n\nArthur presents several Revit add-ins useful for the Russian market, and some are certainly useful for other countries as well.\n\nSuperfilter суперфильтр is better than the basic Revit filter:</p><object height=\"385\" width=\"480\"><param name=\"movie\" value=\"http://www.youtube.com/v/I8GB2tG1W1E?fs=1&amp;hl=en_US\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"385\" src=\"http://www.youtube.com/v/I8GB2tG1W1E?fs=1&amp;hl=en_US\" type=\"application/x-shockwave-flash\" width=\"480\"/></object><p>The standard Revit filter filters by element category, whereas Superfilter filters by family and type instead.\nIt is easier to filter room tags, for instance. \nOne is square and the other is the mark of this room.\nThis is useful for Russian architects.\n\n<p>Another of Arthur's utilities is Rename, Переименовка:</p>\n<!-- http://www.youtube.com/watch?v=Uvnvod35ecM -->\n<object height=\"385\" width=\"480\"><param name=\"movie\" value=\"http://www.youtube.com/v/Uvnvod35ecM?fs=1&amp;hl=en_US\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"385\" src=\"http://www.youtube.com/v/Uvnvod35ecM?fs=1&amp;hl=en_US\" type=\"application/x-shockwave-flash\" width=\"480\"/></object>\n<p>It is a string generator, generating string parameters using other element instance parameters.\nFor instance, you might one to populate a string parameter that contains the element height and width with and 'X' symbol between them.\nThis tool can be very useful for generating entries in a Revit schedule view.\n\n<p>This tool can do much more, actually: for a family instance, it can change the type based on different combination of parameter values, for instance height, width, mark, etc.\nThis means that you can change the type by modifying certain parameter values.\n\n<p>I hope this has raised your curiosity and you will be interested in checking out Arthur's blog.\n</p></p></p></p>"
+  }
+]

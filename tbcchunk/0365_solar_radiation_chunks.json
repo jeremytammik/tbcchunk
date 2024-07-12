@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0365_solar_radiation",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0365_solar_radiation",
+    "header_text": "Solar Radiation Technology Preview",
+    "local_header_href": "#solar-radiation-technology-preview",
+    "chunk_text": "<h3>Solar Radiation Technology Preview</h3><p>The \n\n<a href=\"http://labs.autodesk.com/utilities/ecotect\">\nsolar radiation technology preview</a> for Revit 2011\n\nis now available. \nIt helps understand and quantify solar radiation on the surfaces of a conceptual building model.\nThis can help make informed design decisions about building shape, orientation, and shading strategies early on when changes are least expensive.\n\n<p>A new version was just released, including many improvements and closer inntegrated in the Revit user interface:</p>\n<center>\n<img alt=\"Solar radiation technology preview\" src=\"img/solar_radiation1.png\"/>\n</center>\n<p>One aspect of interest to application developers is that this plug-in is written entirely using the public Revit API, in addition to the Solar Radiation logic from Ecotect wrapped in a library that is also used from the plug-in code. \nWhile there is no direct API access to call the functionality programmatically, it does showcase the new Revit 2011 APIs:\n\n<ul>\n<li>Dynamic Update API\n<li>Analysis Visualization Framework\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/idling-event.html\">Idling Event</a>\n<li>Sun Path API\n</li></li></li></li></ul>\n<p>We will be discussing these in greater depth anon.</p>\n<center>\n<img alt=\"Solar radiation\" src=\"img/solar_radiation2.png\"/>\n</center>\n</p></p>"
+  }
+]

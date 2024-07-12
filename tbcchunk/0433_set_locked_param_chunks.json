@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0433_set_locked_param",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0433_set_locked_param",
+    "header_text": "Setting a Locked Parameter",
+    "local_header_href": "#setting-a-locked-parameter",
+    "chunk_text": "<h3>Setting a Locked Parameter</h3><p>I arrived back in Europe and am still working through my pile of email.\nHere is another interesting tidbit that arose in the course of some correspondence with Anthony Forlong, Associate and CAD Manager at \n\n<a href=\"http://www.cbp.co.nz\">Clendon Burns &amp; Park Ltd</a> over the past few days:\n\n<p><strong>Question:</strong> I've written an application that lets our users search our network and insert Revit families and load types from type catalogues.\nTo help increase performance I have been using the duplicate method if the family exists, and then setting the parameters to their values from the type catalogue.\n\n<p>I am facing the following problem: there doesn't seem to be a method for setting locked parameters in the document. \nIs that correct?  \nThe call to the Set method fails.\n\n<p>The following user interface dialogue provides access to the parameter locking:</p>\n<center>\n<img alt=\"Family Type Parameter Locking User Interface\" src=\"img/set_locked_param.png\"/>\n</center>\n<p>If I manually clear the check box, my function works fine. \nIs there away to set the parameter when it is ticked?\n\n<p><strong>Answer:</strong> The following Revit 2011 API FamilyManager methods should work for this case.\nThe documentation states that they work for Conceptual Mass and Curtain Panel families.\nMy colleague Phil Xia tried other families and found that they worked there as well:\n\n<ul>\n<li>IsParameterLockable: For Conceptual Mass and Curtain Panel families, indicate whether the specified parameter can be locked. \n<li>IsParameterLocked: For Conceptual Mass and Curtain Panel families, indicate whether the specified dimension-driving parameter is locked. \n<li>SetParameterLocked: For Conceptual Mass and Curtain Panel families, lock or unlock a dimension-driving parameter. \n</li></li></li></ul>\n<p>Thanks to Anthony and Phil for raising and clarifying this issue!\n</p></p></p></p></p></p>"
+  }
+]

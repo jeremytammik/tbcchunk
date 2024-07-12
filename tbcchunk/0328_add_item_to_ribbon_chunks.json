@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0328_add_item_to_ribbon",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0328_add_item_to_ribbon",
+    "header_text": "Adding Non-Commands to the Revit Ribbon",
+    "local_header_href": "#adding-non-commands-to-the-revit-ribbon",
+    "chunk_text": "<h3>Adding Non-Commands to the Revit Ribbon</h3><p>In between all the hullabaloo about the new version of Revit, here is some news dealing with the old one and the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/revit-python-shell.html\">\nRevit Python shell</a>\n\nimplemented by Daren Thomas. \nDaren now found a way to add new items such as command buttons to a Revit ribbon panel without actually having any real underlying external command implementation to hook them up to.\nHe uses Reflection.Emit to simulate the missing IExternalCommand implementation. \nHere is Daren's own description:\n\n<span style=\"color:darkblue\">\n<p>I just published a post on a technique for \n\n<a href=\"http://darenatwork.blogspot.com/2010/03/adding-canned-scripts-to-revit.html\">\nadding IronPython scripts as commands to a Revit ribbon panel</a>. \n\nI'm not sure if this technique could be used for other purposes, as it mainly allows dynamically created commands to be accessible by Revit, but you never know...\n\n<p>The technique uses Reflection.Emit to create types that subclasses IExternalCommand with an instance field set to a different value for each type in the parameterless constructor. \nThese types are added to a dynamic assembly, stored to disk and can then be instantiated by Revit in the usual fashion.\n\n<p>Thought you might be interested...\n\n<p>P.S.: This still doesn't solve the problem of dynamically adding commands after IExternalApplication.OnStartup to the Ribbon, but it's a start...\n\n</p></p></p></p></span>\n<p>P.P.S. from Jeremy on the topic of \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/03/dynamically-load-and-debug-plugins.html\">\ndynamically reloading and debugging Revit add-ins</a> and the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/03/addinmanager.html\">\nAddInManager</a>, which takes us back to the hullabaloo around the new release:\nif you are interested in either of these two topics, you really must check out the new 2011 version of the Add-In Manager... it provides a solution! More on that soon...\n\n\n\n\n</p></p>"
+  }
+]

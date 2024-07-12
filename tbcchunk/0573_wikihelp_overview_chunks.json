@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0573_wikihelp_overview",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0573_wikihelp_overview",
+    "header_text": "Revit 2012 WikiHelp Overview",
+    "local_header_href": "#revit-2012-wikihelp-overview",
+    "chunk_text": "<h3>Revit 2012 WikiHelp Overview</h3><p>Here is a product related news item, although obviously of interest to developers as well.\n\n<p>Revit product help has been \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-help.html\">\navailable on the web</a> for \n\na while now, which provides a number of \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-help.html\">\nbenefits</a>.\n\n<p>Some \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-api-help.html \">\nonline Revit API help</a> is\n\nalso available, although the full Revit SDK documentation is not there yet.\n\n<p>Now the product help system has taken the next step by moving to a \n\n<a href=\"http://en.wikipedia.org/wiki/Wiki\">\nwiki-based system</a> which provides support for a full community learning experience.\n\n<p>Here is a\n\n<a href=\"zip/Revit 2012 WikiHelp Overview.pptx\">\nRevit 2012 WikiHelp overview</a> which \n\nincludes a summary of WikiHelp features and benefits, highlights key features and lists the benefits of this new community platform.\n\n<!--\n<p>The first time I started up Revit 2012, I could not find all the help information I was used to seeing. \nThat was just a temporary glitch and the 2012 content is now fully indexed and every bit as complete as for 2011.\n-->\n</p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0638_lock_addin_ribbon_tab",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0638_lock_addin_ribbon_tab",
+    "header_text": "Locking the Add-Ins Ribbon Tab",
+    "local_header_href": "#locking-the-add-ins-ribbon-tab",
+    "chunk_text": "<h3>Locking the Add-Ins Ribbon Tab</h3><p>Here is a minute user interface question of interest to developers that comes up from time to time:\n\n<p><strong>Question:</strong> When I select an element in the Revit model, the ribbon tab is always switched.\nIs there any way to keep 'Add-Ins' tab focused at all times?\n\n<p><strong>Answer:</strong> Here are two little tricks that might help:\n\n<ul>\n<li>Drag the panel you wish to have available off the ribbon add-ins tab somewhere else on the screen.\nIt will then remain available at all times, regardless of how the other ribbon tabs are switched back and forth.\n\n<li>As I already mentioned discussing the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/07/context-tab-toggle.html\">\nribbon tab context toggle</a>, \n\nyou can also select Big R &gt; Options &gt; User Interface and uncheck 'Display the contextual tab on Selection':\n</li></li></ul>\n<center>\n<img alt=\"Ribbon tab context selection option\" src=\"img/context_tab_toggle.png\"/>\n</center>\n</p></p></p>"
+  }
+]

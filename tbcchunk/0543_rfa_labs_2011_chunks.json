@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0543_rfa_labs_2011",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0543_rfa_labs_2011",
+    "header_text": "Family API Labs for Revit 2011",
+    "local_header_href": "#family-api-labs-for-revit-2011",
+    "chunk_text": "<h3>Family API Labs for Revit 2011</h3><p>Someone very friendlily pointed out that the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/10/revit-family-creation-api-labs.html\">\nFamily API labs</a> available \n\nfrom The Building Coder are only provided for the Revit 2010 API and asked for a revised version based on Revit 2011.\nDue to the extent of the changes between the two API's, the previous samples do not run with Revit 2011.\n\n<p>Thank you for pointing that out!\n\n<p>Here is the current version of the \n\n<a href=\"zip/rfa_labs_2011-02-01.zip\">\nFamily API Labs for Revit 2011</a>.\n</p></p></p>"
+  }
+]

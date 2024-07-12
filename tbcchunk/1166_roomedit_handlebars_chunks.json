@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1166_roomedit_handlebars",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<script src=\"http://thebuildingcoder.typepad.com/google-code-prettify/run_prettify.js\"></script>\n</head>"
+  },
+  {
+    "original_filename": "1166_roomedit_handlebars",
+    "header_text": "Room Editor with Handlebars and Refresh",
+    "local_header_href": "#room-editor-with-handlebars-and-refresh",
+    "chunk_text": "<h3>Room Editor with Handlebars and Refresh</h3><p>Somehow, I have a much harder time documenting my JavaScript exploits than my Revit API ones.</p><p>The Autodesk Tech Summit is taking place in Toronto next week, and I am making those potentially disastrous last minute changes that every sane person avoids at all costs.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1166_roomedit_handlebars",
+    "header_text": "Automatically Refresh on Save",
+    "local_header_href": "#automatically-refresh-on-save",
+    "chunk_text": "<h4>Automatically Refresh on Save</h4><p>One really important thing that I fixed now required just one single line of code:</p><p>The browser display of the model is automatically refreshed when you press 'Save'.</p><p>I remember wondering why this did not happen when I originally implemented it last year, and finally giving up, simply resorting to an additional manual button click to trigger the refresh.</p><p>Pondering my simple solution to the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/05/room-editor-element-properties-and-the-async-trap.html#2\">async trap</a> that\n\nI fell into saving element properties, I discovered that the issue here is the exact same thing.</p><p>I need to do whatever needs to be done inside the database callback function and nowhere else.</p><p>If I add other code after initiating the database call, that code will interfere with and corrupt the database interaction.</p><p>So now my save method looks like this:</p><pre class=\"prettyprint\">\nfunction save(a) {\n  for( var i = 0; i &lt; a.length; ++i ) {\n    var f = a[i];\n    var id = f.data(\"jid\");\n\n    var txy = f.transform().toString()\n      .substring(1).split(/[,r]/);\n\n    var trxy = 'R' + f.data('angle')\n      + 'T' + txy[0] + \",\" + txy[1];\n\n    var fdoc = f.data(\"doc\");\n\n    fdoc.transform = trxy;\n\n    if( fdoc.hasOwnProperty('loop') ) {\n      delete fdoc.loop;\n    }\n    db.saveDoc( fdoc,\n      function (err, data) {\n        if (err) {\n          console.log(err);\n          alert(JSON.stringify(err));\n        }\n        document.location.reload( true );\n      }\n    );\n  }\n}\n</pre><p>Note the call to set the document location?</p><p>Last year, I tried to make that call on the last line of the save function instead of inside the anonymous database callback.</p><p>No-no.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1166_roomedit_handlebars",
+    "header_text": "Adding Handlebars",
+    "local_header_href": "#adding-handlebars",
+    "chunk_text": "<h4>Adding Handlebars</h4><p>Today, I added a new package to my bundle: <a href=\"http://handlebarsjs.com\">handlebars</a>.</p><p>It comes packaged for use with <a href=\"http://kan.so\">kanso</a>, and yet I had to struggle a little bit to understand how to add it to my installation.</p><p>In the end, it was simple, just copying the package contents into my packages subfolder and adding a reference to it in my main kanso.json file, which now looks like this:</p><pre class=\"prettyprint\">\n{\n  \"name\": \"roomedit\",\n  \"version\": \"0.0.2\",\n  \"description\": \"display and edit 2D room, furniture and equipment layout\",\n  \"attachments\": [\"index.html\",\"raphael-min-jt.js\",\"roomedit.js\",\"index2.html\"],\n  \"modules\": [\"lib\"],\n  \"load\": \"lib/app\",\n  \"dependencies\": {\n    \"attachments\": null,\n    \"db\": null,\n    \"handlebars\":null,\n    \"modules\": null,\n    \"jquery\": null,\n    \"properties\": null\n  }\n}\n</pre><p>So far, though, I am only using it as a pretty stupid formatting tool by defining a template on the fly and stuffing it with values like this:</p><pre class=\"prettyprint\">\n  var handlebars = require('handlebars');\n\n  var htemplate = handlebars.compile(\n    '&lt;p&gt;{{levels}} and '\n    + '{{sheets}} in '\n    + 'model &lt;i&gt;{{model}}&lt;/i&gt;.&lt;/p&gt;'\n    + '&lt;p&gt;Please select a level or sheet:&lt;/p&gt;' );\n\n  var hresult = htemplate({\n    levels: thingies( nLevel, 'level' ),\n    sheets: thingies( nSheet, 'sheet' ),\n    model: modeldoc.name});\n\n  $('#content').append( hresult );\n</pre><p>That generates two paragraph nodes that I append to the DOM, and nothing more.</p><p>I was previously achieving the exact same result using JavaScript and jquery like this:</p><pre class=\"prettyprint\">\n  var prompt =\n    nLevel.toString() + ' level' + pluralSuffix( nLevel ) + ' and ' +\n    nSheet.toString() + ' sheet' + pluralSuffix( nSheet ) + ' in model ';\n\n  $('#content')\n    .append($('&lt;p/&gt;')\n      .text( prompt )\n      .append( $('&lt;i/&gt;').text( modeldoc.name ) )\n      .append( document.createTextNode( '.' ) ) )\n    .append($('&lt;p/&gt;')\n      .text( 'Please select a level or sheet:' ) );\n</pre><p>It's not really shorter.</p><p>I find it more readable, though.</p><p>And a useful exercise.</p><p>The rest of my efforts today went into refactoring my JavaScript, eliminating code duplication and ludicrously deep indenting.</p><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1166_roomedit_handlebars",
+    "header_text": "Download",
+    "local_header_href": "#download",
+    "chunk_text": "<h4>Download</h4><p>As always, the updated CouchDB database design and Kanso package definition is available from the\n\n<a href=\"https://github.com/jeremytammik/roomedit\">roomedit GitHub repository</a>,\n\nand the version described above is\n\n<a href=\"https://github.com/jeremytammik/roomedit/releases/tag/2.0.0.12\">release 2.0.0.12</a>.</p><p>Its playmate, the RoomEditorApp Revit add-in, with its Visual Studio solution and add-in manifest remains virtually unchanged in its\n\n<a href=\"https://github.com/jeremytammik/RoomEditorApp\">RoomEditorApp GitHub repository</a>,\n\nand the current version is now\n\n<a href=\"https://github.com/jeremytammik/RoomEditorApp/releases/tag/2015.0.2.16\">2015.0.2.16</a>.</p>"
+  }
+]

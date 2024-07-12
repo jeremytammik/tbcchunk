@@ -1,0 +1,938 @@
+[
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "What's New in the Revit 2015 API",
+    "local_header_href": "#whats-new-in-the-revit-2015-api",
+    "chunk_text": "<h3>What's New in the Revit 2015 API</h3><p>I wanted to publish the 'What's New' section of the Revit 2015 API help file right away after the release of Revit 2015 and was caught up in too many other things.\nHere it is, at last.</p><p>The information provided here is extracted from the document 'Revit Platform API Changes and Additions.docx' provided with the Revit SDK.\nIt is also included in the 'What's New' section in the Revit API help file RevitAPI.chm.</p><p>I am putting it online to ensure that the valuable information provided here is picked up by web searches.</p><p>For more detailed information on the pointers provided below, please refer to the complete API documentation in the SDK and the online\n\n<a href=\"http://help.autodesk.com/view/RVT/2015/ENU/?guid=GUID-F0A122E0-E556-4D0D-9D0F-7E72A9315A42\">\nRevit API Developers Guide</a>.</p><p>For an overview of the main highlights, please refer to the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/revit-2015-api-news-devdays-online-recording.html\">\nDevDays Online Recording</a>,\n\nincluding the complete materials from the Revit 2015 DevDays presentations:</p><ul>\n<li>Presentation\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_News_Slides.pdf\">slide deck</a> (23 MB)  \n<a href=\"file:////a/devdays/2013/online/Revit_2015_API_News_Slides.pdf\">^</a>\n</li>\n<li>Presentation\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/index.html\">recording</a> with table of contents navigation (354 MB)  \n<a href=\"file:////a/devdays/2013/online/cam/Revit_2015_API_News/index.html\">^</a>\n</li>\n<li>Presentation\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_News_Notes.pdf\">notes</a> (198 KB)  \n<a href=\"file:////a/devdays/2013/online/Revit_2015_API_News_Notes.pdf\">^</a>\n</li>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_Samples.zip\">Sample code incl. RVT models</a> (45 MB)  \n<a href=\"file:////a/devdays/2013/online/Revit_2015_API_Samples.zip\">^</a>\n</li>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_Samples_No_RVT.zip\">Sample code excl. RVT models</a> (1.5 MB)  \n<a href=\"file:////a/devdays/2013/online/Revit_2015_API_Samples_No_RVT.zip\">^</a>\n</li>\n</ul><p>To look up the introduction of older features, here are the previous 'What's New in the API' sections:</p><ul>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2010-api.html\">What's New in the Revit 2010 API</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2011-api.html\">What's New in the Revit 2011 API</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2012-api.html\">What's New in the Revit 2012 API</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2013/03/whats-new-in-the-revit-2013-api.html\">What's New in the Revit 2013 API</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2013/04/whats-new-in-the-revit-2014-api.html\">What's New in the Revit 2014 API</a></li>\n</ul><a name=\"1\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Major changes and renovations to the Revit API",
+    "local_header_href": "#major-changes-and-renovations-to-the-revit-api",
+    "chunk_text": "<h3>Major changes and renovations to the Revit API</h3><p>This document consists of three main sections, on changes affecting existing add-ins, major new functionality, and minor enhancements.</p><p>For your and my own convenience, I added a table of contents providing an overview of and navigation to the sub-sections as well:</p><ul>\n<li><a href=\"#2\">API Changes</a></li>\n<ul>\n<li><a href=\"#2.01\">.NET 4.5</a></li>\n<li><a href=\"#2.02\">Visual C++ runtime 11 update 4 (Visual Studio 2012)</a></li>\n<li><a href=\"#2.03\">Units API</a></li>\n<li><a href=\"#2.04\">Parameter API changes</a></li>\n<li><a href=\"#2.05\">Worksharing API changes</a></li>\n<li><a href=\"#2.06\">Settings classes are now Elements</a></li>\n<li><a href=\"#2.07\">Family API changes</a></li>\n<li><a href=\"#2.08\">View API changes</a></li>\n<li><a href=\"#2.09\">Structural API changes</a></li>\n<li><a href=\"#2.10\">Selection API changes</a></li>\n<li><a href=\"#2.11\">MEP API changes</a></li>\n<li><a href=\"#2.12\">IFC API changes</a></li>\n<li><a href=\"#2.13\">Energy Analysis API changes</a></li>\n<li><a href=\"#2.14\">Miscellaneous API changes</a></li>\n<li><a href=\"#2.15\">Obsolete API removal</a></li>\n</ul>\n<li><a href=\"#3\">Major API Additions</a></li>\n<ul>\n<li><a href=\"#3.01\">View API changes</a></li>\n<li><a href=\"#3.02\">Default Type API</a></li>\n<li><a href=\"#3.03\">Structural API additions</a></li>\n<li><a href=\"#3.04\">Revisions</a></li>\n<li><a href=\"#3.05\">Parameters API additions</a></li>\n<li><a href=\"#3.06\">Wall API additions</a></li>\n<li><a href=\"#3.07\">Schedule API additions</a></li>\n<li><a href=\"#3.08\">IFC API additions</a></li>\n<li><a href=\"#3.09\">Import API: DirectShape and TessellatedShapeBuilder</a></li>\n<li><a href=\"#3.10\">External Resources Service API</a></li>\n<li><a href=\"#3.11\">Keynote and Assembly Code API</a></li>\n<li><a href=\"#3.12\">Energy analysis API additions: gbXML and BuildingEnvelopeAnalyzer</a></li>\n<li><a href=\"#3.13\">BrowserOrganization API</a></li>\n</ul>\n<li><a href=\"#4\">Minor API Additions</a></li>\n<ul>\n<li><a href=\"#4.01\">Application API additions</a></li>\n<li><a href=\"#4.02\">Document API additions</a></li>\n<li><a href=\"#4.03\">Link API additions</a></li>\n<li><a href=\"#4.04\">Category API additions</a></li>\n<li><a href=\"#4.05\">ElementType API additions: FamilyName and duplicating events</a></li>\n<li><a href=\"#4.06\">Material API additions</a></li>\n<li><a href=\"#4.07\">View API additions</a></li>\n<li><a href=\"#4.08\">Family API additions and loading event</a></li>\n<li><a href=\"#4.09\">Geometry API additions</a></li>\n<li><a href=\"#4.10\">Material API additions</a></li>\n<li><a href=\"#4.11\">Print API additions</a></li>\n<li><a href=\"#4.12\">Connector API additions</a></li>\n<li><a href=\"#4.13\">Naming utilities</a></li>\n<li><a href=\"#4.14\">Dynamic Model Update additions</a></li>\n<li><a href=\"#4.15\">Custom Exporter additions</a></li>\n<li><a href=\"#4.16\">UI API additions: Drag &amp; drop</a></li>\n</ul>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "API Changes",
+    "local_header_href": "#api-changes",
+    "chunk_text": "<h1>API Changes</h1><a name=\"2.01\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": ".NET 4.5",
+    "local_header_href": "#net-45",
+    "chunk_text": "<h2>.NET 4.5</h2><p>Revit's API is now built with and requires .NET 4.5 for compilation.</p><a name=\"2.02\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Visual C++ runtime 11 update 4 (Visual Studio 2012)",
+    "local_header_href": "#visual-c-runtime-11-update-4-visual-studio-2012",
+    "chunk_text": "<h2>Visual C++ runtime 11 update 4 (Visual Studio 2012)</h2><p>Revit is now built with and installs runtime libraries from VC11 update 4 (Visual Studio 2012). Third party applications which include native components may want to upgrade to the same VC runtime as there is no guarantee that Revit will install any other runtime on client machines.</p><a name=\"2.03\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Units API",
+    "local_header_href": "#units-api",
+    "chunk_text": "<h2>Units API</h2><p>A small set of units API functions introduced in Revit 2014 have been obsoleted. Their replacements already existed in Revit 2014, and are listed here:</p><ul>\n<li>Obsoleted member – Replacement</li>\n<li>Units.GetDisplayUnitType() – Units.GetFormatOptions(UnitType.UT_Length).DisplayUnits</li>\n<li>Units.SetDigitalSymbolAndGrouping() – Units.DecimalSymbol, Units.DigitGroupingSymbol, Units.DigitGroupingAmount (setters)</li>\n<li>Units.IsValidDigitalSymbolAndGrouping() – All combinations are now valid</li>\n<li>DigitGroupingSymbol.Tick (enum value) – DigitGroupingSymbol.Apostrophe</li>\n<li>FormatOptions(UnitSymbolType, DisplayUnitType) (constructor) – FormatOptions (DisplayUnitType, UnitSymbolType)</li>\n<li>FormatOptions.GetRounding() – FormatOptions.Accuracy</li>\n<li>FormatOptions.HasRounding() – All display units have accuracy values</li>\n<li>FormatOptions.UseGrouping – FormatOptions.UseDigitGrouping</li>\n<li>FormatOptions.GetName() – UnitUtils.GetTypeCatalogString()</li>\n<li>FormatValueOptions.IsFormatOptionsValidForUnitType() – FormatOptions.IsValidForUnitType()</li>\n<li>UnitFormatUtils.FormatValueToString() – UnitFormatUtils.Format()</li>\n<li>ValueParsingOptions.FormatOptions – ValueParsingOptions.GetFormatOptions()</li>\n<li>FormatUtils.Format() – UnitFormatUtils.Format()</li>\n</ul><a name=\"2.04\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Parameter API changes",
+    "local_header_href": "#parameter-api-changes",
+    "chunk_text": "<h2>Parameter API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Element.Parameter[String]",
+    "local_header_href": "#elementparameterstring",
+    "chunk_text": "<h3>Element.Parameter[String]</h3><p>The indexed property Element.Parameter[String] is obsolete. The recommended replacement is:</p><ul>\n<li>Element.GetParameters(String) – looks up all of the parameters matching the input name on the given element (it is possible that multiple parameters coming from different sources can have the same name).</li>\n<li>Element.LookupParameter(String) – attempts to find a parameter on this Element whose name matches the input.</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Element.Parameters",
+    "local_header_href": "#elementparameters",
+    "chunk_text": "<h3>Element.Parameters</h3><p>The collection returned from this property now includes more parameters. Previously, it returned only parameters that Revit showed in the Properties Palette, but now it also includes parameters available in schedules and tags but not shown in the Properties Palette. This can cause behavioral changes for existing applications because some of the newly visible parameters will have duplicate names, but different ids, with other parameters. To get a list of just the parameters available from the Properties Palette, use Element.GetOrderedParameters().</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Shared parameter creation – description and user modifiability",
+    "local_header_href": "#shared-parameter-creation-description-and-user-modifiability",
+    "chunk_text": "<h3>Shared parameter creation – description and user modifiability</h3><p>Revit now allows the assignment of two new properties to shared parameters:</p><ul>\n<li>Description – this value will be saved with the shared parameter definition, and for all instances of this parameter the text is used as the parameter tooltip.</li>\n<li>UserModifiable – this value will be saved with the shared parameter definition. If set to false the user will see the parameter and its value as grayed out, but any API application may modify the value as needed.</li></ul><p>The new method:</p><ul>\n<li>Definitions.Create(Autodesk.Revit.DB.ExternalDefinitonCreationOptions options);</li></ul><p>create a new shared parameter definition using an options class where any or all of the available options may be set (name and type are required, but GUID, user visible, user modifiable, and description are optional). This method replaces all other specific versions of Definitions.Create() which are now obsolete.</p><p>Note that for shared parameters IsReadOnly can return false for shared parameters whose UserModifiable property is also false, because the value of those parameters can be modified by the API. If a parameter is governed by a formula, IsReadOnly would return true, even if the flag for UserModifiable was set to true when the shared parameter was created.</p><p>The new properties:</p><ul>\n<li>Parameter.UserModifiable</li>\n<li>FamilyParameter.UserModifiable</li></ul><p>provide information about whether the flag is set to the API.</p><a name=\"2.05\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Worksharing API changes",
+    "local_header_href": "#worksharing-api-changes",
+    "chunk_text": "<h2>Worksharing API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "WorksetConfiguration methods",
+    "local_header_href": "#worksetconfiguration-methods",
+    "chunk_text": "<h3>WorksetConfiguration methods</h3><p>The methods</p><ul>\n<li>WorksetConfiguration.CloseAll()</li>\n<li>WorksetConfiguration.OpenLastViewed()</li></ul><p>have been obsoleted. Instead of using these methods after constructing the WorksetConfiguration, use the constructor for WorksetConfiguration accepting one of the following options:</p><ul>\n<li>WorksetConfigurationOption.OpenAllWorksets</li>\n<li>WorksetConfigurationOption.CloseAllWorksets</li>\n<li>WorksetConfigurationOption.OpenLastViewed</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "SynchronizeWithCentralOptions.CompactCentralFile",
+    "local_header_href": "#synchronizewithcentraloptionscompactcentralfile",
+    "chunk_text": "<h3>SynchronizeWithCentralOptions.CompactCentralFile</h3><p>The property</p><ul>\n<li>SynchronizeWithCentralOptions.CompactCentralFile</li>\n</ul><p>duplicated the property</p><ul>\n<li>SynchronizeWithCentralOptions.Compact</li>\n</ul><p>but was not settable. It has been removed completely in Revit 2015.</p><a name=\"2.06\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Settings classes are now Elements",
+    "local_header_href": "#settings-classes-are-now-elements",
+    "chunk_text": "<h2>Settings classes are now Elements</h2><p>Several pre-existing classes:</p><ul>\n<li>DefaultDivideSettings</li>\n<li>StructuralSettings</li>\n<li>ElectricalSetting</li>\n<li>DuctSettings</li>\n<li>DuctSizeSettings</li>\n<li>PipeSettings</li>\n<li>ReinforcementSettings</li>\n<li>WorksetDefaultVisibilitySettings</li>\n<li>RevisionSettings</li>\n<li>ConceptualSurfaceType</li>\n<li>EnergyDataSettings</li>\n<li>StartingViewSettings</li>\n<li>AreaVolumeSettings</li>\n</ul><p>are now subclasses of Element. You can use limited Element related functionality on these members (for example, get their ids to check them out in a local workshared model, or add ExtensibleStorage to them). FilteredElementCollector will now return these types if they pass the associated filters.</p><a name=\"2.07\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family API changes",
+    "local_header_href": "#family-api-changes",
+    "chunk_text": "<h2>Family API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "FamilyBase class removed",
+    "local_header_href": "#familybase-class-removed",
+    "chunk_text": "<h3>FamilyBase class removed</h3><p>The FamilyBase class has been completely removed as a base class of Family. Family now inherits directly from Element. The members which belonged to FamilyBase have moved to Family:</p><ul>\n<li>FamilyBase.FamilyCategory</li>\n<li>FamilyBase.StructuralMaterialType</li>\n</ul><p>Code that accesses elements as Family and uses these members should not need to be changed, but must be recompiled due to the removal of the intermediate level.</p><p>Code that accesses elements as FamilyBase will need to be updated to use Family instead. In Revit, any FamilyBase element found will actually be a Family element and can be cast accordingly.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family.Symbols",
+    "local_header_href": "#familysymbols",
+    "chunk_text": "<h3>Family.Symbols</h3><p>The property Family.Symbols has been obsoleted – use</p><ul>\n<li>Family.GetFamilySymbolIds()</li>\n</ul><p>as a replacement.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family.CurtainPanelHorizontalSpacing and Family.CurtainPanelVerticalSpacing",
+    "local_header_href": "#familycurtainpanelhorizontalspacing-and-familycurtainpanelverticalspacing",
+    "chunk_text": "<h3>Family.CurtainPanelHorizontalSpacing and Family.CurtainPanelVerticalSpacing</h3><p>Access to these properties is now supported only from an owner family obtained from a curtain panel family document.</p><p>An exception will result attempting to access these properties from a family which is not the owner family of the document.</p><p>Code which previously tried to use these properties from a non-owner family will now need to edit the family in order to access this information.</p><a name=\"2.08\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View API changes",
+    "local_header_href": "#view-api-changes",
+    "chunk_text": "<h2>View API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View display settings",
+    "local_header_href": "#view-display-settings",
+    "chunk_text": "<h3>View display settings</h3><p>The new class:</p><ul>\n<li>ViewDisplayModel</li>\n</ul><p>contains settings related to graphics display, such as transparency, silhouette settings, hidden lines, and smooth edges. Access these settings from:</p><ul>\n<li>View.GetViewDisplayModel()</li>\n<li>View.SetViewDisplayModel()</li>\n</ul><p>This access replaces direct properties of View:</p><ul>\n<li>View.SurfaceTransparency</li>\n<li>View.ShowEdges</li>\n<li>View.ShowSilhouettes</li>\n<li>View.SilhouetteLineStyleId</li>\n</ul><p>which have been marked obsolete.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ViewSheet members related to Revisions",
+    "local_header_href": "#viewsheet-members-related-to-revisions",
+    "chunk_text": "<h3>ViewSheet members related to Revisions</h3><p>Several ViewSheet methods related to Revisions have been replaced with new names. The original members have been obsoleted. This table lists the changes:</p><ul>\n<li>Obsoleted member – Replacement</li>\n<li>IList&lt;ElementId&gt; GetAllProjectRevisionIds() – IList&lt;ElementId&gt; GetAllRevisionIds()</li>\n<li>ICollection&lt;ElementId&gt; GetAdditionalProjectRevisionIds() – ICollection&lt;ElementId&gt; GetAdditionalRevisionIds()</li>\n<li>SetAdditionalProjectRevisionIds(ICollection&lt;ElementId&gt;) – SetAdditionalRevisionIds(ICollection&lt;ElementId&gt;)</li>\n</ul><a name=\"2.09\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Structural API changes",
+    "local_header_href": "#structural-api-changes",
+    "chunk_text": "<h2>Structural API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "AnalyticalModel members obsoleted",
+    "local_header_href": "#analyticalmodel-members-obsoleted",
+    "chunk_text": "<h3>AnalyticalModel members obsoleted</h3><p>Several methods of AnalyticalModel have been marked obsolete:</p><ul>\n<li>AnalyticalModel.IsValidProjectionType()</li>\n<li>AnalyticalModel.IsValidDirectionForProjection()</li>\n<li>AnalyticalModel.IsValidSelectorAndDirection()</li>\n<li>AnalyticalModel.IsValidProjectionDatumPlane()</li>\n<li>AnalyticalModel.HasAlignment()</li>\n<li>AnalyticalModel.HasExtension()</li>\n<li>AnalyticalModel.GetAnalyticalProjectionType()</li>\n<li>AnalyticalModel.SetAnalyticalProjectionType()</li>\n<li>AnalyticalModel.SetAlignmentMethod() </li>\n<li>AnalyticalModel.GetAnalyticalProjectionDatumPlane()</li>\n<li>AnalyticalModel.GetAnalyticalProjectionDatumPlane()</li>\n<li>AnalyticalModel.IsSurface()</li>\n</ul><p>Their replacements are more specialized additions in AnalyticalModelSurface and the new classes AnalyticalModelStick and AnalyticalModelColumn, described below.</p><p>To check if an analytical model is a surface type of element, try to downcast it to AnalyticalModelSurface.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "AreaReinforcement API changes",
+    "local_header_href": "#areareinforcement-api-changes",
+    "chunk_text": "<h3>AreaReinforcement API changes</h3><p>The method</p><ul>\n<li>AreaReinforcement.GetCurveElementIds()</li>\n</ul><p>has been obsoleted – use</p><ul>\n<li>AreaReinforcement.GetBoundaryCurveIds()</li>\n</ul><p>as a replacement.</p><p>A new overload has been introduced for</p><ul>\n<li>AreaReinforcement.Create()</li>\n</ul><p>accepting ids for the type, bar type and hook type. The previous version has been obsoleted.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "PathReinforcement API changes",
+    "local_header_href": "#pathreinforcement-api-changes",
+    "chunk_text": "<h3>PathReinforcement API changes</h3><p>A new overload has been introduced for</p><ul>\n<li>PathReinforcement.Create()</li>\n</ul><p>accepting ids for the type, bar type and hook types. The previous version has been obsoleted.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "FabricArea API changes",
+    "local_header_href": "#fabricarea-api-changes",
+    "chunk_text": "<h3>FabricArea API changes</h3><p>The method</p><ul>\n<li>FabricArea.GetCurveElementIds()</li>\n</ul><p>has been obsoleted – use</p><ul>\n<li>FabricArea.GetBoundaryCurveIds()</li>\n</ul><p>as a replacement.</p><p>A new overload has been introduced for</p><ul>\n<li>FabricArea.Create()</li>\n</ul><p>accepting ids for the type and sheet type. The previous version has been obsoleted.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "RebarHookType API changes",
+    "local_header_href": "#rebarhooktype-api-changes",
+    "chunk_text": "<h3>RebarHookType API changes</h3><p>The method</p><ul>\n<li>RebarHookType.GetDefaultHookLength()</li>\n</ul><p>has been obsoleted. Use</p><ul>\n<li>RebarHookType.GetDefaultHookExtension()</li>\n</ul><p>as a replacement.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Miscellaneous changes",
+    "local_header_href": "#miscellaneous-changes",
+    "chunk_text": "<h3>Miscellaneous changes</h3>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Removed classes",
+    "local_header_href": "#removed-classes",
+    "chunk_text": "<h4>Removed classes</h4><p>The following classes:</p><ul>\n<li>FabricReinSpanSymbolControl</li>\n<li>RebarSystemSpanSymbolControl</li>\n</ul><p>have been obsoleted. They did not have specific API access available in the first place.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Removed enumerated value",
+    "local_header_href": "#removed-enumerated-value",
+    "chunk_text": "<h4>Removed enumerated value</h4><p>The enumerated value BoundaryConditionsType.Nothing was removed from the enumerated type. This was a default value which could never be returned or set for any element.</p><a name=\"2.10\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Selection API changes",
+    "local_header_href": "#selection-api-changes",
+    "chunk_text": "<h2>Selection API changes</h2><p>The new method</p><ul>\n<li>Selection.SetElementIds(ICollection&lt;ElementId&gt; ids)</li>\n</ul><p>supports setting of the selected elements in the active document.</p><p>The following items are now obsolete:</p><ul>\n<li>SelElementSet (class)</li>\n<li>Selection.Elements</li>\n</ul><a name=\"2.11\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "MEP API changes",
+    "local_header_href": "#mep-api-changes",
+    "chunk_text": "<h2>MEP API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Connector properties removed",
+    "local_header_href": "#connector-properties-removed",
+    "chunk_text": "<h3>Connector properties removed</h3><p>The properties</p><ul>\n<li>Connector.JointType </li>\n<li>Connector.GenderType</li>\n</ul><p>did not match properties available in the Revit user interface, and thus should not have been exposed in the API. They have been removed completely in Revit 2015.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Creation.Document.NewWire()",
+    "local_header_href": "#creationdocumentnewwire",
+    "chunk_text": "<h3>Creation.Document.NewWire()</h3><p>The method NewWire() has been obsoleted and replaced by the new method</p><ul>\n<li>Wire.Create()</li>\n</ul><p>The new method supports creation of straight, arc, chamfer, and spline wires.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Related Wire API additions",
+    "local_header_href": "#related-wire-api-additions",
+    "chunk_text": "<h3>Related Wire API additions</h3><p>Several new methods have been introduced to edit the layout of an existing wire:</p><ul>\n<li>Wire.AppendVertex(XYZ vertexPoint) – Appends one vertex to the end of the wire.</li>\n<li>Wire.GetVertex(int index) – Returns the vertex position at the given index.</li>\n<li>Wire.InsertVertex(int index, XYZ vertexPoint) – Inserts a new vertex before the given index.</li>\n<li>Wire.RemoveVertex(int index) – Removes one vertex from the given index.</li>\n<li>Wire.SetVertex(int index, XYZ vertexPoint) – Sets one vertex's position from the given index</li>\n<li>Wire.AreVertexPointsValid(IList&lt;XYZ&gt; vertexPoints, Connector startConnector, Connector endConnector) – Identifies if the given vertex points are valid for the wire or not.</li>\n<li>Wire.ConnectTo(Connector startConnectorTo, Connector endConnectorTo) – Connects a wire to another wire</li>\n</ul><p>New properties on wire:</p><ul>\n<li>NumberOfVertices – Number of vertices of the wire, including the start and end point</li>\n<li>WiringType – The wiring type(Arc or Chamfer) for the wire.</li>\n</ul><a name=\"2.12\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "IFC API changes",
+    "local_header_href": "#ifc-api-changes",
+    "chunk_text": "<h2>IFC API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Obsoleted functions, classes, and enums",
+    "local_header_href": "#obsoleted-functions-classes-and-enums",
+    "chunk_text": "<h3>Obsoleted functions, classes, and enums</h3><li>The IFCDoorStyleOperation and IFCWindowStyleOperation enums have been obsoleted and replaced entirely by their .NET equivalents.</li><li>IFCExporterUtils.GetWallHeightDirection is no longer necessary, as all internal Revit walls have a direction of (0,0,1).</li><li>IFCTypeInfo has been deprecated, and is no longer used by IFC Export.</li><li>ExporterIFC.GetBuilding has been deprecated. The IfcBuilding handle is now expected to be stored in the exporting application if needed.</li>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Changed functions, classes, and enums",
+    "local_header_href": "#changed-functions-classes-and-enums",
+    "chunk_text": "<h3>Changed functions, classes, and enums</h3><p>Several API routines that returned HashSet&lt;IFCAnyHandle&gt; now return an ICollection&lt;IFCAnyHandle&gt; instead.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "New functions, classes, and enums",
+    "local_header_href": "#new-functions-classes-and-enums",
+    "chunk_text": "<h3>New functions, classes, and enums</h3><p>IFCFile has a new Read() function that returns the number of errors and warnings reported by the toolkit during the read operation. This is in addition to the existing Read() function.</p><p>IFCAnyHandle now has SetAttribute() functions for each data type to reduce the use of the IFCData class.</p><p>IFCLegacyStairOrRamp has two new functions, GetBoundaryLines() and GetWalkLines(), that return the curve loops associated with the boundaries and walking lines of the legacy stair or ramp, respectively.</p><a name=\"2.13\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Energy Analysis API changes",
+    "local_header_href": "#energy-analysis-api-changes",
+    "chunk_text": "<h2>Energy Analysis API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ElementId properties in EnergyAnaysisDetailModel contents",
+    "local_header_href": "#elementid-properties-in-energyanaysisdetailmodel-contents",
+    "chunk_text": "<h3>ElementId properties in EnergyAnaysisDetailModel contents</h3><p>The properties:</p><ul>\n<li>EnergyAnalysisSpace.SpatialElementId</li>\n<li>EnergyAnalysisOpening.OriginatingElementId</li>\n<li>EnergyAnalysisSurface.OriginatingElementId</li>\n</ul><p>have been obsoleted. Because the EnergyAnaysisDetailModel is intended to be generated at a single point in time, and is not persistently updated as changes are made to the original elements used to generate the energy analysis model, the model has been decoupled from direct relationships with the generating Revit elements. As replacements, the API now offers:</p><ul>\n<li>EnergyAnalysisSpace.CADObjectUniqueId</li>\n<li>EnergyAnalysisOpening.CADObjectUniqueId</li>\n<li>EnergyAnalysisOpening.CADLinkUniqueId</li>\n<li>EnergyAnalysisSurface.CADObjectUniqueId</li>\n<li>EnergyAnalysisSurface.CADLinkUniqueId</li>\n</ul><p>These properties offer the unique id of the related elements instead. In the case of potential relationships with linked model elements, two unique ids are available.</p><p>As a reminder, the EnergyAnaysisDetailModel is intended to be generated and used immediately – none of the data or relationships that it contains is updated as changes are made to the corresponding Revit model. Dispose of the generated EnergyAnaysisDetailModel using the Destroy() method as soon as you have extracted the needed information.</p><a name=\"2.14\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Miscellaneous API changes",
+    "local_header_href": "#miscellaneous-api-changes",
+    "chunk_text": "<h2>Miscellaneous API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Material API",
+    "local_header_href": "#material-api",
+    "chunk_text": "<h3>Material API</h3><p>The property Material.MaterialCagtegory has been obsoleted and replaced by Material.MaterialCategory.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "TableSectionData.InsertColumn(int index, bool bCreateCellData)",
+    "local_header_href": "#tablesectiondatainsertcolumnint-index-bool-bcreatecelldata",
+    "chunk_text": "<h3>TableSectionData.InsertColumn(int index, bool bCreateCellData)</h3><p>This method has been obsoleted – use</p><ul>\n<li>TableSectionData.InsertColumn(int index)</li>\n</ul><p>as a replacement.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "BoundaryConditions",
+    "local_header_href": "#boundaryconditions",
+    "chunk_text": "<h3>BoundaryConditions</h3><p>This class has moved from namespace Autodesk.Revit.DB to Autodesk.Revit.DB.Structure.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "BuiltInCategory.OST_MassWindow",
+    "local_header_href": "#builtincategoryost_masswindow",
+    "chunk_text": "<h3>BuiltInCategory.OST_MassWindow</h3><p>This enumerated type value has been renamed to OST_MassGlazing.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ElementIntersectsElementFilter",
+    "local_header_href": "#elementintersectselementfilter",
+    "chunk_text": "<h3>ElementIntersectsElementFilter</h3><p>Previously, the ElementIntersectsElementFilter would report the target element as an \"intersection\" with itself. This behavior has been changed; the filter will no longer pass the target element.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ExtensibleStorageFilter",
+    "local_header_href": "#extensiblestoragefilter",
+    "chunk_text": "<h3>ExtensibleStorageFilter</h3><p>The ExtensibleStorageFilter class has moved from namespace Autodesk.Revit.DB to Autodesk.Revit.DB.ExtensibleStorage.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "MeshTriangle",
+    "local_header_href": "#meshtriangle",
+    "chunk_text": "<h3>MeshTriangle</h3><p>The MeshTriangle class no longer inherits from APIObject.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "CurtainGridLine.Move()",
+    "local_header_href": "#curtaingridlinemove",
+    "chunk_text": "<h3>CurtainGridLine.Move()</h3><p>The method CurtainGridLine.Move() has been obsoleted. Use ElementTransformUtils.MoveElement() to accomplish the same result.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "CurveLoop.CreateViaThicken()",
+    "local_header_href": "#curveloopcreateviathicken",
+    "chunk_text": "<h3>CurveLoop.CreateViaThicken()</h3><p>Previously, when this function couldn't create a compatible CurveLoop, it would return null. It now throws an exception in this situation.</p><a name=\"2.15\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Obsolete API removal",
+    "local_header_href": "#obsolete-api-removal",
+    "chunk_text": "<h2>Obsolete API removal</h2><p>The following obsolete APIs and classes have been removed:</p><ul>\n<li>Autodesk.Revit.Creation.Application.NewArc(Plane, Double, Double, Double)</li>\n<li>Autodesk.Revit.Creation.Application.NewArc(XYZ, Double, Double, Double, XYZ, XYZ)</li>\n<li>Autodesk.Revit.Creation.Application.NewArc(XYZ, XYZ, XYZ)</li>\n<li>Autodesk.Revit.Creation.Application.NewEllipse(XYZ, Double, Double, XYZ, XYZ, Double, Double)</li>\n<li>Autodesk.Revit.Creation.Application.NewHermiteSpline(IList&lt;XYZ&gt;, Boolean)</li>\n<li>Autodesk.Revit.Creation.Application.NewHermiteSpline(IList&lt;XYZ&gt;, Boolean, XYZ, XYZ)</li>\n<li>Autodesk.Revit.Creation.Application.NewLine(XYZ, XYZ, Boolean)</li>\n<li>Autodesk.Revit.Creation.Application.NewLineBound(XYZ, XYZ)</li>\n<li>Autodesk.Revit.Creation.Application.NewLineUnbound(XYZ, XYZ)</li>\n<li>Autodesk.Revit.Creation.Application.NewNurbSpline(IList&lt;XYZ&gt;, DoubleArray, DoubleArray, Int32, Boolean, Boolean)</li>\n<li>Autodesk.Revit.Creation.Application.NewNurbSpline(IList&lt;XYZ&gt;, IList&lt;Double&gt;)</li>\n<li>Autodesk.Revit.Creation.Application.NewSATExportOptions()</li>\n<li>Autodesk.Revit.Creation.Document.NewAreaReinforcement(Element, CurveArray, XYZ)</li>\n<li>Autodesk.Revit.Creation.Document.NewBeamSystem(CurveArray, Level)</li>\n<li>Autodesk.Revit.Creation.Document.NewBeamSystem(CurveArray, Level, XYZ, Boolean)</li>\n<li>Autodesk.Revit.Creation.Document.NewBeamSystem(CurveArray, SketchPlane)</li>\n<li>Autodesk.Revit.Creation.Document.NewBeamSystem(CurveArray, SketchPlane, XYZ, Boolean)</li>\n<li>Autodesk.Revit.Creation.Document.NewPathReinforcement(Element, CurveArray, Boolean)</li>\n<li>Autodesk.Revit.Creation.Document.NewRebarBarType()</li>\n<li>Autodesk.Revit.Creation.Document.NewRoomTag(Room, UV, View)</li>\n<li>Autodesk.Revit.Creation.Document.NewTopographySurface(IList&lt;XYZ&gt;)</li>\n<li>Autodesk.Revit.Creation.Document.NewTruss(TrussType, SketchPlane, Curve)</li>\n<li>Autodesk.Revit.Creation.Document.NewViewSheet(FamilySymbol)</li>\n<li>Autodesk.Revit.Creation.FamilyItemFactory.NewDividedSurface(Reference)</li>\n<li>Autodesk.Revit.Creation.ItemFactoryBase.NewSketchPlane(PlanarFace)</li>\n<li>Autodesk.Revit.Creation.ItemFactoryBase.NewSketchPlane(Plane)</li>\n<li>Autodesk.Revit.Creation.ItemFactoryBase.NewSketchPlane(Reference)</li>\n<li>Autodesk.Revit.DB.Architecture.BoundaryLocationType</li>\n<li>Autodesk.Revit.DB.Architecture.StairsRun.ExtensionBelowBase</li>\n<li>Autodesk.Revit.DB.Curve.EndParameter[Int32]</li>\n<li>Autodesk.Revit.DB.Curve.EndPoint[Int32]</li>\n<li>Autodesk.Revit.DB.Curve.EndPointReference[Int32]</li>\n<li>Autodesk.Revit.DB.Curve.Transformed[Transform]</li>\n<li>Autodesk.Revit.DB.Dimension.Label</li>\n<li>Autodesk.Revit.DB.DividedSurfaceData</li>\n<li>Autodesk.Revit.DB.Document.AnnotationSymbolTypes</li>\n<li>Autodesk.Revit.DB.Document.BeamSystemTypes</li>\n<li>Autodesk.Revit.DB.Document.ContFootingTypes</li>\n<li>Autodesk.Revit.DB.Document.CurtainSystemTypes</li>\n<li>Autodesk.Revit.DB.Document.DeckProfiles</li>\n<li>Autodesk.Revit.DB.Document.Delete(Element)</li>\n<li>Autodesk.Revit.DB.Document.DimensionTypes</li>\n<li>Autodesk.Revit.DB.Document.ElectricalEquipmentTypes</li>\n<li>Autodesk.Revit.DB.Document.Export(String, String, ViewSet, SATExportOptions)</li>\n<li>Autodesk.Revit.DB.Document.FasciaTypes</li>\n<li>Autodesk.Revit.DB.Document.FindReferencesWithContextByDirection(XYZ, XYZ, View3D)</li>\n<li>Autodesk.Revit.DB.Document.FloorTypes</li>\n<li>Autodesk.Revit.DB.Document.GridTypes</li>\n<li>Autodesk.Revit.DB.Document.GutterTypes</li>\n<li>Autodesk.Revit.DB.Document.LevelTypes</li>\n<li>Autodesk.Revit.DB.Document.LightingDeviceTypes</li>\n<li>Autodesk.Revit.DB.Document.LightingFixtureTypes</li>\n<li>Autodesk.Revit.DB.Document.MechanicalEquipmentTypes</li>\n<li>Autodesk.Revit.DB.Document.RebarBarTypes</li>\n<li>Autodesk.Revit.DB.Document.RebarCoverTypes</li>\n<li>Autodesk.Revit.DB.Document.RebarHookTypes</li>\n<li>Autodesk.Revit.DB.Document.RebarShapes</li>\n<li>Autodesk.Revit.DB.Document.RoofTypes</li>\n<li>Autodesk.Revit.DB.Document.RoomTagTypes</li>\n<li>Autodesk.Revit.DB.Document.SlabEdgeTypes</li>\n<li>Autodesk.Revit.DB.Document.SpaceTagTypes</li>\n<li>Autodesk.Revit.DB.Document.SpotDimensionTypes</li>\n<li>Autodesk.Revit.DB.Document.TextNoteTypes</li>\n<li>Autodesk.Revit.DB.Document.TitleBlocks</li>\n<li>Autodesk.Revit.DB.Document.TrussTypes</li>\n<li>Autodesk.Revit.DB.Document.ViewSheetSets</li>\n<li>Autodesk.Revit.DB.Document.WallTypes</li>\n<li>Autodesk.Revit.DB.Edge.EndPointReference[Int32]</li>\n<li>Autodesk.Revit.DB.Edge.Face[Int32]</li>\n<li>Autodesk.Revit.DB.Element.GetDividedSurfaceData()</li>\n<li>Autodesk.Revit.DB.Element.GetMaterialArea(Material)</li>\n<li>Autodesk.Revit.DB.Element.GetMaterialVolume(Material)</li>\n<li>Autodesk.Revit.DB.Element.Group</li>\n<li>Autodesk.Revit.DB.Element.Level</li>\n<li>Autodesk.Revit.DB.Element.Materials</li>\n<li>Autodesk.Revit.DB.IFC.IFCDoorWindowInfo </li>\n<li>Autodesk.Revit.DB.Line.Bound[XYZ, XYZ]</li>\n<li>Autodesk.Revit.DB.Line.Unbound[XYZ, XYZ]</li>\n<li>Autodesk.Revit.DB.Material.CutPattern</li>\n<li>Autodesk.Revit.DB.Material.GetCutPatternColor()</li>\n<li>Autodesk.Revit.DB.Material.GetCutPatternId()</li>\n<li>Autodesk.Revit.DB.Material.GetRenderAppearance()</li>\n<li>Autodesk.Revit.DB.Material.RenderAppearance</li>\n<li>Autodesk.Revit.DB.Material.SetRenderAppearance(Asset)</li>\n<li>Autodesk.Revit.DB.Material.SurfacePattern</li>\n<li>Autodesk.Revit.DB.MEPSystem.IsDefaultSystem</li>\n<li>Autodesk.Revit.DB.ParameterFilterElement.AllCategoriesFilterable(ICollection&lt;ElementId&gt;)</li>\n<li>Autodesk.Revit.DB.Plumbing.PipeConnectionType</li>\n<li>Autodesk.Revit.DB.Plumbing.PipeSettings.ElbowAngleIncrement</li>\n<li>Autodesk.Revit.DB.Plumbing.PipeType.ConnectionType</li>\n<li>Autodesk.Revit.DB.PointCloudInstance.GetPoints(PointCloudFilter, Int32)</li>\n<li>Autodesk.Revit.DB.SaveAsOptions.Rename</li>\n<li>Autodesk.Revit.DB.Settings.VolumeCalculationSetting</li>\n<li>Autodesk.Revit.DB.SketchPlane.Plane</li>\n<li>Autodesk.Revit.DB.SketchPlane.PlaneReference</li>\n<li>Autodesk.Revit.DB.StairsEditScope.Commit()</li>\n<li>Autodesk.Revit.DB.Structure.FabricArea.Create(Document, Element, IList&lt;CurveLoop&gt;, XYZ)</li>\n<li>Autodesk.Revit.DB.Structure.FabricArea.SetFabricLocation(FabricLocation)</li>\n<li>Autodesk.Revit.DB.Structure.FabricArea.SetFabricSheetTypeId(ElementId)</li>\n<li>Autodesk.Revit.DB.Structure.FabricArea.SetMajorSheetAlignment(FabricSheetAlignment)</li>\n<li>Autodesk.Revit.DB.Structure.FabricArea.SetMinorSheetAlignment(FabricSheetAlignment)</li>\n<li>Autodesk.Revit.DB.Structure.FabricSheet.SheetTypeId</li>\n<li>Autodesk.Revit.DB.Structure.FabricSheetType.PhysicalMaterialAsset</li>\n<li>Autodesk.Revit.DB.Structure.RebarShape.GetHookAngle(Int32)</li>\n<li>Autodesk.Revit.DB.Structure.RebarShape.GetHookOrientation(Int32)</li>\n<li>Autodesk.Revit.DB.Structure.RebarShapeDefinitionBySegments.AddBendDefaultRadius(Int32, Int32, RebarShapeBendAngle)</li>\n<li>Autodesk.Revit.DB.Structure.RebarShapeDefinitionBySegments.AddBendVariableRadius(Int32, Int32, RebarShapeBendAngle, ElementId, Boolean)</li>\n<li>Autodesk.Revit.DB.Transform.Reflection[Plane]</li>\n<li>Autodesk.Revit.DB.Transform.Rotation[XYZ, XYZ, Double]</li>\n<li>Autodesk.Revit.DB.Transform.Translation[XYZ]</li>\n<li>Autodesk.Revit.DB.View.CutColorOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.CutLinePatternOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.CutLineWeightOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.GetVisibility(Category)</li>\n<li>Autodesk.Revit.DB.View.ProjColorOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.ProjLinePatternOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.ProjLineWeightOverrideByElement[ICollection&lt;ElementId&gt;]</li>\n<li>Autodesk.Revit.DB.View.SetVisibility(Category, Boolean)</li>\n<li>Autodesk.Revit.DB.View3D.SectionBox</li>\n<li>Autodesk.Revit.DB.VolumeCalculationOptions</li>\n<li>Autodesk.Revit.DB.VolumeCalculationSetting</li>\n<li>Autodesk.Revit.Utility.AssetPropertyReference.Value</li>\n</ul><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Major API Additions",
+    "local_header_href": "#major-api-additions",
+    "chunk_text": "<h1>Major API Additions</h1><a name=\"3.01\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View API changes",
+    "local_header_href": "#view-api-changes",
+    "chunk_text": "<h2>View API changes</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Active graphical view",
+    "local_header_href": "#active-graphical-view",
+    "chunk_text": "<h3>Active graphical view</h3><p>The new property</p><ul>\n<li>UIDocument.ActiveGraphicalView</li>\n</ul><p>allows you to read the currently active graphical view of the currently active document. Unlike UIDocument.ActiveView, this property will never return auxiliary views like the Project Browser or System Browser if the user has happened to make a selection in one of those views.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Sketchy lines settings",
+    "local_header_href": "#sketchy-lines-settings",
+    "chunk_text": "<h3>Sketchy lines settings</h3><p>The new methods</p><ul>\n<li>View.GetSketchyLines()</li>\n<li>View.SetSketchyLines()</li>\n</ul><p>allow full control over the Sketchy Lines settings for a given view.</p><a name=\"3.02\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Default Type API",
+    "local_header_href": "#default-type-api",
+    "chunk_text": "<h2>Default Type API</h2><p>Revit has a default type for different categories. This default type is shown in the Revit User Interface when the related tool is invoked to create an element of this category.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family Types",
+    "local_header_href": "#family-types",
+    "chunk_text": "<h3>Family Types</h3><p>These members provide read and write access to the default type for a given family category id:</p><ul>\n<li>Document.GetDefaultFamilyTypeId() – Gets the default family type id associated to the given family category id.</li>\n<li>Document.SetDefaultFamilyTypeId() – Sets the default family type id associated to the given family category id.</li>\n<li>Document.IsDefaultFamilyTypeIdValid() – Checks whether the family type id is valid to set as default for the given family category id.</li>\n<li>ElementType.IsValidDefaultFamilyType() – Identifies if a type is a valid default family type for the given family category id.</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Non-family Types",
+    "local_header_href": "#non-family-types",
+    "chunk_text": "<h3>Non-family Types</h3><p>These members provide read and write access to the default type for a non-Family element type:</p><ul>\n<li>Document.GetDefaultElementTypeId() – Gets the default element type id for a given non-Family element type.</li>\n<li>Document.SetDefaultElementTypeId() – Sets the default</li>\n<li>Document.IsDefaultElementTypeIdValid() – Checks whether the element type id is valid for a given non-Family element type.</li>\n</ul><a name=\"3.03\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Structural API additions",
+    "local_header_href": "#structural-api-additions",
+    "chunk_text": "<h2>Structural API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Reinforcement numbering",
+    "local_header_href": "#reinforcement-numbering",
+    "chunk_text": "<h3>Reinforcement numbering</h3><p>The new classes:</p><ul>\n<li>NumberingSchema</li>\n<li>NumberingSchemaType</li>\n</ul><p>are used to define how objects of certain kind and scope are to be organized for the purpose of numbering/tagging them. Each NumberingSchema controls numbering of elements of one particular kind. Instances of NumberingSchema are also elements and there is always only one of each type in every Revit document. Available types of all built-in numbering schemas are enumerated in NumberingSchemaTypes class.</p><p>In this release NumberingSchema applies only to the built-in types matching elements of these categories:</p><ul>\n<li>Rebar</li>\n<li>Fabric Reinforcement</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Reinforcement in parts",
+    "local_header_href": "#reinforcement-in-parts",
+    "chunk_text": "<h3>Reinforcement in parts</h3><p>Reinforcement and Rebar is now allowed to be hosted in Parts if those Parts come from a structural layer of a valid reinforcement host.</p><p>The methods:</p><ul>\n<li>Rebar.CreateFromCurves()</li>\n<li>Rebar.CreateFromCurvesAndShape()</li>\n<li>Rebar.CreateFromRebarShape()</li>\n<li>AreaReinforcement.Create()</li>\n<li>PathReinforcement.Create()</li>\n<li>FabricArea.Create()</li>\n<li>FabricSheet.Create()</li>\n</ul><p>accept compatible parts as host elements.</p><p>The new method:</p><ul>\n<li>RebarHostData.IsValidHost()</li>\n</ul><p>identifies if a proposed host elements is valid for reinforcement.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Rebar presentation mode",
+    "local_header_href": "#rebar-presentation-mode",
+    "chunk_text": "<h3>Rebar presentation mode</h3><p>The new presentation mode capabilities allow the user to specify how rebar sets are shown in a given view. Bar presentation schemes simplify the view while maintaining an identifiable footprint in which the rebar set is placed. In the API, the following members have been added to support this capability:</p><ul>\n<li>Rebar.SetPresentationMode()</li>\n<li>Rebar.GetPresentationMode()</li>\n<li>Rebar.ClearPresentationMode()</li>\n<li>Rebar.HasPresentationOverrides()</li>\n<li>Rebar.SetBarHiddenStatus()</li>\n<li>Rebar.IsBarHidden()</li>\n<li>Rebar.FindMatchingPredefinedPresentationMode()</li>\n<li>Rebar.IsRebarInSection()</li>\n<li>Rebar.CanApplyPresentationMode()</li>\n<li>RebarInSystem.SetPresentationMode()</li>\n<li>RebarInSystem.GetPresentationMode()</li>\n<li>RebarInSystem.ClearPresentationMode()</li>\n<li>RebarInSystem.HasPresentationOverrides()</li>\n<li>RebarInSystem.SetBarHiddenStatus()</li>\n<li>RebarInSystem.IsBarHidden()</li>\n<li>RebarInSystem.FindMatchingPredefinedPresentationMode()</li>\n<li>RebarInSystem.IsRebarInSection()</li>\n<li>RebarInSystem.CanApplyPresentationMode()</li>\n</ul><p>The default settings for bar presentation can be accessed from</p><ul>\n<li>ReinforcementSettings.RebarPresentationInView</li>\n<li>ReinforcementSettings.RebarPresentationInSection</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Place FabricSheet directly in host",
+    "local_header_href": "#place-fabricsheet-directly-in-host",
+    "chunk_text": "<h3>Place FabricSheet directly in host</h3><p>The new members:</p><ul>\n<li>FabricSheet.Create()</li>\n<li>FabricSheet.PlaceInHost()</li>\n<li>FabricSheet.GetSheetLocation()</li>\n<li>FabricSheet.IsSingleFabricSheetWithinHost() </li>\n<li>FabricSheet.HostId</li>\n<li>FabricSheet.FabricLocation</li>\n<li>FabricSheet.CoverOffset</li>\n<li>FabricSheet.FabricHostReference</li>\n<li>FabricSheet.IsCoverOffsetValid</li>\n<li>FabricArea.RemoveFabricReinforcementSystem()</li>\n<li>RebarHostData.GetFabricSheetsInHost() </li>\n</ul><p>support the new Revit capability where single instances of fabric sheets can be placed precisely to reinforce sections of concrete walls or floors.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Creating default reinforcement types",
+    "local_header_href": "#creating-default-reinforcement-types",
+    "chunk_text": "<h3>Creating default reinforcement types</h3><p>The new methods:</p><ul>\n<li>AreaReinforcementType.CreateDefaultAreaReinforcementType()</li>\n<li>PathReinforcementType.CreateDefaultPathReinforcementType()</li>\n<li>FabricAreaType.CreateDefaultFabricAreaType()</li>\n<li>FabricSheetType.CreateDefaultFabricSheetType()</li>\n<li>FabricWireType.CreateDefaultFabricWireType()</li>\n<li>RebarBarType.CreateDefaultRebarBarType()</li>\n<li>RebarHookType.CreateDefaultRebarHookType()</li>\n</ul><p>create a default element type for the given reinforcement class. This is useful if there is no existing type element of this kind in the document.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Miscellaneous reinforcement API additions",
+    "local_header_href": "#miscellaneous-reinforcement-api-additions",
+    "chunk_text": "<h3>Miscellaneous reinforcement API additions</h3>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Create reinforcement based on host boundary",
+    "local_header_href": "#create-reinforcement-based-on-host-boundary",
+    "chunk_text": "<h4>Create reinforcement based on host boundary</h4><p>The new overloads:</p><ul>\n<li>AreaReinforcement.Create(Document, Element, XYZ, ElementId, ElementId, ElementId)</li>\n<li>FabricArea.Create(Document, Element, XYZ, ElementId, ElementId)</li>\n</ul><p>create new reinforcement area elements automatically related to the host's boundary.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Rebar shape family",
+    "local_header_href": "#rebar-shape-family",
+    "chunk_text": "<h4>Rebar shape family</h4><p>The property:</p><ul>\n<li>RebarShape.ShapeFamilyId </li>\n</ul><p>gets the rebar shape family id.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "RebarHostCategory enumerated type",
+    "local_header_href": "#rebarhostcategory-enumerated-type",
+    "chunk_text": "<h4>RebarHostCategory enumerated type</h4><p>The type of host for rebars. This type matches the value returned by the new parameter BuiltInParameter.REBAR_HOST_CATEGORY.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "AnalyticalModel API additions",
+    "local_header_href": "#analyticalmodel-api-additions",
+    "chunk_text": "<h3>AnalyticalModel API additions</h3>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "AnalyticalModel coordinate system",
+    "local_header_href": "#analyticalmodel-coordinate-system",
+    "chunk_text": "<h4>AnalyticalModel coordinate system</h4><p>The new method:</p><ul>\n<li>AnalyticalModel.GetLocalCoordinateSystem()</li>\n</ul><p>returns the local coordinate system from analytical model element.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "AnayticalModelSurface additions",
+    "local_header_href": "#anayticalmodelsurface-additions",
+    "chunk_text": "<h4>AnayticalModelSurface additions </h4><p>The AnalyticalModelSurface class has been extended with several new members:</p><ul>\n<li>AlignmentMethod </li>\n<li>ProjectionZ</li>\n<li>ProjectionPlaneZ </li>\n<li>HasExtension</li>\n<li>BottomExtensionMethod</li>\n<li>TopExtensionMethod</li>\n<li>BottomExtension</li>\n<li>TopExtension</li>\n<li>BottomExtensionPlaneId</li>\n<li>TopExtensionPlaneId </li>\n</ul><p>These new members support checking and manipulating alignment, projection and extension of AnalyticalModelSurface elements such floors, slabs and walls.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Stick and column elements",
+    "local_header_href": "#stick-and-column-elements",
+    "chunk_text": "<h4>Stick and column elements</h4><p>The new class:</p><ul>\n<li>AnalyticalModelStick</li>\n</ul><p>represents a stick in the structural analytical model (A beam, brace or column). This class contains several members to check and manipulate the alignment, projection and extension properties:</p><ul>\n<li>GetAlignmentMethod()</li>\n<li>GetProjectionY()</li>\n<li>GetProjectionZ()</li>\n<li>GetProjectionPlaneY()</li>\n<li>GetProjectionPlaneZ()</li>\n<li>SetProjection()</li>\n</ul><p>The new class:</p><ul>\n<li>AnalyticalModelColumn</li>\n</ul><p>represents an analytical model of structural column. It is a subclass of AnalyticalModelStick. This class contains members to check and manipulate extension properties:</p><ul>\n<li>BaseExtensionMethod</li>\n<li>TopExtensionMethod</li>\n<li>BaseExtensionPlaneId</li>\n<li>TopExtensionPlaneId</li>\n<li>BaseExtension</li>\n<li>TopExtension</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Loads and Boundary Conditions API",
+    "local_header_href": "#loads-and-boundary-conditions-api",
+    "chunk_text": "<h3>Loads and Boundary Conditions API</h3>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "LoadBase class",
+    "local_header_href": "#loadbase-class",
+    "chunk_text": "<h4>LoadBase class</h4><p>The new properties:</p><ul>\n<li>OrientTo</li>\n<li>HostElementId</li>\n<li>WorkPlaneId</li>\n</ul><p>provide the ability to read and change how the load is oriented to the associated host or related work plane.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "BoundaryConditions class",
+    "local_header_href": "#boundaryconditions-class",
+    "chunk_text": "<h4>BoundaryConditions class</h4><p>The new methods:</p><ul>\n<li>BoundaryConditions.GetOrientTo()</li>\n<li>BoundaryConditions.SetOrientTo()</li>\n</ul><p>access the Boundary Conditions element orientation feature that allows orientation of boundary conditions to the local coordinate system of the associated analytical model.</p><p>The new method:</p><ul>\n<li>BoundaryConditions.GetDegreesOfFreedomCoordinateSystem()</li>\n</ul><p>gets the definition of the coordinate system that is used by the element's translation and rotation parameters (e.g. X Translation or Z Rotation).</p><p>The new method:</p><ul>\n<li>BoundaryConditions.GetBoundaryConditionsType()</li>\n</ul><p>accesses the Boundary Conditions type (Point, Line or Area).</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Structural Section Parameters",
+    "local_header_href": "#structural-section-parameters",
+    "chunk_text": "<h4>Structural Section Parameters</h4><p>Revit now supports defined data structures to represent standard structural section shapes. In support of this feature a hierarchy of classes were introduced to the API:</p><ul>\n<li>Class – Represents</li>\n<li>StructuralSection – The base class for StructuralSection specific classes, designed to provide common parameters and ability to differentiate between different structural section shapes.</li>\n<li>StructuralSectionRectangular – The base class for rectangular sections.</li>\n<li>StructuralSectionRound – The base class for round sections.</li>\n<li>StructuralSectionCParallelFlange – C-channel Parallel Flange structural section.</li>\n<li>StructuralSectionCSlopedFlange – C-channel Sloped Flange structural section.</li>\n<li>StructuralSectionHotRolled – Hot rolled structural sections.</li>\n<li>StructuralSectionIParallelFlange – I-shape Parallel Flange structural section.</li>\n<li>StructuralSectionISlopedFlange – I-shape Sloped Flange structural section.</li>\n<li>StructuralSectionISplitParallelFlange – I-split Parallel Flange structural section.</li>\n<li>StructuralSectionISplitSlopedFlange – I-split Sloped Flange structural section.</li>\n<li>StructuralSectionIWelded – I-shape Welded structural section.</li>\n<li>StructuralSectionIWideFlange – I-shape Wide Flange structural section.</li>\n<li>StructuralSectionLAngle – L-angle Flange structural section.</li>\n<li>StructuralSectionPipeStandard – Pipe section.</li>\n<li>StructuralSectionRectangleHSS – Parameterized rectangle HSS structural section.</li>\n<li>StructuralSectionRectangleParameterized – Parameterized rectangle structural section.</li>\n<li>StructuralSectionRectangularBar – Rectangular Bar structural section.</li>\n<li>StructuralSectionRoundBar – Round Bar structural section.</li>\n<li>StructuralSectionRoundHSS – Pipes known as Round HSS (HollowStructuralSection).</li>\n<li>StructuralSectionStructuralTees – Structural Tees structural section.</li>\n</ul><p>Only beams, braces and structural columns can have a structural section. At the level of the Family, these members:</p><ul>\n<li>Family.HasStructuralSection()</li>\n<li>Family.StructuralSectionShape</li>\n</ul><p>identify if the family carries a structural section and its shape.</p><p>At the level of the FamilySymbol, these members:</p><ul>\n<li>FamilySymbol.HasStructuralSection()</li>\n<li>FamilySymbol.GetStructuralSection()</li>\n<li>FamilySymbol.SetStructuralSection()</li>\n</ul><p>provide access to the specific parameterized structural section for a given FamilySymbol.</p><p>The new method:</p><ul>\n<li>LabelUtils.GetStructuralSectionShapeName()</li>\n</ul><p>returns the user-visible name of structural section shape.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "StructuralFramingUtils",
+    "local_header_href": "#structuralframingutils",
+    "chunk_text": "<h3>StructuralFramingUtils</h3><p>The methods:</p><ul>\n<li>StructuralFramingUtils.CanSetEndReference()</li>\n<li>StructuralFramingUtils.IsEndReferenceValid()</li>\n<li>StructuralFramingUtils.RemoveEndReference()</li>\n<li>StructuralFramingUtils.GetEndReference()</li>\n<li>StructuralFramingUtils.SetEndReference()</li>\n</ul><p>support setting / getting / removing the end references for family instances of a structural framing type.</p><p>Family instances need to be non-concrete and joined at the given end. As the new end reference can be set appropriate face of the joined element at the given end. The setback value will be changed as a result of any reference change.</p><p>The methods:</p><ul>\n<li>StructuralFramingUtils.DisallowJoinAtEnd()</li>\n<li>StructuralFramingUtils.AllowJoinAtEnd()</li>\n<li>StructuralFramingUtils.IsJoinAllowedAtEnd()</li>\n</ul><p>support disallowing / allowing structural framing elements to join at the end to others.</p><p>Family instances need to be of a structural framing category. If the framing element is already joined at the end, and becomes disallowed to join, it will become disconnected. If the framing element end is allowed to join and if that end is near other elements it will become joined.</p><a name=\"3.04\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Revisions",
+    "local_header_href": "#revisions",
+    "chunk_text": "<h2>Revisions</h2><p>Revit 2015 introduces new API classes and members for accessing project Revisions, their settings and associated Revision Clouds.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "RevisionSettings class",
+    "local_header_href": "#revisionsettings-class",
+    "chunk_text": "<h3>RevisionSettings class</h3><p>The new RevisionSettings class allows an application to read and modify the project-wide settings that affect Revisions and Revision Clouds.</p><p>The new property</p><ul>\n<li>RevisionSettings.RevisionAlphabet</li>\n</ul><p>determines the characters used to populate the Revision Number parameter of alphabetic Revisions.</p><p>The new property</p><ul>\n<li>RevisionSettings.RevisionCloudSpacing</li>\n</ul><p>determines the sizing of the cloud graphics for Revision Clouds in the project.</p><p>The new property</p><ul>\n<li>RevisionSettings.RevisionNumbering</li>\n</ul><p>determines whether revision numbers for the project are determined on a per sheet or a whole project basis.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Revision class",
+    "local_header_href": "#revision-class",
+    "chunk_text": "<h3>Revision class</h3><p>The new Revision class allows an application to read and modify the existing revisions in a project and also to create new revisions. Revision is a subclass of element.</p><p>The new method</p><ul>\n<li>Revision.GetAllRevisionIds()</li>\n</ul><p>provides an ordered list of all of the Revisions in the document.</p><p>The new method</p><ul>\n<li>Revision.ReorderRevisions()</li>\n</ul><p>allows the ordering of the Revisions within the project to be changed.</p><p>The new method</p><ul>\n<li>Revision.Create()</li>\n</ul><p>creates a new Revision in the document.</p><p>The data associated with a Revision, and its associated settings within the project, can be read and modified through the following new properties:</p><ul>\n<li>Revision.Description</li>\n<li>Revision.Issued</li>\n<li>Revision.IssuedBy</li>\n<li>Revision.IssuedTo</li>\n<li>Revision.NumberType</li>\n<li>Revision.RevisionDate</li>\n<li>Revision.Visibility</li>\n<li>Revision.SequenceNumber</li>\n<li>Revision.RevisionNumber</li>\n</ul><p>The new methods</p><ul>\n<li>Revision.CombineWithNext()</li>\n<li>Revision.CombineWithPrevious()</li>\n</ul><p>allow an application to combine a specified Revision with the next or previous Revision in the model. Combining the Revisions means that the RevisionClouds and revision tags associated with the specified Revision will be reassociated with the next Revision and the specified Revision will be deleted from the model. This method returns the ids of the RevisionClouds that were reassociated.</p><p>The new method</p><ul>\n<li>ViewSheet.GetRevisionNumberOnSheet()</li>\n</ul><p>provides access to the Revision Number for a Revision when the numbering in the project is by sheet.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "RevisionCloud class",
+    "local_header_href": "#revisioncloud-class",
+    "chunk_text": "<h3>RevisionCloud class</h3><p>The new RevisionCloud class allows an application to access information about the revision clouds that are present within a model and to create new revision clouds.</p><p>The new method</p><ul>\n<li>RevisionCloud.Create()</li>\n</ul><p>allows an application to create a new RevisionCloud in a specified view based on a series of lines and curves.</p><p>The new property</p><ul>\n<li>RevisionCloud.RevisionId</li>\n</ul><p>allows an application to read an modify the Revision associated with the RevisionCloud.</p><p>The new method</p><ul>\n<li>RevisionCloud.IsRevisionIssued()</li>\n</ul><p>allows an application to easily check whether a RevisionCloud is associated with a Revision that has already been issued.</p><p>The new method</p><ul>\n<li>RevisionCloud.GetSheetIds()</li>\n</ul><p>allows an application to obtain the ids of the ViewSheets where the RevisionCloud may appear (either because the RevisionCloud is placed directly on the ViewSheet or because the RevisionCloud is visible in some View on the ViewSheet).</p><p>The new ViewSheet method</p><ul>\n<li>ViewSheet.GetRevisionCloudNumberOnSheet()</li>\n</ul><p>provides access to the Revision Number for a RevisionCloud when the numbering in the project is by sheet.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Revision cloud geometry",
+    "local_header_href": "#revision-cloud-geometry",
+    "chunk_text": "<h3>Revision cloud geometry</h3><p>The property:</p><ul>\n<li>Element.Geometry</li>\n</ul><p>has been enhanced to return geometry from RevisionCloud elements. This will return the actual curved lines that make up the cloud.</p><p>The new method</p><ul>\n<li>RevisionCloud.GetSketchCurves()</li>\n</ul><p>allows an application to read the Curves that form the RevisionCloud's sketch. This will return the sketched curves that define the basic outline of the cloud and not the arcs that Revit attaches to these curves to create the cloud appearance.</p><a name=\"3.05\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Parameters API additions",
+    "local_header_href": "#parameters-api-additions",
+    "chunk_text": "<h2>Parameters API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Parameter order",
+    "local_header_href": "#parameter-order",
+    "chunk_text": "<h3>Parameter order</h3><p>Revit now allows users to reorder parameters within their groups for a given family, ensuring that the parameters are presented to the user in the most logical order. Several API changes have been introduced related to this.</p><p>The new methods</p><ul>\n<li>FamilyManager.GetParameters()</li>\n<li>Element.GetOrderedParameters()</li>\n</ul><p>returns the parameters associated to family types or elements in the specified order.  Note that for Element.GetOrderedParameters(), the returned collection only includes parameters that are shown in the Properties Palette (unlike Element.Parameters).</p><p>The new method</p><ul>\n<li>FamilyManager.ReorderParameters(IList<familyparameter> parameters)</familyparameter></li>\n</ul><p>reorders the family parameters within the family according to the specified input.</p><p>The new method</p><ul>\n<li>FamilyManager.SortParameters(ParametersOrder order)</li>\n</ul><p>sorts the family parameters according to the desired automatic sort order.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family parameter creation – description",
+    "local_header_href": "#family-parameter-creation-description",
+    "chunk_text": "<h3>Family parameter creation – description</h3><p>The new method:</p><ul>\n<li>FamilyManager.SetDescription(FamilyParameter familyParameter, String description);</li>\n</ul><p>sets the description for a family parameter.</p><p>The new property:</p><ul>\n<li>Definition.Description</li>\n</ul><p>gets the stored tooltip description of the parameter definition.</p><a name=\"3.06\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Wall API additions",
+    "local_header_href": "#wall-api-additions",
+    "chunk_text": "<h2>Wall API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Stacked wall",
+    "local_header_href": "#stacked-wall",
+    "chunk_text": "<h3>Stacked wall</h3><p>Several new members added to the Wall class provide support for reading information about stacked wall and stacked wall members.</p><p>The new method</p><ul>\n<li>Wall.GetStackedWallMemberIds()</li>\n</ul><p>gets the sub walls which belong to a stacked wall, with the ids returned in order from bottom to top.</p><p>The new properties</p><ul>\n<li>Wall.IsStackedWall</li>\n<li>Wall.IsStackedWallMember</li>\n<li>Wall.StackedWallOwnerId</li>\n</ul><p>identify if the wall is a stacked wall, a member of a stacked wall, and if the wall is a member of the stacked wall, the id of the stacked wall that owns this wall.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Wall Function",
+    "local_header_href": "#wall-function",
+    "chunk_text": "<h3>Wall Function</h3><p>The new property</p><ul>\n<li>WallType.Function</li>\n</ul><p>provides read/write access to the Function property of wall types.</p><a name=\"3.07\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Schedule API additions",
+    "local_header_href": "#schedule-api-additions",
+    "chunk_text": "<h2>Schedule API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Schedule filters",
+    "local_header_href": "#schedule-filters",
+    "chunk_text": "<h3>Schedule filters</h3><p>As schedules now support up to 8 applied filters, the following methods now allow up to 8 filters to be applied:</p><ul>\n<li>ScheduleDefinition.AddFilter()</li>\n<li>ScheduleDefinition.InsertFilter()</li>\n<li>ScheduleDefinition.SetFilter()</li>\n<li>ScheduleDefinition.SetFilters()</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ScheduleDefinition.GrandTotalTitle",
+    "local_header_href": "#scheduledefinitiongrandtotaltitle",
+    "chunk_text": "<h3>ScheduleDefinition.GrandTotalTitle</h3><p>The new property</p><ul>\n<li>ScheduleDefinition.GrandTotalTitle</li>\n</ul><p>provides the ability to customize the name of grand total title row for a schedule.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Images in schedules",
+    "local_header_href": "#images-in-schedules",
+    "chunk_text": "<h3>Images in schedules  </h3><p>Images can now be added to schedules via parameters defined as type \"Image\". In schedule views, the image parameter will display the path of the ImageType, but the image itself displays in ScheduleSheetInstances placed on a sheet. The value of the \"Image\" parameters is an ElementId representing an ImageType element.</p><p>The new ImageType class is a subclass of ElementType representing a type containing an image. Instances of this type may also be displayed on 2D views or sheets directly.</p><p>The new method:</p><ul>\n<li>ImageType.Create()</li>\n</ul><p>provides the ability to create a new ImageType element and loads a copy of the image into it.</p><p>The new members:</p><ul>\n<li>ImageType.Reload()</li>\n<li>ImageType.ReloadFrom()</li>\n<li>ImageType.IsLoadedFromFile()</li>\n<li>ImageType.Path</li>\n</ul><p>provide the ability to manage the contents of the image, and reload it from its original path location or a new location.</p><p>The new members</p><ul>\n<li>ViewSchedule.ImageRowHeight</li>\n<li>ViewSchedule.RestoreImageSize()</li>\n<li>ViewSchedule.HasImageField()</li>\n</ul><p>provide the ability to affect the size and display characteristics of schedules that contain images.</p><a name=\"3.08\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "IFC API additions",
+    "local_header_href": "#ifc-api-additions",
+    "chunk_text": "<h2>IFC API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "IFC import options and operations",
+    "local_header_href": "#ifc-import-options-and-operations",
+    "chunk_text": "<h3>IFC import options and operations</h3><p>The new method:</p><ul>\n<li>RevitLinkType.CreateFromIFC()</li>\n</ul><p>creates a new linked IFC type representing an IFC model opened for reference. Once created, you can place instance(s) of this type using regular RevitLinkInstance methods.</p><p>The new method:</p><ul>\n<li>Application.OpenIFCDocument(string, IFCImportOptions)</li>\n</ul><p>supports different options for import and create of a new document based on an IFC file:</p><ul>\n<li>IFCImportOptions.Action(open or link)</li>\n<li>IFCImportOptions.Intent (parametric or reference)</li>\n<li>IFCImportOptions.AutoJoin (applies to parametric import only)</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ImporterIFC new properties and functions",
+    "local_header_href": "#importerifc-new-properties-and-functions",
+    "chunk_text": "<h3>ImporterIFC new properties and functions</h3><p>ImporterIFC offers new members to assist with the implementation of custom IFC importers:</p><ul>\n<li>ImporterIFC.Document  – returns the document associated with the IFC file.</li>\n<li>ImporterIFC.GetOptions() – returns the options names and values set for the current IFC import.</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Built-in parameter changes",
+    "local_header_href": "#built-in-parameter-changes",
+    "chunk_text": "<h3>Built-in parameter changes</h3><p>BuiltInParameter.IFC_*_GUID values (IFC_GUID, IFC_TYPE_GUID, IFC_PROJECT_GUID, IFC_BUILDING_GUID, and IFC_SITE_GUID) are no longer required to be unique, and are schedulable.</p><p>BuiltInParameter.IFC_TYPE_GUID has a default English value of \"Type IfcGUID\" to distinguish it from BuiltInParameter.IFC_GUID.</p><a name=\"3.09\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Import API",
+    "local_header_href": "#import-api",
+    "chunk_text": "<h2>Import API</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "DirectShape",
+    "local_header_href": "#directshape",
+    "chunk_text": "<h3>DirectShape</h3><p>The new classes:</p><ul>\n<li>DirectShape</li>\n<li>DirectShapeType</li>\n<li>DirectShapeLibrary</li>\n</ul><p>offer the ability to create imported geometry elements directly in the project document. The geometry can include closed solids or meshes.  The geometry will be validated to ensure that it is valid for Revit use.</p><p>The created elements must be assigned to a category. This grants the elements a collection of available parameters and some limited behaviors.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "TessellatedShapeBuilder",
+    "local_header_href": "#tessellatedshapebuilder",
+    "chunk_text": "<h3>TessellatedShapeBuilder</h3><p>The new classes:</p><ul>\n<li>TessellatedShapeBuilder</li>\n<li>TessellatedFaces</li>\n<li>TessellatedShapeBuilderResult</li>\n</ul><p>can be used create solid, shell, or polymeshes bounded by a set of connected planar facets, created by adding TessellatedFace objects one by one. The utility includes some ability to heal imprecisions and discontinuities in the inputs, and offers some diagnostics regarding geometry that is too imprecise to be used.</p><a name=\"3.10\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "External Resources Service API",
+    "local_header_href": "#external-resources-service-api",
+    "chunk_text": "<h2>External Resources Service API</h2><p>This new framework allows add-ins to provide Revit with external content obtained from anywhere. Add-ins implementing a server for this type can obtain their external content from the web, an external database, or another application. The Revit user can browse the external content locally and select appropriate content to use in their models.</p><p>In this release, only some types of Revit external content are supported as External Resources:</p><ul>\n<li>Keynotes</li>\n<li>Assembly classification codes</li>\n<li>Revit links</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "IExternalResourceServer",
+    "local_header_href": "#iexternalresourceserver",
+    "chunk_text": "<h3>IExternalResourceServer</h3><p>The new interface:</p><ul>\n<li>IExternalResourceServer</li>\n</ul><p>allows developers to provide resources from an external source. Revit will call IExternalResourceServer.LoadResource(), and the server will provide the data for the requested resource.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "IExternalResourceUIServer",
+    "local_header_href": "#iexternalresourceuiserver",
+    "chunk_text": "<h3>IExternalResourceUIServer</h3><p>The new interface:</p><ul>\n<li>IExternalResourceUIServer</li>\n</ul><p>gives Revit a list of the resources handled by the server. The resources will appear in Revit's UI when the Revit user browses for the appropriate link type. Servers can also provide custom error-handling UI. This allows servers to handle cases Revit could not know about. For example, if the network is down and the server cannot access its resources, the server can put up a detailed error message explaining the problem.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ExternalResourceReference",
+    "local_header_href": "#externalresourcereference",
+    "chunk_text": "<h3>ExternalResourceReference</h3><p>The new class:</p><ul>\n<li>ExternalResourceReference</li>\n</ul><p>contains identifying information for resources which come from external servers. Each external server link will contain an ExternalResourceReference. The ExternalResourceReference contains the id of the server which provided the resource. The class also contains a string-to-string map which contains the actual identity information for the reference. Servers can define their own conventions for naming and identifying resources.</p><a name=\"3.11\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Keynote and Assembly Code API",
+    "local_header_href": "#keynote-and-assembly-code-api",
+    "chunk_text": "<h2>Keynote and Assembly Code API</h2><p>Revit 2015 introduces a number of new classes to give applications access to the keynote and assembly code data used within a Revit model.</p><p>Because there are a number of similarities in the way the keynote data and the assembly code data are structured, many of the operations can be accessed through base classes that provide common functionality for key-based tree-structured data.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "KeyBasedTreeEntryTable",
+    "local_header_href": "#keybasedtreeentrytable",
+    "chunk_text": "<h3>KeyBasedTreeEntryTable</h3><p>The new class:</p><ul>\n<li>KeyBasedTreeEntryTable</li>\n</ul><p>represents a collection of key-based tree entries stored within the Revit model, such as the keynote or assembly code table. There are two subclasses – KeynoteTable for the keynote table, and AssemblyCodeTable for the assembly code table.</p><p>The methods:</p><ul>\n<li>KeynoteTable.GetKeynoteTable()</li>\n<li>AssemblyCodeTable.GetAssemblyCodeTable()</li>\n</ul><p>are static methods which allow access to the current table.</p><p>The methods:</p><ul>\n<li>KeyBasedTreeEntryTable.LoadFrom()</li>\n<li>KeyBasedTreeEntryTable.Reload()</li>\n</ul><p>allow the user to reload the keynote or assembly code table. LoadFrom() allows the table to be reloaded from a new location.</p><p>The method:</p><ul>\n<li>GetKeyBasedTreeEntries()</li>\n</ul><p>allows access to the data in the table.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "KeyBasedTreeEntry",
+    "local_header_href": "#keybasedtreeentry",
+    "chunk_text": "<h3>KeyBasedTreeEntry</h3><p>The class:</p><ul>\n<li>KeyBasedTreeEntry</li>\n</ul><p>represents an individual entry within a key-based tree. It provides properties for the key and parent key. The subclasses, KeynoteEntry and ClassificationEntry, provide properites and methods specific to the keynote table and the assembly code table. Keynotes have access to the keynote text, while ClassificationEntries have access to the level, category Id, and description.</p><a name=\"3.12\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Energy analysis API additions",
+    "local_header_href": "#energy-analysis-api-additions",
+    "chunk_text": "<h2>Energy analysis API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "gbXML export options",
+    "local_header_href": "#gbxml-export-options",
+    "chunk_text": "<h3>gbXML export options</h3><p>The new property:</p><ul>\n<li>GBXMLExportOptions.ExportEnergyModelType</li>\n</ul><p>determines the type of analysis used when producing the export gbXML file for the document. Options are:</p><ul>\n<li>SpatialElement – Energy model based on rooms or spaces. This is the default for calls when this option is not set, and matches behavior in Revit 2014.</li>\n<li>BuildingElement – Energy model based on analysis of building element volumes.</li>\n</ul>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "BuildingEnvelopeAnalyzer Class",
+    "local_header_href": "#buildingenvelopeanalyzer-class",
+    "chunk_text": "<h3>BuildingEnvelopeAnalyzer Class</h3><p>The new class:</p><ul>\n<li>  BuildingEnvelopeAnalyzer  </li>\n</ul><p>analyzes which elements are part of the building envelope (the building elements exposed to the outside). This class uses a combination of ray-casting and flood-fill algorithms in order to find the building elements that are exposed to the outside of the building. This method can also look for the bounding building elements for enclosed space volumes inside the building. Options for the analysis include:</p><ul>\n<li>AnalyzeEnclosedSpaceVolumes – Whether or not to analyze interior connected regions inside the building forming enclosed space volumes.</li>\n<li>GridCellSize – The cell size for the uniform cubical grid used when analyzing the building envelope.</li>\n<li>OptimizeGridCellSize – Whether or not to use the exact value for the cell size or let the analyzer optimize the cell size based on the specified grid size</li>\n</ul><a name=\"3.13\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "BrowserOrganization API",
+    "local_header_href": "#browserorganization-api",
+    "chunk_text": "<h2>BrowserOrganization API</h2><p>The new class</p><ul>\n<li>BrowserOrganization</li>\n</ul><p>contains settings for grouping, sorting, and filtering of items in the project browser.</p><p>New methods</p><ul>\n<li>BrowserOrganization.AreFiltersSatisfied() – Determines if the given element satisfies the filters defined by the browser organization.</li>\n<li>BrowserOrganization.GetFolderItems() –  Returns a collection of leaf FolderItemInfo objects each containing the given element Id.</li>\n</ul><p>New static Methods</p><ul>\n<li>GetCurrentBrowserOrganizationForViews() – Gets the BrowserOrganization that applies to the Views section of the project browser. </li>\n<li>GetCurrentBrowserOrganizationForSheets() – Gets the BrowserOrganization that applies to the Sheets section of the project browser. </li>\n</ul><p>New properties</p><ul>\n<li>SortingOrder – The sorting order if sorting of items is applicable in the browser.</li>\n<li>SortingParameterId – The id of the parameter used to determine the sorting order of items in the browser.</li>\n</ul><p>The new class</p><ul>\n<li>FolderItemInfo</li>\n</ul><p>contains data for each folder item in the organization settings of the project browser including folder parameter Id and folder name.</p><p>New properties</p><ul>\n<li>ElementId – The folder parameter Id.</li>\n<li>Name – The folder name .</li>\n</ul><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Minor API Additions",
+    "local_header_href": "#minor-api-additions",
+    "chunk_text": "<h1>Minor API Additions</h1><a name=\"4.01\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Application API additions",
+    "local_header_href": "#application-api-additions",
+    "chunk_text": "<h2>Application API additions</h2><p>Three new properties have been added to Application to retrieve file paths from revit.ini:</p><ol>\n<li>DefaultIFCProjectTemplate: the template set in the IFC import options to override the default project template.</li>\n<li>ExportIFCCategoryTable: the path and file name to the Revit category to IFC entity mapping table for export.</li>\n<li>ImportIFCCategoryTable: the path and file name to the IFC entity to Revit category mapping table for import.</li>\n</ol><a name=\"4.02\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Document API additions",
+    "local_header_href": "#document-api-additions",
+    "chunk_text": "<h2>Document API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Document.IsDetached",
+    "local_header_href": "#documentisdetached",
+    "chunk_text": "<h3>Document.IsDetached</h3><p>The new property</p><ul>\n<li>Document.IsDetached</li>\n</ul><p>identifies if a workshared document is opened as detached.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Document.DocumentWorksharingEnabled",
+    "local_header_href": "#documentdocumentworksharingenabled",
+    "chunk_text": "<h3>Document.DocumentWorksharingEnabled</h3><p>This event is raised when Revit has just enabled worksharing in the document.  Handlers of this event are permitted to make modifications to any document (including the active document), except for documents that are currently in read-only mode.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "UIDocument operations and additions",
+    "local_header_href": "#uidocument-operations-and-additions",
+    "chunk_text": "<h3>UIDocument operations and additions</h3><p>The new method</p><ul>\n<li>UIDocument.RequestViewChange()</li>\n</ul><p>requests to change the active view by posting a message asynchronously. Unlike setting the ActiveView property, this will not make the change in active view immediately. Instead the request will be posted to occur when control returns to Revit from the API context. This method is permitted to change the active view from the Idling event or an ExternalEvent callback.</p><p>The new methods</p><ul>\n<li>UIDocument.PostRequestForElementTypePlacement()</li>\n<li>UIDocument.PromptToPlaceElementTypeOnLegendView()</li>\n</ul><p>places a request on Revit's command queue for the user to place instances of the specified ElementType.  The former is for general use, the latter is specifically for legend views. This does not execute immediately,  but instead when control returns to Revit from the current API context. This method starts its own transaction. In a single invocation, the user can place multiple instances of the input element type until they finish the placement (with Cancel or ESC or a click elsewhere in the UI). This method invokes the UI when control returns from the current API context; because of this, the normal Revit UI options will be available to the user,  but the API will not be notified when the user has completed this action. Because this request is queued to run at the end of the current API context, only one such request can be set (between this and the commands set by UIApplication.PostCommand()). This differs from UIDocument.PromptForFamilyInstancePlacement() as that method can be run within the current API context, but the user is not permitted full access to the user interface options during placement.</p><p>The new method</p><ul>\n<li>UIDocument.PromptToPlaceViewOnSheet()</li>\n</ul><p>Prompts the user to place a specified view onto a sheet. Set  allowReplaceExistingSheetViewport to true to allow the user to replace the existing viewport.</p><p>The new method</p><ul>\n<li>UIDocument.PromptToMatchElementType()</li>\n</ul><p>prompts the user to select instance elements to change them to the input type.</p><a name=\"4.03\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Link API additions",
+    "local_header_href": "#link-api-additions",
+    "chunk_text": "<h2>Link API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "External Resource compatibility",
+    "local_header_href": "#external-resource-compatibility",
+    "chunk_text": "<h3>External Resource compatibility</h3><p>The Revit Link API has been updated – all methods which took a ModelPath argument now have new versions which take an ExternalResourceReference argument. These methods can also work with files from disk. ExternalResourceReference.CreateLocalResource() can be used to create an ExternalResourceReference corresponding to a local file.</p><p>The older Revit link methods have not been deprecated; they are still available for local links.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "RevitLinkType.AttachmentType",
+    "local_header_href": "#revitlinktypeattachmenttype",
+    "chunk_text": "<h3>RevitLinkType.AttachmentType</h3><p>This property is now writable, and can be toggled between Attachment and Overlay.</p><a name=\"4.04\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Category API additions",
+    "local_header_href": "#category-api-additions",
+    "chunk_text": "<h2>Category API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Category.CategoryType",
+    "local_header_href": "#categorycategorytype",
+    "chunk_text": "<h3>Category.CategoryType</h3><p>The new property</p><ul>\n<li>Category.CategoryType</li>\n</ul><p>determines if the category is shown in the Visibility/Graphics settings grouped with the model, annotation, or analytical model categories.  Note that import categories are also \"model\" but will be shown separately in the dialog. Some categories not shown in the dialog and will return Internal for the category type.</p><a name=\"4.05\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ElementType API additions",
+    "local_header_href": "#elementtype-api-additions",
+    "chunk_text": "<h2>ElementType API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ElementType.FamilyName",
+    "local_header_href": "#elementtypefamilyname",
+    "chunk_text": "<h3>ElementType.FamilyName</h3><p>The new property</p><ul>\n<li>ElementType.FamilyName</li>\n</ul><p>contains the localized string describing the family in which this ElementType belongs. For family symbols, this will be the name of the associated Family. For system family types, this will be the name used to group related types, such as \"Oval Duct\" or \"Curtain Wall\".</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "ElementType duplicating events",
+    "local_header_href": "#elementtype-duplicating-events",
+    "chunk_text": "<h3>ElementType duplicating events</h3><p>The events:</p><ul>\n<li>Application.ElementTypeDuplicating</li>\n<li>Application.ElementTypeDuplicated</li>\n</ul><p>allow you to subscribe to an event to be notified when Revit is just about to duplicate an element type, and after Revit has finished duplicating an element type.</p><a name=\"4.06\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Material API additions",
+    "local_header_href": "#material-api-additions",
+    "chunk_text": "<h2>Material API additions</h2><p>The new static method</p><ul>\n<li>Material.IsNameUnique(Document document, String name)</li>\n</ul><p>validates whether a proposed material name is unique in document. This will be used to confirm the validity of the name before creating a new material via Material.Create() or Material.Duplicate().</p><a name=\"4.07\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View API additions",
+    "local_header_href": "#view-api-additions",
+    "chunk_text": "<h2>View API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View.IsAssemblyView",
+    "local_header_href": "#viewisassemblyview",
+    "chunk_text": "<h3>View.IsAssemblyView</h3><p>The new property</p><ul>\n<li>View.IsAssemblyView</li>\n</ul><p>identifies if the view is an assembly view.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "View.Title",
+    "local_header_href": "#viewtitle",
+    "chunk_text": "<h3>View.Title</h3><p>The new property</p><ul>\n<li>View.Title</li>\n</ul><p>returns the view title. This consists of the view name plus other modifiers, such as the view type, sheet number, area scheme, and/or assembly type, depending on the specifics of the view.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Categories hidden status",
+    "local_header_href": "#categories-hidden-status",
+    "chunk_text": "<h3>Categories hidden status</h3><p>The following properties are now settable:</p><ul>\n<li>View.AreModelCategoriesHidden</li>\n<li>View.AreAnnotationCategoriesHidden</li>\n<li>View.AreAnalyticalModelCategoriesHidden</li>\n<li>View.AreImportCategoriesHidden</li>\n</ul><p>Setting these properties allow an application to toggle Model Categories, Annotation Categories, Analytical Model Categories, or Import Categories visibility.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Drafting view creation",
+    "local_header_href": "#drafting-view-creation",
+    "chunk_text": "<h3>Drafting view creation</h3><p>The new method</p><ul>\n<li>ViewDrafting.Create()</li>\n</ul><p>allows an application to create a new drafting view in the model with a specified ViewFamilyType.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Orient 3D view",
+    "local_header_href": "#orient-3d-view",
+    "chunk_text": "<h3>Orient 3D view</h3><p>The new method</p><ul>\n<li>View3D.OrientTo(XYZ forwardDirection)</li>\n</ul><p>supports reorienting the 3D view to align with the forward direction. This is an alternate method to reorient the view using typical Revit calculations for other related parameters in ViewOrientation3D.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Reference callouts and sections",
+    "local_header_href": "#reference-callouts-and-sections",
+    "chunk_text": "<h3>Reference callouts and sections</h3><p>The new class ReferenceableViewUtils provides utility methods that allow an application to manage reference views such as reference sections or reference callouts.</p><p>The new methods</p><ul>\n<li>ReferenceableViewUtils.ChangeReferencedView</li>\n<li>ReferenceableViewUtils.GetReferencedViewId</li>\n</ul><p>allows an application to read and change the view referenced by a reference view (such as a reference section or reference callout).</p><a name=\"4.08\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family API additions",
+    "local_header_href": "#family-api-additions",
+    "chunk_text": "<h2>Family API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "FamilyManager.IsUserAssignableParameterGroup",
+    "local_header_href": "#familymanagerisuserassignableparametergroup",
+    "chunk_text": "<h3>FamilyManager.IsUserAssignableParameterGroup</h3><p>The new method</p><ul>\n<li>FamilyManager.IsUserAssignableParameterGroup()</li>\n</ul><p>provide the ability to identify the given built-in parameter group is user assignable for family parameter or not.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "LocationPoint.Rotation for view-specific family instances",
+    "local_header_href": "#locationpointrotation-for-view-specific-family-instances",
+    "chunk_text": "<h3>LocationPoint.Rotation for view-specific family instances</h3><p>The property:</p><ul>\n<li>LocationPoint.Rotation</li>\n</ul><p>now returns the rotation angle in the plane of the view, for view-specific family instances such as detail components. Previously the angle was measured from an axis outside the plane of the view.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "PromptForFamilyInstancePlacement() option for Air Terminals on Ducts",
+    "local_header_href": "#promptforfamilyinstanceplacement-option-for-air-terminals-on-ducts",
+    "chunk_text": "<h3>PromptForFamilyInstancePlacement() option for Air Terminals on Ducts</h3><p>The new overload method</p><ul>\n<li>UIDocument.PromptForFamilyInstancePlacement(Autodesk.Revit.DB.FamilySymbol, Autodesk.Revit.UI.PromptForFamilyInstancePlacementOptions)</li>\n</ul><p>allows an application to prompt the user to place instances of a specified family symbol interactively. The options class supports a setting requiring the mode to be set to place an air terminal family instance directly on a duct (the option is either set to be on or off, the user cannot toggle this during placement).</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Family loading events",
+    "local_header_href": "#family-loading-events",
+    "chunk_text": "<h3>Family loading events</h3><p>The events:</p><ul>\n<li>Application.FamilyLoadingIntoDocument</li>\n<li>Application.FamilyLoadedIntoDocument </li>\n</ul><p>allow you to subscribe to an event to be notified when Revit is just about to load a family into a document, and after Revit has just finished loading the family.</p><a name=\"4.09\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Geometry API additions",
+    "local_header_href": "#geometry-api-additions",
+    "chunk_text": "<h2>Geometry API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Curve",
+    "local_header_href": "#curve",
+    "chunk_text": "<h3>Curve</h3><p>The new method:</p><ul>\n<li>Curve.CreateReversed()</li>\n</ul><p>creates a new curve that has the same shape, but has its orientation reversed.</p><p>The new method:</p><ul>\n<li>Curve.CreateOffset()</li>\n</ul><p>creates a new curve that is offset from the original curve by a certain distance. The offset direction is determined by the normal of the curve at any given point.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "CurveLoop",
+    "local_header_href": "#curveloop",
+    "chunk_text": "<h3>CurveLoop</h3><p>The new method:</p><ul>\n<li>CurveLoop.CreateViaThicken()</li>\n</ul><p>creates a new closed curve loop by thickening the input open curve loop with respect to a given plane.</p><p>The new method:</p><ul>\n<li>CurveLoop.CreateViaOffset()</li>\n</ul><p>creates a new CurveLoop that is an offset of the original CurveLoop. This is effectively done by offsetting each Curve in the CurveLoop and trimming the ends to form a new continuous CurveLoop.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Face",
+    "local_header_href": "#face",
+    "chunk_text": "<h3>Face</h3><p>The new method:</p><ul>\n<li>Face.GetEdgesAsCurveLoops() </li>\n</ul><p>returns a list of closed curve loops that correspond to the edge loops of the face. Curves in each curve loop correspond to individual edges.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "CurveElement",
+    "local_header_href": "#curveelement",
+    "chunk_text": "<h3>CurveElement</h3><p>The new method:</p><ul>\n<li>CurveElement.SetGeometryCurve()</li>\n</ul><p>explicitly sets the geometry of the curve element with the option to not affect the geometry of any currently joined curve elements. After the curve geometry is set, other curves may autojoin to the new curve geometry.</p><p>The new method:</p><ul>\n<li>CurveElement.SetSketchPlaneAndCurve()</li>\n</ul><p>sets the sketch plane and the curve for the CurveElement simultaneously (allowing the SketchPlane to be successfully modified in a way that would be incompatible if set separately). This method will not affect the geometry of any current joined curve elements.</p>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "FreeFormElement",
+    "local_header_href": "#freeformelement",
+    "chunk_text": "<h3>FreeFormElement</h3><p>The new method:</p><ul>\n<li>FreeFormElement.UpdateSolidGeometry()</li>\n</ul><p>updates the geometry of the FreeFormElement to the given shape preserving References to the existing geometry where possible.</p><a name=\"4.10\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Material API additions",
+    "local_header_href": "#material-api-additions",
+    "chunk_text": "<h2>Material API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Material.UseRenderAppearanceForShading",
+    "local_header_href": "#materialuserenderappearanceforshading",
+    "chunk_text": "<h3>Material.UseRenderAppearanceForShading</h3><p>The new property:</p><ul>\n<li>Material.UseRenderAppearanceForShading</li>\n</ul><p>determines if the material's appearance in a shaded view should be driven by the settings of the render appearance, or driven by the material's graphics properties.</p><a name=\"4.11\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Print API additions",
+    "local_header_href": "#print-api-additions",
+    "chunk_text": "<h2>Print API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Region edges mask coincident lines",
+    "local_header_href": "#region-edges-mask-coincident-lines",
+    "chunk_text": "<h3>Region edges mask coincident lines</h3><p>The new property:</p><ul>\n<li>PrintParameters.MaskCoincidentLines</li>\n</ul><p>indicates whether to mask coincident lines when printing.</p><a name=\"4.12\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Connector API additions",
+    "local_header_href": "#connector-api-additions",
+    "chunk_text": "<h2>Connector API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "New connector properties",
+    "local_header_href": "#new-connector-properties",
+    "chunk_text": "<h3>New connector properties </h3><p>The new properties:</p><ul>\n<li>Connector.AllowsSlopeAdjustments </li>\n<li>Connector.Utility </li>\n<li>Connector.Description</li>\n</ul><p>provide project level read access to connector properties which can be set in the family environment.</p><a name=\"4.13\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Naming utilities",
+    "local_header_href": "#naming-utilities",
+    "chunk_text": "<h2>Naming utilities</h2><p>The method</p><ul>\n<li>NamingUtils.IsValidName()</li>\n</ul><p>identifies if the input is valid to be used as a name of an object in Revit.</p><p>This routine checks only for prohibited characters in the string. When setting the name for an object there are other specific considerations which are checked (for example, the same name cannot be used twice for different elements of the same type). This routine does not check those conditions.</p><p>The method</p><ul>\n<li>NamingUtils.CompareNames(string nameA, string nameB)</li>\n</ul><p>compares the input two names according to the comparison rules in Revit. The method returns a negative value if nameA comes before nameB, zero if nameA is equivalent to nameB,and a positive value if nameA comes after nameB. The method is similar to String.Compare(), but uses Revit rules for comparison. This involves breaking the names into alphabetic and numeric tokens and comparing tokens individually.</p><a name=\"4.14\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Dynamic Model Update additions",
+    "local_header_href": "#dynamic-model-update-additions",
+    "chunk_text": "<h2>Dynamic Model Update additions</h2><p>The new methods:</p><ul>\n<li>UpdaterRegistry.EnableUpdater()</li>\n<li>UpdaterRegistry.DisableUpdater()</li>\n<li>UpdaterRegistry.IsUpdaterEnabled()</li>\n</ul><p>allow temporary enable and disable of Updaters. This allows an application to control whether an updater is triggered unnecessarily based on changes the application knows about.</p><a name=\"4.15\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Custom Exporter additions",
+    "local_header_href": "#custom-exporter-additions",
+    "chunk_text": "<h2>Custom Exporter additions</h2><p>The new method:</p><ul>\n<li>CustomExporter.IsRenderingSupported()</li>\n</ul><p>allows an application to test that libraries necessary to support rendering and 3D exports are installed and available.</p><a name=\"4.16\"></a>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "UI API additions",
+    "local_header_href": "#ui-api-additions",
+    "chunk_text": "<h2>UI API additions</h2>"
+  },
+  {
+    "original_filename": "1141_whats_new_2015",
+    "header_text": "Drag & drop API",
+    "local_header_href": "#drag-drop-api",
+    "chunk_text": "<h3>Drag &amp; drop API</h3><p>The new interface</p><ul>\n<li>IControllableDropHandler</li>\n</ul><p>inherits from IDropHandler. This includes an extra interface to be executed when custom data is dragged and dropped onto the Revit user interface. This interface is different from IDropHandler in that it allows the handler to verify whether the drop event can be executed on the given view.</p><p>The new interface method</p><ul>\n<li>IControllableDropHandler.CanExecute(UIDocument document, object data, ElementId dropViewId)</li>\n</ul><p>Implement this method to inform Revit whether the drop event can be executed onto the given view.</p>"
+  }
+]

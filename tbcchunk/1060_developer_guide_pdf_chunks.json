@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1060_developer_guide_pdf",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "1060_developer_guide_pdf",
+    "header_text": "Revit 2014 Developer Guide PDF",
+    "local_header_href": "#revit-2014-developer-guide-pdf",
+    "chunk_text": "<h3>Revit 2014 Developer Guide PDF</h3><p>Happy Sunday!\n\n<p>Extra, extra, breaking news!</p>\n<p>As I just mentioned a few days back, the Revit API\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/11/the-developer-guide-is-back-on-wikihelp.html\">\ndeveloper guide is back on WikiHelp</a> again.</p>\n<p>Still, as we recently discussed here and in the Revit API discussion forum, a\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/10/revit-2013-api-developer-guide-pdf.html#2\">\nPDF version of the developer guide</a> can\n\nalso come in very handy now and then, e.g. for offline perusal.</p>\n<p>Ian alias Keldar67 now repeated his heroic Revit 2013 feat and presents the\n\n<a href=\"http://forums.autodesk.com/t5/Revit-API/Revit-2014-Platform-Developer-Guidlines-in-PDF-Format/td-p/4629067\">\nRevit 2014 API developer guide in PDF format</a>.</p>\n<p>Please take a look at his magnificent 450-page achievement, adhere to his request to take the 'gift shop route' and give him kudos for his good work.</p>\n<p>Thank you, Ian, and thank you, fellow Revit API developers.</p>\n<p><strong>Addendum:</strong> </p>\n</p>"
+  }
+]

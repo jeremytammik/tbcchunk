@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0466_revittoday_addins",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0466_revittoday_addins",
+    "header_text": "RevitToday Add-Ins Import and Export Coordinates",
+    "local_header_href": "#revittoday-add-ins-import-and-export-coordinates",
+    "chunk_text": "<h3>RevitToday Add-Ins Import and Export Coordinates</h3><p>Renzo van Rijswijk of\n\n<a href=\"http://www.struktonengineering.com\">\nStrukton Engineering bv</a> just pointed out that he offers some free Revit add-ins on his blog\n\n<a href=\"http://revittoday.blogspot.com\">\nRevitToday</a>:\n\n<ul>\n<li><a href=\"http://revittoday.blogspot.com/2010/10/import-coordinates-into-revit-2011.html\">\nImport coordinates into Revit 2011</a> for \n\nimporting coordinates from a TXT file. \nYou are free to select a family of your own. \nIt should be a Point Based family of course.\n</li></ul>\n<ul>\n<li><a href=\"http://revittoday.blogspot.com/2010/09/export-xyz-from-revit-2011.html\">\nExport XYZ from Revit 2011</a>  to \n\nexport all coordinates of Point Based Generic Models to an Excel file.\nYou can locate Point Based Generic Models in your whole model. \nYou are able to nest such a Family within another. \nThese points are exported as well when you make this family Shared.\n\n</li></ul>\n</p>"
+  }
+]

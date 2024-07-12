@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0390_client_versus_addin_id",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0390_client_versus_addin_id",
+    "header_text": "ClientId Versus AddInId",
+    "local_header_href": "#clientid-versus-addinid",
+    "chunk_text": "<h3>ClientId Versus AddInId</h3><p>Looking at many other developers' add-in manifest files here at the AEC DevLab in Waltham, I just noticed that the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/addin-manifest-and-guidize.html#4\">\nClientId tag</a>\n\nthat I have been using in my manifest files has actually been renamed to AddInId to be more consistent.\nMost other developers are using the AddInId tag instead of the ClientId one.\nThe ClientId tag still works, but maybe I should start using AddInId myself as well in future.\n\n<p>I updated my \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/addin-manifest-and-guidize.html#5\">\nguidize utility</a> to\n\npopulate and update the contents of both the AddInId and ClientId tags.\nHere is version 2 which does that, both the \n\n<a href=\"zip/guidize_src_2.zip\">\ncomplete source code and Visual Studio solution file</a> and also the \n\n<a href=\"zip/guidize_exe_2.zip\">\nready-built executable</a> for non-programmers. \n</p></p>"
+  }
+]

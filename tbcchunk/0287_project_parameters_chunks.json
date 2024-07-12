@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0287_project_parameters",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0287_project_parameters",
+    "header_text": "Retrieving Project Parameters",
+    "local_header_href": "#retrieving-project-parameters",
+    "chunk_text": "<h3>Retrieving Project Parameters</h3><p>In between the series of background information from Scott's Autodesk University presentation on \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/01/analyse-building-geometry.html\">\nanalysing building geometry</a>,\n\nlet's have a quick look at a completely different question, on retrieving all shared parameters from a Revit project.\nOther posts related to shared parameters are listed at the end of our discussion of\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/11/adding-a-column-to-rdblink-export.html\">\nRDBLink Export</a>.\n\n<p>The following solution comes from a case handled by Saikat Bhattacharya.\n\n<p><strong>Question:</strong> How can I programmatically retrieve the set of project parameters added to a given Revit project?\n\n<p><strong>Answer:</strong> Shared parameters are bound to certain categories.\nYou can access all the bound parameter definitions from the BindingMap returned from the Document.ParameterBindings property. \nEach project parameter shown in the Settings &gt; Project Parameters dialogue represents an entry in this mapping. \nTo see more on how this works, you can refer to the VB.NET BrowseBindings SDK sample residing in the SDK samples folder.\nIt illustrates the usage of the ParameterBindings property by retrieving the ParameterBindingsMap and looping through all entries in the map to display all parameter definitions and bindings in a tree view.\n\n<p>Here are the project parameters as displayed in the user interface:</p>\n<center>\n<img alt=\"Project parameters\" src=\"img/project_parameters.jpg\"/>\n</center>\n<p>This is the display generated for the same project through the Revit API by the BrowseBindings SDK sample:</p>\n<center>\n<img alt=\"BrowseBindings SDK sample\" src=\"img/browse_bindings.jpg\"/>\n</center>\n<p>Many thanks to Saikat for handling this case!</p>\n</p></p></p></p>"
+  }
+]

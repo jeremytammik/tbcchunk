@@ -1,0 +1,218 @@
+[
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\ntwitter:\n\nRevit 2024 released and RevitLookup 2024 enhanced with new UI, Windows 11 support, context menu, tooltip, searchbar, new core, extensions, extended storage, snoop point, edge, face, solid for the @AutodeskRevit #BIM #RevitAPI @DynamoBIM @AutodeskAPS https://autode.sk/revitlookup2024\n\nRevit 2024 released and RevitLookup 2024 enhanced with new UI, Windows 11 support, context menu, tooltips, searchbar, new core, extensions, extended storage, snooping points, edges, faces, solids, usability features for the @AutodeskRevit #BIM #RevitAPI @DynamoBIM @AutodeskAPS https://autode.sk/revitlookup2024\n\nRevit 2024 released and RevitLookup 2024 enhanced with new UI, Windows 11 support, new core, extensability and usability features\n- Brand-new user interface\n- Themes\n- Extended context menu\n- Tooltips\n- Snoop Selection on Modify tab\n- Smooth navigation\n- Windows 11 Mica effect and Snap Layouts\n- Searchbar\n- Brand-new Engine core\n- Extensions\n- Display all methods\n- Generic names support\n- Methods overloads\n- Extensible storage\n- Extending Functionality\n- Snoop Point, Sub-Element, UI Application\n- Component manager\n- PerformanceAdviser\n- Registry research: schemas, services, updaters\n- Explore built-in and APS (formerly Forge) units\n- Event monitor\n- Reworked search\n- Visual search in a project\n- OTA update\n- RevitLookup ideas\n- Vote: Where would you like to snoop? ...\n\nlinkedin:\n\nRevit 2024 released and RevitLookup 2024 enhanced with new UI, Windows 11 support, context menu, tooltips, searchbar, new core, extensions, extended storage, snooping points, edges, faces, solids, usability features for the #RevitAPI\n\nhttps://autode.sk/revitlookup2024\n\n- Brand-new user interface\n- Themes\n- Extended context menu\n- Tooltips\n- Snoop Selection on Modify tab\n- Smooth navigation\n- Windows 11 Mica effect and Snap Layouts\n- Searchbar\n- Brand-new Engine core\n- Extensions\n- Display all methods\n- Generic names support\n- Methods overloads\n- Extensible storage\n- Extending Functionality\n- Snoop Point, Sub-Element, UI Application\n- Component manager\n- PerformanceAdviser\n- Registry research: schemas, services, updaters\n- Explore built-in and APS (formerly Forge) units\n- Event monitor\n- Reworked search\n- Visual search in a project\n- OTA update\n- RevitLookup ideas\n- Vote: Where would you like to snoop? ...\n\n#BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk\n\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread\n\n<center>\n<img src=\"img/\" alt=\"\" title=\"\" width=\"600\"/>\n<p style=\"font-size: 80%; font-style:italic\"></p>\n</center>\n\n-->"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Revit 2024 and RevitLookup 2024",
+    "local_header_href": "#revit-2024-and-revitlookup-2024",
+    "chunk_text": "### Revit 2024 and RevitLookup 2024\n\n[Revit 2024 was released this week](https://blogs.autodesk.com/revit/2023/04/04/whats-new-in-autodesk-revit-2024/).\n\nFurther improving on last year's ground-breaking speed record,\nRoman [Nice3point](https://github.com/Nice3point) was prepared well in advance to\nrelease the corresponding [RevitLookup](https://github.com/jeremytammik/RevitLookup)\n[2024 update](https://github.com/jeremytammik/RevitLookup/releases/tag/2024.0.0)\nfaster still this time around:\n\n<!-- https://github.com/jeremytammik/RevitLookup/releases/edit/2024.0.0 -->\n\n<div align=\"center\">\n<img alt=\"RevitLookup\" width=\"300\" src=\"img/RevitLookup2024_01.png\"/>\n</div>\n\nIn this release, the entire code base has been completely rewritten from scratch with a redesigned user interface.\nNew tools, OTA update, Windows 11 support!\n\nHere is an overview of the enhancements:\n\n- [UI](#2)\n    - A brand-new user interface\n    - Themes\n    - Extended context menu\n    - Tooltips\n    - Snoop Selection on Modify tab\n    - Smooth navigation\n    - Windows 11 Mica effect support\n    - Windows 11 Snap Layouts support\n    - Accent colour synced with OS\n    - New logo\n    - Searchbar\n- [Engine](#3)\n    - A brand-new core\n    - Extensions\n    - Display all methods\n    - Generic names support\n    - Multiple results for methods with overloads\n    - Extensible storage moved to the `GetEntity()` method\n    - Extending Functionality\n- [New features](#4)\n    - Snoop Point\n    - Snoop Sub-Element\n    - Snoop UI Application\n    - Component manager\n    - PerformanceAdviser on document performance\n    - Registry research: schemas, services, updaters\n    - Explore built-in and APS (formerly Forge) units\n    - Event monitor\n    - Reworked search\n    - Visual search in a project\n    - OTA update\n- [RevitLookup ideas](#5)\n- [Where would you like to snoop?](#6)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "UI",
+    "local_header_href": "#2",
+    "chunk_text": "####<a name=\"2\"></a> UI\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "A brand-new user interface",
+    "local_header_href": "#a-brand-new-user-interface",
+    "chunk_text": "##### A brand-new user interface\n\n![image](img/RevitLookup2024_02.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Themes",
+    "local_header_href": "#themes",
+    "chunk_text": "##### Themes\n\n![image](img/RevitLookup2024_03.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Extended context menu",
+    "local_header_href": "#extended-context-menu",
+    "chunk_text": "##### Extended context menu\n\n![image](img/RevitLookup2024_04.png)\n\nWiki page: [Context actions](https://github.com/jeremytammik/RevitLookup/wiki/Context-actions)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Tooltips",
+    "local_header_href": "#tooltips",
+    "chunk_text": "##### Tooltips\n\n![image](img/RevitLookup2024_05.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Snoop Selection on Modify tab",
+    "local_header_href": "#snoop-selection-on-modify-tab",
+    "chunk_text": "##### Snoop Selection on Modify tab\n\nThe Snoop Selection button has been moved to the Modify tab:\n\n![image](img/RevitLookup2024_06.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Smooth navigation",
+    "local_header_href": "#smooth-navigation",
+    "chunk_text": "##### Smooth navigation\n\nEnable acceleration in Revit settings if you are having trouble with this option:\n\n![image](img/RevitLookup2024_07.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Windows 11 Mica effect support",
+    "local_header_href": "#windows-11-mica-effect-support",
+    "chunk_text": "##### Windows 11 Mica effect support\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Windows 11 Snap Layouts support",
+    "local_header_href": "#windows-11-snap-layouts-support",
+    "chunk_text": "##### Windows 11 Snap Layouts support\n\n![image](img/RevitLookup2024_08.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Accent colour synced with OS",
+    "local_header_href": "#accent-colour-synced-with-os",
+    "chunk_text": "##### Accent colour synced with OS\n\n![image](img/RevitLookup2024_09.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "New logo",
+    "local_header_href": "#new-logo",
+    "chunk_text": "##### New logo\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Searchbar",
+    "local_header_href": "#searchbar",
+    "chunk_text": "##### Searchbar\n\nFocus is triggered by pressing any key on the keyboard:"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Engine",
+    "local_header_href": "#3",
+    "chunk_text": "####<a name=\"3\"></a>  Engine\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "A brand-new core",
+    "local_header_href": "#a-brand-new-core",
+    "chunk_text": "##### A brand-new core\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Extensions",
+    "local_header_href": "#extensions",
+    "chunk_text": "##### Extensions\n\nSupport new methods from the API and other libraries:\n\n![image](img/RevitLookup2024_10.png)\n\n[Available Extensions](https://github.com/jeremytammik/RevitLookup/wiki/Extensions)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Display all methods",
+    "local_header_href": "#display-all-methods",
+    "chunk_text": "##### Display all methods\n\nDisplaying all methods that objects have, even if RevitLookup does not support them:\n\n![image](img/RevitLookup2024_11.png)\n\n![image](img/RevitLookup2024_12.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Generic names support",
+    "local_header_href": "#generic-names-support",
+    "chunk_text": "##### Generic names support\n\n<style> th, td { padding-right: 1em; } </style>\n\n<table>\n<tr><td>Before</td><td>Now</td></tr>\n<tr><td><img src=\"img/RevitLookup2024_13.png\"/></td><td><img src=\"img/RevitLookup2024_14.png\"/></td></tr>\n</table>"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Multiple results for methods with overloads",
+    "local_header_href": "#multiple-results-for-methods-with-overloads",
+    "chunk_text": "##### Multiple results for methods with overloads\n\n![image](img/RevitLookup2024_15.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Extensible storage moved to the `GetEntity()` method",
+    "local_header_href": "#extensible-storage-moved-to-the-getentity-method",
+    "chunk_text": "##### Extensible storage moved to the `GetEntity()` method\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Extending Functionality",
+    "local_header_href": "#extending-functionality",
+    "chunk_text": "##### Extending Functionality\n\nAdding new features and extending the functionality of RevitLookup just got easier;\n[check out the Developer's Guide](https://github.com/jeremytammik/RevitLookup/blob/dev/Contributing.md#architecture)."
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "New features",
+    "local_header_href": "#4",
+    "chunk_text": "####<a name=\"4\"></a>  New features\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Snoop Point",
+    "local_header_href": "#snoop-point",
+    "chunk_text": "##### Snoop Point\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Snoop Sub-Element",
+    "local_header_href": "#snoop-sub-element",
+    "chunk_text": "##### Snoop Sub-Element\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Snoop UI Application",
+    "local_header_href": "#snoop-ui-application",
+    "chunk_text": "##### Snoop UI Application\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Component manager",
+    "local_header_href": "#component-manager",
+    "chunk_text": "##### Component manager\n\nExplore `AdWindows.dll` and learn how the ribbon and user interface in Revit are arranged.\n\n![image](img/RevitLookup2024_16.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "PerformanceAdviser on document performance",
+    "local_header_href": "#performanceadviser-on-document-performance",
+    "chunk_text": "##### PerformanceAdviser on document performance\n\n`PerformanceAdviser` to Explore document performance issues."
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Registry research: schemas, services, updaters",
+    "local_header_href": "#registry-research-schemas-services-updaters",
+    "chunk_text": "##### Registry research: schemas, services, updaters\n\n"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Explore built-in and APS (formerly Forge) units",
+    "local_header_href": "#explore-built-in-and-aps-formerly-forge-units",
+    "chunk_text": "##### Explore built-in and APS (formerly Forge) units\n\n![image](img/RevitLookup2024_17.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Event monitor",
+    "local_header_href": "#event-monitor",
+    "chunk_text": "##### Event monitor\n\nTrack all incoming events.\nEvents from the `RevitAPI.dll` and `RevitAPIUI.dll` libraries are available.\nThe search bar is used to filter results:\n\n![image](img/RevitLookup2024_18.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Reworked search",
+    "local_header_href": "#reworked-search",
+    "chunk_text": "##### Reworked search\n\nNow you can search for multiple values by `Name`, `Id`, `UniqueId`, `IfcGUID` and `Type IfcGUID` parameters:\n\n![image](img/RevitLookup2024_19.png)\n\nWiki page: [Search elements](https://github.com/jeremytammik/RevitLookup/wiki/Search-elements)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Visual search in a project",
+    "local_header_href": "#visual-search-in-a-project",
+    "chunk_text": "##### Visual search in a project\n\nShowing elements:\n\n![image](img/RevitLookup2024_20.png)\n\nShowing faces (Revit 2023 or higher):\n\n![image](img/RevitLookup2024_21.png)\n\nShowing solids (Revit 2023 or higher):\n\n![image](img/RevitLookup2024_22.png)\n\nShowing edges (Revit 2023 or higher):\n\n![image](img/RevitLookup2024_23.png)"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "OTA update",
+    "local_header_href": "#ota-update",
+    "chunk_text": "##### OTA update\n\nThe RevitLookup update is now available directly from the plugin:\n\n![image](img/RevitLookup2024_24.png)\n\nDesigned & Developed by [Nice3point](https://github.com/Nice3point) 🕊\n\nEver so many thanks to Roman [Nice3point](https://github.com/Nice3point) for his tremendous work!\n\n\n<!--\n\nRevit 2024 has been released, which means it's time to update RevitLookup!\n\nAll new features will now be released for versions 2022 and 2024.\n\nAlso updated: all additional components for developers:\n\n- Official Autodesk [Revit SDK](https://www.autodesk.com/developer-network/platform-technologies/revit)\n- [Nice3point Revit libraries](https://github.com/Nice3point/RevitApi)\n- [Nice3point Revit add-in templates](https://github.com/Nice3point/RevitTemplates)\n- [Nice3point Revit extensions](https://github.com/Nice3point/RevitExtensions)\n\nFor further details, you can check out:\n\n- The online help page\non [What's New in Revit 2024](https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-C81929D7-02CB-4BF7-A637-9B98EC9EB38B)\n- The blog post\non [What’s New in Autodesk Revit 2024](https://blogs.autodesk.com/revit/2022/04/05/whats-new-in-revit-2024/)\n- Register to the AEC Collection Essentials webinar\non [What's New in Revit 2024](https://www.autodesk.com/webinars/aec/aec-collection-revit-2024) next week,\nApril 12\n\n\n<center>\n<img src=\"img/rvt_2024_whats_new.png\" alt=\"Revit 2024\" title=\"Revit 2024\" width=\"600\"/>\n</center>\n\n-->"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "RevitLookup Ideas",
+    "local_header_href": "#5",
+    "chunk_text": "####<a name=\"5\"></a> RevitLookup Ideas\n\nCheck out\nthe [RevitLookup discussions page](https://github.com/jeremytammik/RevitLookup/discussions)\naka [RevitLookup Ideas](https://github.com/jeremytammik/RevitLookup/discussions)\nto discuss your RevitLookup wishes and dreams with the developer community.\n\nHere is one of the open discussions including a poll asking for your preference:"
+  },
+  {
+    "original_filename": "1988_rvt_2024",
+    "header_text": "Where would you like to Snoop?",
+    "local_header_href": "#6",
+    "chunk_text": "####<a name=\"6\"></a> Where would you like to Snoop?\n\nDiscussion about\nthe [Snoop Selection button placement &#35;151](https://github.com/jeremytammik/RevitLookup/discussions/151):\n\nWhat do you think of the new location of the \"Snoop Selection\" button?\nHow do you feel about it and what is your opinion on it, should it be kept or made optional?\nThe idea is that Revit automatically opens \"Modify\" tab, making the Snoop button available at all times.\n\n[Please vote](https://github.com/jeremytammik/RevitLookup/discussions/151)!"
+  }
+]

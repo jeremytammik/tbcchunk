@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0253_solid_material",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0253_solid_material",
+    "header_text": "Solid Material",
+    "local_header_href": "#solid-material",
+    "chunk_text": "<h3>Solid Material</h3><p>Here is a simple question with a simple answer on materials and solids:\n\n<p><strong>Question:</strong> Is there a way to retrieve the material of the solid geometry object of a Revit Element, like the door leaf of a door element?\n\n<p><strong>Answer:</strong> No, I am not aware of any way that a material can be assigned to a solid. \nThe only representation of the solid in the graphical user interface is through its faces, and they can have materials assigned to them. \nAs far as I know, the solid itself has no such property. \nThe only way that I am aware of to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/10/element-materials.html\">\ndetermine the material</a> \n\nof a solid is through the path Solid &gt; Faces &gt; FaceArray &gt; Item &gt; Face &gt; MaterialElement.\n\n<p>Another short little note on a completely unrelated topic:\n\n<h3>Clean Uninstall of Revit 2010</h3>\n<p>In case you ever have problems with the installation of Revit, the Autodesk Revit Architecture Services &amp; Support area includes a page describing a method to achieve a \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=13712572&amp;linkID=9243099\">\nclean uninstall of Revit 2010 products</a>. \n</p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0253_solid_material",
+    "header_text": "Clean Uninstall of Revit 2010",
+    "local_header_href": "#clean-uninstall-of-revit-2010",
+    "chunk_text": "<h3>Clean Uninstall of Revit 2010</h3><p>In case you ever have problems with the installation of Revit, the Autodesk Revit Architecture Services &amp; Support area includes a page describing a method to achieve a \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=13712572&amp;linkID=9243099\">\nclean uninstall of Revit 2010 products</a>. \n</p>"
+  }
+]

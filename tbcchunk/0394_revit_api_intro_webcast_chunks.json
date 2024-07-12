@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0394_revit_api_intro_webcast",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0394_revit_api_intro_webcast",
+    "header_text": "Revit API Introduction Webcast Recording",
+    "local_header_href": "#revit-api-introduction-webcast-recording",
+    "chunk_text": "<h3>Revit API Introduction Webcast Recording</h3><p>The recording and materials of the Revit API Introduction webcast presented on May 20 2010 by Adam Nagy and Saikat Bhattacharya is available from the Autodesk Developer Network (ADN) DevTech \n\n<a href=\"http://autodesk.com/apitraining\">\nAPI Training &amp; Consulting</a>\n\npage, following the \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_webcast_archive.php\">\nwebcast archive</a> link \n\nand filtering for 'Revit API' and 'English'.\nSelect the download link to obtain the archive file RevitAPI_20May2010.zip containing the following four files:\n\n<ul>\n<li>Revit 2011 API - Intro_PPT.zip\n<li>Revit API Intro Webcast_May 2010_Recording.zip\n<li>Revit_API_Intro_Webcast_May_2010_QA.docx\n<li>RevitLabs.zip\n</li></li></li></li></ul>\n<p>They obviously contain the presentation, recording, questions and answers, and samples, respectively.\n\n<p>The topics covered include:\n\n<ul>\n<li>Introduction\n<ul>\n<li>Revit products and SDK\n<li>Documentation and samples\n</li></li></ul>\n<li>Getting Started and Hello World\n<ul>\n<li>Development environment\n<li>External commands and applications\n<li>Add-in manifest<li>RvtSamples \n<li>RevitLookup (formally known as RvtMgdDbg)\n</li></li></li></li></li></ul>\n<li>Database Fundamentals \n<ul>\n<li>Understanding the representation of Revit elements\n<li>Element iteration, filtering and queries \n<li>Element modification\n<li>Model creation \n</li></li></li></li></ul>\n<li>UI Topics\n<ul>\n<li>Ribbon\n<li>Selection\n<li>Task dialogue\n</li></li></li></ul>\n<li>Events\n<li>Dynamic model update\n</li></li></li></li></li></li></ul>\n<p>The labs used to explain the basics of the Revit API have been rewritten from scratch, and the introduction is much more effective and easier to follow now than the one we used in previous versions.\n\n<p>The presentation is also completely new and very didactically designed, so it should provide a good starting point for anyone wishing to get into the Revit API, regardless of whether you have had a look at it in previous versions of the product or not.\n</p></p></p></p></p>"
+  }
+]

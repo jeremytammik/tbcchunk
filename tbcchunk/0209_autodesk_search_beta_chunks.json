@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0209_autodesk_search_beta",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0209_autodesk_search_beta",
+    "header_text": "Autodesk Search Beta",
+    "local_header_href": "#autodesk-search-beta",
+    "chunk_text": "<h3>Autodesk Search Beta</h3><p>We recently mentioned two new online search possibilities, the availability of \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-help.html\">\nonline help for the Revit product</a>\n\nand Rod Howarth's customised \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-api-help.html\">\nglobal Revit API search</a>.\n\nHere is another note in the same vein:</p><a href=\"http://searchbeta.autodesk.com\">\nAutodesk Search Beta</a><ul>\n<li>Type-ahead.\n<li>Did you mean...\n<li>Filter by publish date, site source, etc.\n<li>Expanded search scope covering discussion forums, blogs, online product documentation, community sites and the Autodesk channel on YouTube.\n</li></li></li></li></ul><p>Please check it out and provide feedback to help validate and fine tune the technology, and possibly justify using it to replace the current search functionality.</p><p>I tested the search with the keywords \"newsweep revit\" and it returned exactly two hits, i.e. not too few nor too many, both of which were perfectly relevant, i.e. no junk.</p>"
+  }
+]

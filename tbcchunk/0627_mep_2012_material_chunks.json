@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0627_mep_2012_material",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0627_mep_2012_material",
+    "header_text": "MEP Sample Code for Revit 2012",
+    "local_header_href": "#mep-sample-code-for-revit-2012",
+    "chunk_text": "<h3>MEP Sample Code for Revit 2012</h3><p>One of my sessions at \n\n<a href=\"http://au.autodesk.com/?nd=e2011\">\nAutodesk University 2011</a> is \n\n<b>CP4453</b> Everything in Place with Revit MEP Programming.\nIt will cover both the new \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/the-revit-mep-2012-api.html\">\nRevit MEP 2012 API features</a> and\n\nthe \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/09/the-revit-mep-api.html\">\nRevit MEP API in general</a>.\n\n<p>In preparation for that, as well as preparing new samples, e.g. on \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/07/mep-placeholders.html\">\nplaceholder elements</a>,\n\nI am also updating the existing material, especially the ADN Revit MEP sample code.\n\n<p>The old Revit 2011 material from AU 2010 is available online, for instance from the list of all sessions in the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/12/the-revit-api-track-at-au-2010.html\">\nRevit API track at AU 2010</a> and\n\nfor Revit MEP from my\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/11/autodesk-university-2010-class-materials.html\">\nRevit MEP 2011 API class materials</a>.\n\nThey are also available directly from the \n\n<a href=\"http://au.autodesk.com/?nd=event_class&amp;session_id=6882&amp;jid=620080\">\nCP316-3U All Systems Go in Autodesk Revit MEP Programming</a> page \n\nin the AU site itself.\n\n<p>So, after all that retrospective introspection, here is \n\n<a href=\"zip/rme_src_2011-08-09.zip\">rme_src_2011-08-09.zip</a> containing \n\nthe flat migrated sample material for Revit MEP 2012. \nThe descriptions of the features implemented provided by last year's handout material still apply.\n\n\n<a name=\"2\"></a>\n<h4>Upcoming Revit API Training Classes</h4>\n<p>There is still time to sign up to attend our classroom-based training sessions coming up this autumn. \nPlease take a look at the \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_sched.php\">API training schedule</a> and the\n\n<a href=\"http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=785271\">\ncourse descriptions</a> to \n\nfind out if you could benefit from attending one of these classes.\n\n<p>The next classes discussing the Revit API are listed by filtering for \"Revit API\":\n\n<ul>\n<li>Aug 25 2011 – Chennai, India, English\n<li>Sep 29 2011 – Sao Paulo, Brazil, Portuguese\n</li></li></ul>\n</p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0627_mep_2012_material",
+    "header_text": "Upcoming Revit API Training Classes",
+    "local_header_href": "#upcoming-revit-api-training-classes",
+    "chunk_text": "<h4>Upcoming Revit API Training Classes</h4><p>There is still time to sign up to attend our classroom-based training sessions coming up this autumn. \nPlease take a look at the \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_sched.php\">API training schedule</a> and the\n\n<a href=\"http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=785271\">\ncourse descriptions</a> to \n\nfind out if you could benefit from attending one of these classes.\n\n<p>The next classes discussing the Revit API are listed by filtering for \"Revit API\":\n\n<ul>\n<li>Aug 25 2011 – Chennai, India, English\n<li>Sep 29 2011 – Sao Paulo, Brazil, Portuguese\n</li></li></ul>\n</p></p>"
+  }
+]

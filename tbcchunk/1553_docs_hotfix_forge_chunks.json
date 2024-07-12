@@ -1,0 +1,62 @@
+[
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nRevit 2018 added to Revit API Docs #RevitAPI #3dwebcoder @AutodeskRevit #adsk #aec #bim #dynamobim http://bit.ly/wwcdocforgeupdate\nForge DevCon and AU Call for Proposals @AutodeskForge #ForgeDevCon #RevitAPI #3dwebcoder @AutodeskRevit #adsk #aec #bim #dynamobim http://bit.ly/wwcdocforgeupdate\nImminent Forge scopes enforcement plus View and Data API countdown @AutodeskForge #ForgeDevCon #RevitAPI http://bit.ly/wwcdocforgeupdate\n\nUpdates on Revit 2017, Revit 2018, and above all our treasured Revit API Docs.\nPlus, the clock is running now on two Forge enhancements.\nFinally, notes on DevCon, AU, female coders and the <i>Women Who Code</i> conference\n&ndash; Revit 2018 added to Revit API Docs\n&ndash; Revit 2018.0.1 hot fix\n&ndash; Revit 2017.2.1 update\n&ndash; Forge scopes enforcement by May 22\n&ndash; Forge View and Data API countdown\n&ndash; Forge DevCon call for speakers is open\n&ndash; Autodesk University call for proposals\n&ndash; Five Autodeskers speak at <i>Women Who Code</i>...\n\n-->"
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "Women Coders, Forge and Revit API Docs Updates",
+    "local_header_href": "#women-coders-forge-and-revit-api-docs-updates",
+    "chunk_text": "### Women Coders, Forge and Revit API Docs Updates\n\nMore updates on Revit 2017, Revit 2018, and above all our treasured Revit API Docs.\n\nPlus, the clock is running now on two Forge enhancements.\n\nIf your existing app uses the obsolete View and Data API or unscoped tokens, it will stop working soon!\n\nFinally, notes on DevCon, AU, female coders and the Twitter *Women Who Code* conference:\n\n- [Revit 2018 added to Revit API Docs](#2)\n- [Revit 2018.0.1 hot fix](#3)\n- [Revit 2017.2.1 update](#4)\n- [Forge scopes enforcement by May 22](#5)\n- [Forge View and Data API countdown](#6)\n- [Forge DevCon call for speakers is open](#7)\n- [Autodesk University Call for Proposals](#8)\n- [Five Autodeskers speak at *Women Who Code*](#9)"
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"2\"></a>Revit 2018 Added to Revit API Docs",
+    "local_header_href": "#a-name2arevit-2018-added-to-revit-api-docs",
+    "chunk_text": "#### <a name=\"2\"></a>Revit 2018 Added to Revit API Docs\n\n[Revit API Docs](http://www.revitapidocs.com) provides online access to the full contents of the Revit API help file *RevitAPI.chm* for all versions of the Revit API from Revit 2015 onwards.\n\nNow it is up and running with [support added for Revit 2018 as well](http://www.revitapidocs.com/2018/news):\n\n<center>\n  <a href=\"http://www.revitapidocs.com/2018/news\">\n    <img src=\"img/revitapidocs2018.png\" alt=\"Revit API Docs 2018\" width=\"440\">\n  </a>\n</center>\n\nMany thanks to [Gui Talarico](http://gtalarico.com) for maintaining this invaluable resource!\n\nAwesome, awesomely effective and awesomely simple web site, btw  :-)"
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"3\"></a>Revit 2018.0.1 Hot Fix",
+    "local_header_href": "#a-name3arevit-201801-hot-fix",
+    "chunk_text": "#### <a name=\"3\"></a>Revit 2018.0.1 Hot Fix\n\n2018 has received its first little update, the Revit 2018.0.1 Hot Fix.\n\nThe reported issues resolved in Revit 2018 build 20170421_2315 include:\n\n- Improved stability when using the pick line tool.\n- Improved data integrity of the local project files after download operation when using [Collaboration for Revit C4R](http://www.autodesk.com/products/collaboration-for-revit/overview).\n\nHere are direct links:\n\n- [Download](http://up.autodesk.com/2018/RVT/Autodesk_Revit_2018_0_1.exe)\n- [Release notes](http://revit.downloads.autodesk.com/download/2018_0_1_RVT/Docs/RelNotes/Autodesk_Revit_2018_0_1_ReleaseNotes.html)\n- [Readme](http://up.autodesk.com/2018/RVT/Autodesk_Revit_2018_0_1_Readme.htm)"
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"4\"></a>Revit 2017.2.1 Update",
+    "local_header_href": "#a-name4arevit-201721-update",
+    "chunk_text": "#### <a name=\"4\"></a>Revit 2017.2.1 Update\n\nA new update for Revit 2017 has been published as well, with too many enhancements to list here.\n\nPlease refer to the [release notes](http://revit.downloads.autodesk.com/download/2017_2_1_RVT/Docs/RelNotes/Autodesk_Revit_2017_2_1_ReleaseNotes.html) for full details.\n\nHere is the [direct link to download](http://up.autodesk.com/2017/RVT/Autodesk_Revit_2017_2_1.exe) and\nthe [readme doc](http://up.autodesk.com/2017/RVT/Autodesk_Revit_2017_2_1_Readme.htm)."
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"5\"></a>Forge Scopes Enforcement by May 22",
+    "local_header_href": "#a-name5aforge-scopes-enforcement-by-may-22",
+    "chunk_text": "#### <a name=\"5\"></a>Forge Scopes Enforcement by May 22\n\nAs part of the continual Forge platform security improvements, enforcement of the scopes requirement for all access tokens will begin on **May 22, 2017**.\n\nIf you have apps created before June 15, 2016, you need to update your code so that any access tokens generated by your app request scopes.\n\nCalls without scopes will be rejected after May 22.\n\nFor full details, please refer to\nthe [Forge OAuth scopes docs](https://developer.autodesk.com/en/docs/oauth/v2/overview/scopes)."
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"6\"></a>Forge View and Data API Countdown",
+    "local_header_href": "#a-name6aforge-view-and-data-api-countdown",
+    "chunk_text": "#### <a name=\"6\"></a>Forge View and Data API Countdown\n\nAs said, the clock is running now.\n\nConvert your existing app from the obsolete View and Data API to the [Forge Viewer API](https://developer.autodesk.com/en/docs/viewer/v2/overview).\n\nIt’s been almost a year since the release of the \nForge [Data Management API](https://developer.autodesk.com/en/docs/data/v2/overview/),\n[Model Derivative API](https://developer.autodesk.com/en/docs/model-derivative/v2/overview/),\nand [Viewer JavaScript library](https://developer.autodesk.com/en/docs/viewer/v2/overview/) replacing\nthe original View and Data API.\n\nConsequently, on **July 17, 2017** the View and Data API will close down.\n\nPlease migrate your code from the obsolete platform version `v1` to the new platform `v2` before July 17, 2017, or your application will stop working.\n\nFor more information, please refer to the detailed description \non [migrating apps from Forge `v1` to `v2`](https://forge.autodesk.com/cloud_and_mobile/2016/09/autodesk-forge-apis-migrating-from-v1-to-v2.html)."
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"7\"></a>Forge DevCon Call for Speakers is Open",
+    "local_header_href": "#a-name7aforge-devcon-call-for-speakers-is-open",
+    "chunk_text": "#### <a name=\"7\"></a>Forge DevCon Call for Speakers is Open\n\nThe [Forge DevCon call for speakers is open](https://forge.autodesk.com/blog/forge-devcon-announces-call-proposals).\n\nAre you interested in sharing your experience working with the Forge platform?\n\nHave you creatively used Forge to enhance a project or solve a challenge?\n\nIf so, then come join other experts in a leadership role at [Forge DevCon](https://forge.autodesk.com/devcon-2017).\n\nPlease [submit your proposal by May 17](https://forge.autodesk.com/blog/forge-devcon-announces-call-proposals)!\n\n<center>\n<img src=\"img/2017_forge_devcon_promo_image3_1024x512.png\" alt=\"Forge DevCon\" width=\"400\">\n</center>"
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"8\"></a>Autodesk University Call for Proposals",
+    "local_header_href": "#a-name8aautodesk-university-call-for-proposals",
+    "chunk_text": "#### <a name=\"8\"></a>Autodesk University Call for Proposals\n\nAs already mentioned, the Forge DevCon has been aligned\nwith [Autodesk University in Las Vegas](http://au.autodesk.com).\n\nAutodesk University obvoisly remains the most important event of the year for all Autodesk technology not directly related to Forge programming, including Revit, its API and add-in development.\n\nIf you have anything you would like to share on any such subject,\nplease [submit your AU proposal by May 17](http://au.autodesk.com/speaker-resource-center/call-for-proposals)."
+  },
+  {
+    "original_filename": "1553_docs_hotfix_forge",
+    "header_text": "<a name=\"9\"></a>Five Autodeskers Speak at Women Who Code",
+    "local_header_href": "#a-name9afive-autodeskers-speak-at-women-who-code",
+    "chunk_text": "#### <a name=\"9\"></a>Five Autodeskers Speak at Women Who Code\n\nFive female Autodeskers will take the stage at\nthe [Women Who Code conference](https://www.womenwhocode.com/) at Twitter HQ on Saturday April 29.\n\nCheck out\nthe [interview with them on female professionals, developing and collaborating](https://forge.autodesk.com/blog/forge-ahead-join-us-industry-wide-conversation-and-twitter-women-who-codes-connect-17).\n\n<center>\n<a class=\"twitter-timeline\" href=\"https://twitter.com/WomenWhoCode\">Tweets by WomenWhoCode</a>\n<script async src=\"http://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n</center>"
+  }
+]

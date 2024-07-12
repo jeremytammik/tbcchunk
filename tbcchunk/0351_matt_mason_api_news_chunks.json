@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0351_matt_mason_api_news",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0351_matt_mason_api_news",
+    "header_text": "Matt Mason's API News",
+    "local_header_href": "#matt-masons-api-news",
+    "chunk_text": "<h3>Matt Mason's API News</h3><p>I just noticed from Matt Mason's \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/plugin-migration-steps.html?cid=6a00e553e168978833013480152d31970c#comment-6a00e553e168978833013480152d31970c\">\ncomment</a> on the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/plugin-migration-steps.html\">\nplug-in migration steps</a> that\n\nhe is running a very interesting \n\n<a href=\"http://cadappdev.blogspot.com/2010/03/revit-api-2011-edition-whats-new.html\">\nseries of posts on the new Revit 2011 API</a> as well.\n\n<p>Here is his current table of contents:\n\n<ul>\n<li>Upgrading Existing Revit API commands/applications \n<li>New Deployment Methods \n<li>The New UI vs. Database split. \n<li>New Ribbon Capabilities \n<li>Element Iteration Changes \n<li>Ooh-ooh Pick Me! New Selection Methods \n<li>Dynamic Model Update \n<li>Event Model Changes \n<li>RevitLookup: The New RevitMgdDbg \n<li>Whats New in Element Creation? \n<li>What Kinds of Applications are Possible Now? \n<li>And More...\n</li></li></li></li></li></li></li></li></li></li></li></li></ul>\n<p>Some of the topics have already been posted, others not yet.\nWe have covered some of the areas here as well, but several not, such as the new\n\n<a href=\"http://cadappdev.blogspot.com/2010/03/revit-api-2011-user-interface.html\">\nribbon capabilities</a> and\n\n<a href=\"http://cadappdev.blogspot.com/2010/03/revit-api-2011-ooh-ooh-pick-me.html\">\nselection methods</a>.\n\n<p>Great stuff, Matt, and thank you very much for pointing it out!\n</p></p></p></p>"
+  }
+]

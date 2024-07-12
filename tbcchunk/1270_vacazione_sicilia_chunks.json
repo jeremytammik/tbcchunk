@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1270_vacazione_sicilia",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1270_vacazione_sicilia",
+    "header_text": "Vacazione in Sicilia",
+    "local_header_href": "#vacazione-in-sicilia",
+    "chunk_text": "<h3>Vacazione in Sicilia</h3><p>I'm off for a short vacation in <a href=\"https://en.wikipedia.org/wiki/Sicily\">Sicily</a>.</p><p>No computer, sleeping out.</p><p>I wish you lots of fun and success with the Revit API, and myself some nice nature, good long walks, and deep relaxation.</p><p>And good coffee.</p><p>Ciao!</p><center>\n<img alt=\"Punta delle formiche, Portopalo di Capo Passero\" src=\"img/punta_delle_formiche_portapalo.png\" width=\"400\"/>\n</center>"
+  }
+]

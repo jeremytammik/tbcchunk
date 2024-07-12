@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1535_family_browser",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- rfa browser -- https://github.com/RomanLavrov/RevitFamilyBrowser\n  I am working on family browser for Revit using RevitAPI and WPF. Your blog helps me a lot, so I decide to share my work with you. I think, some ideas will be useful for other coders. If you had time, please have a look my program https://github.com/RomanLavrov/RevitFamilyBrowser. \n  \nWPF Revit Family Browser and Vacation #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge http://bit.ly/familybrowser\n\nI am away on vacation.\nIn the meantime, Roman Lavrov shared his Revit Family Browser, saying:\nI am working on family browser for Revit using Revit API and WPF. Your blog helps me a lot, so I decide to share my work with you. I think, some ideas will be useful for other coders. If you have time, please take a look my program on GitHub at github.com/RomanLavrov/RevitFamilyBrowser...\n\n\n\n-->"
+  },
+  {
+    "original_filename": "1535_family_browser",
+    "header_text": "WPF Revit Family Browser and Vacation",
+    "local_header_href": "#wpf-revit-family-browser-and-vacation",
+    "chunk_text": "### WPF Revit Family Browser and Vacation\n\nJust for your information, I am away on vacation now.\n\nPlease don't expect any Revit API related activity from me here, on\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160),\nor anywhere else during the coming week.\n\nHappily, I have something else to share with you and possibly help keep you busy and entertained in the meantime:\n\n[Roman Lavrov](https://github.com/RomanLavrov) shared\nhis [Revit Family Browser](https://github.com/RomanLavrov/RevitFamilyBrowser), saying:\n\n> I am working on family browser for Revit using Revit API and WPF.\nYour blog helps me a lot, so I decide to share my work with you.\nI think, some ideas will be useful for other coders.\nIf you have time, please take a look my program on GitHub\nat [github.com/RomanLavrov/RevitFamilyBrowser](https://github.com/RomanLavrov/RevitFamilyBrowser). \n\n<center> \n<img src=\"img/revit_family_browser_panel.png\" alt=\"Revit family browser panel\" width=\"504\"/>\n</center>\n\nMany thanks to Roman for sharing his cool utility and source code!\n\nI wish everybody a happy and productive time while I am gone!"
+  }
+]

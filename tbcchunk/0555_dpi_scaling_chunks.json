@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0555_dpi_scaling",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0555_dpi_scaling",
+    "header_text": "Handling DPI Scaling in .NET Application Forms",
+    "local_header_href": "#handling-dpi-scaling-in-net-application-forms",
+    "chunk_text": "<h3>Handling DPI Scaling in .NET Application Forms</h3><p>Here is a quick pointer to Kean's post on \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2011/03/handling-dpi-scaling-in-your-net-applications-forms.html\">\nhandling DPI scaling in .NET application forms</a>, \n\nin case you missed it.\n\nThis issue is obviously relevant in Revit add-ins as well, and was actually encountered by Adam Nagy developing the \n\n<a href=\"http://labs.autodesk.com/utilities/ADN_plugins\">\nRoomRenumbering for Revit ADN Plugin of the Month</a>.\n\n<h4>Autodesk Special Media Webcast</h4>\n<p>The Autodesk public relations team is producing a special webcast, hosted by Amar Hanspal, on March 21 at 14:00 PST, 17:00 EST, and 21:00 UTC (Pacific, Eastern, and Coordinated Universal Time).\n\n<p>It is open to any interested parties including customers, partners and other friends of Autodesk.   \n\n<p>You can register today to join the <a href=\"http://www.autodesk.com/webcast\">Autodesk Special Media Webcast</a> on March 21.\n\n</p></p></p></p>"
+  },
+  {
+    "original_filename": "0555_dpi_scaling",
+    "header_text": "Autodesk Special Media Webcast",
+    "local_header_href": "#autodesk-special-media-webcast",
+    "chunk_text": "<h4>Autodesk Special Media Webcast</h4><p>The Autodesk public relations team is producing a special webcast, hosted by Amar Hanspal, on March 21 at 14:00 PST, 17:00 EST, and 21:00 UTC (Pacific, Eastern, and Coordinated Universal Time).\n\n<p>It is open to any interested parties including customers, partners and other friends of Autodesk.   \n\n<p>You can register today to join the <a href=\"http://www.autodesk.com/webcast\">Autodesk Special Media Webcast</a> on March 21.\n\n</p></p></p>"
+  }
+]

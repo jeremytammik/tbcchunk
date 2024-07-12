@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0263_devtv",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0263_devtv",
+    "header_text": "Updated DevTV Introduction to Revit Programming",
+    "local_header_href": "#updated-devtv-introduction-to-revit-programming",
+    "chunk_text": "<h3>Updated DevTV Introduction to Revit Programming</h3><p>The \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/index?id=2484975&amp;siteID=123112\">\nRevit Developer Center</a> proudly presents\n\nan updated version of the <strong>DevTV Introduction to Revit Programming</strong>\n\nfor Revit 2010, which is now available in both English and Portuguese:\n\n<ul>\n<li>English: \n<a href=\"http://download.autodesk.com/media/adn/DevTV_Introduction_to_Revit_Programming_new\">View online</a> | \n<a href=\"http://download.autodesk.com/media/adn/Introduction_to_Revit_Programming.zip\">Download</a>.\n<li>Portuguese:\n<a href=\"http://download.autodesk.com/media/adn/DevTV_Introducao_a_Programacao_Revit\">View online</a> | \n<a href=\"http://download.autodesk.com/media/adn/Introducao_a_Programacao_Revit.zip\">Download</a>.\n</li></li></ul>\n<p>Oh dear, Saikat just pointed out that the online viewing links apparently do not work here, they only work when selected on the \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/index?id=2484975&amp;siteID=123112\">\nRevit Developer Center</a> page.\n\nSorry about that.\n\n<p>The original version was created based on \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/08/getting-started.html\">\nRevit 2008</a>, \n\nand we reused that version for our \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/04/getting-started-with-the-revit-2009-api.html#2\">\nRevit 2009</a> getting started material as well.\n\n<p>Many thanks to Augusto Gonçalves of Autodesk Brazil for creating the updated version for Revit 2010!\n</p></p></p></p>"
+  }
+]

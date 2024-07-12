@@ -1,0 +1,62 @@
+[
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nThe Building Coder Samples 2017 #revitAPI #3dwebcoder @AutodeskRevit #adsk #aec #bim #dynamobim\n\nLast night, I migrated The Building Coder samples to Revit 2017\n&ndash; Flat Migration\n&ndash; Updated RvtSamples Include File\n&ndash; Automatic Transaction Mode is Obsolete\n&ndash; Obsolete Plane Constructors and NewPlane Methods\n&ndash; Obsolete NewPlane Method Taking a CurveArray Argument\n&ndash; Replace View.SetVisibility by SetCategoryHidden\n&ndash; Use DirectShape ApplicationId and ApplicationDataId\n&ndash; All Obsolete Revit API Usage Eliminated...\n\n-->"
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "The Building Coder Samples 2017",
+    "local_header_href": "#the-building-coder-samples-2017",
+    "chunk_text": "### The Building Coder Samples 2017\n\nLast night, I migrated The Building Coder samples to Revit 2017:\n\n- [Flat Migration](#2)\n- [Updated RvtSamples Include File](#3)\n- [Automatic Transaction Mode is Obsolete](#4)\n- [Obsolete Plane Constructors and NewPlane Methods](#5)\n- [Obsolete NewPlane Method Taking a CurveArray Argument](#6)\n- [Replace View.SetVisibility by SetCategoryHidden](#7)\n- [Use DirectShape ApplicationId and ApplicationDataId](#8)\n- [All Obsolete Revit API Usage Eliminated](#9)"
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"2\"></a>Flat Migration",
+    "local_header_href": "#a-name2aflat-migration",
+    "chunk_text": "#### <a name=\"2\"></a>Flat Migration\n\nThe flat migration was trivial:\n\n- Updated the Revit API references to Revit 2017\n- Updated the .NET framework target version from 4.5 to 4.5.2\n\nThe compilation succeeded right away with [zero errors and 53 warnings](zip/tbc_samples_2017_migr_01.txt) about obsolete API usage.\n\nHere are the [diffs](https://github.com/jeremytammik/the_building_coder_samples/compare/2016.0.127.3...2017.0.127.0) for this first step."
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"3\"></a>Updated RvtSamples Include File",
+    "local_header_href": "#a-name3aupdated-rvtsamples-include-file",
+    "chunk_text": "#### <a name=\"3\"></a>Updated RvtSamples Include File\n\nNext, in order to perform a first test run, I updated the RvtSamples include file, i.e., the text\nfile [BcSamples.txt](https://github.com/jeremytammik/the_building_coder_samples/blob/master/BcSamples.txt) read\nby the RvtSamples external application to load the individual external commands, simply updating the BuildingCoder.dll output build path to point to the new 2017-specific folder.\n\nOnce that was done, I was up and running in Revit 2017 &ndash; RvtSamples lists The Building Coder sample commands in the three alphabetically sorted sections prefixed with 'ADN Bc':\n\n<center>\n<img src=\"img/tbc_samples_2017.png\" alt=\"The Building Coder samples in Revit 2017\" width=\"711\">\n</center>\n\nSo that was quick and easy.\n\nWhile we are at it, let's fix those 53 obsolete API usage warnings as well."
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"4\"></a>Automatic Transaction Mode is Obsolete",
+    "local_header_href": "#a-name4aautomatic-transaction-mode-is-obsolete",
+    "chunk_text": "#### <a name=\"4\"></a>Automatic Transaction Mode is Obsolete\n\n30 of the 53 warnings concern the obsolete automatic transaction mode:\n\n- Warning CS0618: 'TransactionMode.Automatic' is obsolete: 'This mode is deprecated in Revit 2017.'\n\nWe have know for long that it will be going away.\n\nIn fact, it\nwas [publicly announced](http://thebuildingcoder.typepad.com/blog/2012/05/read-only-and-automatic-transaction-modes.html) as\nfar back as 2012.\n\nSo this clean-up is long overdue.\n\nUnfortunately, it will cost me some effort to rewrite these 30 commands.\n\nThat is also the reason why it is so long overdue &nbsp; :-)\n\nLater... I fixed all 30 of these external commands, reducing the count to [23 warnings](zip/tbc_samples_2017_migr_02.txt) about obsolete API usage.\n\nHere are the [diffs](https://github.com/jeremytammik/the_building_coder_samples/compare/2017.0.127.0...2017.0.127.1) for this clean-up."
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"5\"></a>Obsolete Plane Constructors and NewPlane Methods",
+    "local_header_href": "#a-name5aobsolete-plane-constructors-and-newplane-methods",
+    "chunk_text": "#### <a name=\"5\"></a>Obsolete Plane Constructors and NewPlane Methods\n\nAll three overloads of the Application.NewPlane method are obsolete:\n\n- NewPlane(CurveArray) Obsolete. Creates a new geometric plane from a loop of planar curves.\n- Public method NewPlane(XYZ, XYZ) Obsolete. Creates a new geometric plane object based on a normal vector and an origin.\n- Public method NewPlane(XYZ, XYZ, XYZ) Obsolete. Creates a new geometric plane object based on two coordinate vectors and an origin.\n\nI am using the one taking two `XTZ` arguments representing a normal vector and an origin, and the one taking a `CurveArray` argument.\n\nAll three overloads of the Plane class constructor are obsolete:\n\n- Plane() Obsolete. Default constructor\n- Public method Plane(XYZ, XYZ) Obsolete. Constructs a Plane object from a normal and an origin represented as XYZ objects. Follows the standard conventions for a planar surface. The constructed Plane object will pass through origin and be perpendicular to normal. The X and Y axes of the plane will be defined arbitrarily.\n- Public method Plane(XYZ, XYZ, XYZ) Obsolete. Constructs a Plane object from X and Y axes and an origin represented as XYZ objects. The plane passes through \"origin\" and is spanned by the basis vectors \"xVec\" and \"yVec\".\n\nI am using the one taking two `XYZ` arguments representing a normal vector and an origin.\n\nThese three obsolete methods generate the following warnings:\n\n- Warning CS0618: 'Application.NewPlane(XYZ, XYZ)' is obsolete: 'This method is obsolete in Revit 2017. Please use Plane.CreateByNormalAndOrigin() instead.'\n- Warning CS0618: 'Plane.Plane(XYZ, XYZ)' is obsolete: 'This method is obsolete in Revit 2017. Please use Plane.CreateByNormalAndOrigin() instead.'\n- Warning CS0618: 'Application.NewPlane(CurveArray)' is obsolete: 'This method is obsolete in Revit 2017. Please use CurveLoop.GetPlane() instead.'\n\nLet's go and do what the man says...\n\nI replaced all occurrences of the first two warnings, reducing the count to [5 warnings](zip/tbc_samples_2017_migr_03.txt) about obsolete API usage.\n\nHere are the [diffs](https://github.com/jeremytammik/the_building_coder_samples/compare/2017.0.127.1...2017.0.127.2) for this clean-up."
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"6\"></a>Obsolete NewPlane Method Taking a CurveArray Argument",
+    "local_header_href": "#a-name6aobsolete-newplane-method-taking-a-curvearray-argument",
+    "chunk_text": "#### <a name=\"6\"></a>Obsolete NewPlane Method Taking a CurveArray Argument\n\nI still have three calls to the obsolete `Application.NewPlane` method taking a `CurveArray` argument, e.g., in CmdWallProfile.cs:\n\n<pre class=\"code\">\n  <span style=\"color:#2b91af;\">CurveArray</span>&nbsp;curves&nbsp;=&nbsp;creapp.NewCurveArray();\n\n  <span style=\"color:blue;\">foreach</span>(&nbsp;<span style=\"color:#2b91af;\">Curve</span>&nbsp;curve&nbsp;<span style=\"color:blue;\">in</span>&nbsp;curveLoop2&nbsp;)\n  {\n  &nbsp;&nbsp;curves.Append(&nbsp;curve.CreateTransformed(&nbsp;offset&nbsp;)&nbsp;);\n  }\n\n  <span style=\"color:green;\">//&nbsp;Create&nbsp;model&nbsp;lines&nbsp;for&nbsp;an&nbsp;curve&nbsp;loop.</span>\n\n  <span style=\"color:#2b91af;\">Plane</span>&nbsp;plane&nbsp;=&nbsp;creapp.NewPlane(&nbsp;curves&nbsp;);&nbsp;<span style=\"color:green;\">//&nbsp;2016</span>\n</pre>\n\nThe suggested fix is to use the `CurveLoop.GetPlane` method instead.\n\nLuckily, in this case, the variable `curveLoop2` from which we extract the individual curves to add to the CurveArray collection is already a `CurveLoop` instance, so we can call `GetPlane` on it directly:\n\n<pre class=\"code\">\n  <span style=\"color:#2b91af;\">Plane</span>&nbsp;plane&nbsp;=&nbsp;curveLoop2.GetPlane();&nbsp;<span style=\"color:green;\">//&nbsp;2017</span>\n</pre>\n\nUnfortunately, we still need to retain and set up the `CurveArray`, because that is a required argument in the subsequent call to `NewModelCurveArray`.\n\n<!---\nI eliminated one more of these warnings, but not the other, because it is just used for an assertion in a debugging statement.\n\nThat leaves us with\njust [3 warnings](zip/tbc_samples_2017_migr_04.txt) about\nobsolete API usage, after making the changes captured in\nthese [diffs](https://github.com/jeremytammik/the_building_coder_samples/compare/2017.0.127.2...2017.0.127.3).\n-->"
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"7\"></a>Replace View.SetVisibility by SetCategoryHidden",
+    "local_header_href": "#a-name7areplace-viewsetvisibility-by-setcategoryhidden",
+    "chunk_text": "#### <a name=\"7\"></a>Replace View.SetVisibility by SetCategoryHidden\n\nThe `View.SetVisibility` is replaced by `SetCategoryHidden`.\n\nHere are the calls used in Revit 2016 and Revit 12017, respectively:\n\n<pre class=\"code\">\n  view.SetVisibility(&nbsp;catHosts,&nbsp;<span style=\"color:blue;\">false</span>&nbsp;);&nbsp;<span style=\"color:green;\">//&nbsp;2016</span>\n\n  view.SetCategoryHidden(&nbsp;catHosts.Id,&nbsp;<span style=\"color:blue;\">true</span>&nbsp;);&nbsp;<span style=\"color:green;\">//&nbsp;2017</span>\n</pre>"
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"8\"></a>Use DirectShape ApplicationId and ApplicationDataId",
+    "local_header_href": "#a-name8ause-directshape-applicationid-and-applicationdataid",
+    "chunk_text": "#### <a name=\"8\"></a>Use DirectShape ApplicationId and ApplicationDataId\n\nIn Revit 2016, the application and application data GUIDs for a DirectShape element were passed into the constructor.\n\nIn Revit 2017, they can be set later using the corresponding properties:\n\n<pre class=\"code\">\n  <span style=\"color:#2b91af;\">DirectShape</span>&nbsp;ds&nbsp;=&nbsp;<span style=\"color:#2b91af;\">DirectShape</span>.CreateElement(\n  &nbsp;&nbsp;doc,&nbsp;e.Category.Id,\n  &nbsp;&nbsp;_direct_shape_appGUID,\n  &nbsp;&nbsp;appDataGUID&nbsp;);&nbsp;<span style=\"color:green;\">//&nbsp;2016</span>\n\n  <span style=\"color:#2b91af;\">DirectShape</span>&nbsp;ds&nbsp;=&nbsp;<span style=\"color:#2b91af;\">DirectShape</span>.CreateElement(\n  &nbsp;&nbsp;doc,&nbsp;e.Category.Id&nbsp;);&nbsp;<span style=\"color:green;\">//2017</span>\n\n  ds.ApplicationId&nbsp;=&nbsp;_direct_shape_appGUID;&nbsp;<span style=\"color:green;\">//&nbsp;2017</span>\n  ds.ApplicationDataId&nbsp;=&nbsp;appDataGUID∫∫;&nbsp;<span style=\"color:green;\">//&nbsp;2017</span>\n</pre>"
+  },
+  {
+    "original_filename": "1436_tbc_samples_2017",
+    "header_text": "<a name=\"9\"></a>All Obsolete Revit API Usage Eliminated",
+    "local_header_href": "#a-name9aall-obsolete-revit-api-usage-eliminated",
+    "chunk_text": "#### <a name=\"9\"></a>All Obsolete Revit API Usage Eliminated\n\nThe final result of the migration and obsolete API clean-up\nis [release 2017.0.127.4](https://github.com/jeremytammik/the_building_coder_samples/releases/tag/2017.0.127.4),\ncompiling with zero errors and warnings.\n\nThe newest version is always available\nfrom [The Building Coder samples GitHub repository](https://github.com/jeremytammik/the_building_coder_samples) master branch."
+  }
+]

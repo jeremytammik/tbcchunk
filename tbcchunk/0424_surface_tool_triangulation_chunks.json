@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0424_surface_tool_triangulation",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0424_surface_tool_triangulation",
+    "header_text": "Surface Triangulation Tool",
+    "local_header_href": "#surface-triangulation-tool",
+    "chunk_text": "<h3>Surface Triangulation Tool</h3><p>I exchanged \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/11/model-line-creation.html?cid=6a00e553e1689788330133f2f0958e970b#comment-6a00e553e1689788330133f2f0958e970b\">\nsome</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/11/model-line-creation.html?cid=6a00e553e1689788330133f2f44c3b970b#comment-6a00e553e1689788330133f2f44c3b970b\">\ncomments</a>\n\nwith Anthony of\n\n<a href=\"http://www.cbp.co.nz\">\nClendon Burns &amp; Park Ltd </a>\n\nin the course of the last couple of days and suggested the use of my \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/model-curve-creator.html\">\nNewSketchPlaneContainCurve method</a>, with the following happy end:\n\n<p style=\"color:darkblue\">My app now works perfectly. \nI'm generating some model lines from a topo surface, this enables our users to edit the top of retaining walls etc. to follow the ground line cut away by building pads.</p>\n<p>Anthony has very friendlily published his resulting \n\n<a href=\"http://forums.augi.com/showthread.php?p=1089399#post1089399\">\nsurface triangulation tool</a> on AUGI.\n\nHere is what he says about it there:\n\n<span style=\"color:darkblue\">\n<p>Have you ever wanted to trim the top of a retaining wall to the top of your toposurface?\nWell now you can.\n\n<p>User instructions:\n\n<ol>\n<li>Create a building pad that follows your retaining wall.\n<li>Draw your retaining walls so they project above the surface make sure location line is set to core centre line).\n<li>Select the toposurface and run the surfacetool command.\n<li>Edit the walls profile, by snapping to the end points of the new model lines.\n</li></li></li></li></ol>\n<p>Install instructions:\n\n<ol>\n<li>Unzip the attached file to C:\\surfacetool.\n<li>Copy the add-in file to your Revit addins directory.\n</li></li></ol>\n</p></p></p></span>\n<p>Please visit \n\n<a href=\"http://forums.augi.com/showthread.php?p=1089399#post1089399\">\nAnthony's AUGI thread</a>\n\nto download the solution file Surface.zip and make sure he gets your appreciation!\n\n<p>For completeness' sake, here is the \n\n<a href=\"zip/SurfaceTool.zip\">\nsource code</a> as well.\n\n</p></p></p></p>"
+  }
+]

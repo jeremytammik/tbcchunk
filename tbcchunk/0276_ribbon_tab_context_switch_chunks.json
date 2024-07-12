@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0276_ribbon_tab_context_switch",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0276_ribbon_tab_context_switch",
+    "header_text": "Custom Ribbon Tab Context Switch",
+    "local_header_href": "#custom-ribbon-tab-context-switch",
+    "chunk_text": "<h3>Custom Ribbon Tab Context Switch</h3><p>Guy Robinson updated his\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/create-a-real-revit-ribbon-tab.html\">\ncustom ribbon tab</a>\n\nsolution to correctly handle\n\n<a href=\"http://redbolts.com/blog/post/2010/01/08/Happy-New-Year-e28093-Custom-Ribbon-Tabs-Complete.aspx\">\ncontext switching</a>\n\nbetween standard projects and families.\n\n</p>"
+  }
+]

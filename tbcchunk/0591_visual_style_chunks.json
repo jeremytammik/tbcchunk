@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0591_visual_style",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0591_visual_style",
+    "header_text": "Set the Visual Style of a View",
+    "local_header_href": "#set-the-visual-style-of-a-view",
+    "chunk_text": "<h3>Set the Visual Style of a View</h3><p>Today is the day of the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/05/chinese-revit-2012-api-webcast.html\">\nChinese Revit API webcast</a>, \n\nand also the holiday of \n\n<a href=\"http://en.wikipedia.org/wiki/Ascension_Day\">\nAscension Day</a> in\n\nmany part of Europe.\n\nJust like last year, it is raining cats and dogs again.\n\n<p>Anyway, here is a useful answer to a little question that arises from time to time:\n\n<p><strong>Question:</strong> I'm creating a new 3D view of a family instance like this:\n\n<pre class=\"code\">\n  <span class=\"blue\">Dim</span> v <span class=\"blue\">As</span> <span class=\"teal\">View3D</span> = doc.Create.NewView3D( _\n    famInst.FacingOrientation)\n\n  v.SectionBox = famInst.BoundingBox(v)\n</pre>\n<p>Now I would like to set its visual style to 'Shaded' or 'Shaded with Edges'. \n\n<p>Is there any way to achieve this using the API? \n\n<p><strong>Answer:</strong> The view style can be changed by modifying the value of the 'Visual Style' parameter, which corresponds to the built-in parameter MODEL_GRAPHICS_STYLE.\n\nEach option in the 'Visual Style' property drop-down list in the property dialog corresponds to an integer value from 0 to 6:\n\n<ol>\n<li>Wireframe\n<li>Hidden line\n<li>Shaded\n<li>Shaded with Edges\n<li>Consistent Colors\n<li>Realistic\n</li></li></li></li></li></li></ol>\n<p>In order to change the visual style to 'Shaded with edges', please set the parameter value to 4, for instance like this:\n\n<pre class=\"code\">\n  view.get_Parameter( \n    <span class=\"teal\">BuiltInParameter</span>.MODEL_GRAPHICS_STYLE )\n    .set( 4 );\n</pre>\n<p>These numbers may have changed since they were first established.\nYou can determine the correct numbers to use yourself by simply cycling through all the styles manually and checking the current parameter value as an integer each time, e.g. using the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/revitlookup-update.html\">\nRevitLookup</a> tool.\n \n\n\n<h4>Project Vasari 2</h4>\n<p>The \n\n<a href=\"http://labs.autodesk.com/utilities/vasari/\">\ntechnology preview 2</a> of \n\nthe conceptual design and analysis tool Project Vasari, which includes access to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/11/project-vasari-api.html\">\nRevit API</a>,\n\nis now available in an updated version compatible with Revit 2012:</p>\n<center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"275\" src=\"http://www.youtube.com/embed/EnxEuFhTx-c\" width=\"440\"></iframe>\n</center>\n</p></p></p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0591_visual_style",
+    "header_text": "Project Vasari 2",
+    "local_header_href": "#project-vasari-2",
+    "chunk_text": "<h4>Project Vasari 2</h4><p>The \n\n<a href=\"http://labs.autodesk.com/utilities/vasari/\">\ntechnology preview 2</a> of \n\nthe conceptual design and analysis tool Project Vasari, which includes access to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/11/project-vasari-api.html\">\nRevit API</a>,\n\nis now available in an updated version compatible with Revit 2012:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"275\" src=\"http://www.youtube.com/embed/EnxEuFhTx-c\" width=\"440\"></iframe>\n</center>"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0995_2014_ur1",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0995_2014_ur1",
+    "header_text": "Revit 2014 Update Release 1",
+    "local_header_href": "#revit-2014-update-release-1",
+    "chunk_text": "<h3>Revit 2014 Update Release 1</h3><p>Rather belatedly, let me point out that Revit 2014 Update Release 1 has been posted to the\n\n<a href=\"http://www.autodesk.com/products/autodesk-revit-family\">\nAutodesk Revit</a> product pages:</p><ul>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=22002894&amp;linkID=16831210\">\nRevit 2014 Update Release 1</a></li>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=22002645&amp;linkID=21208796\">\nRevit Architecture 2014 Update Release 1</a></li>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=22002629&amp;linkID=21208796\">\nRevit MEP 2014 Update Release 1</a></li>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=22002614&amp;linkID=21208796\">\nRevit Structure 2014 Update Release 1</a></li>\n</ul><p>As usual, the update release uses service pack technology and does not require a full install.</p><p>Prior to installing the Update Release 1, please verify that you are running the First Customer Ship build of Autodesk Revit 2014, build 20130308_1515.</p><p>After the update, the build number specified in the Help &gt; About dialogue will be 20130709_2115.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "0995_2014_ur1",
+    "header_text": "Revit 2014 Update Release 1 API Enhancements",
+    "local_header_href": "#revit-2014-update-release-1-api-enhancements",
+    "chunk_text": "<h4>Revit 2014 Update Release 1 API Enhancements</h4><p>Here is the list of API enhancements provided by this update:</p><ul>\n<li>Allows a drag/drop operation (UIApplication.DoDragDrop) to initiate from a dockable window.</li>\n<li>Improves the ability to include any type of component inside a dockable window without it disappearing during Revit redraw efforts.</li>\n<li>Allows UIApplication.PostCommand() to work consistently for Add-in created commands.</li>\n<li>Triggers an updater callback for ElementChangeTypeGeometry related to rebar and other reinforcement elements when their geometry changes.</li>\n<li>Improves stability for FamilyManager.NewType() on families which have no defined types already.</li>\n<li>Allows FamilyManager.Set(ElementId) to work correctly for family parameters of type LoadClassification.</li>\n<li>Improves stability for reading Mesh and MeshTriangle elements.</li>\n<li>Creates the default schedule header automatically when schedules are created by ViewSchedule.Create() methods.</li>\n<li>Allows ViewSchedule.GroupHeaders() to succeed even if the schedule is not active.</li>\n<li>Allows Connector.DisconnectFrom() to consistently remove unneeded information from the associated element, so that it can be reconnected as needed.</li>\n<li>OpenOptions.SetOpenWorksetConfiguration() allows null to remove the existing configuration.</li>\n</ul>"
+  }
+]

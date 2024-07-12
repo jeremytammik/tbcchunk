@@ -1,0 +1,8 @@
+[
+  {
+    "original_filename": "0029_obfuscation",
+    "header_text": "Obfuscation",
+    "local_header_href": "#obfuscation",
+    "chunk_text": "<h3>Obfuscation</h3><p>In response to the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/10/converting-between-vb-and-c-and-net-decompilation.html\">\nlast post</a>, \n\n<a href=\"http://roddotnet.blogspot.com\">Rod Howarth</a>\n\nbrought up the related topic of \n\n<a href=\"http://en.wikipedia.org/wiki/Obfuscated\">source code obfuscation</a>\n\nfor a .NET assembly. He says:</p><p>Reflector is certainly a useful tool, and its good to delve into both your own code and other namespaces. It can greatly assist with understanding code and also disaster recovery, in the case of lost source files.</p><p>A related topic is \n\n<a href=\"http://en.wikipedia.org/wiki/Obfuscated\">obfuscation</a>,\n\nas the first thing that one thinks about when you realize that your DLL file is easily convertible back to source code is the possible loss of intellectual property. \n\n<a href=\"http://forum.codecall.net/tutorials/6391-tutorial-visual-studio-2008-obfuscating-dotfuscator.html\">\nCodecall</a>\n\nand the\n\n<a href=\"http://msdotnetsupport.blogspot.com/2008/02/net-obfuscation-using-dotfuscator-for.html\">\nMicrosoft .NET Support Team</a>\n\nhave quick tutorials about dotfuscator, which comes with Visual Studio. There are also a number of 3rd party tools. \n\n<a href=\"http://www.xenocode.com/Products/Postbuild\">\nXenocode Postbuild</a>\n\nand \n\n<a href=\"http://www.programmersheaven.com/download/55168/download.aspx\">\nCodeVeil</a>\n\nare a couple of names Ive heard used.</p>"
+  }
+]

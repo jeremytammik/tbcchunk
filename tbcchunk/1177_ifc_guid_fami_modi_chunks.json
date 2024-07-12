@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1177_ifc_guid_fami_modi",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1177_ifc_guid_fami_modi",
+    "header_text": "IFC GUID Algorithm Update and Family Modification",
+    "local_header_href": "#ifc-guid-algorithm-update-and-family-modification",
+    "chunk_text": "<h3>IFC GUID Algorithm Update and Family Modification</h3><p>Two short topics for today, an important little\n\n<a href=\"#2\">IFC GUID algorithm bug fix</a> and\n\nsome thoughts on\n\n<a href=\"#3\">detecting family modification</a>.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1177_ifc_guid_fami_modi",
+    "header_text": "IFC GUID Algorithm in C# Update",
+    "local_header_href": "#ifc-guid-algorithm-in-c-update",
+    "chunk_text": "<h4>IFC GUID Algorithm in C# Update</h4><p>Håkon Clausen implemented a bug fix update and created a GitHub repository for the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/06/ifc-guid-algorithm-in-c.html\">\nIFC GUID algorithm in C#</a> that\n\nhe originally published back in June 2010.</p><p>Here are the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/06/ifc-guid-algorithm-in-c.html#2\">\ndetails on the update</a>\n\nand a direct link to his\n\n<a href=\"https://github.com/hakonhc/IfcGuid\">\nIfcGuid GitHub repository</a>.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1177_ifc_guid_fami_modi",
+    "header_text": "Detecting Family Modification",
+    "local_header_href": "#detecting-family-modification",
+    "chunk_text": "<h4>Detecting Family Modification</h4><p>For ages, content creators and developers have been asking how to prevent users from modifying their families to protect their IP, or at least for foolproof ways to detect such changes.\n<p>Here is a typical query:</p>\n<p><strong>Question:</strong> I keep being asked how the user can be prevented from tinkering with my components.</p>\n<p>I cannot and will not implement any such barrier, since the resulting system would be much too rigid.</p>\n<p>However, it would be very helpful if I could detect whether any changes have been made to the family.</p>\n<p>For instance, a parameter value could be set to zero as soon as a family is copied or modified.</p>\n<p>That would allow my add-in or a model tester to define a filter to see which components were manually created and need additional attention.</p>\n<p><strong>Answer:</strong> You really need to discuss this with a content creation expert.</p>\n<p>I do believe there are some tricks that I am not properly aware of, e.g. placing parameters in nested families and thus restricting access to them.</p>\n<p>The Revit 2015 API provides one important new feature in this area, read-only parameters that can only be set programmatically and are not modifiable manually at all.\nFor more on this, look at the section\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/whats-new-in-the-revit-2015-api.html#2.04\">\nshared parameter creation – description and user modifiability</a>.\n\n<p>Finally, the following cool idea comes to mind spontaneously:</p>\n<ul>\n<li>Define and implement a standard method to create a binary lump of some kind from a family definition. For instance, you could use the result of calling the EditFamily method on it and then saving to an external file.</li>\n<li>Calculate a checksum for the binary lump.</li>\n<li>Save the checksum value in a read-only parameter or in extensible storage, possibly in encrypted form.</li>\n</ul>\n<p>From now on, every time you encounter an instance of this family, you can recalculate the current checksum value that it produces and compare it with the stored original value.</p>\n<p>I would hope that a proper implementation of this would enable you to detect changes in the way you wish.</p>\n<p>I would appreciate hearing from you, dear reader, about other suggestions and solutions for this.</p>\n<p>Thank you!</p>\n</p></p>"
+  }
+]

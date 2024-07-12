@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0462_points_on_plane",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0462_points_on_plane",
+    "header_text": "Plane Normal and Points on Plane",
+    "local_header_href": "#plane-normal-and-points-on-plane",
+    "chunk_text": "<h3>Plane Normal and Points on Plane</h3><p><strong>Question:</strong> I have an origin point and a normal vector and wish to determine three points to create a reference plane. How can I calculate the third point using normal and origin?\n\n<p><strong>Answer:</strong> This is very elementary geometry. \nIf you have an origin point and a normal vector, you can easily calculate three points in a plane. \nConversely, if you have three points in a plane, it is easy to calculate the normal vector. \n\n<p>Let 'x' denote the vector \n\n<a href=\"http://en.wikipedia.org/wiki/Cross_product\">\ncross product</a>. \n\n<p>Given an origin point P and a normal vector N:\n\n<ul>\n<li>Select an arbitrary vector V that is not collinear with N, e.g. the X or Y axis. \n<li>Set U = N x V to obtain a vector that is perpendicular to N. \n<li>Set V = N x U to obtain another vector perpendicular to both N and V. \n<li>Set Q = P + U and R = P + V to obtain three points P, Q and R in the plane.\n</li></li></li></li></ul>\n<p>Given three points P, Q and R in the plane:\n\n<ul>\n<li>Set V = Q - P and W = R - P to obtain two perpendicular vectors in the plane. \n<li>Set N = V x W to obtain the plane normal.\n</li></li></ul>\n<p>I published a number of posts demonstrating this. \nThe most useful ones for you might be the ones describing the GetCurveNormal method:\n\n<ul>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/detail-curve-must-be-in-plane.html\">\nDetail curve must be in a plane</a>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/model-curve-creator.html\">\nModel curve creator</a>\n</li></li></ul>\n</p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0625_pickobject_view",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0625_pickobject_view",
+    "header_text": "PickObject Requires Valid View",
+    "local_header_href": "#pickobject-requires-valid-view",
+    "chunk_text": "<h3>PickObject Requires Valid View</h3><p>The Revit 2011 API introduced the PickObject and PickObjects methods, and we gave a simple sample of using the latter for \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/pipe-to-conduit-converter.html#8\">\ninteractive filtered element selection</a> in the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/pipe-to-conduit-converter.html\">\npipe to conduit converter</a>.\n\n<p>One thing to be aware of is that these methods throw an exception if the user cancels the selection, so the add-in needs to implement a handler for that.\n\n<p>They can also throw an exception of called in an invalid view, for example in the Revit MEP system browser:\n\n\n<p><strong>Question:</strong> If I launch an external command calling PickObject after opening the system browser and selecting an MEP system, Revit throws a System.Runtime.InteropServices.SEHException.\n\n<p>How can I avoid this from happening?\n\n<p><strong>Answer:</strong> Here are two simple and self-explanatory workarounds for this:\n\n<p>1. Always check the active view before calling PickObject, and avoid calling it at all if the current view type is ViewType.Internal.\n\n<p>In this case, the active view is 'System Browse', which is an internal view:\n\n<pre class=\"code\">\n  <span class=\"blue\">if</span>( <span class=\"teal\">ViewType</span>.Internal == doc.ActiveView.ViewType )\n  {\n    <span class=\"teal\">TaskDialog</span>.Show( <span class=\"maroon\">\"Error\"</span>,\n      <span class=\"maroon\">\"Cannot pick element in this view: \"</span> \n      + doc.ActiveView.Name );\n \n    <span class=\"blue\">return</span> <span class=\"blue\">null</span>;\n  }\n</pre>\n<p>2. Activate a valid view before the PickObject action. \nYou will obviously need to know which is the currently valid 'active' view.\n\n<pre class=\"code\">\n  uidoc.ActiveView = view; <span class=\"green\">// non internal view</span>\n \n  <span class=\"teal\">Reference</span> selectedRef = uidoc.Selection\n    .PickObject( <span class=\"teal\">ObjectType</span>.Element );\n</pre>\n<p>The first workaround is very easy to implement. \nThe second one needs more effort to keep track of the currently valid 'active' view.\nThe ViewActivating and ViewActivated events might help you implement something to achieve this.\n\n<p><strong>Reponse:</strong> Thank you for these tips. \nI ended up using alternative no. 2 and it seems to be working fine. \n</p></p></p></p></p></p></p></p></p></p></p>"
+  }
+]

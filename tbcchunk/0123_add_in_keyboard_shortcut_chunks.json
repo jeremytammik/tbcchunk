@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0123_add_in_keyboard_shortcut",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n</style>"
+  },
+  {
+    "original_filename": "0123_add_in_keyboard_shortcut",
+    "header_text": "Add-In Keyboard Shortcut",
+    "local_header_href": "#add-in-keyboard-shortcut",
+    "chunk_text": "<h3>Add-In Keyboard Shortcut</h3><p>Here is a short item from a case handled by Saikat Bhattacharya:</p><p><strong>Question:</strong>\nHow can I define keyboard shortcuts for external commands in the Revit 2010 add-ins tab?</p><p><strong>Answer:</strong>\nShortcut keys for Revit are defined by adding entries to the file KeyboardShortcuts.txt.\nThis file is located in the Revit Program folder, together with Revit.exe and Revit.ini.\nIt contains a commented header section describing how to construct a new shortcut key entry.</p><p>A shortcut definition consists of a line specifying the key sequence, an action type and the action string.\nThe key sequence is quoted, the action type is 'ribbon' for add-ins, and the action string is the hyphen-delimited path to the ribbon item to activate.\nExample:</p><pre>\n\"WA\"  ribbon:\"Home-Basic Modeling Tools-Wall\"\n</pre><p>Since add-ins are located in the ribbon, the action item for an add-in will always be 'ribbon'.\nTo specify the Add-Ins tab, you need to replace the hyphen by an underscore, because the hyphen is reserved as a separator character in the keyboard shortcut definition.\nTherefore, the first item in the shortcut definition for an external command is 'Add_Ins'. \nThe next items specify the panel name, which is 'External', followed by 'External Tools' for the external commands pulldown button.\nSo for a simple external command named XyzCommand in Revit.ini, the complete keyboard shortcut definition might be:</p><pre>\"XYZ\" ribbon:\"Add_Ins-External-External Tools-XyzCommand\"</pre>"
+  }
+]

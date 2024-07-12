@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0729_txt_type_list",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0729_txt_type_list",
+    "header_text": "A TXT File may be a Type List",
+    "local_header_href": "#a-txt-file-may-be-a-type-list",
+    "chunk_text": "<h3>A TXT File may be a Type List</h3><p>Here is a short note on a little issue to be aware of by Chuck Dodson of\n\n<a href=\"http://www.sgadesigngroup.com\">\nSGA Design Group</a>:\n\n<p><strong>Question:</strong> I am stuck trying to figure out the meaning of this error message:</p>\n<center>\n<img alt=\"TXT type list error message\" src=\"img/txt_type_list_err.png\"/>\n</center>\n<p>I am creating a family in code.\nI get the same problem if I create it manually.\n\n<p>Do you have any idea what the message is saying?\n\n<p>Looking online, I find comments about Shared Parameter file corruption, but I'm not using any.\n\n<p>The odd thing is, if I rename the family, it loads fine.  \nI can drag it from explorer; fine.  \nI can load it from the open family file; fine.  \nBut if I use the Load Family button, I get the message, although it does actually load.\n\n<p>Any ideas?\n\n<p><strong>Answer:</strong> I solved this.  \n\n<p>I was writing a text file (.txt) in the same folder that my families were being created in.  \nFor some reason, Revit assumes it is a shared parameter file.  \n\n<p>I changed the filename extension of the ASCII files I was writing to DEF instead of TXT and the problem is solved.  \n\n<p>The '(' in the message above is a reference to a parenthesis starting on the first line of the text file.\n\nThought you might want to know.\n\n<p>Jeremy adds: yes, I did know, in fact, and so do most family developers, but possibly a number of API newbies do not, so I am sure that this is information worth publishing and sharing. \nThank you very much for that, Chuck!\n</p></p></p></p></p></p></p></p></p></p></p>"
+  }
+]

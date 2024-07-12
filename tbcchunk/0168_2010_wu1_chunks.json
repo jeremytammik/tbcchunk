@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0168_2010_wu1",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n</style>"
+  },
+  {
+    "original_filename": "0168_2010_wu1",
+    "header_text": "Revit 2010 Web Update 1",
+    "local_header_href": "#revit-2010-web-update-1",
+    "chunk_text": "<h3>Revit 2010 Web Update 1</h3><p>The Revit 2010 Web Update 1 is now available from the usual places:</p><ul>\n<li><a href=\"http://www.autodesk.com/revitarchitecture\">Revit Architecture</a></li>\n<li><a href=\"http://www.autodesk.com/revitstructure\">Revit Structure</a></li>\n<li><a href=\"http://www.autodesk.com/revitmep\">Revit MEP</a></li>\n</ul><p>Click on the Product Download link on the left hand side.</p><p>Here are the detailed Revit API enhancements included in this update, available in all three flavours:</p><ul>\n<li>Suppressed Revit inaccuracies warnings during transaction when generating geometries using massing API. \n<li>Associated LinearArray's NumMembers property with Family parameter.\n<li>Dissociated FamilyParameter from Label property of BaseArray and Dimension. \n<li>Provided a tool to update reference path of RevitAPI.dll for samples.\n<li>Provided an update to DistanceToPanels sample. \n<li>Improved stability when creating NewReferencePoint with PointOnEdge that references a ModelCurve.\n<li>Floating point values are no longer reset when crossing from managed code to unmanaged code.\n<li>In the Print API, ViewSheetSetting.Save() no longer raises an InvalidOperationException when the user removes all views. \n<li>A meaningful exception will be raised when an incorrect sketch plane is used in NewSweep(,,SketchPlane,,,).\n<li>FamilyManager.Set() can now assign an ElementId value to a parameter. \n<li>Improved stability when using the DocumentOpened event and linked files.\n<li>Improved stability of VSTA. \n</li></li></li></li></li></li></li></li></li></li></li></li></ul>"
+  }
+]

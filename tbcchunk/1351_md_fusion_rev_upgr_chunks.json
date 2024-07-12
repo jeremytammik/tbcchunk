@@ -1,0 +1,62 @@
+[
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- 11039110 [Drawing revision cloud with our custom design]\n- 11039134 [Run a process in background]\n\n#revitapi #adsk #3dwebcoder\n#restapi #python\n#bim #aec #adskdevnetwrk #dotnet #csharp\n#geometry\n#grevit\n#responsivedesign #typepad\n#ah8 #augi #au2015 #dotnet #dynamobim\n#stingray #adsklabs #cloud #rendering\n#3dweb #3dviewapi #html5 #threejs #webgl #3d #apis #mobile #vr #ecommerce\n\n#Markdown, #Fusion360 #Fusion360Hackathon, Revisions and Bulk Upgrade #revitapi #adsk #3dwebcoder #aec #bim\n\nRevit API, Jeremy Tammik, akn_include\n\n-->"
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "Markdown, the Fusion Accelerator, Revisions and Bulk Upgrade",
+    "local_header_href": "#markdown-the-fusion-accelerator-revisions-and-bulk-upgrade",
+    "chunk_text": "### Markdown, the Fusion Accelerator, Revisions and Bulk Upgrade\n\nToday, I discuss my new Markdown blog post format, Fusion 360, the Fusion accelerator and a couple of Revit issues:\n\n- [Using the Markdown blog post format](#2)\n- [Fusion 360](#3)\n- [Fusion 360 for game artists](#4)\n- [Fusion 360 accelerator](#5)\n- [The Revit Revision API](#6)\n- [Running a background bulk upgrade batch](#7)\n- [Banksy's Dismaland bemusement park](#8)"
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"2\"></a>Using the Markdown Blog Post Format",
+    "local_header_href": "#a-name2ausing-the-markdown-blog-post-format",
+    "chunk_text": "#### <a name=\"2\"></a>Using the Markdown Blog Post Format\n\nThis is my first post on The Building Coder using\n[Markdown](http://daringfireball.net/projects/markdown) instead\nof handcrafted HTML.\n\nI tested it yesterday on\n[The 3D Web Coder](http://the3dwebcoder.typepad.com),\nwhere I also explain some of the\n[motivation behind this change](http://the3dwebcoder.typepad.com/blog/2015/08/hackergarten-chromium-and-markdown.html#4).\n\nSuffice to say, it is saving me some time today.\n\n<!--- The markdown version of this post is 9438 bytes in size, the HTML file that I generate from it 8933 bytes. -->\n\nFor instance, here is the markdown source code of this section you are reading:\n\n<pre class=\"prettyprint\">"
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "&lt;a name=\"2\"&gt;&lt;/a&gt;Using the Markdown Blog Post Format",
+    "local_header_href": "#lta-name2gtltagtusing-the-markdown-blog-post-format",
+    "chunk_text": "#### &lt;a name=\"2\"&gt;&lt;/a&gt;Using the Markdown Blog Post Format\n\nThis is my first post on The Building Coder using\n[Markdown](http://daringfireball.net/projects/markdown) instead\nof handcrafted HTML.\n\nI tested it yesterday on\n[The 3D Web Coder](http://the3dwebcoder.typepad.com),\nwhere I also explain some of the\n[motivation behind this change](http://the3dwebcoder.typepad.com/blog/2015/08/hackergarten-chromium-and-markdown.html#4).\n\nSuffice to say, it is saving me some time today.\n</pre>\n\nThe equivalent HTML looks like this:\n\n<pre class=\"prettyprint\">\n&lt;h4&gt;&lt;a name=\"2\"&gt;&lt;/a&gt;Using the Markdown Blog Post Format&lt;/h4&gt;\n&lt;p&gt;This is my first post on The Building Coder using\n&lt;a href=\"http://daringfireball.net/projects/markdown\"&gt;Markdown&lt;/a&gt; instead\nof handcrafted HTML.&lt;/p&gt;\n&lt;p&gt;I tested it yesterday on\n&lt;a href=\"http://the3dwebcoder.typepad.com\"&gt;The 3D Web Coder&lt;/a&gt;,\nwhere I also explain some of the motivation behind this change.&lt;/p&gt;\n&lt;p&gt;Suffice to say, it is saving me some time today.&lt;/p&gt;\n</pre>\n\nTypepad supports markdown right out of the box:\n\n<center>\n<img src=\"img/typepad_markdown.png\" alt=\"Typepad Markdown\" width=\"600\"/>\n</center>\n\nUnfortunately, I discovered yesterday that\n[its excerpt generation machinery does not](http://the3dwebcoder.typepad.com/blog/2015/08/hackergarten-chromium-and-markdown.html#4),\nso I now have to add that myself by hand."
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"3\"></a>Fusion 360",
+    "local_header_href": "#a-name3afusion-360",
+    "chunk_text": "#### <a name=\"3\"></a>Fusion 360\n\nAs an architect, you may not be aware of\n[Fusion 360](http://www.autodesk.com/products/fusion-360),\na cloud-based design, test, fabrication and collaboration tool targeted primarily at the manufacturing side of CAD."
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"4\"></a>Fusion 360 for Game Artists",
+    "local_header_href": "#a-name4afusion-360-for-game-artists",
+    "chunk_text": "#### <a name=\"4\"></a>Fusion 360 for Game Artists\n\nThat is not all, however, as Lester Bank's article on\n[Fusion 360 for Game Artists](http://lesterbanks.com/2015/08/fusion-360-for-game-artists) explains:\n\n> Solid modellers are just better at some things. Solid modellers are great for knocking out quick forms, and really make short work of Boolean operations, bevels, chamfers and building complex components.\n\n> The problem with Solid modelling applications is that they are typically CAD/CAM, CAE tools not really meant for artists. One application is kind of changing that, and that is Autodesk’s Fusion 360. The application was built from the ground up to be an easy to use solid modeller for conceptual design, engineering, matching and sharing CAD content... using Autodesk’s Fusion 360 in a game art pipeline... get started with Fusion 360’s interface and tools... put together some game art assets... completely affordable... free for students, enthusiasts, hobbyists, and startups...\n\nMaybe you will discover that it is a powerful and useful tool for architects as well?"
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"5\"></a>Fusion 360 Accelerator",
+    "local_header_href": "#a-name5afusion-360-accelerator",
+    "chunk_text": "#### <a name=\"5\"></a>Fusion 360 Accelerator\n\nIf you are interested in taking a closer look at Fusion 360, you might as well hit the ground running and earn some money with it right away, in this once in a decade opportunity:\n\nBuild your first Fusion 360 app using JavaScript, Python or C++ by participating in the upcoming\n[Fusion 360 Hackathon](http://fusion360hackathon.com).\n\n<center>\n<p style=\"font-size:500%; font-weight:bold; color:darkorange\">$500</p>\n</center>\n\nBuild and publish a Fusion 360 app in the\n[Autodesk App Store](https://apps.exchange.autodesk.com/FUSION/en/Home/Index) during\nthe Hackathon, and you earn a $500 reward, too!\n\nFor more information, you can also head over to Adam Nagy's take on the\n[Fusion 360 hackathon site](http://adndevblog.typepad.com/manufacturing/2015/08/fusion-360-hackathon-site-live.html) and\nfollow the event tweets at [#Fusion360Hackathon](https://twitter.com/hashtag/fusion360hackathon).\n\n<center>\n<img src=\"img/fusion360hackathon.png\" alt=\"Fusion 360 hackathon\" width=\"400\"/>\n</center>\n\n<!---\n<p><a class=\"asset-img-link\" href=\"http://adndevblog.typepad.com/.a/6a0167607c2431970b01b8d14f4463970c-pi\" style=\"display: inline;\"><img alt=\"Hackathon\" border=\"0\" class=\"asset  asset-image at-xid-6a0167607c2431970b01b8d14f4463970c image-full img-responsive\" src=\"http://adndevblog.typepad.com/.a/6a0167607c2431970b01b8d14f4463970c-800wi\" title=\"Hackathon\" /></a></p>\n-->\n\nGood luck and have fun!"
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"6\"></a>The Revit Revision API",
+    "local_header_href": "#a-name6athe-revit-revision-api",
+    "chunk_text": "#### <a name=\"6\"></a>The Revit Revision API\n\n**Question:** I would like to develop a custom operator in Revit with the same\nfunctionality as Revit's Revision cloud but with our custom cloud design\n(the cloud design something like Revision cloud of AutoCAD).\nDoes the Revit API provide the facility to draw these, or free-hand sketching\nusing the mouse with our custom operator?\n\n**Answer:**\nRevit 2015 provides programmatic access to this area, so the\n[What's New in the Revit 2015 API](http://thebuildingcoder.typepad.com/blog/2014/04/whats-new-in-the-revit-2015-api.html) documentation\nfor that version covers just about all there is to know about the\n[Revision API](http://thebuildingcoder.typepad.com/blog/2014/04/whats-new-in-the-revit-2015-api.html#3.04).\n\nYou may also be interested in the\n[GetRevisionData Revit add-in](http://thebuildingcoder.typepad.com/blog/2014/06/the-revision-api-and-a-form-on-the-fly.html).\n\nI just upgraded it to Revit 2016 for you; check it out in the\n[GetRevisionData GitHub repository](https://github.com/jeremytammik/GetRevisionData)."
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"7\"></a>Running a Background Bulk Upgrade Batch",
+    "local_header_href": "#a-name7arunning-a-background-bulk-upgrade-batch",
+    "chunk_text": "#### <a name=\"7\"></a>Running a Background Bulk Upgrade Batch\n\n**Question:** I am working on a Revit plugin to bulk upgrade Revit's old\nversion files to a new version. I need to run this process in the background\nso that other tasks can be performed in Revit during this upgrade process.\nCan you please guide me on how to run an upgrade process in the background?\n\n**Answer:**\nThe topic of driving Revit from outside or other background threads has been discussed extensively in the\n[Revit API discussion forum](http://forums.autodesk.com/t5/revit-api/bd-p/160) and on The Building Coder blog,\nso all the information that I am aware of on this topic is already sitting there waiting for your perusal.\n\nPlease check out the topic group on\n[driving Revit from outside](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.28) and\nexplore that material.\n\nI would recommend starting at the end, since the last two entries in that topic list provide a good overview.\n\nRegarding the bulk upgrade, you will probably also be interested in taking a look at Saikat Bhattacharya's\n[File Upgrader add-in](http://thebuildingcoder.typepad.com/blog/2011/06/file-upgrader-plugin-of-the-month.html).\n\nIt was originally written for Revit 2012 and updated several times for later Revit versions.\n\nFor a while, it was also available from the [Autodesk Exchange AppStore](https://apps.exchange.autodesk.com).\n\nI am including the most recent version that I happen to have at hand here, in\n[FileUpgrader_2015-08-27.zip](zip/FileUpgrader_2015-08-27.zip)."
+  },
+  {
+    "original_filename": "1351_md_fusion_rev_upgr",
+    "header_text": "<a name=\"8\"></a>Banksy's Dismaland Bemusement Park",
+    "local_header_href": "#a-name8abanksys-dismaland-bemusement-park",
+    "chunk_text": "#### <a name=\"8\"></a>Banksy's Dismaland Bemusement Park\n\nLet's finish off with something unrelated to the Revit API.\n\nAre you interested in modern art or culture?\n\nSomehow, both always seem to include and almost require a certain provocative tinge.\n\nIf you are, you are probably aware of the world's most renowned and valued &ndash; both artistically and $-wise &ndash; graffiti artist,\n[Banksy](https://en.wikipedia.org/wiki/Banksy).\n\nCheck out his newest project, the\n[Dismaland Bemusement Park](http://www.banksy.co.uk),\na 'family theme park unsuitable for small children'.\n\nHere is a\n[Channel4 news item](http://www.channel4.com/news/dismaland-banksy-bemusement-park-shocking-funny-extraordinary) and two-minute\n[YouTube video](https://www.youtube.com/watch?v=PTr9SZTtCHo) to give you a first impression:\n\n<center>\n<iframe width=\"500\" height=\"281\" src=\"https://www.youtube.com/embed/PTr9SZTtCHo\" frameborder=\"0\" allowfullscreen></iframe>\n</center>"
+  }
+]

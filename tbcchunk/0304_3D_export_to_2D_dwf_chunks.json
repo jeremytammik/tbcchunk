@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0304_3D_export_to_2D_dwf",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0304_3D_export_to_2D_dwf",
+    "header_text": "Export 3D View to 2D DWF",
+    "local_header_href": "#export-3d-view-to-2d-dwf",
+    "chunk_text": "<h3>Export 3D View to 2D DWF</h3><p>By the time you read this, I will already be away on my holiday in Andalusia.\nStill, I thought I could drop off this last post before I leave.\n\n<p>We looked at various aspects of DWF export in the past, such as the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/02/uniqueid-dwf-and-ifc-guid.html\">\nunique id</a> assigned to elements, the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/04/dwf-view-definition.html\">\nview definition</a>, and the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/modify-the-dwf-export-filename.html\">\nexport filenames</a> used.\n\n<p>Here is another quick question on DWF export handled by Saikat Bhattacharya that may be of general interest:\n\n<p><strong>Question:</strong> Is it possible to use the Revit API to export a 3D view in Revit to a 2D page in the generated DWF file? \nI tried using both DWFX2DExportOptions and DWF2DExportOptions, and both generate a 3D DWF when I export a 3D view from Revit.\n\n<p><strong>Answer:</strong> When working from the Revit user interface, 3D views are always exported to 3D DWF files, and plans and elevations as sheets in 2D DWF ones. \nAs usual in Revit, the functionality provided by the API parallels the product functionality, so I do not see a way to export 3D Revit models into 2D DWF sheets using the API. \nAs a quick test, you can play around with the Revit SDK ImportExport sample, where you can select a 3D view and choose 2D DWF as the output format. \nYou still get a 3D representation of the model in DWF, and not a 2D sheet.\n\nAs a workaround, though, you can always create a sheet in the Revit model containing the 2D representation of the 3D view.\nIf you export this sheet into DWF, the resulting file will represent the 3D view as a 2D sheet in DWF format. \nHere is an example of using this workaround:</p>\n<center>\n<img alt=\"2D DWF sheet displaying 3D Revit View\" src=\"img/3D_export_to_2D_dwf.png\"/>\n</center>\n<p>Many thanks to Saikat for this solution!\n</p></p></p></p></p>"
+  }
+]

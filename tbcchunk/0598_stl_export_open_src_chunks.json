@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0598_stl_export_open_src",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0598_stl_export_open_src",
+    "header_text": "Revit STL Exporter Released as Open Source",
+    "local_header_href": "#revit-stl-exporter-released-as-open-source",
+    "chunk_text": "<h3>Revit STL Exporter Released as Open Source</h3><p>Here is one of the most surprising and promising recent news items for Revit API developers, published yesterday by Emile Kfouri on \n\n<a href=\"http://bimapps.typepad.com\">BIM Apps</a>:\n\nThe \n\n<a href=\"http://bimapps.typepad.com/bim-apps/2011/06/stl-exporter-for-revit-2012-is-open-source.html\">Revit STL exporter is now open source</a>.\n\n<p>Look at Emile's post for the complete story, including:\n\n<ul>\n<li>Introduction, motivation, and explanation.\n<li>Definitions of STL, stereolithography, and open source.\n<li>STL exporter history.\n<li>User feedback.\n<li>Future.\n<li>Open source license and participating parties.\n<li>How to get started.\n</li></li></li></li></li></li></li></ul>\n<p>Exciting news!\n\n\n<a name=\"2\"></a>\n<h4>Adding a Parameter to a Family</h4>\n<p>To add an unrelated technical note, here is a very quick little question that crops up from time to time:\n\n<p><strong>Question:</strong> How can I a parameter to an existing family? \n\n<p><strong>Answer:</strong> You can add a real family parameter directly using the FamilyManager AddParameter method taking the arguments string, BuiltInParameterGroup, ParameterType, Boolean.\n\n<p>Alternatively, you can create a shared parameter definition and add it to family using the FamilyManager AddParameter method taking the arguments ExternalDefinition, BuiltInParameterGroup, Boolean: \n\n<ul>\n<li>AddParameter(String, BuiltInParameterGroup, ParameterType, Boolean) adds a new family parameter with a given name. \n<li>AddParameter(ExternalDefinition, BuiltInParameterGroup, Boolean) adds a new shared parameter to the family.\n</li></li></ul>\n</p></p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0598_stl_export_open_src",
+    "header_text": "Adding a Parameter to a Family",
+    "local_header_href": "#adding-a-parameter-to-a-family",
+    "chunk_text": "<h4>Adding a Parameter to a Family</h4><p>To add an unrelated technical note, here is a very quick little question that crops up from time to time:\n\n<p><strong>Question:</strong> How can I a parameter to an existing family? \n\n<p><strong>Answer:</strong> You can add a real family parameter directly using the FamilyManager AddParameter method taking the arguments string, BuiltInParameterGroup, ParameterType, Boolean.\n\n<p>Alternatively, you can create a shared parameter definition and add it to family using the FamilyManager AddParameter method taking the arguments ExternalDefinition, BuiltInParameterGroup, Boolean: \n\n<ul>\n<li>AddParameter(String, BuiltInParameterGroup, ParameterType, Boolean) adds a new family parameter with a given name. \n<li>AddParameter(ExternalDefinition, BuiltInParameterGroup, Boolean) adds a new shared parameter to the family.\n</li></li></ul>\n</p></p></p></p>"
+  }
+]

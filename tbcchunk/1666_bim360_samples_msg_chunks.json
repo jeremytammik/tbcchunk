@@ -1,0 +1,38 @@
+[
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<!--\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nBIM360 and Forge for digital construction message and samples #RevitAPI @AutodeskRevit #bim #dynamobim @AutodeskForge #ForgeDevCon http://bit.ly/bim360forgeaecsamples\n\nI am participating in a <i>Digital Construction Live</i> event in the UK next week and presenting there on Forge for the BIM domain. Today, let's focus on the real message and some live samples putting it to use:\n&ndash; The real message\n&ndash; BIM collaboration roles and magnitudes\n&ndash; Forge for AEC Sample Live\n&ndash; Connecting Forge with BIM360 Sample...\n\n--->"
+  },
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "BIM360 and Forge for AEC Message and Samples",
+    "local_header_href": "#bim360-and-forge-for-aec-message-and-samples",
+    "chunk_text": "### BIM360 and Forge for AEC Message and Samples\n\nAs I pointed out in\nthe [overview of Forge for AEC and BIM360](http://thebuildingcoder.typepad.com/blog/2018/06/forge-for-aec-and-bim360-overview.html),\nI am participating in a *Digital Construction Live* event in the UK next week and presenting there on Forge for the BIM domain.\n\nToday, let's focus on the real message and some live samples putting it to use:\n\n- [The real message](#2) \n- [BIM collaboration roles and magnitudes](#3) \n- [Forge for AEC sample](#4) \n- [Connecting Forge with BIM360 sample](#5)"
+  },
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "<a name=\"2\"></a> The Real Message",
+    "local_header_href": "#a-name2a-the-real-message",
+    "chunk_text": "#### <a name=\"2\"></a> The Real Message\n\nThe real message about Forge for AEC and BIM360, according to Jim Quanci, with whom I luckily was able to chat yesterday, is this:\n\n- A number of people work on the project team, in a BIM360 project: managers, plumbers, projects superintendents, etc., on both desktop and mobile.\n- The rest of the organisation, a much larger number of people, does not work in that (rather complex, specialised) environment.\n- The organisation can save cost and time by letting everybody concerned always see what is going on in each project.\n- A majority of the collaborators do not need or want the full BIM360.\n- Using Forge, you can easily pop up your own web page to provide them with whatever information they need.\n\nI explained this principle in more depth in my presentation\non [rational BIM programming](http://thebuildingcoder.typepad.com/blog/2017/10/rational-bim-programming-at-au-darmstadt.html) at\nAutodesk University in Darmstadt, Germany, last year.\n\nOne of the main motivating aspects in that talk is basically exactly what Jim points out:"
+  },
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "<a name=\"3\"></a> BIM Collaboration Roles and Magnitudes",
+    "local_header_href": "#a-name3a-bim-collaboration-roles-and-magnitudes",
+    "chunk_text": "#### <a name=\"3\"></a> BIM Collaboration Roles and Magnitudes\n\nI am not a very graphical person, and generally use much too few images in my presentations.\n\nExceptionally, though, I did create a graph for that one, to explain the orders of magnitude of difference in numbers of BIM collaboration participants in different kinds of roles in the design process segments targeted by Autodesk and supported by the Forge platform:\n\n- Design &ndash; architect, engineer &ndash; Revit\n- Visualise &ndash; client, everybody &ndash; Forge Viewer\n- Collaborate &ndash; management &ndash; Glue + Plan\n- Make &ndash; construction &ndash; Field + Layout\n- Use &ndash; inhabit, maintain, FM &ndash; Building Ops\n\nPlease excuse the obsolete BIM360 naming in the list above. It keeps changing all the time &mdash; the principles remain the same.\n\nIn extreme cases, these numbers might vary by several orders of magnitude:\n\n<center>\n<img src=\"img/bim_collaboration_roles_magnitude.png\" alt=\"BIM Collaboration Roles and Magnitudes\" width=\"360\"/>\n</center>\n\nFor more details, please refer\nto [my presentation mentioned above](http://thebuildingcoder.typepad.com/blog/2017/10/rational-bim-programming-at-au-darmstadt.html)."
+  },
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "<a name=\"4\"></a> Forge for AEC Sample Live",
+    "local_header_href": "#a-name4a-forge-for-aec-sample-live",
+    "chunk_text": "#### <a name=\"4\"></a> Forge for AEC Sample Live\n\nOne of Jim's favourite Forge AEC examples\nis [BLDNG360](https://bldng360.com)\nby [CAD &amp; Company](http://www.cadcompany.nl) in\nthe Netherlands.\n\nIt provides a gallery of building including detailed BIM information.\n\nOne very nice example is the [Duijpaviljoen 'Zuin am See'](https://bldng360.com/gebouwen/TqOCqXo9I0CrW9h_vAIG4A).\n\nIt includes a large amount of detailed BIM information, numerous drawings, lists all the content, all the structure and other information on the model quality, e.g., the percentage of components equipped with assembly codes, materials, areas per level and material types.\n\nThis kind of dashboard information can be used to easily assess how complete the BIM is in various respects.\n\nThis kind of application can be built using the generic Forge components, for any type of CAD model."
+  },
+  {
+    "original_filename": "1666_bim360_samples_msg",
+    "header_text": "<a name=\"5\"></a> Connecting Forge with BIM360 Sample",
+    "local_header_href": "#a-name5a-connecting-forge-with-bim360-sample",
+    "chunk_text": "#### <a name=\"5\"></a> Connecting Forge with BIM360 Sample\n\nAnother sample specifically targeted at BIM360\nis the [BIM360 Visual Reports app](https://bim360reports.autodesk.io) written by my FPD colleague Augusto Gonçalves.\n\nFull source code for this app is provided in  \nthe [bim360appstore-viewer-nodejs-visual.reports GitHub repository](https://github.com/Autodesk-Forge/bim360appstore-viewer-nodejs-visual.reports).\n\nAs explained in\nthe [GitHub project documentation](https://github.com/Autodesk-Forge/bim360appstore-viewer-nodejs-visual.reports),\nit is a BIM360 project dashboard example demonstrating how to extract properties from BIM360 elements and display them in a project dashboard.\n\nIt enables you to load and analyse Revit models hosted on BIM360, list the versions available, switch between the 2D and 3D views, select elements in one type of view to be highlighted in the other, select and highlight element groups, examine the BIM element properties and dimensions, look at different kinds of graphs and dashboards presenting statistics on various aspects of quantities, types, levels, constraints, assembly codes, materials, and more.\n\nThe Urban House model is a good one to explore here.\n\nFor a closer look at this sample in action, watch Jaime Rosales' one-and-a-half-minute video recording\nshowing [how to use bim360reports](https://youtu.be/4g9FFFlQMjU):\n\n<center>\n<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/4g9FFFlQMjU\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>\n</center>"
+  }
+]

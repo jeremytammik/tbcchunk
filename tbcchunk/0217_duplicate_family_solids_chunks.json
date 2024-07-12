@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0217_duplicate_family_solids",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0217_duplicate_family_solids",
+    "header_text": "Duplicate Family Solids",
+    "local_header_href": "#duplicate-family-solids",
+    "chunk_text": "<h3>Duplicate Family Solids</h3><p>Here is a question handled by Joe Ye on multiple occurrences of solids in a pipe family definition.</p><p><strong>Question:</strong> We were surprised to discover that the solids inside a pipe family are duplicated.\nThis is an issue for us, because we want to determine the relationship between the family symbol and the corresponding geometrical solid.\nWe would like to add symbol properties such as a subcategory to the solid.\nDuring the export, we don't know which sub category is used for presentation on the screen.\nWe retrieve all the solids, but their subcategory is not defined, so we cannot determine whether or not to export the data.\n\n<p><strong>Answer:</strong> There are three solids in the family definition, and they represent three different parts of the pipe.\nOne is for the pipe fitting insulation, another is for the pipe fitting lining, and the third for the pipe itself.\n\n<p>If the parameter values Lining Thickness and Insulation Thickness are zero, all three solids are identical.\nOtherwise, their sizes are different.\nHere is an example displaying non-zero Lining Thickness and Insulation Thickness parameter values:</p>\n<center>\n<img alt=\"Pipe elbow solids\" src=\"img/pipe_elbow_solids.jpg\"/>\n</center>\n<p>According to which solid you need to export, you can compare the sizes and export only the one that you require.\n\n<p>For example, if you only want to export the insulation size, then you can search for the largest solid and export that.\nIf you want to export the lining solid, export the smallest solid.\n\n<p>If the Lining Thickness and Insulation Thickness are both zero, then exporting any one of them will work.\n\n<p>By the way, for a pipe fitting, there are only two such solids.\n\n<p>Many thanks to Joe for this explanation!\n</p></p></p></p></p></p></p>"
+  }
+]

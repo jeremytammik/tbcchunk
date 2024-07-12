@@ -1,0 +1,50 @@
+[
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<!-- <script src=\"run_prettify.js\" type=\"text/javascript\"></script> --> \n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\n- revitwebcam\n\n- rvtfader\n\nDisplay webcam image on Revit element using AVF #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge http://bit.ly/avf_raytrace_webcam\nCalculate signal attenuation in BIM using ReferenceIntersector ray tracing #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge http://bit.ly/avf_raytrace_webcam\n\nI implemented a neat new little sample add-in, RvtFader, that  calculates and displays signal attenuation caused by distance and obstacles, specifically walls.\nIt uses two very interesting pieces of Revit API functionality\n&ndash; AVF, the Analysis Visualisation Framework, for displaying graphical data in a transient manner directly in the BIM\n&ndash; The ReferenceIntersector ray tracing functionality to detect walls and other obstacles between two points.\nIn the course of implementing the AVF part of things, I also resuscitated my trusty old RevitWebcam add-in\n&ndash; RevitWebcam\n&ndash; RvtFader\n&ndash; Task\n&ndash; Implementation\n&ndash; Further Reading...\n\n-->"
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "AVF, Ray Tracing and Signal Attenuation",
+    "local_header_href": "#avf-ray-tracing-and-signal-attenuation",
+    "chunk_text": "### AVF, Ray Tracing and Signal Attenuation\n\nI have been a bit quieter in\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) in\nthe past day or two.\n\nWhy?\n\nWell, I implemented a neat new little sample add-in, [RvtFader](https://github.com/jeremytammik/RvtFader).\n\nIn a rather simplified manner, it calculates and displays signal attenuation caused by distance and obstacles, specifically walls.\n\nThat provided an opportunity for me to dive in again into two very interesting pieces of Revit API functionality:\n\n- [AVF, the Analysis Visualisation Framework](http://thebuildingcoder.typepad.com/blog/avf), for displaying graphical data in a transient manner directly in the BIM.\n- The `ReferenceIntersector` ray tracing functionality to detect walls and other obstacles between two points.\n\nIn the course of implementing the AVF part of things, I also resuscitated my trusty\nold [RevitWebcam](https://github.com/jeremytammik/RevitWebcam) add-in.\n\n- [RevitWebcam](#2)\n- [RvtFader](#3)\n- [Task](#4)\n- [Implementation](#5)\n- [Further Reading](#6)"
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"2\"></a> RevitWebcam",
+    "local_header_href": "#a-name2a-revitwebcam",
+    "chunk_text": "#### <a name=\"2\"></a> RevitWebcam\n\n[RevitWebcam](https://github.com/jeremytammik/RevitWebcam) uses\nAVF and an external event to display a live webcam image on a selected element face.\n\nThe external event polls the webcam for updated images at regular intervals.\n\nI now created a new GitHub repository to host this add-in and migrated it to Revit 2017.\n\nHere it is displaying a webcam image on a wall:\n\n<center>\n<img src=\"img/webcam_on_wall_2017.png\" alt=\"RevitWebcam in action in Revit 2017\" width=\"500\"/>\n</center>\n\nBack to `RvtFader`, though:"
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"3\"></a> RvtFader",
+    "local_header_href": "#a-name3a-rvtfader",
+    "chunk_text": "#### <a name=\"3\"></a> RvtFader\n\nRvtFader is a Revit C# .NET API add-in to calculate and display signal attenuation using \nthe [analysis visualisation framework](http://thebuildingcoder.typepad.com/blog/avf) AVF\nand `ReferenceIntersector` ray tracing.\n\n<center>\n<img src=\"img/rvtfader_command_icon.png\" alt=\"RvtFader\" width=\"32\"/>\n</center>"
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"4\"></a> Task",
+    "local_header_href": "#a-name4a-task",
+    "chunk_text": "#### <a name=\"4\"></a> Task\n\nThis application works in a Revit model with a floor plan containing walls.\n\nIt calculates the signal attenuation caused by distance and obstacles.\n\nIn the first iteration, the only obstacles taken into account are walls.\n\nTwo signal attenuation values in decibels are defined in the application settings:\n\n- Attenuation per metre in air\n- Attenuation by a wall\n\nGiven a source point, calculate the attenuation in a widening circle around it and display that as a heat map."
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"5\"></a> Implementation",
+    "local_header_href": "#a-name5a-implementation",
+    "chunk_text": "#### <a name=\"5\"></a> Implementation\n\nTo achieve this task, RvtFader implements the following:\n\n- Manage settings to be edited and stored (signal loss in dB).\n- Enable user to pick a source point on a floor.\n- Determine the floor boundaries.\n- Shoots rays from the picked point to an array of other target points covering the floor.\n- Determine the obstacles encountered by the ray, specifically wall elements.\n- Display a 'heat map', i.e. colour gradient, representing the signal loss caused by the distance and number of walls between the source and the target points.\n\nSummary of the steps towards achieving this:\n\n- Skeleton add-in using the [Visual Studio Revit Add-In Wizards](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.20).\n- External command for the settings user interface displaying a Windows form and storing data in JSON as developed for\nthe [HoloLens escape path waypoint JSON exporter](http://thebuildingcoder.typepad.com/blog/2016/09/hololens-escape-path-waypoint-json-exporter.html):\n    - Display modal Windows form.\n    - Implement form validation using `ErrorProvider` class, `Validating` and `Validated` events.\n    - Store add-in option settings in JSON using the `JavaScriptSerializer` class.\n- AVF heat map, initially simply based on distance from the selected source point:\n\n<center>\n<img src=\"img/rvtfader_avf.png\" alt=\"RvtFader displaying distance using AVF\" width=\"188\"/>\n</center>\n\n- Graphical debugging displaying model lines representing the `ReferenceIntersector` rays traced using `ReferenceIntersector`, conditionally compiled based on the pragma definition `DEBUG_GRAPHICAL`:</br>\n\n<center>\n<img src=\"img/rvtfader_graphical_debug_model_line.png\" alt=\"Graphical debugging displaying model lines\" width=\"339\"/>\n</center>\n\n- `AttenuationCalculator` taking walls and door openings into account:</br>\n\n<center>\n<img src=\"img/rvtfader_attenuation_with_doors.png\" alt=\"Attenuation calculation results\" width=\"269\"/>\n</center>\n\nFor more details on the implementation steps, please refer to\nthe [list of releases](https://github.com/jeremytammik/RvtFader/releases)\nand [commits](https://github.com/jeremytammik/RvtFader/commits)."
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"6\"></a> Further Reading",
+    "local_header_href": "#a-name6a-further-reading",
+    "chunk_text": "#### <a name=\"6\"></a> Further Reading\n\n- **The Analysis Visualisation Framework AVF**:\n    - An introduction to AVF programming basics is provided by Matt Mason's Autodesk University\nclass [CP5229 Seeing Data and More &ndash; The Analysis Visualization Framework](http://aucache.autodesk.com/au2011/sessions/5229/class_handouts/v1_CP5229-SeeingDataAndMore-TheAVFinRevitAPI.pdf)\n([^](doc/cp5229_matt_mason_avf.pdf))\n    - [Discussion of AVF by The Building Coder](http://thebuildingcoder.typepad.com/blog/avf)\n- **`ReferenceIntersector` ray tracing**:\n    - The `ReferenceIntersector` was previously named [`FindReferencesByDirection`](http://thebuildingcoder.typepad.com/blog/2010/01/findreferencesbydirection.html)\n    - [Dimension walls using `FindReferencesByDirection`](http://thebuildingcoder.typepad.com/blog/2011/02/dimension-walls-using-findreferencesbydirection.html)\n    - [Intersect Solid Filter, AVF vs DirectShape Debugging](http://thebuildingcoder.typepad.com/blog/2015/07/intersect-solid-filter-avf-and-directshape-for-debugging.html)\n    - [Using `ReferenceIntersector` in linked files](http://thebuildingcoder.typepad.com/blog/2015/07/using-referenceintersector-in-linked-files.html)\n- **Signal attenuation**:\n    - [Attenuation](https://en.wikipedia.org/wiki/Attenuation)\n    - [Modelling Signal Attenuation in IEEE 802.11 Wireless LANs - Vol. 1](http://www-cs-students.stanford.edu/~dbfaria/files/faria-TR-KP06-0118.pdf)\n    - [The Basics of Signal Attenuation](http://www.dataloggerinc.com/content/resources/white_papers/332/the_basics_of_signal_attenuation/)\n    - [RF Basics - Part 1](http://community.arubanetworks.com/aruba/attachments/aruba/tkb@tkb/121/1/RF-Basics_Part1.pdf) says \"the free-space loss for 2.4 GHz at 100 meters from the transmitter is about 80 dB\"."
+  },
+  {
+    "original_filename": "1542_avf_intersect_fader",
+    "header_text": "<a name=\"7\"></a>Highlights",
+    "local_header_href": "#a-name7ahighlights",
+    "chunk_text": "#### <a name=\"7\"></a>Highlights\n\n- External application with custom ribbon panel, custom tab, split button with main command and settings, always defaulting to main command.\n- Settings storage in external JSON text file, displayed to user in Windows form, validated with detailed feedback."
+  }
+]

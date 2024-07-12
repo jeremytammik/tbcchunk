@@ -1,0 +1,38 @@
+[
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\n\ntwitter:\n\nBinding a shared parameter to revision in the #RevitAPI @AutodeskForge @AutodeskRevit #bim #DynamoBim #ForgeDevCon http://bit.ly/bindsharedparam\n\nHere is a recurring question on binding a shared parameter to a given category\n&ndash; How to add a shared parameter to revision?\n&ndash; Determine the category\n&ndash; Binding to the category\n&ndash; Implementation sample...\n\nlinkedin:\n\nBinding a shared parameter to revision in the #RevitAPI @AutodeskForge @AutodeskRevit #bim #DynamoBim #ForgeDevCon http://bit.ly/bindsharedparam\n\nHere is a recurring question on binding a shared parameter to a given category:\n\n- How to add a shared parameter to revision?\n- Determine the category\n- Binding to the category\n- Implementation sample...\n\nof [The Building Coder samples](https://github.com/jeremytammik/the_building_coder_samples/releases/tag/2019.0.145.4).\n\n-->"
+  },
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "Binding a Shared Parameter to Revision",
+    "local_header_href": "#binding-a-shared-parameter-to-revision",
+    "chunk_text": "### Binding a Shared Parameter to Revision\n\nHere is a recurring question that we have answered in depth a few times over, on binding a shared parameter to a given category, so the answer mainly consists of pointers to past discussions:\n\n- [How to add a shared parameter to revision?](#2) \n- [Determine the category](#3) \n- [Binding to the category](#4) \n- [Implementation sample](#5) \n\n<center>\n<img src=\"img/bind_and_package.jpg\" alt=\"Bind and package\" width=\"190\">\n</center>"
+  },
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "<a name=\"2\"></a> How to Add a Shared Parameter to Revision?",
+    "local_header_href": "#a-name2a-how-to-add-a-shared-parameter-to-revision",
+    "chunk_text": "#### <a name=\"2\"></a> How to Add a Shared Parameter to Revision?\n\nIs there an example to add a shared parameter to a Revision record?\n\nHow do I add more information to the Revision record in the parameters?"
+  },
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "<a name=\"3\"></a> Determine the Category",
+    "local_header_href": "#a-name3a-determine-the-category",
+    "chunk_text": "#### <a name=\"3\"></a> Determine the Category\n\nAfaict from experiments in the distant past, you can add a shared parameter to almost any category.\n\nDoes a category exist for revisions?\n\nIf you don't know off-hand, you can tell in several different ways:\n\n- Explore the existing revision that you just created using RevitLookup; what category does it have?\n- Look at the definition of the built-in category enumeration in Visual Studio and search for 'revision'.\n- Look at the definition of the built-in category enumeration in the Revit API help documentation and search for 'revision'.\n\nI did the latter, looked at\nthe [`BuiltInCategory` enumeration documentation](https://apidocs.co/apps/revit/2019/ba1c5b30-242f-5fdc-8ea9-ec3b61e6e722.htm).\n\nThat shows me that the built-in category `OST_Revisions` exists, so all is well so far."
+  },
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "<a name=\"4\"></a> Binding to the Category",
+    "local_header_href": "#a-name4a-binding-to-the-category",
+    "chunk_text": "#### <a name=\"4\"></a> Binding to the Category\n\nNext, I suggest you check out the [ADN Xtra labs](https://github.com/jeremytammik/AdnRevitApiLabsXtra).\n\nOf special interest in your case is the external command Lab4_3_1_CreateAndBindSharedParam in\nthe [module Labs4.cs](https://github.com/jeremytammik/AdnRevitApiLabsXtra/blob/master/XtraCs/Labs4.cs) that\nshows how to create and bind a shared parameter.\n\nAs you can see from\nthe [comments on that command](https://github.com/jeremytammik/AdnRevitApiLabsXtra/blob/master/XtraCs/Labs4.cs#L518-L539),\nI have used it repeatedly in the past to test creating a shared parameter for various categories, both built-in ones such as `OST_Revisions` and dynamically generated ones, such as for an imported DWG file.\n\nSearch The Building Coder blog posts for Lab4_3_1_CreateAndBindSharedParam to see detailed discussions of some of those experiments:\n\n- [Adding a Shared Parameter to a DWG File](http://thebuildingcoder.typepad.com/blog/2008/11/adding-a-shared-parameter-to-a-dwg-file.html)\n- [Model Group Shared Parameter](http://thebuildingcoder.typepad.com/blog/2009/06/model-group-shared-parameter.html)\n- [Exporting Parameter Data to Excel, and Re-importing](http://thebuildingcoder.typepad.com/blog/2012/09/exporting-parameter-data-to-excel.html)\n- [Sydney Revit API Training](http://thebuildingcoder.typepad.com/blog/2013/07/sydney-revit-api-training-and-vacation.html)\n- [Retrieving Element Properties](https://thebuildingcoder.typepad.com/blog/2015/06/archsample-active-transaction-and-adnrme-for-revit-mep-2016.html#2)\n- [The FireRating Revit SDK Sample and ADN Xtra Labs](http://thebuildingcoder.typepad.com/blog/2015/07/firerating-and-the-revit-python-shell-in-the-cloud-as-web-servers.html)\n- [Material Shared Parameters and ADN Xtra Labs](http://thebuildingcoder.typepad.com/blog/2016/12/material-shared-parameters-and-adn-xtra-labs.html)"
+  },
+  {
+    "original_filename": "1734_bind_shared_param_rev",
+    "header_text": "<a name=\"5\"></a> Implementation Sample",
+    "local_header_href": "#a-name5a-implementation-sample",
+    "chunk_text": "#### <a name=\"5\"></a> Implementation Sample\n\nOnce you have ascertained that you can bind a shared parameter to the category of interest, I assume your next question will be how to do so in a simple and efficient manner.\n\nI implemented one approach for\nthe [ExportCncFab add-in](https://github.com/jeremytammik/ExportCncFab).\n\nIt is discussed in three posts by The Building Coder, listed in the topic group\non [splitting an element into parts](https://thebuildingcoder.typepad.com/blog/about-the-author.html#5.39).\n\nThe third of those explores and\nimplements [binding and storing shared parameter data](https://thebuildingcoder.typepad.com/blog/2013/12/driving-cnc-fabrication-and-shared-parameters.html#4)."
+  }
+]

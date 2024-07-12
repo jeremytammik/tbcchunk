@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1487_roomedit3d_material",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<title>The Building Coder</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"3dwc.css\"/>\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true\" defer=\"defer\"></script>\n</head>\n\n<!---\n\n<code></code>\n\nConnecting Desktop and Cloud #RTCEUR Material @RTCEvents @AutodeskForge #revitapi @AutodeskRevit #aec #bim\n\nI am in the last stages of preparing my presentation this afternoon on connecting the desktop and the cloud for the RTC Revit Technology Conference Europe. For your and the audience's convenience, here are the materials I am presenting, and some of the main links to further information &ndash; Handout &ndash; Slide deck &ndash; Samples Connecting Desktop and Cloud...\n\n-->"
+  },
+  {
+    "original_filename": "1487_roomedit3d_material",
+    "header_text": "Connecting Desktop and Cloud RTC Material",
+    "local_header_href": "#connecting-desktop-and-cloud-rtc-material",
+    "chunk_text": "### Connecting Desktop and Cloud RTC Material\n\nI am in the last stages of preparing my presentation this afternoon on connecting the desktop and the cloud for \nthe [RTC Revit Technology Conference Europe](http://www.rtcevents.com/rtc2016eur).\n\nFor your and the audience's convenience, here are the materials I am presenting, and some of the main links to further information:\n\n- [Slide deck](/a/doc/revit/rtc/2016/doc/s1_4_pres_connect_desktop_cloud_jtammik.pdf)\n- [Handout document](/a/doc/revit/rtc/2016/doc/s1_4_hand_connect_desktop_cloud_jtammik.pdf)\n- [Recording (1h 15min)](https://youtu.be/XJ3OLsOeeUc)\n\n<center>\n<br/>\n<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/XJ3OLsOeeUc?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n</center>"
+  },
+  {
+    "original_filename": "1487_roomedit3d_material",
+    "header_text": "<a name=\"1\"></a>Samples Connecting Desktop and Cloud",
+    "local_header_href": "#a-name1asamples-connecting-desktop-and-cloud",
+    "chunk_text": "#### <a name=\"1\"></a>Samples Connecting Desktop and Cloud\n\nHere is a summary overview of the samples discussed.\n\nEach consists of two components, a C# .NET Revit API desktop add-in and a web server.\n\nEach of them lives in an own GitHub repository with its own documentation pointing to more detailed underlying research and implementation steps discussed in sequences of blog posts:\n\n- [RoomEditorApp](https://github.com/jeremytammik/RoomEditorApp) and the [roomeditdb](https://github.com/jeremytammik/roomedit) CouchDB database and web server demonstrating real-time round-trip graphical editing of furniture family instance location and rotation plus textual editing of element properties in a simplified 2D SVG representation of the 3D BIM.\n- [FireRatingCloud](https://github.com/jeremytammik/FireRatingCloud) and the [fireratingdb](https://github.com/jeremytammik/firerating) node.js MongoDB web server demonstrating real-time round-trip editing of Revit element shared parameter values stored in a globally accessible mongolab-hosted db.\n- [Roomedit3dApp](https://github.com/jeremytammik/Roomedit3dApp) and the first [roomedit3d](https://github.com/jeremytammik/roomedit3d) Forge Viewer extension demonstrating translation of BIM elements in the viewer and updating the Revit model in real time via a socket.io broadcast.\n- [Roomedit3dv3](https://github.com/Autodesk-Forge/forge-boilers.nodejs/tree/roomedit3d),\nthe new Forge-based sample, a viewer extension to demonstrate translation of BIM element instances in the viewer and updating the Revit model in real time via a `socket.io` broadcast, adding the option to select any Revit model hosted on A360, again using the [Roomedit3dApp](https://github.com/jeremytammik/Roomedit3dApp) Revit add-in.\n    - [GitHub](https://github.com/jeremytammik/roomedit3dv3)\n    - [Live sample URL](https://roomedit3dv3.herokuapp.com)\n    - [Discussion and first demo recording](http://thebuildingcoder.typepad.com/blog/2016/10/roomedit3dv3-up-and-running-with-demo-recording.html)"
+  },
+  {
+    "original_filename": "1487_roomedit3d_material",
+    "header_text": "<a name=\"2\"></a>Other Topics",
+    "local_header_href": "#a-name2aother-topics",
+    "chunk_text": "#### <a name=\"2\"></a>Other Topics\n\n- [Forge for BIM Programming](https://github.com/jeremytammik/forge_bim_programming)\n&ndash; [online presentation](http://jeremytammik.github.io/forge_bim_programming)\n- [Requesting input on Revit I/O](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.28b)\n- [LmvNav](https://calm-inlet-4387.herokuapp.com)\n\n<center>\n<img src=\"/p/2016/2016-10-20_rtc_ah/669_anthony_hauck.jpg\" alt=\"Anthony Hauck RTC keynote\" width=\"400\">\n</center>"
+  }
+]

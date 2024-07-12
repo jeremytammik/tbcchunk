@@ -1,0 +1,104 @@
+[
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\n/a/doc/au/2017/doc2/sd125457_forge_design_automation_rvt_diane_christoforo_handout.pdf\n/a/doc/au/2018/doc/forge_da4r.pptx\n\nBIM 360 Issues API #RevitAPI @AutodeskForge @AutodeskRevit #bim #DynamoBim #ForgeDevCon http://bit.ly/bim360issues\n\nToday, I am presenting a class on Design Automation for Revit or DA4R and the BIM 360 Issues API at the German Autodesk University in Darmstadt.\nThe first and main part is similar to yesterday's presentation at the Forge DevCon conference.\nTherefore, I will just share the BIM 360 slides here and now\n&ndash; Overview\n&ndash; Four types of issues\n&ndash; Permissions\n&ndash; Attachments\n&ndash; Assignee\n&ndash; Issues API\n&ndash; Get issues\n&ndash; Create issues\n&ndash; Issue type and root cause of field issue\n&ndash; Directly attach local files (photo) to issues\n&ndash; Pushpin Forge viewer extension\n&ndash; .NET core sample\n&ndash; Node.js samples\n&ndash; API Limitations...\n\n-->"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "BIM 360 Issues API",
+    "local_header_href": "#bim-360-issues-api",
+    "chunk_text": "### BIM 360 Issues API\n\nToday, I am presenting a class on Design Automation for Revit or DA4R and the BIM 360 Issues API at the German Autodesk University in Darmstadt.\n\nIt is in German language: *BIM360 News und Online Revit-Programmierung von BIM via Forge Design Automation API für RVT*.\n\nThe first and main part is similar to yesterday's presentation \non [Forge Design Automation for Revit](http://thebuildingcoder.typepad.com/blog/2018/10/forge-design-automation-for-revit.html) at\nthe Forge DevCon conference.\n\nTherefore, I will only share the BIM 360 slides (just the text, with most images missing) here now:\n\n- [Overview](#3) \n    - [Four types of issues](#4) \n    - [Permissions](#5) \n    - [Attachments](#6) \n    - [Assignee](#7) \n- [Issues API](#8) \n    - [Get issues](#8.1) \n    - [Create issues](#8.2) \n    - [Issue type and root cause of field issue](#8.3) \n    - [Directly attach local files (photo) to issues](#8.4) \n    - [Pushpin Forge viewer extension](#8.5) \n    - [.NET core sample](#8.6) \n    - [Node.js sample](#8.7) \n    - [Node.js sample 2](#8.8) \n    - [API limitations](#8.9) \n\nFor your convenience, here is the slide deck including images in PDF format:\n\n- [Slide deck](zip/bim360_issues_api.pdf)\n\nAll the following information comes from a few base sources, so please refer to those to get it straight from the horse's mouth:\n\n- [BIM 360 API documentation](https://forge.autodesk.com/en/docs/bim360/v1/overview)\n- [Introducing the BIM 360 Issues API blog post](https://forge.autodesk.com/blog/introducing-bim-360-issues-api)\nincluding [.NET core sample code `bim360-csharp-issues`](https://github.com/Autodesk-Forge/bim360-csharp-issues) \nand [live demo](https://bim360issues.herokuapp.com)\n- [BIM 360 Issues API sample by Node.js](https://forge.autodesk.com/blog/bim-360-issues-api-sample-nodejs)\nincluding [`bim360-api-demo-node.js` for Issue API sample code](https://github.com/xiaodongliang/BIM360-API-Demo-Node.js/tree/IssueAPI) \nand [live demo](https://bim360-issue-csv.herokuapp.com)"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"3\"></a> Overview",
+    "local_header_href": "#a-name3a-overview",
+    "chunk_text": "#### <a name=\"3\"></a> Overview\n\n- Four Types of Issues\n- Permissions\n- Attachment\n- Issues API\n- Current Scope and Limitations"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"4\"></a> Four Types of Issues",
+    "local_header_href": "#a-name4a-four-types-of-issues",
+    "chunk_text": "#### <a name=\"4\"></a> Four Types of Issues\n\n- Document Issue in Project Level\n- Field Issue in Project Level\n- Document Issue in Document Level\n- Field Issue in Document Level"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"5\"></a> Permissions",
+    "local_header_href": "#a-name5a-permissions",
+    "chunk_text": "#### <a name=\"5\"></a> Permissions\n\n- Permission for Document Issues\n  - By default, every member of the project can create a document issue in project level\n  - By default, if a member has permission to a folder, she can create a document issue on the specific document within this folder\n- Permission for Field Issues\n  - Basic: can view issues the member has created or assigned to\n  - View All: can view all, but cannot create \n  - Create: can create new and view created and assigned to\n  - View and Create: can create new issues and view all issues\n  - No permission with a folder: cannot view the model the field issue was created from"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"6\"></a> Attachments",
+    "local_header_href": "#a-name6a-attachments",
+    "chunk_text": "#### <a name=\"6\"></a> Attachments\n\n- Attachment for Document Issue\n- Attachment for Field Issue\n  - Field on PC can attach any kind of files to issue, such as photo\n  - Field on mobile can only attach photo format to an issue\n  - Where are the photos? \n  - A hidden folder named 'Photos’\n  - Save level as Plans, Project Files, Shop Drawings"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"7\"></a> Assignee",
+    "local_header_href": "#a-name7a-assignee",
+    "chunk_text": "#### <a name=\"7\"></a> Assignee\n\n- Assign To\n- User: valid member in this project\n- Role: Engineer, Designer, ...\n- IT: Project Engineer, Project Manager, ..."
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8\"></a> Issues API",
+    "local_header_href": "#a-name8a-issues-api",
+    "chunk_text": "#### <a name=\"8\"></a> Issues API\n\n- [Get Issues](#8.1) \n- [Create Issues](#8.2) \n- [Issue Type And Root Cause of Field Issue](#8.3) \n- [Directly Attach Local Files (photo) to Issues](#8.4) \n- [Pushpin Forge Viewer Extension](#8.5) \n- [.NET Core Sample](#8.6) \n- [Node.js Sample](#8.7) \n- [Node.js Sample 2](#8.8) \n- [API Limitations](#8.9)"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.1\"></a> Get Issues",
+    "local_header_href": "#a-name81a-get-issues",
+    "chunk_text": "#### <a name=\"8.1\"></a> Get Issues\n\n<pre>\nGET: {{base_domain}}/issues/v1/containers/{{issue_container_id}}/issues?filter[status]=closed\nGET: {{base_domain}}/issues/v1/containers/{{issue_container_id}}/quality-issues\n</pre>\n\n- Issue Container\n- Document Issue\n- Field Issue (in API: Quality Issue)\n- API Help: Document Issue, Field Issue"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.2\"></a> Create Issues",
+    "local_header_href": "#a-name82a-create-issues",
+    "chunk_text": "#### <a name=\"8.2\"></a> Create Issues\n\n- Currently only in project level\n\n<pre>\nPOST: {{base_domain}}/issues/v1/containers/{{issue_container_id}}/issues\nPOST: {{base_domain}}/issues/v1/containers/{{issue_container_id}}/quality-issues\n</pre>\n\n- API Help: Document Issue, Field Issue"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.3\"></a> Issue Type and Root Cause of Field Issue",
+    "local_header_href": "#a-name83a-issue-type-and-root-cause-of-field-issue",
+    "chunk_text": "#### <a name=\"8.3\"></a> Issue Type and Root Cause of Field Issue\n\n- Issue Type \n    - Quality\n    - Safety\n    - PushList\n    - Commitment\n    - In API: enum index\n    - GET supported field issue types to get the corresponding meaningful string\n- Root Cause\n    - GET Root-Cause-Types"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.4\"></a> Directly Attach Local Files (photo) to Issues",
+    "local_header_href": "#a-name84a-directly-attach-local-files-photo-to-issues",
+    "chunk_text": "#### <a name=\"8.4\"></a> Directly Attach Local Files (photo) to Issues\n\n<center>\n<img src=\"img/bim360_issues_attach_file.png\" alt=\"Attach local file\" width=\"500\">\n</center>"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.5\"></a> Pushpin Forge Viewer Extension",
+    "local_header_href": "#a-name85a-pushpin-forge-viewer-extension",
+    "chunk_text": "#### <a name=\"8.5\"></a> Pushpin Forge Viewer Extension\n\n- Extension in Forge Viewer\n- Same experience as BIM 360 UI\n- Can toggle visibility of Issues\n- Other data source (custom issue) could also use the skeleton"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.6\"></a> .NET Core Sample",
+    "local_header_href": "#a-name86a-net-core-sample",
+    "chunk_text": "#### <a name=\"8.6\"></a> .NET Core Sample\n\n- Get all document issues of one document \n- Show up the pushpins by Pushpin Extension\n- Live Demo:\n<br/>[https://bim360issues.herokuapp.com](https://bim360issues.herokuapp.com)\n- Blog:\n<br/>[https://forge.autodesk.com/blog/introducing-bim-360-issues-api](https://forge.autodesk.com/blog/introducing-bim-360-issues-api)"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.7\"></a> Node.js Sample",
+    "local_header_href": "#a-name87a-nodejs-sample",
+    "chunk_text": "#### <a name=\"8.7\"></a> Node.js Sample\n\n- Demos on how to manipulate issues \n- Attach local photos to an issue\n- Load specific issue and its model \n- Export all issues to an CSV file (differs from BIM 360 UI function; the CSV contains comments list)\n- Live demo:\n<br/>[https://bim360-issue-csv.herokuapp.com](https://bim360-issue-csv.herokuapp.com)\n- Blog:\n<br/>[https://forge.autodesk.com/blog/bim-360-issues-api-sample-nodejs](https://forge.autodesk.com/blog/bim-360-issues-api-sample-nodejs)"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.8\"></a> Node.js Sample 2",
+    "local_header_href": "#a-name88a-nodejs-sample-2",
+    "chunk_text": "#### <a name=\"8.8\"></a> Node.js Sample 2\n\n- Dashboards on stats of the issues\n\n<center>\n<img src=\"img/bim360_issues_nodejs_sample_dashboard.png\" alt=\"Node.js sample dashboard\" width=\"500\">\n</center>"
+  },
+  {
+    "original_filename": "1696_bim360_issues_api",
+    "header_text": "<a name=\"8.9\"></a> API Limitations",
+    "local_header_href": "#a-name89a-api-limitations",
+    "chunk_text": "#### <a name=\"8.9\"></a> API Limitations\n\n- Creating Issue in Document Level is not supported \n- Getting project users (Assignee) has not been exposed\n- No endpoints to manage permissions\n- Attachment workflow is confusing, mixing 2-legged and 3-legged token"
+  }
+]

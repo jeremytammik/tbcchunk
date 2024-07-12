@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0781_api_wishlist_survey",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0781_api_wishlist_survey",
+    "header_text": "API Wishlist Survey Deadline Looming",
+    "local_header_href": "#api-wishlist-survey-deadline-looming",
+    "chunk_text": "<h3>API Wishlist Survey Deadline Looming</h3><p>I returned safe and sound from Boston and the AEC DevCamp and started recuperating from the intensive week at the conference and DevLab.\nI love being back home again!\n\n<p>The \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2012/05/revit-and-navisworks-api-wishlist-surveys.html\">\nRevit and Navisworks API wishlist surveys</a> opened \n\nback in May. \n\n<p>In the meantime, the Civil 3D and Inventor ones were launched as well.\n\n<p>Kean just announced an \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2012/06/api-wishlist-surveys.html\">\nextension of the deadline</a>.\n\n<p>I would like to join him in urging anyone who has not already submitted their wishes to do so as soon as possible:\n\n<ul>\n<li><a href=\"http://www.zoomerang.com/Survey/WEB22FSEYSMJ86\">AutoCAD Civil 3D</a></li>\n<li><a href=\"http://www.zoomerang.com/Survey/WEB22FVZCJTCQN\">Autodesk Inventor</a></li>\n<li><a href=\"http://www.zoomerang.com/Survey/WEB22FRMLV62H3\">Autodesk Navisworks</a></li>\n<li><a href=\"http://www.zoomerang.com/Survey/WEB22FR9A8WHJ9\">Autodesk Revit</a> </li>\n</ul>\n<p>The API wishlist survey with your feedback on your API needs has a strong influence on the direction of the future API, so please take the time to fill it out.\n\n<p>Our engineering teams use this feedback to help prioritise the areas of API enhancements in coming releases. \nIf you wish, you can leave your e-mail address and we will send you the final results when they become available. \n\n</p></p></p></p></p></p></p>"
+  }
+]

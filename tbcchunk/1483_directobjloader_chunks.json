@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1483_directobjloader",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<title>The Building Coder</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"3dwc.css\"/>\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true\" defer=\"defer\"></script>\n</head>\n\n<!---\n\nDirectObjLoader for Revit 2017 @AutodeskForge #revitapi #3dwebcoder @AutodeskRevit #aec #bim @RTCEvents\n\nHere is a last quick Sunday morning post before I head off on vacation, on the DirectObjLoader migration to Revit 2017, handling the changes in <code>DirectShape.CreateElement</code> and <code>TessellatedShapeBuilderResult</code>...\n\n-->"
+  },
+  {
+    "original_filename": "1483_directobjloader",
+    "header_text": "DirectObjLoader for Revit 2017",
+    "local_header_href": "#directobjloader-for-revit-2017",
+    "chunk_text": "### DirectObjLoader for Revit 2017\n\nHere is a last quick Sunday morning post before I head off on vacation, prompted\nby [truevis](https://github.com/truevis)' comment on\nthe [DirectObjLoader](https://github.com/jeremytammik/DirectObjLoader)\n[GitHub issue #2](https://github.com/jeremytammik/DirectObjLoader/issues/2):"
+  },
+  {
+    "original_filename": "1483_directobjloader",
+    "header_text": "<a name=\"2\"></a>Question",
+    "local_header_href": "#a-name2aquestion",
+    "chunk_text": "#### <a name=\"2\"></a>Question\n\nWhat do we have to change to get this to work in Revit 2017? Seems there are changes in `DirectShape.CreateElement` and `TessellatedShapeBuilderResult`."
+  },
+  {
+    "original_filename": "1483_directobjloader",
+    "header_text": "<a name=\"3\"></a>Answer",
+    "local_header_href": "#a-name3aanswer",
+    "chunk_text": "#### <a name=\"3\"></a>Answer\n\nI migrated the sample to Revit 2017 for you.\n\nHere is what I did:\n\n- Updated the Revit API references\n- Incremented the .NET framework from 4.5 to 4.5.2\n- Reinstalled the FileFormatWavefront NuGet package\n- Recompiled\n\nThat produced two warnings:\n\n- Error CS1501 No overload for method 'Build' takes 3 arguments DirectObjLoader C:\\a\\vs\\DirectObjLoader\\DirectObjLoader\\Command.cs 126 Active\n- Warning CS0618 'DirectShape.CreateElement(Document, ElementId, string, string)' is obsolete: 'This function will be obsolete in Revit 2017. Use DirectShape.CreateElement(Document, ElementId) instead. Use DirectShape.ApplicationId, DirectShape.ApplicationDataId properties to set application id and application data id.' DirectObjLoader C:\\a\\vs\\DirectObjLoader\\DirectObjLoader\\Command.cs 131 Active\n\nThe warning is completely self-explanatory and trivial.\n\nTo fix it, just do what the man says.\n\nThe error is caused by the changes described\nin [What's New in the Revit 2017 API](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html):\n\n<font color=\"darkblue\">"
+  },
+  {
+    "original_filename": "1483_directobjloader",
+    "header_text": "<a name=\"4\"></a>[TessellatedShapeBuilder Changes](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html#2.12.2)",
+    "local_header_href": "#a-name4atessellatedshapebuilder-changeshttpthebuildingcodertypepadcomblog201604whats-new-in-the-revit-2017-apihtml2122",
+    "chunk_text": "#### <a name=\"4\"></a>[TessellatedShapeBuilder Changes](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html#2.12.2)\n\nThe options for building are now set as options in the `TessellatedShapeBuilder` itself. Access these options through the new properties:\n\n- TessellatedShapeBuilder.Target\n- TessellatedShapeBuilder.Fallback\n- TessellatedShapeBuilder.GraphicsStyleId\n\n</font>\n\nFurthermore, the build result is now accessible through `GetBuildResult` instead of being returned by the `Build` method.\n\nI published a new [release 2017.0.0.0](https://github.com/jeremytammik/DirectObjLoader/releases/tag/2017.0.0.0) including the corresponding changes.\n\nYou can [compare the changes](https://github.com/jeremytammik/DirectObjLoader/compare/2015.0.0.22...2017.0.0.0) to see exactly what I did.\n\nHere is the code for Revit 2017:\n\n<script src=\"https://gist.github.com/jeremytammik/1b1b36cbcadc0be957ea4492b0093fca.js\"></script>\n\nThe flat migration works fine, and this image was produced as a result from a 6 MB OBJ apartment model:\n\n<center>\n<img src=\"img/directobjloader_2017_emser.png\" alt=\"DirectObjLoader loaded a 6 MB OBJ model of an apartment\" width=\"572\">\n</center>"
+  }
+]

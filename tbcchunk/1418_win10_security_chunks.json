@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1418_win10_security",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- Tim Burnham RE: Solved: Revit 2016 Plugin under Win10\n\nWindows 10 Security Blocks External Command #revitAPI #3dwebcoder @AutodeskRevit #adsk #aec #bim #win10\n\nHere is a Revit API add-in installation issue that came up in various forms in the past and now again in the context of Windows 10 configuration: I have a plugin that has been working fine for all pre-Windows 10 platforms. Under Win10, the DLL loads into Revit.exe correctly. The add-in manifest contents are displayed correctly in the Revit UI. When I issue the command, however, nothing happens...\n\n-->"
+  },
+  {
+    "original_filename": "1418_win10_security",
+    "header_text": ".NET Runtime Security Blocks External Command",
+    "local_header_href": "#net-runtime-security-blocks-external-command",
+    "chunk_text": "### .NET Runtime Security Blocks External Command\n\nHere is a Revit API add-in installation issue that came up in various forms in the past and was now raised and resolved once again by Tim Burnham in the special context of .NET Runtime 4.0 configuration:\n\n**Question:** I have a plugin that has been working fine for for several years now on all pre-Windows 10 platforms.\n\nUnder Win10, the DLL loads into Revit.exe correctly.\nThe `.addin` add-in manifest contents are displayed correctly in the Revit UI.\nWhen I issue the command, however, nothing happens.\n\nI trimmed down all dependencies and code to simply display a message box when the command is launched.\n\nStill no luck.\n\nAre there any known Windows 10 issues for Revit plugins, or Security issues that would prevent a command from being executed?\n\nSP2 is installed.\n\nI don’t think Revit 2016 is officially supported on Windows 10, but this is a really important project and Win 10 is the project platform.\n\nAny hints on resolving this?\n\n\n**Answer:** I have a solution for my plugin not running.\n\nIt was indeed security related, and apparently a common one with regards to Autodesk plugins since .NET 4.0 was released.\n\nAfter snooping around the journal files I saw this:\n\n<pre>\nJrn.RibbonEvent \"Execute external command:aaa9bd72-930c-4da5-8305-94cde3a1c3ee:CommandRevitMetricsReporter\"\n' 0:&lt; DBG_WARN: Could not load file or assembly 'file:///C:\\Program Files\\Autodesk\\Revit 2016\\RevitMetricsReporter.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515): line 188 of AddIn\\AddInItem.cpp.\n</pre>\n\nThe `HRESULT` error code `0x80131515` led me to a couple of solutions:"
+  },
+  {
+    "original_filename": "1418_win10_security",
+    "header_text": "<a name=\"1\"></a>Solution #1",
+    "local_header_href": "#a-name1asolution-1",
+    "chunk_text": "#### <a name=\"1\"></a>Solution #1\n\nAdd the following to the `revit.exe.config` file:\n\n<pre>\n<span class=\"blue\">&nbsp; &lt;</span><span class=\"maroon\">runtime</span><span class=\"blue\">&gt;</span>\n<span class=\"blue\">&nbsp; &nbsp; &lt;</span><span class=\"maroon\">loadFromRemoteSources</span><span class=\"blue\"> </span><span class=\"red\">enabled</span><span class=\"blue\">=</span>&quot;<span class=\"blue\">true</span>&quot;<span class=\"blue\"> /&gt;</span>\n<span class=\"blue\">&nbsp; &lt;/</span><span class=\"maroon\">runtime</span><span class=\"blue\">&gt;</span>\n</pre>\n\nThis will apply to all plugins, so beware!"
+  },
+  {
+    "original_filename": "1418_win10_security",
+    "header_text": "<a name=\"2\"></a>Solution #2",
+    "local_header_href": "#a-name2asolution-2",
+    "chunk_text": "#### <a name=\"2\"></a>Solution #2\n\nUnblock the DLL individually via its Windows properties.\n\n<center>\n<img src=\"img/tb_win10_security.jpeg\" alt=\"Security Unblock\" width=\"423\">\n</center>\n\nThis Block/Unblock property will only show itself if the component was unzipped or downloaded from the web.\n\nApparently .NET doesn’t distinguish between the two and will provide fewer privileges for the DLL when you attempt to load and run it."
+  },
+  {
+    "original_filename": "1418_win10_security",
+    "header_text": "<a name=\"3\"></a>Solution #3",
+    "local_header_href": "#a-name3asolution-3",
+    "chunk_text": "#### <a name=\"3\"></a>Solution #3\n\nAnother option would be to deploy the add-in via a simple MSI installer package.\n\nDLLs deployed via an installer are not automatically blocked by Windows, unlike simple deployment via a zip file.\n\nI am currently developing an MSI package for this to avoid future headache.\n\n\nJeremy adds: Closely related issues arose repeatedly in the past.\n\nI first mentioned it in relation to\nthe [Revit Add-in file load exception](http://thebuildingcoder.typepad.com/blog/2011/10/revit-add-in-file-load-exception.html) loading\nthe RevitPythonShell on some non-XP machines,\nand [Kean Walmsley](http://through-the-interface.typepad.com) provided\na comprehensive explanation of it back in 2011\nto [unblock ZIP files before installing Plugins of the Month](http://labs.blogs.com/its_alive_in_the_lab/2011/05/unblock-net.html) from\nAutodesk Labs.\n\n<a name=\"4\"></a>**Addendum:** For a little more background information, pleaase refer to this StackOverflow thread on how to [detect if a file has been blocked by the operating system](http://stackoverflow.com/questions/17527347/detect-if-a-file-has-been-blocked-by-the-operating-system)."
+  }
+]

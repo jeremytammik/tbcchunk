@@ -1,0 +1,8 @@
+[
+  {
+    "original_filename": "0066_f_sharp_contest",
+    "header_text": "F# Programming Contest",
+    "local_header_href": "#f-programming-contest",
+    "chunk_text": "<h3>F# Programming Contest</h3><p>Kean Walmsley just announced a \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2009/01/f-programming-contest.html\">\nprogramming contest</a>\n\nusing the exciting new \n\n<a href=\"http://en.wikipedia.org/wiki/Functional_programming\">\nfunctional</a>\n\n.NET language \n\n<a href=\"http://en.wikipedia.org/wiki/F_Sharp_programming_language\">\nF#</a>.\n\nSince functional programming has many uses in all realms including architecture, there should be lots of scope for making use of it in conjunction with the Revit API as well.\nI hope to install Visual Studio 2008 real soon now and have a look at setting up a basic F# Revit add-in project.\nI am very much looking forward to hearing from you about ideas for making use of F# in Revit.</p>"
+  }
+]

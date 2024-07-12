@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0732_split_duct_pipe",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0732_split_duct_pipe",
+    "header_text": "Split a Duct or Pipe",
+    "local_header_href": "#split-a-duct-or-pipe",
+    "chunk_text": "<h3>Split a Duct or Pipe</h3><p>Here is another short and sweet answer to a question that keeps popping up regularly:\n\n\n<p><strong>Question:</strong> How can I change the length of a pipe using the Revit MEP API?\n\n<p>I am actually interested in programmatically splitting the pipe, but I cannot see any support for this in the API.\n\n<p>I tried to change the length of the pipe to indirectly cause a split, but the LocationCurve.Length property is read-only, so I cannot simply modify it.\n\n\n<p><strong>Answer:</strong> I touched briefly on the topic of \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/04/revit-api-cases-1.html#2\">\nsplitting a duct or pipe</a> a\n\nlong time ago, back in 2009.\n\n<p>As stated there, there is no built-in ready-made method to split a pipe or duct.\n \n<p>You can however create as many new ducts and pipes as you like using the NewDuct and NewPipe methods.\n\n<p>Also, although the LocationCurve.Length property is read-only, you can still modify it by simply assigning a completely new curve to the element Location property itself.\nWe already discussed samples of doing so for a \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/09/bevelled-steel-beams.html\">\nbeam</a> and a\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/08/edit-wall-length.html\">\nwall</a>.\n\nThe same approach can be used on a pipe as well, and obviously replacing the location curve can also change its length.\n\n<p>Finally, the whole operation of splitting pipes and ducts both by changing their lengths and by creating new elements is demonstrated by the Revit SDK samples, especially the AutoRoute and AvoidObstruction ones: \n\n<ul>\n<li>AutoRoute: Route a set of ducts and fittings between a base air supply equipment and two terminals. \n<li>AvoidObstruction: Detect and resolve obstructions between ducts, pipes, and beams.\n</li></li></ul>\n</p></p></p></p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0210_mep_api_webcast",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0210_mep_api_webcast",
+    "header_text": "Revit MEP API Webcast",
+    "local_header_href": "#revit-mep-api-webcast",
+    "chunk_text": "<h3>Revit MEP API Webcast</h3><p>Here is a last-minute reminder to register for the Revit MEP API webcast that we are holding on Thursday August 27<sup>th</sup>. \nYou still have 36 hours time until it begins, starting now.\nTo register, you can visit the ADN or Autodesk Developer Network ADN DevTech API \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_sched.php\">\ntraining schedule</a>,\n\nfilter for Revit MEP API, and click on the \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/item?id=10417086&amp;siteID=123112&amp;cname=Revit%20MEP%20API,%20Webcast,%20Aug%2027%202009,%20200851\">\nregister</a> \n\nlink.\nThis webcast is open to all developers, regardless of ADN membership.</p><p>I am still very busy preparing the material  :-)</p>"
+  }
+]

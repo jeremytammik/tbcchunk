@@ -1,0 +1,38 @@
+[
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "RvtVa3c – Revit Va3c Generic AEC Viewer JSON Export",
+    "local_header_href": "#rvtva3c-revit-va3c-generic-aec-viewer-json-export",
+    "chunk_text": "<h3>RvtVa3c – Revit Va3c Generic AEC Viewer JSON Export</h3><p>When you read this, I will already be sitting on the plane back from New York to Switzerland.</p><p>Before leaving, though, I wanted to add some more explanations on the extremely fruitful work we accomplished this weekend.</p><p>I am very happy and grateful that we spontaneously formed such a wonderful team and worked together so enthusiastically, pleasantly and effectively.</p><p>Most of all, I enjoyed the companionship, competence and professionality of my closest teammate Matt Mason of\n\n<a href=\"http://www.imaginit.com\">\nImaginit Technologies</a>.</p><p>I am really looking forward to seeing where all the other exciting projects that we discussed will go, and of course most of all how this one will fare in the long run.</p><p>In the short\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/05/aec-hackathon-from-the-midst-of-the-fray.html\">AEC Hackathon</a>\n\nproject description that I published yesterday, I mentioned our new  three.js based open source AEC visualisation project\n\n<a href=\"https://github.com/va3c\"><b>va3c</b> to view 3D building models</a> in\n\nany web browser.</p><p>The entire\n\n<a href=\"http://va3c.github.io/#team\">va3c team</a> ended\n\nup proudly winning the second place in the Hackathon competition, and each project participant was awarded an\n\n<a href=\"http://www.arduino.cc\">Arduino</a> as a prize.</p><p>Here are <a href=\"#2\">more details</a> on the\n\n<a href=\"https://github.com/va3c/RvtVa3c\">RvtVa3c</a> Revit\n\nva3c exporter project that I completed together with Matt in\n\na total effort of 2 * 26 hours = 52 man hours.</p><p>The entire source code, Visual Studio solution and add-in manifest is provided in the\n\n<a href=\"https://github.com/va3c/RvtVa3c\">RvtVa3c GitHub repository</a>.</p><p>The other projects, especially the central viewer component fed by the Revit add-in component, can be copied or cloned from their respective own\n\n<a href=\"#5\">repositories</a> listed\n\nbelow.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "Short RvtVa3c Project Description",
+    "local_header_href": "#short-rvtva3c-project-description",
+    "chunk_text": "<h4>Short RvtVa3c Project Description</h4><p>Implement a Revit add-in external application, external command and custom exporter extracting information straight from the Revit graphics output pipeline and streaming it to a three.js scene version 4 JSON model file for consumption and display in the va3c AEC viewer, including  support for meta-data and Internet hyperlinks.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "Task List and Features",
+    "local_header_href": "#task-list-and-features",
+    "chunk_text": "<h4>Task List and Features</h4><ul>\n<li>Done:</li>\n<ul>\n<li>Properly handle instance transformation, e.g. doors and windows</li>\n<li>Properly handle colour and material</li>\n<li>Support transparency, e.g. window panes</li>\n<li>Get completely fed up with the buggy Microsoft System.Runtime.Serialization.Json.DataContractJsonSerializer class and switch to the more reliable <a href=\"http://james.newtonking.com/json\">Json.NET</a> component</li>\n<li>Add scaling to common viewer size, e.g. [(0,0),(20000,20000)]</li>\n<li>Implement the external application ribbon panel and button</li>\n<li>Implement element properties, i.e. metadata support</li>\n<li>Eliminate multiple non-element materials</li>\n<li>Prompt user for output file name and location</li>\n<li>Eliminate null element properties, i.e. useless JSON userData entries</li>\n<li>Fix the GitHub repository corrupted by adding an excessively large file exceeding the 100 MB GitHub size limit</li>\n</ul>\n<li>Todo:</li>\n<ul>\n<li>More optimisations to reduce file size</li>\n<li>More intelligent family instance and type reuse</li>\n</ul>\n</ul><p>I could spend hours discussing each one of the steps listed above, more hours than Matt and I spent implementing them.</p><p>I can also save some time and breath and let you explore them for yourself.</p><p>Suffice to say that the Revit add-in is up and running, reliably producing version 4 three.js rendering of both small and large Revit models, and that the va3c viewer and all the other different va3c exporters work reliably as well.</p><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "Main Challenge",
+    "local_header_href": "#main-challenge",
+    "chunk_text": "<h4>Main Challenge</h4><p>The target JSON format was initially a moving target, oscillating between version 3 and 4, both of which are nowhere completely reliably defined, requiring hard-core reverse engineering of the viewer by extensive JavaScript debugging.</p><p>We settled for version 4 in the end, since 3 is announced soon to be deprecated.</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1157_rvtva3c",
+    "header_text": "Links to Related Va3c Projects",
+    "local_header_href": "#links-to-related-va3c-projects",
+    "chunk_text": "<h4>Links to Related Va3c Projects</h4><ul>\n<li><a href=\"http://va3c.github.io/\">va3c project landing page</a></li>\n<li><a href=\"https://github.com/va3c/viewer\">viewer</a> – HTML viewer</li>\n<li><a href=\"https://github.com/va3c/GHva3c\">GHva3c</a> – Grasshopper va3c exporter</li>\n<li><a href=\"https://github.com/va3c/maxscriptVa3c\">maxscriptVa3c</a> – 3DS Max va3e JSON Exporter</li>\n<li><a href=\"https://github.com/va3c/json\">json</a> – JSON sample files</li>\n<li><a href=\"https://github.com/va3c/va3c.github.io\">va3c</a> – web viewer for AEC models organisation</li>\n<li><a href=\"http://va3c.github.io/viewer\">va3c viewer demo</a></li>\n</ul>"
+  }
+]

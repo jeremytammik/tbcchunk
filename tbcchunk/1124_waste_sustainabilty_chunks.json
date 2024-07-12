@@ -1,0 +1,44 @@
+[
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Automating Large Scale Waste Recycling and Sustainability",
+    "local_header_href": "#automating-large-scale-waste-recycling-and-sustainability",
+    "chunk_text": "<h3>Automating Large Scale Waste Recycling and Sustainability</h3><p>Today we take a forward look at new solutions for the seemingly unrelated issues of waste recycling and sustainability, using rail-mounted robots and 3D printing technology in combination with novel materials:</p><ul>\n<li><a href=\"#2\">Sustainability</a></li>\n<li><a href=\"#3\">3D Printing</a></li>\n<li><a href=\"#4\">Robots on Rails</a></li>\n<li><a href=\"#5\">Recycling Waste into Insulation and Curtain Walls</a></li>\n<li><a href=\"#6\">Autodesk Sustainability Workshop</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Sustainability",
+    "local_header_href": "#sustainability",
+    "chunk_text": "<h4>Sustainability</h4><p>As you know, Autodesk is leading the way in\n\n<a href=\"http://www.autodesk.com/sustainabledesign\">\nsustainable design</a>,\n\nwas commended for its\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/01/sustainably-chugging-along.html#2\">\ntremendous leadership in corporate sustainability metrics</a>,\n\nand BIM is one of the main tools enabling the detailed\n\n<a href=\"http://autodesk.typepad.com/bpa\">\nbuilding performance analysis</a> required\n\nto achieve the high and noble goals we set ourselves.</p><center>\n<img alt=\"Autodesk sustainable design solutions\" src=\"img/adsk_sustainability_1.jpg\" width=\"252\"/>\n</center><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "3D Printing",
+    "local_header_href": "#3d-printing",
+    "chunk_text": "<h4>3D Printing</h4><p>Autodesk is also actively engaged in the work on 3D printing.\nUnbelievable things, and simple, small and practical things as well, can be achieved using 3D printers, by anyone, right at home, as explained by CNN in this\n\n<a href=\"https://www.youtube.com/watch?v=e0rYO5YI7kA\">4-minute video</a>:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"236\" src=\"http://www.youtube.com/embed/e0rYO5YI7kA\" width=\"420\"></iframe>\n</center><p>Again, Autodesk is in the midst of the fray with\n\n<a href=\"http://www.123dapp.com/make\">123D Make</a>:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"236\" src=\"http://www.youtube.com/embed/jo5TxtKLmjM\" width=\"420\"></iframe>\n</center><p>Note that the materials used to print can have almost any properties desired, including transparency and low heat conduction.</p><p>\n<a href=\"http://www.collective-evolution.com/2014/02/22/scientists-develop-giant-3d-printer-that-can-build-a-house-in-24-hours\">\n3D printers can build entire houses</a>,\n\nas discussed in this\n\n<a href=\"https://www.youtube.com/watch?v=5ZuukXXEFPg\">one-minute video</a>:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"236\" src=\"http://www.youtube.com/embed/5ZuukXXEFPg\" width=\"420\"></iframe>\n</center><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Robots on Rails",
+    "local_header_href": "#robots-on-rails",
+    "chunk_text": "<h4>Robots on Rails</h4><p>Automatic window and building cleaning systems have been around for a long time.\nHere is a research paper from 1999 on\n\n<a href=\"http://www.iaarc.org/publications/fulltext/Automated_cleaning_of_windows_on_standard_facades.PDF\">\nautomated cleaning of windows on standard facades</a> by\n\nSchraft, Braeuning, Orlowski and Hornemann in Automation and Robotics in Construction XVI.</p><p>A more recent\n\n<a href=\"https://www.youtube.com/watch?v=xA6a9VZALGM\">automatic window cleaning system</a>,\n\nwon the Khalifa University's Engineering Innovation Day:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"236\" src=\"http://www.youtube.com/embed/xA6a9VZALGM\" width=\"420\"></iframe>\n</center><p>Here is a\n\n<a href=\"https://www.youtube.com/watch?v=phkdmFuJMDM\">four-minute video</a> of\n\nan existing commercial autonomous multifunctional robot on rails working on high voltage power lines, in warehouses, in tunnels, and numerous other inaccessible or dangerous places:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"236\" src=\"http://www.youtube.com/embed/phkdmFuJMDM\" width=\"420\"></iframe>\n</center><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Recycling Waste into Insulation and Curtain Walls",
+    "local_header_href": "#recycling-waste-into-insulation-and-curtain-walls",
+    "chunk_text": "<h4>Recycling Waste into Insulation and Curtain Walls</h4><p>Combining the experiences made with existing mobile robotic systems with new materials is fuelling applications enthusing both sustainability and garbage recycling advocates, killing two flies in one blow: the waste generated by a typical office building is sorted and recycled into transparent and opaque materials that can be fed directly to mobile 3D printer robots that generate both insulation and\n\n<a href=\"http://en.wikipedia.org/wiki/Curtain_wall\">curtain wall</a> systems\n\naround a building of any size in real time.</p><p>The robots are completely mobile, sitting on rails mounted on a scaffolding system, which in turn is also mobile, navigating around the circumference of the building as the insulation and curtain wall generation progresses, enabling it to cover the entire building hull step by step.</p><p>Look forward to having your recyclable soda bottle grabbed right out of your hand and reused to insulate your office building  :-)</p><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "1124_waste_sustainabilty",
+    "header_text": "Autodesk Sustainability Workshop",
+    "local_header_href": "#autodesk-sustainability-workshop",
+    "chunk_text": "<h4>Autodesk Sustainability Workshop</h4><p>By the way, are you aware of the\n\n<a href=\"http://sustainabilityworkshop.autodesk.com\">\nAutodesk sustainability workshop</a> and certification program?</p><p>It offers free online resources teaching the principles and practice of sustainability in engineering and design, covering building and product design and including concepts, examples and tutorials.</p><p>Have fun learning and using existing technologies, and even more developing and realising your own revolutionary ideas!</p>"
+  }
+]

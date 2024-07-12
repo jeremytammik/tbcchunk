@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0535_set_elbow_fitting_type",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0535_set_elbow_fitting_type",
+    "header_text": "Set Elbow Fitting Type",
+    "local_header_href": "#set-elbow-fitting-type",
+    "chunk_text": "<h3>Set Elbow Fitting Type</h3><p>Here is a simple question with a simple solution on setting the type of a family instance:\n\n<p><strong>Question:</strong> I read your post on \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/05/cable-tray-orientation-and-fittings.html\">\ncable tray orientation and fittings</a> and \n\nalso looked at the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/09/the-revit-mep-api.html#6\">\nAutoRoute</a> SDK sample.\n\nI am using NewElbowFitting too.\n\n<p>The problem is that the fittings created automatically are of the family 'Rectangle Elbow - Mitered: Standard'.\nIf I want to create instances of another family, say 'Rectangle Elbow - Radius: 1W', how could I achieve that?\n\n<p><strong>Answer:</strong> How about creating them first, in whatever way you can, and then accessing the new family instance and setting its type as you like after it has been created. \nDoes that work? \n\n<p><strong>Response:</strong> Thanks for your suggestion. \nIt works! \n\n<p>I implemented the idea as follows:\n\n<p>1. Find the target type element id using the following code:\n\n<pre class=\"code\">\n  <span class=\"teal\">ICollection</span>&lt;<span class=\"teal\">ElementId</span>&gt; iElementIds \n    = fi.GetValidTypes();\n \n  <span class=\"blue\">if</span>( iElementIds != <span class=\"blue\">null</span> &amp;&amp; iElementIds.Count &gt; 0 )\n  {\n    <span class=\"blue\">string</span> typeInfo = <span class=\"maroon\">\"\"</span>;\n    <span class=\"blue\">foreach</span>( <span class=\"teal\">ElementId</span> eid <span class=\"blue\">in</span> iElementIds )\n    {\n      <span class=\"teal\">Element</span> elem = doc.get_Element( eid );\n      <span class=\"blue\">if</span>( elem != <span class=\"blue\">null</span> )\n      {\n        <span class=\"teal\">FamilySymbol</span> fs = elem <span class=\"blue\">as</span> <span class=\"teal\">FamilySymbol</span>;\n        typeInfo += fs.Family.Name + <span class=\"maroon\">\"  \"</span> \n          + elem.Name + <span class=\"maroon\">\"  \"</span> \n          + eid.IntegerValue.ToString() + <span class=\"maroon\">\"\\n\"</span>;\n      }\n    }\n    <span class=\"teal\">TaskDialog</span>.Show( <span class=\"maroon\">\"revit\"</span>, typeInfo );\n  }\n</pre>\n<p>2. Use the ChangeTypeId method to change the FamilyInstance type:\n\n<pre class=\"code\">\n  fi.ChangeTypeId( <span class=\"blue\">new</span> <span class=\"teal\">ElementId</span>( 133158 ) );\n</pre>\n</p></p></p></p></p></p></p></p>"
+  }
+]

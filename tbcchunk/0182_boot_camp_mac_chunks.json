@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0182_boot_camp_mac",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n\npre { \n  font-size : 95%; \n  line-height : 120%; \n  background-color : lightgrey;\n  white-space : wrap;\n  color: darkblue;\n  background-color : linen;\n}\n\npre.code { \n  color: black;\n  background-color : white; \n}\n\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n\n</style>"
+  },
+  {
+    "original_filename": "0182_boot_camp_mac",
+    "header_text": "Revit Boot Camp on Mac",
+    "local_header_href": "#revit-boot-camp-on-mac",
+    "chunk_text": "<h3>Revit Boot Camp on Mac</h3><p>Following up on the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/07/practical-notes-on-impractical-things.html\">\npractical notes on impractical things</a>, \n\nhere is one on a practical thing as well:</p><p>Autodesk is now officially supporting Apple Boot Camp for users of AutoCAD, 3ds Max, Inventor and last but not least the three flavours of Revit.\nBoot Camp is a component of the Mac OSX operating system that enables customers to run Windows on the Mac.\nSee \n\n<a href=\"http://www.autodesk.com/mac\">www.autodesk.com/mac</a> \n\nfor more general details and this \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/ps/dl/item?siteID=123112&amp;id=13578805&amp;linkID=9243099\">FAQ</a>\n\nfor some frequently asked Revit specific questions and hardware requirements.</p>"
+  }
+]

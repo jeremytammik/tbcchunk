@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0192_online_help",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0192_online_help",
+    "header_text": "Online Revit Help",
+    "local_header_href": "#online-revit-help",
+    "chunk_text": "<h3>Online Revit Help</h3><p>Help for the three Revit products is now available on the web, viewable in the browser.  \nLinks to the online help are provided on the documentation pages for each of the product centres:\n\n<center>\n<img alt=\"Online Help\" src=\"img/online_help.png\"/>\n</center>\n<p>Here are the links to the product centres for the three flavours of the product:</p>\n<ul>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=13080345\">Revit Architecture</a>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=13092650\">Revit MEP</a>\n<li><a href=\"http://usa.autodesk.com/adsk/servlet/index?siteID=123112&amp;id=13113091\">Revit Structure</a>\n</li></li></li></ul>\n<p>These are the direct links to the help information for each of the three flavours:</p>\n<ul>\n<li><a href=\"http://www.autodesk.com/revitarchitecture-help\">Revit Architecture Help</a>\n<li><a href=\"http://www.autodesk.com/revitmep-help\">Revit MEP Help</a>\n<li><a href=\"http://www.autodesk.com/revitstructure-help\">Revit Structure Help</a>\n</li></li></li></ul>\n<p>The benefits of the online help system include:\n\n<ul>\n<li>Increased Findability &amp; Usage: Web-based help is now accessible through Autodesk and third-party search engines such as Google.\n<li>Helps Resolve Support Issues: Customers can solve issues themselves through up to date web-based documentation. \n<li>Enables Collaboration: Users can now easily share URL links to product help with colleagues, driving usage and convenience.\n<li>Scalability and Performance:  This service is delivered via a global network of servers, ensuring scalability to support direct user access from millions of product seats.\n<li>Increases Efficiency: Publishing is quick and easy, updates can be published in hours as opposed to months.\n<li>Allows Maintainability: Updating product help between releases and service packs is possible, published updates appear immediately with no need to install a service pack.\n<li>Localization-Friendly: Facilitates publishing of localized web-based help.\n<li>Ensures Consistency: The solution generates a consistent URL to link the product to its corresponding web-based help based on the product, release, and language.\n<li>Enables Usage Tracking: Usage statistics can be tracked.\n</li></li></li></li></li></li></li></li></li></ul>\n</p></p>"
+  }
+]

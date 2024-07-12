@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1088_html5",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "1088_html5",
+    "header_text": "HTML5 for Teaching Maths and Physics",
+    "local_header_href": "#html5-for-teaching-maths-and-physics",
+    "chunk_text": "<h3>HTML5 for Teaching Maths and Physics</h3><p>Good morning and welcome to this new week.</p><p>I am pretty busy right now, so I will just recommend taking a look at something not related to the Revit API:\n\n<a href=\"http://world.mathigon.org\">\nMathigon</a>,\n\na stupendously beautiful interactive didactical mathematical eBook making advanced mathematical ideas accessible to the general public.\nMathematics has never been so colourful!</p><p>Very impressive use of HTML5, JavaScript, etc.</p><p>It reminds me of the\n\n<a href=\"http://codepen.io/stuffit/pen/KrAwx\">\nJavaScript physics sample</a> simulating ripping a curtain of tearable cloth that I\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/04/cloud-based-restaurant-seating-arrangement-and-cleaning.html#5\">\nmentioned</a> last\n\nspring, showing an extremely compact example using HTML5, Canvas, CSS and JavaScript to implement an interactive graphical physical simulation of a hanging tearable cloth in just three hundred lines of code.</p>"
+  }
+]

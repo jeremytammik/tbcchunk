@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0871_get_schedule_elements",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0871_get_schedule_elements",
+    "header_text": "Accessing all Elements in a Schedule",
+    "local_header_href": "#accessing-all-elements-in-a-schedule",
+    "chunk_text": "<h3>Accessing all Elements in a Schedule</h3><p>Here is a quick little post, with a surprisingly short and simple answer to a short and seemingly difficult Revit API question.\n\n<p>Before getting to that, I will just mention that I arrived safe and sound in Paris for a developer conference here.\nI had a walk in the sunset on the north bank of the Seine from the Gare de Lyon along the industrial areas on Quai de Bercy and crossed the river over the new-built Pont National to reach the rue de Tolbiac by a rather roundabout route.</p>\n<center>\n<img alt=\"Sur le Pont National\" src=\"file:///j/photo/jeremy/2012/2012-12-12_devdays_paris/sur_le_pont_national.jpeg\" width=\"400\"/>\n</center>\n<p>So, back to Revit; how can we easily retrieve all the elements listed in a schedule view?</p>\n<p><strong>Question:</strong> The Revit 2013 API finally enabled the creation of schedule views, which is great.\n\n<p>I would also need to query that schedule and retrieve all the element ids of the elements contained in it.\n\n<p>Currently, I am using the workaround of exporting the schedule and then comparing with elements within the project, which takes a considerable amount of time.\n\n<p>Is there any simpler way to achieve this?\n\n\n<p><strong>Answer:</strong> Yes, there is.\n\n<p>The schedule is a view, and its view id can be passed in to the filtered element collector just like any other.</p>\n<p>That will return the relevant elements.</p>\n<p>Sorry you had to go to all that unnecessary trouble  :-)</p>\n<p>Many thanks to\n\n<a href=\"http://redbolts.com\">Guy Robinson</a> for\n\npointing this out!</p>\n</p></p></p></p></p></p>"
+  }
+]

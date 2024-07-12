@@ -1,0 +1,50 @@
+[
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- arnost SD10752 external services at AU 2015\n  /a/doc/au/2015/todo_au.txt\n  update https://github.com/jeremytammik/UserMepCalculation\n  add link to Arnošt Löbel, SD10752 - Revit External Services—Make Built-in Features Behave Your Way\n\n0762_mep_2013.htm -- http://thebuildingcoder.typepad.com/blog/2012/05/the-revit-2013-mep-api-and-external-services.html\n0938_whats_new_2014.htm:3\n0986_mep_calculation.htm:7\n1054_mep_calculation.htm:2\n1176_extern_resource_serv.htm:1\n1380_au2015_day_1.md:3\n\n#dotnet #csharp\n#fsharp #python\n#grevit\n#responsivedesign #typepad\n#ah8 #augi #dotnet\n#stingray #rendering\n#3dweb #3dviewapi #html5 #threejs #webgl #3d #apis #mobile #vr #ecommerce\n#Markdown #Fusion360 #Fusion360Hackathon\n#javascript\n#RestSharp #restapi\n#mongoosejs #mongodb #nodejs\n#geometry #3d\n#xaml\n\nRevit API, Jeremy Tammik, akn_include\n\nExternal Services at #AU2015 #apis #revitapi #bim #aec #3dwebcoder #adsk #rtceur\n\nIt's been a while since I talked about External Services. The External Services framework was initially introduced and used sparingly in the Revit 2013 MEP API. In Revit 2014, the IFC export was moved to an external service and I presented the user-defined MEP calculation sample, later moved to GitHub. The framework for handling referenced file resources is also implemented as an external service. The motivation to continue this discussion now was given by Arnošt Löbel's class SD10752 on Revit External Services at Autodesk University 2015 in Las Vegas...\n\n-->"
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "External Services",
+    "local_header_href": "#external-services",
+    "chunk_text": "### External Services\n\nIt's been a while since I talked about External Services.\n\nThe External Services framework was initially introduced and used sparingly in\nthe [Revit 2013 MEP API](http://thebuildingcoder.typepad.com/blog/2012/05/the-revit-2013-mep-api-and-external-services.html).\n\nIn Revit 2014,\nthe [IFC export was moved to an external service](http://thebuildingcoder.typepad.com/blog/2013/04/whats-new-in-the-revit-2014-api.html) and\nI presented\nthe [user-defined MEP calculation sample](http://thebuildingcoder.typepad.com/blog/2013/04/whats-new-in-the-revit-2014-api.html),\nlater [moved to GitHub](http://thebuildingcoder.typepad.com/blog/2013/11/user-mep-calculation-sample-on-github.html).\n\nThe framework for handling [referenced file resources](http://thebuildingcoder.typepad.com/blog/2014/07/referenced-files-as-a-service.html) is\nalso implemented as an external service, using an implementation called the ExternalResourceService.\n\nThe motivation to continue this discussion now was given by Arnošt Löbel's class SD10752 on Revit External Services at Autodesk University 2015 in Las Vegas.\n\n<center>\n<img src=\"img/372_arnost_lobel_600x520.jpg\" alt=\"Arnošt Löbel\" width=\"600\">\n</center>"
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"1\"></a>Hashmas Hangover Run",
+    "local_header_href": "#a-name1ahashmas-hangover-run",
+    "chunk_text": "#### <a name=\"1\"></a>Hashmas Hangover Run\n\nBefore getting to that, I'll just mention that I joined\nthe [Hashmas Hangover run](http://www.meetup.com/Basel-Hash/events/226867168) organised by\nthe [Basel Hash House Harriers](http://www.meetup.com/Basel-Hash) for\na jog around the nice little Swiss town of Liestal last Sunday:\n\n<center>\n<a href=\"http://harrier.ch/Likkmm/CH-BaselH3/Events/BaHHH.20151213\">\n<img src=\"img/hhhbsl_2015-12-13.png\" alt=\"Hash House Harriers Basel Likk'mm trail run on December 13 2015\" width=\"563\">\n</a>\n</center>\n\nMany thanks to our incomparable hare [Likk'mm](http://harrier.ch/Likkmm), who laid the trail and provided the GPS track."
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"2\"></a>Revit External Services &ndash; Make Built-in Features Behave Your Way",
+    "local_header_href": "#a-name2arevit-external-services-ndash-make-built-in-features-behave-your-way",
+    "chunk_text": "#### <a name=\"2\"></a>Revit External Services &ndash; Make Built-in Features Behave Your Way\n\nThe Revit External Services framework enables developers to tailor the behavior of built-in Revit features to a level impossible to achieve with conventional external command-based add-ins. External Services have been used as a base to support customized MEP (mechanical, electrical, and plumbing) calculations, access externally stored data, replace built-in export/import filters, and many other Revit features. As Revit continues to grow there are new external services introduced with every major release, which gives developers new opportunities to provide their solutions on top of the Revit core functionality. Unfortunately, this feature has not been widely used by the yet, possibly due to the lack of comprehensive documentation, which is exactly the gap this class will attempt to fill. We explain the framework's main ideas, clearly illustrate the most anticipated uses and present a hands-on coding approach using a simple MEP friction calculator as an example.\n\nLearning objectives:\n\n- Learn how to identify all the parts that make up the Framework of External Services\n- Discover the framework's main workflows, expectations, and limitations\n- Learn how to find, organize, and use built-in external servers and services\n- Learn how to design and implement a custom server for a published service (e.g., a MEP friction calculator)\n\nBelow are Jeremy's session notes taken during the presentation, followed by the official [handout and class material](#6)."
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"3\"></a>Session Notes",
+    "local_header_href": "#a-name3asession-notes",
+    "chunk_text": "#### <a name=\"3\"></a>Session Notes\n\nThis framework was introduced in Revit two years ago.\n\nThere is scant documentation for it.\n\nHere is the agenda:\n\n- Five-mile view, philosophy and design.\n- Classes, implementation, workflows.\n- Code samples.\n\nIt could be used, e.g., to replace a spell checker. Note that this is a purely hypothetical example for the audience to better understand the workflow. Spell-checking in Revit is not really implemented as an external service.\n\nIn a nutshell: delegate a process to an external application for redefinition, enabling feature componentising and behaviour customisation.\n\nThe ApplicationInitialized event was implemented two years back explicitly so that external servers can register after all external services have been registered, i.e., after all OnStartup calls have completed.\n\nCurrently, we are renovating Revit inside out and adding a large number of services.\n\nWe implemented two sample applications just for this class:\n\n- [Server explorer](#4)\n- [Revit MEP calculation](#5)\n\nNote that these samples currently register their service in external commands.\n\nThis is totally unrealistic and only intended for demonstration purposes.\n\nA real external server would register its service during start-up instead.\n\nNote that the Revit SDK samples are not designed to be perfect and fully fleshed out, just demonstrate the basic code using the API."
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"4\"></a>Server Explorer",
+    "local_header_href": "#a-name4aserver-explorer",
+    "chunk_text": "#### <a name=\"4\"></a>Server Explorer\n\nThe first sample is the Server Explorer.\nIt lists all external servers and the services they provide.\n\nHere are the results of running the server explorer sample in Revit 2016 SP2:\n\n<center>\n<img src=\"img/sd10752_revit_external_service_explorer.png\" alt=\"Server Explorer Sample\" width=\"600\">\n</center>\n\nMEP calculations are one of the most important uses of external services.\n\nAs you can see from the output above, there are currently four servers for duct fitting pressure drop calculation."
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"5\"></a>Revit MEP Calculation",
+    "local_header_href": "#a-name5arevit-mep-calculation",
+    "chunk_text": "#### <a name=\"5\"></a>Revit MEP Calculation\n\nThe second example is a Revit MEP calculation external service sample for a pressure drop calculation.\n\nIt was implemented specifically for this AU class and, as mentioned, uses external commands to add and remove the calculator. A proper calculator will be implemented as an ExternalDBApplication with no external commands involved.\n\nIt currently just demonstrates the principles and returns hardcoded dummy calculation results."
+  },
+  {
+    "original_filename": "1385_external_service",
+    "header_text": "<a name=\"6\"></a>Handout and Class Material",
+    "local_header_href": "#a-name6ahandout-and-class-material",
+    "chunk_text": "#### <a name=\"6\"></a>Handout and Class Material\n\nThe two sample applications discussed above are included in\nthe [zip file containing the SD10752 class material](/a/doc/au/2015/doc2/sd10752_revit_external_services_arnost_lobel_samples.zip).\n\nJeremy's note to self:\nthe Revit 2014 [UserMepCalculation](https://github.com/jeremytammik/UserMepCalculation) sample\nis now superseded by this one and should be replaced.\n\nHere is Arnošt's [handout document](/a/doc/au/2015/doc2/sd10752_revit_external_services_arnost_lobel_handout.pdf).\nThe slide deck is very similar.\n\nMany thanks to Arnošt for preparing and presenting all this important material!"
+  }
+]

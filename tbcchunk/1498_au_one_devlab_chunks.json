@@ -1,0 +1,86 @@
+[
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nAU Day One, Keynote and DevLab #RevitAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge #AU2016 #beyondthebuilding #lofab #DevLab\n\nToday Autodesk University started up for real.\nFor me personally, the morning was occupied with booth preparation, the exciting keynote presentations and the afternoon DevLab Q&amp;A\n&ndash; Autodesk University Keynote\n&ndash; Jeff Kowalski, CTO\n&ndash; Machine learning\n&ndash; Generative design\n&ndash; Virtual reality\n&ndash; Robotic systems\n&ndash; Exciting times\n&ndash; Guest Speakers Christian Benimana and Anna Nixon\n&ndash; Carl Bass, CEO\n&ndash; DevLab\n&ndash; Forge Pricing\n&ndash; Cl3ver, Chaos Group and V-Ray...\n\n-->"
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "AU Day One, Keynote and DevLab",
+    "local_header_href": "#au-day-one-keynote-and-devlab",
+    "chunk_text": "### AU Day One, Keynote and DevLab\n\nToday Autodesk University started up for real.\n\nFor me personally, the morning was occupied with booth preparation, the exciting keynote presentations and the afternoon DevLab Q&amp;A:\n\n- [Autodesk University Keynote](#2)\n    - [Jeff Kowalski, CTO](#3)\n        - [Machine learning](#3.1)\n        - [Generative design](#3.2)\n        - [Virtual reality](#3.3)\n        - [Robotic systems](#3.4)\n        - [Exciting times](#3.5)\n    - [Guest Speakers Christian Benimana and Anna Nixon](#4)\n    - [Carl Bass, CEO](#5)\n- [DevLab](#6)\n- [Forge Pricing](#7)\n- [Cl3ver, Chaos Group and V-Ray](#8)\n\nHere are my very minimally edited and cleaned-up personal short-hand notes of the day.\n\nTake them or leave them  :-)\n\n<center>\n<img src=\"img/au2016_2.jpeg\" alt=\"AU2016\" width=\"624\">\n</center>"
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"2\"></a>Autodesk University Keynote",
+    "local_header_href": "#a-name2aautodesk-university-keynote",
+    "chunk_text": "#### <a name=\"2\"></a>Autodesk University Keynote\n\nA great DJane before and after the keynote itself.\n\nHere are some snapshots of her, the presenters, the huge 8k+ audience and the vastness of the hall at the end:\n\n<center>\n<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/jeremytammik/albums/72157660821078848\" title=\"AU2016 Keynote\"><img src=\"https://c3.staticflickr.com/6/5620/22835812418_73bf152c67_n.jpg\" width=\"320\" height=\"240\" alt=\"AU2016 Keynote\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>\n</center>"
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3\"></a>Jeff Kowalski, CTO",
+    "local_header_href": "#a-name3ajeff-kowalski-cto",
+    "chunk_text": "#### <a name=\"3\"></a>Jeff Kowalski, CTO\n\nMy favourite presentation, as you can well understand if you paid attention to my recent ponderings\non [AlphaGo](http://thebuildingcoder.typepad.com/blog/2016/01/bim-programming-madrid-and-spanish-connectivity.html#7) and how\nto [replace myself by artificial intelligence](http://thebuildingcoder.typepad.com/blog/2016/10/ai-edit-and-continue.html#3):\n\n- [Machine learning](#3.1)\n- [Generative design](#3.2)\n- [Virtual reality](#3.3)\n- [Robotic systems](#3.4)\n- [Exciting times](#3.5)"
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3.1\"></a>Machine learning",
+    "local_header_href": "#a-name31amachine-learning",
+    "chunk_text": "#### <a name=\"3.1\"></a>Machine learning\n\nTic-tac-toe, chess, jeopardy, go.\nIntuition.\nWhy is it doing what it is doing? The programmers don't know.\nSomething exponential is happening.\nTwo reasons: Unprecedented computing power plus computers teach themselves.\nIntuition, hunches.\nTransition from Spock to captain Kirk, logic to intuition."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3.2\"></a>Generative design.",
+    "local_header_href": "#a-name32agenerative-design",
+    "chunk_text": "#### <a name=\"3.2\"></a>Generative design.\n\nToronto office optimised using gd.\nPrioritise personal relationships.\nCreate best possible experience.\nDreamcatcher."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3.3\"></a>Virtual reality",
+    "local_header_href": "#a-name33avirtual-reality",
+    "chunk_text": "#### <a name=\"3.3\"></a>Virtual reality\n\nImmersive, more connected to your data, emotional, real.\nAutodesk Live.\nCollaborate.\nBuild a bridge of shared understanding.\nUltimate step: Designing in VR."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3.4\"></a>Robotic systems",
+    "local_header_href": "#a-name34arobotic-systems",
+    "chunk_text": "#### <a name=\"3.4\"></a>Robotic systems\n\nGet things real, physical.\nNothing new, but team them up with machine learning and generative design...\ntechnology is only one half of the equation.\nThreat? Nope, wrong. Superpower.\nNot *coming* for us, but coming *for* us."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"3.5\"></a>Exciting times",
+    "local_header_href": "#a-name35aexciting-times",
+    "chunk_text": "#### <a name=\"3.5\"></a>Exciting times\n\nThe people doing the work... talent.\nStability &rarr; mobility.\nFree-lancers.\nVastly larger pool of talented people\nBring them to any challenge you embrace.\nLast point:\nHuman learning\nPressure on all of us to learn more quickly.\nDon't stop your education.\nNever stop learning.\nOngoing learning."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"4\"></a>Guest Speakers Christian Benimana and Anna Nixon",
+    "local_header_href": "#a-name4aguest-speakers-christian-benimana-and-anna-nixon",
+    "chunk_text": "#### <a name=\"4\"></a>Guest Speakers Christian Benimana and Anna Nixon\n\nChristian Benimana of\nthe [African Design Centre](https://massdesigngroup.org/work/research/african-design-centre) in\nRwanda, 'home of the best coffee in the world', architect, talked about \n[#beyondthebuilding](https://twitter.com/hashtag/beyondthebuilding), human dignity and [#lofab local fabrication](https://twitter.com/hashtag/lofab).\n\nAnna Nixon, 16 years old, high school student, presented her experiences participating in\nthe [FIRST Robotics Competition](https://en.wikipedia.org/wiki/FIRST_Robotics_Competition).\n\nShe quotes John Dewey:\n\n> We only think when confronted with a problem.\n\nSo give students a chance and a challenge: robots, [stem4girls](http://www.stem4girls.org), \n*Science Technology Engineering and Math for Girls*.\n\nThe most valuable asset to any worker: learn, and keep on learning."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"5\"></a>Carl Bass, CEO",
+    "local_header_href": "#a-name5acarl-bass-ceo",
+    "chunk_text": "#### <a name=\"5\"></a>Carl Bass, CEO\n\nWhat we are doing today seemed impossible a few years back.\n\nReusable rocket.\n\nZarah Hadid is dead. Her building is being manufactured, not built.\n\nAutomobile industry in uproar for three reasons:\n\n- Autonomous car\n- Car sharing, ownership\n- Electric or hybrid Powertrains\n\nScaring the crap out of the automobile industry.\nNot a driving experience, a passenger experience.\nNow its Uber.\nNot pay by car, but pay by access.\nTransportation as a service, from a range of providers.\nGoogle car short range, fast Mercedes for the long range motorway.\n\nLet go of the old system, embrace the new.\nHow?\nHow to transition?\nExperiment.\nBuild a small team and try it out, gather experience.\nBe proactive.\nDo not be afraid of new ideas.\nThe automobile is just one example of an industry faced with three serious challenges today.\nDisruption can be the source of new value.\nThis might make your company great in the future.\nAutodesk is facing disruptions, e.g., machine learning.\nIt can be used to design new software.\nPreviously it was all about deterministic software programming, and speeding it up.\nNow create software that customises itself.\n\nDesign Graph in A360: \nIf you have a bolt in your design, it can show you all the fitting washers and nuts.\n\nCADCAM driven by machine learning to automate machining speeds.\nAn algorithm figures out what took each machinists years of experience to learn.\nAI can learn from existing digital designs.\nTools can learn from experiences.\n\nWe are not building tools for individuals.\nNow we build tools for teams.\nMake teams more productive.\nCollaborate well.\nRespond together to a changing environment.\n\n<center>\n<img src=\"img/au2016.jpeg\" alt=\"AU2016\" width=\"717\">\n</center>"
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"6\"></a>DevLab",
+    "local_header_href": "#a-name6adevlab",
+    "chunk_text": "#### <a name=\"6\"></a>DevLab\n\nDevelopers can come and ask questions.\n\nHere is my personal shorthand mini-summary of the Q&amp;A that I fielded myself:\n\n<b>[Q]</b> How to collapse a tree view, specifically the Revit project browser?\n\n<b>[A]</b> Spy++ and `EnumChildWindows`:\n\n- Use Spy++ to discover how to identify the tree view container window:\n    - `C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\spyxx.exe`\n- Use `EnumChildWindows` with the Revit window handle to find the window containing the tree view,\ncf. how to [collapse 'My Computer' in tree view of explorer.exe by program](https://social.msdn.microsoft.com/Forums/en-US/31466763-4f0d-4516-a58a-13024d54f2c0/collapse-my-computer-in-tree-view-of-explorerexe-by-program): ... to collapse the treeview, send the `TVM_EXPAND` Message with `wParam` set to `TVE_COLLAPSE` message to the `SysTreeView32` which is the tree view control, with `lParam` set to the node handle.\n \n<b>[Q]</b> When printing from Revit, how can I determine whether the file creation really fully completed?\n\n<b>[A]</b> Check out [how can I detect via Windows API when a file is being written to a folder?](https://www.quora.com/How-can-I-detect-via-Windows-API-when-a-file-is-being-written-to-a-folder).\n\n<b>[Q]</b> I am trying to find the centre line reference of a sprinkler family, but can’t always do so.  My first question: if you do get a reference of an element, how do you get the geometry associated with that element?\n\n<b>[A]</b> Use `Element.GetGeometryObjectFromReference` like this:\n\n<pre class=\"code\">\n  <span style=\"color:#2b91af;\">Reference</span>&nbsp;r&nbsp;=&nbsp;<span style=\"color:blue;\">null</span>;\n  <span style=\"color:#2b91af;\">Document</span>&nbsp;doc&nbsp;=&nbsp;<span style=\"color:blue;\">null</span>;\n  <span style=\"color:#2b91af;\">Element</span>&nbsp;e&nbsp;=&nbsp;doc.GetElement(&nbsp;r.ElementId&nbsp;);\n  <span style=\"color:#2b91af;\">GeometryObject</span>&nbsp;geo&nbsp;=&nbsp;e.GetGeometryObjectFromReference(&nbsp;r&nbsp;);\n</pre>\n\nHowever, please note that `GetGeometryObjectFromReference` is not foolproof, especially for references to datums,\nWe have a pending wish list item `REVIT-102253` to provide more direct access to the common references stored in families.\nThere are also several Revit Idea Station requests related to access to references. \n\n<b>[Q]</b> How can I refresh the graphics after updating the element from a modeless WPF form?\n\n<b>[A]</b> Check out these two posts on refreshing graphics:\n\n- [2011-07](http://thebuildingcoder.typepad.com/blog/2011/07/refresh-element-graphics-display.html)\n- [2014-06](http://thebuildingcoder.typepad.com/blog/2014/06/refresh-element-graphics-display.html)\n\nYou should also explore The Building Coder topic\ngroup [5.33](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.33) on\nthe [need to regenerate](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.33).\n\n<b>[Q]</b> Do you have any suggestions for an open source IFC toolkit?\n\n<b>[A]</b> Yes, please refer to\nthe [y GeometryGymIFC Open Source C# Library](http://thebuildingcoder.typepad.com/blog/2016/07/ifc-import-and-open-source.html#4).\n\n<b>[Q]</b> I have a Revit API wish list item. How can I ensure that it is given the attention it deserves?\n\n<b>[A]</b> Submit it to the [Revit Idea Station](http://forums.autodesk.com/t5/revit-ideas/idb-p/302/label-name/api/tab/most-recent),\n\n<b>[Q]</b> I am creating a Revit plugin to bulk upgrade old version RVT files to new version. I need to run this process in the background so that other tasks can be performed during this upgrade process. Can you please guide us to how to run this upgrade process in the background?\n\n<b>[A]</b> The topic of driving Revit from outside or other background threads has been discussed extensively in the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api/bd-p/160) and in the posts listed in The Building Coder topic group on [Idling and External events for modeless access and driving Revit from outside](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.28). Please explore that material in some depth to begin with. I would recommend starting at the end, since the last two entries in that topic list provide a good overview. Regarding the bulk upgrade, you will probably also be interested in taking a look at Saikat Bhattacharya's [File Upgrader add-in](http://thebuildingcoder.typepad.com/blog/2011/06/file-upgrader-plugin-of-the-month.html). It may be outdated, though. It was originally written for Revit 2012 and updated several later Revit versions. For a while, it was also available from the Autodesk Exchange AppStore. The last version that I have stored locally is [FileUpgrader_2015-08-27.zip](zip/FileUpgrader_2015-08-27.zip).\n\n<b>[Q]</b> I am interested in tracking and logging element modification.\n\n<b>[A]</b> Check out the posts on [tracking element modification](http://thebuildingcoder.typepad.com/blog/2016/01/tracking-element-modification.html) and [TrackChangesCloud](http://thebuildingcoder.typepad.com/blog/2016/03/implementing-the-trackchangescloud-external-event.html).\n\n<b>[Q]</b> Do you have any suggestions on using extensible storage in a worksharing environment?\n\n<b>[A]</b> Yes. They are included in The Building Coder topic\ngroup [5.23](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.23)\non [extensible storage](http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.23)."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"7\"></a>Forge Pricing",
+    "local_header_href": "#a-name7aforge-pricing",
+    "chunk_text": "#### <a name=\"7\"></a>Forge Pricing\n\nAs Jim Quanci announced yesterday at\nthe [DevDay conference general session](http://thebuildingcoder.typepad.com/blog/2016/11/devday-conference-at-autodesk-university.html#2),\n[Forge subscriptions](https://developer.autodesk.com/en/pricing) successfully launched.\n\nYou can now take your apps to production\nwith [flexible cloud credits and more cost-efficient services](http://adndevblog.typepad.com/cloud_and_mobile/2016/11/forge-update-take-your-apps-to-production-flexible-cloud-credits-and-more-cost-efficient-services.html).\n\n- Based on community feedback, Forge pricing​ is based on cloud credits redeemable for use on Forge API calls, simplified storage and more cost effective platform services.\n- New Forge registrants will automatically be signed up for a free trial with a set number of cloud credits for Forge that expire after 12 months.\n- Existing Forge registrants can continue to use Forge for free until their account is converted to a free trial beginning December 9.\n- Developers in US and Europe can now subscribe to Forge online and receive a set number of cloud credits each month applicable to Forge APIs and services.\n- Anyone with expected usage beyond the subscription limits should contact Autodesk Forge sales."
+  },
+  {
+    "original_filename": "1498_au_one_devlab",
+    "header_text": "<a name=\"8\"></a>Cl3ver, Chaos Group and V-Ray",
+    "local_header_href": "#a-name8acl3ver-chaos-group-and-v-ray",
+    "chunk_text": "#### <a name=\"8\"></a>Cl3ver, Chaos Group and V-Ray\n\n[Chaos Group](https://www.chaosgroup.com)\ncreate [V-Ray for Revit](https://www.chaosgroup.com/vray/revit) and\nare now partnering with the AEC presentation start-up [CL3VER](https://www.cl3ver.com).\nFor more details, please refer to the [press release](http://www.prweb.com/releases/2016/11/prweb13851266.htm)."
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!---\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n#dotnet #csharp\n#fsharp #python\n#grevit\n#responsivedesign #typepad\n#ah8 #augi #dotnet\n#stingray #adsklabs #rendering\n#3dweb #3dviewapi #html5 #threejs #webgl #3d #apis #mobile #vr #ecommerce\n#Markdown #Fusion360 #Fusion360Hackathon\n#javascript\n#RestSharp #restapi\n#mongoosejs #mongodb #nodejs\n#rtceur\n#geometry #3d\n#xaml\n\nRevit API, Jeremy Tammik, akn_include\n\n#AU2015 Keynote and Revit API Panel #revitapi #bim #aec #3dwebcoder #adsk\n\nThe first day at Autodesk University was jam-packed full and exciting as always. My main highlights were\n&ndash; The Keynote session\n&ndash; The DevHack\n&ndash; Arnošt Löbel's class SD10752 on Revit External Services\n&ndash; The Revit API panel...\n\n-->"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "AU Keynote and Revit API Panel",
+    "local_header_href": "#au-keynote-and-revit-api-panel",
+    "chunk_text": "### AU Keynote and Revit API Panel\n\nThe first day at Autodesk University was jam-packed full and exciting as always.\n\nMy main highlights were:\n\n- [The Keynote session](#2)\n- The DevHack\n- Arnošt Löbel's class SD10752 on Revit External Services\n- [The Revit API panel](#9)\n\nI'll discuss Arnošt's class and important information later separately.\n\nHere is my keynote photo album:\n\n<center>\n<a data-flickr-embed=\"true\"  href=\"https://www.flickr.com/photos/jeremytammik/albums/72157661776840791\" title=\"Autodesk University Keynote\"><img src=\"https://farm1.staticflickr.com/671/23433426586_75a9e3950f_n.jpg\" width=\"400\" height=\"300\" alt=\"Autodesk University Keynote\"></a><script async src=\"//embedr.flickr.com/assets/client-code.js\" charset=\"utf-8\"></script>\n</center>"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"2\"></a>Autodesk University Keynote",
+    "local_header_href": "#a-name2aautodesk-university-keynote",
+    "chunk_text": "#### <a name=\"2\"></a>Autodesk University Keynote\n\nThe keynote featured the following speakers:\n\n- [Lynn Allen](#3)\n- [Andrew McAffee](#4)\n- [Carl Bass](#5)\n- [Jeff Kowalski](#6)\n- [Hugh Herr](#7)\n\nCheck out the [live stream](http://au.autodesk.com/au-online/live-stream?utm_source=calendar&utm_medium=ics&utm_campaign=live-stream)\nand [keynote recording](http://au.autodesk.com/au-online/classes-on-demand/class-catalog/2015/class-detail/11906#chapter=0).\n\nHere are my very short and possibly rather cryptic notes on the event:"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"3\"></a>Lynn Allen",
+    "local_header_href": "#a-name3alynn-allen",
+    "chunk_text": "#### <a name=\"3\"></a>Lynn Allen\n\nLynn Allen checked an item off her bucket list and was accompanied onto the stage by a star wars escort of a dozen-plus armoured stormtrooper warriors:\n\n<center>\n<img src=\"/p/2015/2015-12-00_las_vegas/2015-12-01_keynote/345_lynn_allen_star_wars.jpg\" alt=\"Lynn Allen in Star Wars\" width=\"320\">\n</center>\n\nRather a lot of loud music and break dance."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"4\"></a>Carl Bass",
+    "local_header_href": "#a-name4acarl-bass",
+    "chunk_text": "#### <a name=\"4\"></a>Carl Bass\n\n<center>\n<img src=\"/p/2015/2015-12-00_las_vegas/2015-12-01_keynote/356_carl_bass.jpg\" alt=\"Carl Bass\" width=\"320\">\n</center>\n\nThe production of a car has a much larger environmental impact than its entire lifetime of running it.\nMore important to improve the process of making it than improve its running.\nLook at the right problem to address.\nThere won't be a shortage of jobs, but a shortage of good people.\nHow can you attract good employees?\nPeople care more about doing meaningful work than perks."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"5\"></a>Andrew McAffee",
+    "local_header_href": "#a-name5aandrew-mcaffee",
+    "chunk_text": "#### <a name=\"5\"></a>Andrew McAffee\n\nAndrew McAffee, MIT, author of *The Second Machine Age*.\nAnalysis human development, ever increasing use of resources.\nInnovation.\nDematerialization: use of basic commodities is sinking: alu, copper, potash, phosphate, lead, iron and steel.\nComputerization.\nBottomless thirst for resources is being replaced by a bottomless thirst for information, code and computerisation.\nVery optimistic!\nTwo remaining challenges:\n\n- Global warming.\n- Economic problems\n\nDiminishing labour class.\nCapital versus labour:\nCorporate profits versus GDP is in a healthy place.\nNon-farm labour share is sinking dramatically since turn of the century.\nWhat happens to people as their skills get left behind?\nCan we unplug all the robots?\nNo, we do not want to go back.\n\n<center>\nWe can make things better only by tireless improvement &ndash; *Winston Churchill*\n</center>\n\n<center>\nTechnology is a gift of god &ndash; *Freeman Dyson*\n</center>\n\nWe are restoring forests.\nWhales are coming back to NYC."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"6\"></a>Jeff Kowalski",
+    "local_header_href": "#a-name6ajeff-kowalski",
+    "chunk_text": "#### <a name=\"6\"></a>Jeff Kowalski\n\n<center>\n<img src=\"/p/2015/2015-12-00_las_vegas/2015-12-01_keynote/357_jeff_kowalski.jpg\" alt=\"Jeff Kowalski\" width=\"320\">\n</center>\n\nThe next 20 years will change our work as much as in the past 2000.\nFour eras: hunter and gatherer, culture, industrial, information.\nCusp to next era: augmented age.\nAugmented cognition.\nTools, levels of computing: passive &rarr; generative &rarr; intuitive &rarr; empathic.\nComputers explore entire solution space and find solutions we never imagined.\nAutodesk and Airbus: generative design project.\nSave half a million tons of CO2 emission per year for just one single improved component.\nIntuition: learn by observation.\nPay attention, remember what happens next, retain a pattern in your mind.\nMachines are learning to learn.\nEmpathic: embed human reactions into the system.\nGive you not just what you ask for, but what you really need.\nProject Hive, a pavilion built by cooperation of robots and humans.\nIt could not have been built by either alone."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"7\"></a>Hugh Herr",
+    "local_header_href": "#a-name7ahugh-herr",
+    "chunk_text": "#### <a name=\"7\"></a>Hugh Herr\n\n<center>\n<img src=\"/p/2015/2015-12-00_las_vegas/2015-12-01_keynote/361_hugh_herr.jpg\" alt=\"Hugh Herr\" width=\"320\">\n</center>\n\nDr. Hugh Herr, MIT Media Lab, lost both legs from frostbite in the eighties.\nNow he is back to climbing with artificial limbs.\nHe is climbing at a higher level than before.\nHis artificial limbs enable him to achieve things than natural limbs cannot.\n\n<center>\n*Take technology away from me, and I am crippled.*\n\n*With technology, I am free.*\n</center>"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"8\"></a>Jeff Kowalski Wraps Up",
+    "local_header_href": "#a-name8ajeff-kowalski-wraps-up",
+    "chunk_text": "#### <a name=\"8\"></a>Jeff Kowalski Wraps Up\n\nIoT, give the computer a nervous system.\nBandito bros in LA.\nGuinness world record for the longest car jump, first cork screw and double 360 loop.\nFeed the input from test drives back into the design of a car chassis."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "<a name=\"9\"></a>Revit API Panel at AU",
+    "local_header_href": "#a-name9arevit-api-panel-at-au",
+    "chunk_text": "#### <a name=\"9\"></a>Revit API Panel at AU\n\nThis is session SD10181 *Revit API Expert Roundtable &ndash; Open House on the Factory Floor*."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Learning objectives",
+    "local_header_href": "#learning-objectives",
+    "chunk_text": "##### Learning objectives\n\n- Find answers to Revit programming questions bugging you\n- Meet and make yourself heard to the Revit development team and ADN experts\n- Discuss your needs and wishes with Autodesk employees and your peers\n- Gain a first-hand impression of the current hot Revit API issues"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Description",
+    "local_header_href": "#description",
+    "chunk_text": "##### Description\n\nInteract with a panel of Revit API experts from Autodesk to answer your questions and discuss all relevant topics of your choice. For anyone writing add-ins for Revit, this is the perfect forum to better get to know the people who shape the APIs you work with and explain your views, ideas, and problems face to face. Please note that prior .NET programming and Revit add-in development experience is required. This class is not suitable for beginners."
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Overview",
+    "local_header_href": "#overview",
+    "chunk_text": "##### Overview\n\nWe meet, introduce ourselves, and discuss advanced Revit API issues. Please also refer to the notes from previous similar Revit API panel sessions, e.g.:\n\n- [SD5156 &ndash; The Revit API Expert Panel at Autodesk University 2014](http://thebuildingcoder.typepad.com/blog/2014/12/the-revit-api-panel-at-autodesk-university.html#1)\n- [The Revit API Panel at the Revit Technology Conference RTC Europe 2015](http://thebuildingcoder.typepad.com/blog/2015/11/rtc-budapest-and-the-revit-api-panel.html#5)"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Panellists",
+    "local_header_href": "#panellists",
+    "chunk_text": "##### Panellists\n\n- Arno&scaron;t L&ouml;bel, Revit Development, Senior Principal Engineer\n- Augusto Gonçalves, ADN, Senior Developer Consultant\n- Ian Keough, Principal Engineer, Dynamo Expert\n- Jeremy Tammik, ADN, Principal Developer Consultant\n- Mikako Harada, ADN, AEC Technical Lead\n- Saikat Bhattacharya, Autodesk Consulting, Technical Consultant"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Questions, Answers and Notes &ndash; Live!",
+    "local_header_href": "#questions-answers-and-notes-ndash-live",
+    "chunk_text": "##### Questions, Answers and Notes &ndash; Live!\n\n[Q] PostCommand during Idling suddenly crashes Revit since Revit SP2. What happened? It is giving us a bad reputation.\n\n[A] It worked in SP1, and crashed in SP2?\n\n[Q] Yes. It actually crashes Revit, Revit just disappears. We did raise a case for this.\n\n[A] You need to make sure this is reported properly and we will look into it. We have to be able to reproduce it. Please describe exactly how we can reproduce the issue for testing and analysis and verification that our fixes really help. There was a problem of using PostCommand within PostCommand. That part was fixed and has been released. We also try improve the pre-release handling so testing can be improved. Another issue: some commands could not be posted. That has been fixed in Revit 2016. Unfortunately, this introduced a different issue that caused an exception to be thrown. If you have bad reviews in the AppStore due to this, please contact hazel Wood and ask her to arrange with the AppStore customers to fix those detrimental comments.\n\n[Q] We have a modeless app. Revit goes into edit mode. The Idling thread is not running due to the edit mode.\n\n[A] Unfortunately, this is not possible. We are not in control of Idling. If Idling does not come to your application, we cannot help. When the first Idling call occurs, you can control whether further calls should be made. If you want more control, you might want to look at the external events instead. Second part: how to find out whether it is possible at all to communicate with Revit? There is no such API call, e.g. to ask whether Revit is busy.\n\n[Q] Wish: Could we have an event so that Revit can tell us, 'I am ready to accept requests'?\n\n[A] Yes.\n\n[Q] Locking a custom family within another family. When you move a family instance, another instance should follow it.\n\n[A] Use DMU, dynamic model updater. Yes, please look at the DynamicModelUpdate AssociativeSection SDK sample.\n\n[Q] I implemented a Revit add-in that exports all schedules in the model to Excel. I used the built-in ViewSchedule.Export method. Unfortunately, it just exports the schedule data, but does not provide the element id enabling me to link it back to the source elements to connect the external data back into the BIM. Could we have an element id added to the schedule rows? Or is there some other solution?\n\n[A] In Autodesk Consulting, we often address this by adding shared parameters that hold the element id or UniqueId so that these show up automatically in the schedule.\n\n[Q] An issue with shared parameters. I have text, numerical and Boolean valued ones. When creating a shared parameter in grouping, they are allowed or not allowed to have different values. Certain parameter types are not allowed to vary within groups, only text ones. This is the same in both UI and API. This is not a bug, more a wish list item.\n\n[A] Please submit a wish list item with a minimal reproducible case and use case to the [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api/bd-p/160).\n\n[Q] I would like more API access to the ribbon. How can I put something into the ribbon without a label?\n\n[A] Yes, the Revit ribbon customisation functionality is rather limited. This sounds like another wish list item. Please avoid creating workarounds for things like this, because that will probably cause problems in the long run. We prefer hearing about your needs and trying to address them directly. The initial ribbon was not customisable at all. That was intentional. The limitations are partially intentional.\n\n[Q] How about adding a label to the ribbon? And the little ticks that you have in the corner of the panel? Those two things would be really useful.\n\n[A] Please log a wish list item for that as well. Thank you.\n\n[Q] I have a question about transactions, transaction groups and sub-transactions, and how they affect the undo list. I would like to avoid partial undos. Surely there must be a way to roll several transactions into one in the undo list.\n\n[A] Yes, this can be done. The transaction group is the solution for this. All transaction can be rolled into one single undo item by calling Assimilate on the group instead of Commit. This does not just affect the user interface, but really saves space in the undo stack as well. When you assimilate, you can also define the name that appears and is displayed to the end user.\n\n[Q] What are the top five wish list items?\n\n[A] We cannot share certain information for legal reasons. We also do not want to get your hopes too high. Until we are done we don’t know for certain whether we can complete anything at all. The priorities are affected by a number of factors: number of requests, expense, gains, feasibility, marketing, project management, etc.\n\n[Q] My add-in was affected by the Revit 2016 R2 release. As a developer, we need to test the new functionality introduced between releases before it becomes public. As Autodesk moves towards continuous releases, how are we going to be able to test these changes before they are released?\n\n[A] Become a beta tester. In the case of the R2 changes, some of the effects on add-ins were unintended. Lessons were learned. The update was totally binary compatible. In real life, even if it is binary compatible, some unintended changes behind the scenes can still break things. It helps if the add-ins really only makes use of the API in a legal manner.\n\n[Q] I have a PickPoint question, or possibly a wish list item: Does PickPoint support snapping? We are placing a face based family instance.\n\n[A] We are working in this area. Look at Arno&scaron;t’s presentation on external services. Please do submit a request for your exact need. Letting us know will always help. There might be another workaround: you can pick a 3D point by temporarily setting up an appropriate work plane.\n\n[Q] Pipe fittings and MEP. We use categories to differentiate pipes, fittings, etc. For fabrication, this is harder, because they are all fabrication parts, one single category.\n\n[A] First step might be to use RevitLookup and examine the properties. Please let us know about your needs.\n\n[Q] Many Revit API functions just return true or false. Could we have more information on why it might have failed? For instance, view sets.\n\n[A] Sorry :-) There are obviously some historical reasons. These often come from the first API generation. Communication was limited. Newer functionality should behave better.\n\n[Q] We see solid modelling errors in Revit. Is the kernel really the same in AutoCAD, Revit and other products? That seems improbable.\n\n[A] The modeller really is the same. All products use the same modeller internally. It has its own API. Each product uses the modeller differently and creates its own wrapper for it. If you see a problem, please report it to us. Thank you!\n\n[Q] Can we call a Dynamo script from within a Revit add-in?\n\n[A] The official answer is no. Unofficially, you should check out the dynamo automation package to allow Dynamo to start up Revit as a batch process using journaling and launch Revit on top of Dynamo, also launched via journaling. Search for Dynamo automation on GitHub.\n\n[Q] Adding shared parameters seems a bit inefficient. You have to switch to a different shared parameter file. Could this be improved? Just create a shared parameter on the fly?\n\n[A] Yes, this area is not beautiful.\n\n[Q] Wall justification. I would like more options for them, and a placement point for columns, not just offsets.\n\n[A] Please submit a wish list item for these. Thank you!\n\nMany thanks to everybody, participants and panellists, for your enthusiasm and interest!"
+  },
+  {
+    "original_filename": "1380_au2015_day_1",
+    "header_text": "Learning More",
+    "local_header_href": "#learning-more",
+    "chunk_text": "##### Learning More\n\n- [Revit Developer Centre](http://www.autodesk.com/developrevit): DevTV and My First Plugin Introduction, SDK, Samples, API Help\n- [Developer Guide and Online Help](http://www.autodesk.com/revitapi-help)\n- [Autodesk Discussion Group Community](http://forums.autodesk.com) > Revit Architecture > [Revit API](http://forums.autodesk.com/t5/revit-api/bd-p/160)\n- [ADN AEC DevBlog](http://adndevblog.typepad.com/aec)\n- [The Building Coder Revit API Blog](http://thebuildingcoder.typepad.com)\n- [ADN](http://www.autodesk.com/joinadn), The Autodesk Developer Network and [ADN Open](http://www.autodesk.com/adnopen)"
+  }
+]

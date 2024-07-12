@@ -1,0 +1,218 @@
+[
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\n- Electrical Wire not found in BoundingBoxIsInsideFilter\n  https://forums.autodesk.com/t5/revit-api-forum/electrical-wire-not-found-in-boundingboxisinsidefilter/m-p/11938583\n  ricaun created the BoundingBoxViewIntersectsFilter and BoundingBoxViewIsInsideFilter:\n  https://gist.github.com/ricaun/14ec0730e7efb3cc737f2134475e2539\n\n- https://forums.autodesk.com/t5/revit-api-forum/visualizing-circuits-in-3d/td-p/11937368\n\n- align two elements:\n  How to use the Alignment method for family Instance\n  https://forums.autodesk.com/t5/revit-api-forum/how-to-use-the-alignment-method-using-for-family-instance/m-p/11938454\n\ntwitter:\n\nAligning two elements for a constraint and two electrical wire issues, filtering and visualising circuits in 3D in the @AutodeskRevit #RevitAPI #BIM @DynamoBIM @AutodeskAPS https://autode.sk/find_see_wire\n\nTwo challenging electrical wire issues addressed by @ricaun and a recurring question on element alignment for defining a constraint\n&ndash; Bounding box filter for wires\n&ndash; Visualizing circuits in 3D\n&ndash; Aligning two elements...\n\nlinkedin:\n\nAligning two elements for a constraint and two electrical wire issues, filtering and visualising circuits in 3D in the #RevitAPI\n\nhttps://autode.sk/find_see_wire\n\n- Bounding box filter for wires\n- Visualizing circuits in 3D\n- Aligning two elements...\n\n#BIM #DynamoBIM #AutodeskAPS #Revit #API #IFC #SDK #Autodesk #AEC #adsk\n\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread\n\n<center>\n<img src=\"img/\" alt=\"\" title=\"\" width=\"600\"/>\n<p style=\"font-size: 80%; font-style:italic\"></p>\n</center>\n\n-->"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "Aligning Elements, Finding and Visualising Wires",
+    "local_header_href": "#aligning-elements-finding-and-visualising-wires",
+    "chunk_text": "### Aligning Elements, Finding and Visualising Wires\n\nTwo challenging electrical wire issues addressed by\nLuiz Henrique [@ricaun](https://github.com/ricaun) Cassettari and\na recurring question on element alignment for defining a constraint:\n\n- [Bounding box filter for wires](#2)\n- [Visualizing circuits in 3D](#3)\n- [Aligning two elements](#4)"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "Bounding Box Filter for Wires",
+    "local_header_href": "#2",
+    "chunk_text": "####<a name=\"2\"></a> Bounding Box Filter for Wires\n\nLuiz shared a solution for the task of retrieving electrical wires within a bounding box in the thread\non [electrical wire not found in `BoundingBoxIsInsideFilter`](https://forums.autodesk.com/t5/revit-api-forum/electrical-wire-not-found-in-boundingboxisinsidefilter/m-p/11938583):\n\n**Question:** I am currently trying to locate electrical wires that exist within a dependent view's bounding box. However, I have not been successful in using methods such as BoundingBoxIsInsideFilter, BoundingBoxIntersectsFilter, or VisibleInViewFilter.\n\nIn order to obtain a wire's bounding box, I had to use `wire.get_BoundingBox`, passing in the view it exists on, to get any value for its location.\nDespite following Jeremy's example in message #4 in the thread\non how to [check to see if a point is inside bounding box](https://forums.autodesk.com/t5/revit-api-forum/check-to-see-if-a-point-is-inside-bounding-box/m-p/4354446),\nI am still unable to get any wires into my list.\n\n<center>\n<img src=\"img/electrical_wire_collector.png\" alt=\"Electrical wire collector\" title=\"Electrical wire collector\" width=\"800\"/> <!-- Pixel Height: 534 Pixel Width: 1,757 -->\n<p style=\"font-size: 80%; font-style:italic\">Electrical wire collector</p>\n</center>\n\n**Answer:** I am not sure whether the filtered element collectors are ever able to take wire geometry into account.\nDo your wires have real geometry, e.g., a curve and a location?\nThe filtered element collectors only deal with BIM elements and BIM element geometry.\nIf your wires have valid geometry, it may not be recognised by them a valid BIM element geometry,\nso you will have to treat is as abstract pure non-BIM geometry and use other means than the filtered element collectors to retrieve it.\nSo, yes, using a pure geometry bounding box sounds like a good way to go.\nJust be clear that this is completely separate from filtered element collectors.\n\n**Response:** Yes sir they do have a curve and location, I am able to find them just fine through the `FilteredElementCollector` for each View, except on a Dependent View.\n\nThe Dependent View will show all wires of the Primary View not just what is within its Crop Region.\nTook a few iterations but I finally found how to get the actual Crop Region of the Dependent View,\nthe first few ways I tried gave me the Primary Views Crop Region, so I ended up having to get the\nextents from the BuiltInParameter.\n\nI also tried to extend my Z from that 1000' in either direction and it still did not show up,\nbut if I invert any of those three filters, it finds all the wires of the Primary View even\nincluding the handful inside the Crop Region which shouldn't with it inverted.\n\n<!--\nThis is the extents of the Dependent Views Crop Region:\n\nMikeM615_3-1682684885657.png\n\nAnd these are the wires within it:\n\nMikeM615_4-1682684901736.pngMikeM615_5-1682684903736.pngMikeM615_6-1682684905452.png\n-->\n\nEverything at face value looks like the filters should work, it just seems I am missing something simple.\nHere is the section of code I used just to produce those values, but the `BoundingBoxIsInsideFilter` is failing on:\n\n<pre class=\"prettyprint\">\n  private List&lt;Wire&gt; WireCollector( ForEachView viewPlan )\n  {\n    List&lt;Wire&gt; wireCollector\n      = new FilteredElementCollector( _Doc, viewPlan.Id )\n        .OfCategory( BuiltInCategory.OST_Wire )\n        .WhereElementIsNotElementType( )\n        .OfType&lt;Wire&gt;( )\n        .ToList( );\n\n    // If view is dependent view, filter wires by bounding box\n\n    if ( viewPlan.PrimaryPlan != ElementId.InvalidElementId )\n    {\n      // Set Z value to 1 ft above and below level\n\n      XYZ viewBoundingBoxMin = new XYZ(\n        viewPlan.ViewBoundingBox.Min.X,\n        viewPlan.ViewBoundingBox.Min.Y, -1 );\n      XYZ viewBoundingBoxMax = new XYZ(\n        viewPlan.ViewBoundingBox.Max.X,\n        viewPlan.ViewBoundingBox.Max.Y,  1 );\n\n      // Create Outline and BoundingBox\n\n      Outline outline = new Outline( viewBoundingBoxMin,\n        viewBoundingBoxMax );\n      BoundingBoxIsInsideFilter boundingBoxIsInsideFilter\n        = new BoundingBoxIsInsideFilter( outline );\n\n      // Test Value Reporting\n\n      TaskDialog.Show( \"Wire Export\", viewBoundingBoxMin.ToString( )\n        + \" Min \" + viewBoundingBoxMax.ToString( ) + \" Max \" );\n\n      // Add elements to new list if passes filter\n\n      // Test Value Reporting\n\n      foreach ( Wire wire in wireCollector)\n      {\n        TaskDialog.Show( \"Wire Export\", wire.get_BoundingBox(\n            viewPlan.CropRegionElement ).Min.ToString( )\n          + \" Min \" + wire.get_BoundingBox(\n            viewPlan.CropRegionElement ).Max.ToString( )\n          + \"Max\" );\n      }\n\n      List&lt;Wire&gt; filteredWires = wireCollector\n        .Where( w =&gt; boundingBoxIsInsideFilter.PassesFilter(w) )\n        .ToList( );\n\n      // Test Value Reporting\n\n      TaskDialog.Show( \"Wire Export\",\n        $\"There are {filteredWires.Count} wires in the view {viewPlan.Name}.\" );\n      return filteredWires;\n    }\n    else\n    {\n      // Test Value Reporting\n\n      TaskDialog.Show( \"Wire Export\",\n        $\"There are {wireCollector.Count} wires in the view {viewPlan.Name}.\" );\n      return wireCollector;\n    }\n  }\n</pre>\n\n**Answer:** I'm not sure the bounding box filter works with 2d elements that are owned by a view.\n\nI guess in the bound box filter implementation, the filter tries to get the bound box of the element without a view, like `element.get_BoundingBox(null)`, and the result would be null, resulting in a PassesFilter to false.\n\nI guess the only way would be to create your own filter and add a View to use in the comparison (Gonna be a slow filter to use with Linq).\n\nI created a [Revit API Filter for BoundingBox element in a View](https://gist.github.com/ricaun/14ec0730e7efb3cc737f2134475e2539) with\n`BoundingBoxViewIntersectsFilter`, `BoundingBoxViewIsInsideFilter` and a command to test them:\n\n- [BoundingBoxViewIntersectsFilter.cs](https://gist.github.com/ricaun/14ec0730e7efb3cc737f2134475e2539#file-boundingboxviewintersectsfilter-cs)\n- [BoundingBoxViewIsInsideFilter.cs](https://gist.github.com/ricaun/14ec0730e7efb3cc737f2134475e2539#file-boundingboxviewisinsidefilter-cs)\n- [CommandWireIsInside.cs](https://gist.github.com/ricaun/14ec0730e7efb3cc737f2134475e2539#file-commandwireisinside-cs)\n\nHere is a code sample to test; I use a big tolerance to force the `PassesFilter` to return true.\n\n<pre class=\"prettyprint\">\nusing Autodesk.Revit.Attributes;\nusing Autodesk.Revit.DB;\nusing Autodesk.Revit.DB.Electrical;\nusing Autodesk.Revit.UI;\nusing System.Linq;\n\nnamespace RevitAddin.Commands\n{\n  [Transaction(TransactionMode.Manual)]\n  public class CommandWireIsInside : IExternalCommand\n  {\n    public Result Execute(\n      ExternalCommandData commandData,\n      ref string message,\n      ElementSet elementSet)\n    {\n      UIApplication uiapp = commandData.Application;\n\n      UIDocument uidoc = uiapp.ActiveUIDocument;\n      Document document = uidoc.Document;\n      View view = uidoc.ActiveView;\n\n      var wires = new FilteredElementCollector(document)\n          .OfCategory(BuiltInCategory.OST_Wire)\n          .WhereElementIsNotElementType()\n          .OfType&lt;Wire&gt;()\n          .ToList();\n\n      System.Console.WriteLine($\"Wires: {wires.Count}\");\n\n      var tolerance = 1e3;\n      var viewBox = view.CropBox;\n      var outline = new Outline(viewBox.Min, viewBox.Max);\n      var boundingBoxFilter = new BoundingBoxViewIsInsideFilter(\n        outline, view, tolerance);\n\n      var wiresBox = wires\n          .Where(boundingBoxFilter.PassesFilter)\n          .ToList();\n\n      System.Console.WriteLine($\"WiresBox: {wiresBox.Count}\");\n\n      TaskDialog.Show(\n        $\"Wires: {wires.Count}\",\n        $\"WiresBox: {wiresBox.Count}\");\n\n      return Result.Succeeded;\n    }\n  }\n}\n</pre>\n\n**Response:** Thank you @ricaun, that makes a lot of sense and matches what I was seeing in my results and assumptions;\nI definitely got stuck on the problem and couldn't think of a next step at all in the moment!\n\nThank you for the examples, that is exactly what I needed!"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "Visualizing Circuits in 3D",
+    "local_header_href": "#3",
+    "chunk_text": "####<a name=\"3\"></a> Visualizing Circuits in 3D\n\nLuiz also shared advice\non [visualizing circuits in 3D](https://forums.autodesk.com/t5/revit-api-forum/visualizing-circuits-in-3d/td-p/11937368):\n\n**Question:** I'm trying to create a script that will help me better visualize circuits in 3D.\nBasically, you select one or more electrical panels, and temporary generic model lines will get\ndrawn in between all the elements in each circuit on the panel.\nThe problem is that a single circuit may have 10 or more receptacles, and I don't want a line\ngoing from the panelboard to each receptacle &ndash; I'd like to show them daisy-chained together\nlike when you create a circuit.\nI set up a nearest-neighbor algorithm and a minimum spanning tree algorithm, but neither really\nmatches the results that you'd see if you tab-select a circuit and add wiring.\nHere's my current implementation in pyRevit:\n\n<pre class=\"prettyprint\">\n\"\"\" Visualize Connected Circuits\n\nAuthor: Perry Lackowski\nTested: 2021.1\n\"\"\"\n\nimport sys\n\nfrom pyrevit import DB, forms, revit, script\nfrom Autodesk.Revit.UI.Selection import ObjectType\nfrom Autodesk.Revit.UI.Selection import ISelectionFilter\n\nfrom enum import Enum\nfrom rpw import ui\n\ndoc = revit.doc\nuidoc = revit.uidoc\noutput = script.get_output()\n\nselectable_categories = [\n  int(DB.BuiltInCategory.OST_ElectricalEquipment),\n  int(DB.BuiltInCategory.OST_ElectricalFixtures)\n]\n\ndef UI_get_equipment():\n  selected_equipment_ids = uidoc.Selection.GetElementIds()\n\n  # If pre-selection, convert ids to elements, and remove anything that\n  # isn't electrical equipment.\n  if selected_equipment_ids:\n    selected_equipment = [doc.GetElement(eId) for eId in selected_equipment_ids]\n    selected_equipment = [x for x in selected_equipment if x.Category.Id.IntegerValue in selectable_categories]\n    use_preselected_elements = forms.alert(msg='You currently have {} elements selected. Do you want to proceed with the currently selected item(s)?'.format(len(selected_equipment)),ok=False,yes=True, no=True)\n    if use_preselected_elements:\n      return selected_equipment\n\n  # If post selection, use the Revit's PickObjects to select items.\n  # selection_filter limits selection to electrical equipment.\n  selection_filter = electrical_equipment_filter()\n  try:\n    selection_reference = uidoc.Selection.PickObjects(ObjectType.Element, selection_filter, 'Select Electrical Equipment to rename.')\n  except:\n    # if selection is aborted, it throws an exception...\n    sys.exit()\n  if not selection_reference:\n    sys.exit()\n  selected_equipment = [doc.GetElement(r.ElementId) for r in selection_reference]\n\n  return selected_equipment\n\nclass electrical_equipment_filter(ISelectionFilter):\n  def __init__(self):\n    pass\n  def AllowElement(self, element):\n    if element.Category.Id.IntegerValue in selectable_categories:\n      return True\n    else:\n      return False\n  def AllowReference(self, element):\n    return False\n\ndef get_parents_and_children(elem):\n  parents_and_children = list(elem.MEPModel.GetElectricalSystems())\n\n  children = list(elem.MEPModel.GetAssignedElectricalSystems())\n  parents = []\n  for es in parents_and_children:\n    if es.Id not in [x.Id for x in children]:\n      parents.append(es)\n\n  # To get the corresponding elements from the circuit, you can typically use\n  # circuit.Elements. However, if you're looking at the parent circuit, the\n  # base element element will be the only item in this list. In parent\n  # circuits, you'll want to look at the BaseEquipment property.\n\n  return parents, children\n\nclass Colors(Enum):\n  Red = DB.Color(255,0,0)\n  Green = DB.Color(0,128,0)\n  Blue = DB.Color(70,65,240)\n\ndef create_line(start, end):\n  if start.DistanceTo(end) &lt; 1:\n     return False\n  new_line = DB.Line.CreateBound(start,end)\n  return new_line\n\ndef make_shape(lines, color):\n  new_shape = DB.DirectShape.CreateElement(doc, DB.ElementId(DB.BuiltInCategory.OST_GenericModel))\n  new_shape.SetShape(lines)\n\n  graphic_settings = DB.OverrideGraphicSettings()\n  graphic_settings.SetProjectionLineColor(color)\n  graphic_settings.SetProjectionLineWeight(6)\n\n  doc.ActiveView.SetElementOverrides(new_shape.Id, graphic_settings)\n\n  return new_shape\n\ndef set_shape_params(shape, circuit_slot, circuit_name):\n  shape.get_Parameter(DB.BuiltInParameter.ALL_MODEL_MARK).Set('pyRevit Electrical Circuit Visualization')\n  shape.get_Parameter(DB.BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).Set('{} - {}'.format(circuit_slot, circuit_name))\n\nfrom itertools import izip, tee\ndef pairwise(iterable):\n  \"s -&gt; (s0, s1), (s1, s2), (s2, s3), ...\"\n  a, b = tee(iterable)\n  next(b, None)\n  return izip(a, b)"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "def minimum_spanning_tree(source, points):",
+    "local_header_href": "#def-minimum_spanning_treesource-points",
+    "chunk_text": "# def minimum_spanning_tree(source, points):\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Create a set to keep track of visited points",
+    "local_header_href": "#-create-a-set-to-keep-track-of-visited-points",
+    "chunk_text": "#   # Create a set to keep track of visited points\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "visited = set()",
+    "local_header_href": "#visited-set",
+    "chunk_text": "#   visited = set()\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Initialize the source point",
+    "local_header_href": "#-initialize-the-source-point",
+    "chunk_text": "#   # Initialize the source point\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "visited.add(source)",
+    "local_header_href": "#visitedaddsource",
+    "chunk_text": "#   visited.add(source)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Initialize the lines list",
+    "local_header_href": "#-initialize-the-lines-list",
+    "chunk_text": "#   # Initialize the lines list\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "lines = []",
+    "local_header_href": "#lines",
+    "chunk_text": "#   lines = []\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Loop until all points have been visited",
+    "local_header_href": "#-loop-until-all-points-have-been-visited",
+    "chunk_text": "#   # Loop until all points have been visited\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "while len(visited) &lt; len(points) + 1:",
+    "local_header_href": "#while-lenvisited-lt-lenpoints-1",
+    "chunk_text": "#   while len(visited) &lt; len(points) + 1:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Find the closest unvisited point to the visited set",
+    "local_header_href": "#-find-the-closest-unvisited-point-to-the-visited-set",
+    "chunk_text": "#     # Find the closest unvisited point to the visited set\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "min_dist = float('inf')",
+    "local_header_href": "#min_dist-floatinf",
+    "chunk_text": "#     min_dist = float('inf')\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "min_point = None",
+    "local_header_href": "#min_point-none",
+    "chunk_text": "#     min_point = None\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "for visited_point in visited:",
+    "local_header_href": "#for-visited_point-in-visited",
+    "chunk_text": "#     for visited_point in visited:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "for neighbor in points:",
+    "local_header_href": "#for-neighbor-in-points",
+    "chunk_text": "#       for neighbor in points:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "if neighbor in visited:",
+    "local_header_href": "#if-neighbor-in-visited",
+    "chunk_text": "#         if neighbor in visited:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "continue",
+    "local_header_href": "#continue",
+    "chunk_text": "#           continue\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "dist = visited_point.DistanceTo(neighbor)",
+    "local_header_href": "#dist-visited_pointdistancetoneighbor",
+    "chunk_text": "#         dist = visited_point.DistanceTo(neighbor)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "if dist &lt; min_dist:",
+    "local_header_href": "#if-dist-lt-min_dist",
+    "chunk_text": "#         if dist &lt; min_dist:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "min_dist = dist",
+    "local_header_href": "#min_dist-dist",
+    "chunk_text": "#           min_dist = dist\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "min_point = neighbor",
+    "local_header_href": "#min_point-neighbor",
+    "chunk_text": "#           min_point = neighbor\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "# Add the closest point to the visited set and draw a line to it",
+    "local_header_href": "#-add-the-closest-point-to-the-visited-set-and-draw-a-line-to-it",
+    "chunk_text": "#     # Add the closest point to the visited set and draw a line to it\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "visited.add(min_point)",
+    "local_header_href": "#visitedaddmin_point",
+    "chunk_text": "#     visited.add(min_point)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "new_line = create_line(min_point, visited_point)",
+    "local_header_href": "#new_line-create_linemin_point-visited_point",
+    "chunk_text": "#     new_line = create_line(min_point, visited_point)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "lines.append(new_line)",
+    "local_header_href": "#linesappendnew_line",
+    "chunk_text": "#     lines.append(new_line)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "return lines",
+    "local_header_href": "#return-lines",
+    "chunk_text": "#   return lines\n\ndef nearest_neighbor(source, points):\n  unvisited = set(points)\n  sorted_points = [source]\n  while unvisited:\n    closest = min(unvisited, key=lambda p: p.DistanceTo(sorted_points[-1]))\n    sorted_points.append(closest)\n    unvisited.remove(closest)\n  lines = []\n  for x, y in pairwise(sorted_points):\n    line = create_line(x, y)\n    lines.append(line)\n  return lines"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "def star_connect(source, points):",
+    "local_header_href": "#def-star_connectsource-points",
+    "chunk_text": "# def star_connect(source, points):\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "lines = []",
+    "local_header_href": "#lines",
+    "chunk_text": "#   lines = []\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "for point in points:",
+    "local_header_href": "#for-point-in-points",
+    "chunk_text": "#   for point in points:\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "line = create_line(source, point)",
+    "local_header_href": "#line-create_linesource-point",
+    "chunk_text": "#     line = create_line(source, point)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "lines.append(line)",
+    "local_header_href": "#linesappendline",
+    "chunk_text": "#     lines.append(line)\n\n"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "return lines",
+    "local_header_href": "#return-lines",
+    "chunk_text": "#   return lines\n\ndef visualize_circuits(equipment):\n  equipment_origin = equipment.GetTransform().Origin\n  parents, children = get_parents_and_children(equipment)\n  new_shapes = []\n  lines = []\n\n  # First draw circuits for parents (upstream sources)\n  for circuit in parents:\n    circuit_slot = circuit.Name\n    circuit_name = circuit.get_Parameter(DB.BuiltInParameter.RBS_ELEC_CIRCUIT_NAME).AsString()\n    line = create_line(equipment_origin, circuit.BaseEquipment.GetTransform().Origin)\n    if line:\n      lines.append(line)\n  if lines:\n    shape = make_shape(lines, Colors.Red.value)\n    set_shape_params(shape, circuit_slot, circuit_name)\n    new_shapes.append(shape)\n    print('Source Vector: {}'.format(output.linkify(shape.Id)))\n\n  children = sorted(children, key=lambda x: x.Name)\n\n  # Next draw circuits for children (downstream loads)\n  for circuit in children:\n    circuit_slot = circuit.Name\n    circuit_name = circuit.get_Parameter(DB.BuiltInParameter.RBS_ELEC_CIRCUIT_NAME).AsString()\n    if 'SPARE' in circuit_name or 'SPACE' in circuit_name:\n      continue\n    print('{} - {}'.format(circuit_slot, circuit_name))\n    load_locations = [elem.GetTransform().Origin for elem in circuit.Elements]\n\n    lines = nearest_neighbor(equipment_origin, load_locations)\n    ## Two alternate algorithms for drawing lines:\n    # lines = minimum_spanning_tree(equipment_origin, load_locations)\n    # lines = star_connect(equipment_origin, load_locations)\n\n    if lines:\n      shape = make_shape(lines, Colors.Blue.value)\n      set_shape_params(shape, circuit_slot, circuit_name)\n      new_shapes.append(shape)\n      print('Load Vector: {}'.format(output.linkify(shape.Id)))\n  return new_shapes\n\nselected_equipment = UI_get_equipment()\nt = DB.Transaction(doc, \"Visualize Electrical Equipment\")\nt.Start()\nall_created_circuits = []\n\nfor equipment in selected_equipment:\n  all_created_circuits.append(visualize_circuits(equipment))\n\nif all_created_circuits:\n  selection = ui.Selection()\n  selection.clear()\n\n  for shape in all_created_circuits:\n    selection.add(shape)\n\n  selection.update()\nt.Commit()\n</pre>\n\nHere are screenshots of the results of each:\n\n<center>\n<img src=\"img/pr_circuit_nearest_neighbour.png\" alt=\"Nearest Neighbor\" title=\"Nearest Neighbor\" width=\"800\"/> <!-- Pixel Height: 1,332 Pixel Width: 1,822 -->\n<p style=\"font-size: 80%; font-style:italic\">Nearest Neighbor</p>\n</center>\n\n<center>\n<img src=\"img/pr_circuit_minimum_spanning_tree.png\" alt=\"Minimum Spanning Tree\" title=\"Minimum Spanning Tree\" width=\"800\"/> <!-- Pixel Height: 1,474 Pixel Width: 2,002 -->\n<p style=\"font-size: 80%; font-style:italic\">Minimum Spanning Tree</p>\n</center>\n\n<center>\n<img src=\"img/pr_circuit_star_connected.png\" alt=\"Star Connected\" title=\"Star Connected\" width=\"800\"/> <!-- Pixel Height: 1,326 Pixel Width: 1,800 -->\n<p style=\"font-size: 80%; font-style:italic\">Star Connected</p>\n</center>\n\n**Answer:** I would suggest taking a step back from Revit and model lines and ponder how\nto best [display complex graph relationships](https://duckduckgo.com/?q=display+complex+graph+relationships).\n\nI used the [Delaunay algorithm](https://en.wikipedia.org/wiki/Delaunay_triangulation) to\nconnect all the elements that have electrical circuits:\n\n<center>\n<img src=\"img/pr_circuit_ricaun_delaunay.png\" alt=\"Delaunay algorithm\" title=\"Delaunay algorithm\" width=\"800\"/> <!-- Pixel Height: 2,160 Pixel Width: 3,840 -->\n<p style=\"font-size: 80%; font-style:italic\">Delaunay algorithm</p>\n</center>\n\nThat was the best I found to visualize circuits in 3d.\n\n**Response:** The goal of this script is to help our team decide if panels can/should be relocated based on the locations of their loads (to minimize feeder lengths and voltage drop). Typically, I might just go to a plan view and look at the wiring, but with the size of the project we're working on, we have 21 views across two floors, across multiple disciplines like lighting, power distribution, house power.\n\nThe star-connected approach has been ok, as long as I group the generic models I'm creating by circuit so I can see which clusters of lines belong together. But it looks very messy when two circuits feed to the same room, so there might be 10-20 lines going off in the same direction. I'm really looking to generate a node graph that matches the proposed wiring that Revit provides when you create new circuits (see attached image). If I could, I'd like to just use the existing wiring that's in the views in the project (basically I'd do a search for the wires that are linked with that circuit and use the end points of those wires as the X- and Y-coordinates, then add the Z-coordinate from the model elements to draw my 3D graph lines), however I can't guarantee that every element is wired in the plans, and there's also no guarantee that the wire layouts are up-to-date/accurate. So I'd settle for an approximate layout that uses Revit's predictive wiring system.\n\nI see in the API that Revit has a Wire Create() method, but it seems like the set of XYZ points you provide to the method argument are used to generate a single wire at a time. Is there a way to provide multiple XYZ points and have Revit insert multiple wires to inter-connect the points?\n\nOtherwise, after finding this page, using a force-directed graph with simulated annealing seems like the closest approach. However, I'm in way over my head here, and sadly I just won't have time to implement this. It also looks like it's generating a 'closed' graph, similar to the Delaunay approach, where all the nodes are interconnected. It would still need some second function to eliminate closed loops if we want it to be more accurate.\n\nFinally, are there any recommendations as far as modeling these vectors go? I'm generating lines and placing them in Generic Model elements right now, but I'm wondering if that's the best approach. It offers no easy way for me to select all similar and delete them when I'm done, so if I forget they are there and start doing other things, I'll eventually need a script to find and delete them. Perhaps putting them in a unique sub-category of electrical equipment, or maybe under analytical models somewhere?\n\nThanks for the help!\n\n<center>\n<img src=\"img/pr_circuit_desired_result.png\" alt=\"Desired Result\" title=\"Desired Result\" width=\"800\"/> <!-- Pixel Height: 902 Pixel Width: 1,096 -->\n<p style=\"font-size: 80%; font-style:italic\">Desired Result</p>\n</center>\n\n**Answer:** Have you looked at [ElectricalSystem.GetCircuitPath()](https://apidocs.co/apps/revit/2020.1/0448a0ee-c9bf-f037-c1b7-d49ce03ffa71.htm)?\n\n**Response:** I did try that at first, but it had its own problems.\nThe first is that the circuit's Path Mode must be set to 'All Devices', rather than 'Farthest Device'.\nThis isn't always the case. If it's set to Farthest Device, then GetCircuitPath() only returns the points to get to the farthest device. I'd have to override the existing Path Mode settings for each circuit on the panel, and then set them back when done - and this means taking ownership over all the circuits, which may not be feasible with the number of users we have on this project.\n\nAnd while that would likely get us pretty close to the desired result, it's also still not perfect. As a test, I cleared the wires from a lighting circuit and redrew them using the automatic tool. Then I opened up the Edit Path tool and set the Path Mode to All Devices, and you can see in the attachment that the path still contains closed loops, whereas the wires do not.\n\n<center>\n<img src=\"img/pr_circuit_problem_case.png\" alt=\"Problem Case\" title=\"Problem Case\" width=\"800\"/> <!-- Pixel Height: 1,346 Pixel Width: 2,720 -->\n<p style=\"font-size: 80%; font-style:italic\">Problem Case</p>\n</center>\n\n**Answer:** If your goal is to check if your panel is near or far from the load, the best approach should be to create a load center from the panel.\nBasically, the interpolation between each element location using the load value (Load1 x Location1 + Load2 x Location2) / (Load1 + Load2).\n\nI don't use Revit Wire, I have a plugin to create wires inside Conduit/CableTray, that's a requirement in my country, so Revit Wire is useless in my case.\n\nIf you only need to verify the panel location probably messing with Wire is a bad choice, Wire is a 2d element that needs to have a view to work. You could try to get the location of the Wire and draw the lines, but I'm not sure if gonna be easy to see in a 3d view.\n\nYou already using DirectShape to create the lines, I guess that is the easiest way. You could set a name in the DirectShape element and use that to select every single one and delete using another command.\n\n**Response:** Good ideas @ricaun.\nFinding a center-point that's weighted based on the loads may be an easier approach.\nI could then use the distance between that center-point and the panel origin as a metric that I could even potentially calculate for every panel, without having to model anything. I may eventually put that together as a separate tool which you could use first, to find the problem panels.\n\nI agree using wire is not ideal - it would take quite a bit of manipulation to get from 2D wire to 3D vector shapes. If I eventually find time to pursue this further, I'll likely use a Delaunay implementation as you have suggested. It's too bad Revit wire isn't 3D - I have gotten in trouble before for copying a plan view with wires; I eventually deleted the wires from the first view and it took me ages to figure out why I still couldn't recircuit the elements.\n\nAlso, good to know I can SetName on the DirectShapes. I have just been storing info in the comment and mark parameters, but that leaves them open to editing by others, which is risky if I ever need to search through them and delete them based on a filter.\n\n**Answer:** I'm not sure if the distance is too useful to know where is the best place to put the panel.\nAnd probably gonna add some features like that in the plugin ElectricalUtils;\nusing `DirectContext3D` would be fun to show the load center without creating any element.\n\nMany thanks to Luiz 'ricaun' for sharing these great suggestions and his extensive experience!"
+  },
+  {
+    "original_filename": "1994_wire_align",
+    "header_text": "Aligning Two Elements",
+    "local_header_href": "#4",
+    "chunk_text": "####<a name=\"4\"></a> Aligning Two Elements\n\nLet's wrap up with some hints\non [how to use the alignment method for family instance](https://forums.autodesk.com/t5/revit-api-forum/how-to-use-the-alignment-method-using-for-family-instance/m-p/11938454):\n\n**Question:** I need to align a `FamilyInstance` which I created using C# to a line that I also created Via C# in Revit 2023,\nlike in this picture showing a structural column and a `ModelCurve` that are not yet aligned:\n\n<center>\n<img src=\"img/align_element_1.png\" alt=\"Align element &ndash; not aligned\" title=\"Align element &ndash; not aligned\" width=\"300\"/>\n<p style=\"font-size: 80%; font-style:italic\">Align element &ndash; not aligned</p>\n</center>\n\nThis is how I want the column to be aligned to the `ModelCurve`:\n\n<center>\n<img src=\"img/align_element_2.png\" alt=\"Align element\" title=\"Align element\" width=\"300\"/>\n<p style=\"font-size: 80%; font-style:italic\">Align element</p>\n</center>\n\nHere is sample code from my script:\n\n<pre class=\"prettyprint\">\n  Line line = Line.CreateBound(startPoint, endPoint);\n  Element newPile = doc.Create.NewFamilyInstance(\n    point, symbol, Level, structuralType);\n</pre>\n\n**Answer:** Well, first of all you need to understand how to implement such a constraint manually in the end user interface.\nI believe you define a dimension between the two objects to do so, and constrain it to a zero distance.\nThe [Family API samples](https://thebuildingcoder.typepad.com/blog/2009/08/the-revit-family-api.html) demonstrate\nhow such a constraint can be set up programmatically.\n\nReading that myself, I discover that\nthe [NewAlignment method](https://www.revitapidocs.com/2023/b3c10008-aba6-9eee-99c9-7e05ace75796.htm) might\ncome in handy.\nSearching this forum for other threads on `NewAlignment` ought to turn up something useful for you.\n\n**Response:** Thanks a lot for introducing this method for me .\nI am trying to align the family instance called newPile to the model Curve however I am getting this error:\n\n- Autodesk.Revit.Exceptions.ArgumentException:\n  The two references are not geometrically aligned so the Alignment cannot be created.\n  Parameter name: reference2\n\nI have created both the model curve and the family instance on the same level.\n\nThis is the code that I am using:\n\n<pre class=\"prettyprint\">\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\nusing Autodesk.Revit.DB;\nusing Autodesk.Revit.DB.Structure;\nusing Autodesk.Revit.UI;\nusing Autodesk.Revit.UI.Selection;\nusing Document = Autodesk.Revit.DB.Document;\n\nnamespace Tunnel\n{\n  public class SheetPile\n  {\n    double meters = 3.28084;\n\n    public SheetPile(Document doc, double x, String PileName, Level Level, TunnelFloors tunnelFloors)\n    {\n      Options options = new Options();\n      Plane plane = Plane.CreateByNormalAndOrigin(new XYZ(0, 0, 1), new XYZ(0, 0, 0));\n      SketchPlane sketchPlane = SketchPlane.Create(doc, plane);\n      // Create a new view plan for Level 1\n      // Get the floor plan view family type\n      ViewFamilyType viewFamilyType = new FilteredElementCollector(doc)\n        .OfClass(typeof(ViewFamilyType))\n        .Cast&lt;ViewFamilyType&gt;()\n        .FirstOrDefault(v =&gt; v.ViewFamily == ViewFamily.StructuralPlan);\n\n      // Create a new view plan for Level 1\n\n      ViewPlan viewPlan = ViewPlan.Create(doc, viewFamilyType.Id, Level.Id);\n      // Convert input values from feet to meters\n      x = x * meters;\n\n      // Define the family symbol and structural type\n      FamilySymbol symbol = new FilteredElementCollector(doc)\n        .OfClass(typeof(FamilySymbol))\n        .OfCategory(BuiltInCategory.OST_StructuralColumns)\n        .FirstOrDefault(e =&gt; e.Name == PileName) as FamilySymbol;\n\n      StructuralType structuralType = StructuralType.Column;\n\n      // Create a list of curves\n      List&lt;Curve&gt; curves = new List&lt;Curve&gt;();\n      foreach (Floor floor in tunnelFloors.Floors)\n      {\n        Sketch sketch = doc.GetElement(floor.SketchId) as Sketch;\n        foreach (CurveArray curveArray in sketch.Profile)\n        {\n          foreach (Curve curve in curveArray)\n          {\n            XYZ p0 = (new XYZ(curve.GetEndPoint(0).X, curve.GetEndPoint(0).Y, 0));\n            XYZ p1 = (new XYZ(curve.GetEndPoint(1).X, curve.GetEndPoint(1).Y, 0));\n            Curve c1 = Line.CreateBound(p0, p1);\n            curves.Add(curve);\n          }\n        }\n      }\n\n      foreach (Curve curve in curves)\n      {\n        ModelCurve m1 = doc.Create.NewModelCurve(curve, sketchPlane);\n        // Move the family instance along the curve by the distance variable\n        double length = curve.Length;\n        int count = (int)(length / x);\n        for (int j = 1; j &lt;= count; j++)\n        {\n          XYZ point = curve.Evaluate((double)j * x / length, true);\n          FamilyInstance newPile = doc.Create.NewFamilyInstance(point, symbol, Level, structuralType);\n          newPile.LookupParameter(\"Top Level\").Set(\"Level 2\");\n          Reference s = newPile.GetReferenceByName(\"SS\");\n          // Get the reference plane named \"SS\" from the family instance\n\n          //uidoc.Selection.PickObject(ObjectType.PointOnElement);\n          doc.Create.NewAlignment(viewPlan, s, curve.Reference);\n        }\n      }\n    }\n  }\n}\n</pre>\n\n**Answer:** Did you read the remarks on\nthe [NewAlignment method](https://www.revitapidocs.com/2023/b3c10008-aba6-9eee-99c9-7e05ace75796.htm) in\nthe Revit API docs?\n\n> These references must be already geometrically aligned (this function will not force them to become aligned).\n\n**Response:** Is there any way I can force them to be aligned using the Revit API?\n\n**Answer:** The easiest way to ensure they are aligned is to create them accordingly in the first place, if they are being generated from scratch.\nOtherwise, you can use the standard translation and rotation functionality provided by `ElementTransformUtils`.\nOr, you can set the location curve via the `Location` property.\n\n**Response:** I will rest for a few then see which approach fits best.\nI am using a family which is already loaded in the Project and I am placing them on a line with a specific distance .\nHowever I want them to rotate according to the Curve or Line they are placed on.\nI haven't been able to do such thing.\nShould I use `ElementTransformUtils.Rotate` in this case?\n\n**Answer:** Either `ElementTransformUtils.Rotate` or just manipulate the `LocationPoint` or `LocationCurve`\nvia [`Rotate`](https://www.revitapidocs.com/2023/ed4de043-9a60-f6cd-c09b-b13c4612b343.htm)."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0299_kean_on_reflector",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0299_kean_on_reflector",
+    "header_text": "Kean on Reflector",
+    "local_header_href": "#kean-on-reflector",
+    "chunk_text": "<h3>Kean on Reflector</h3><p>I repeatedly mentioned the topic of \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/10/converting-between-vb-and-c-and-net-decompilation.html\">\nconverting between C# and VB</a>,\n\nand how I use the \n\n<a href=\"http://www.red-gate.com/products/reflector\">\nReflector</a>\n\ntool for this task, for example to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/05/vb-samples-and-other-questions.html#2\">\nconvert Revit SDK samples</a>.\n\n<p>If you are as keen on Reflector as I am, you will probably find Kean Wamsley's series on the new \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2010/02/debugging-into-autocads-net-api-layer-using-reflector-part-1.html\">\nReflector pro</a>\n\nversion very interesting as well.\n\n</p></p>"
+  }
+]

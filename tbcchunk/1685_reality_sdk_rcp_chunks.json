@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "1685_reality_sdk_rcp",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n\nReality Solutions SDK enables RCP file read-write #RevitAPI @AutodeskRevit #bim #dynamobim @AutodeskForge #ForgeDevCon http://bit.ly/rcpreadwrite\n\nToday, we proudly present a DLL for reading and writing RCP files,\nannouncing the Reality Solutions SDK,\nproviding full access to the Autodesk proprietary point cloud format\n&ndash; Announcing the Reality Solutions SDK\n&ndash; How do I access the SDK?\n&ndash; Discussion and support resources...\n\n-->"
+  },
+  {
+    "original_filename": "1685_reality_sdk_rcp",
+    "header_text": "Reality Solutions SDK Enables RCP File Read-Write",
+    "local_header_href": "#reality-solutions-sdk-enables-rcp-file-read-write",
+    "chunk_text": "### Reality Solutions SDK Enables RCP File Read-Write\n\nToday, rather belatedly, we proudly present a DLL for reading and writing RCP files,\n[announcing the Reality Solutions SDK](http://blogs.autodesk.com/recap/announcing-the-reality-solutions-sdk),\nwhich provides full access to the Autodesk proprietary point cloud format and\nis [available for free to registered ADN members](https://adn.autodesk.io/index.php?r=custom_pages%2Fview&id=174):\n\n- [Announcing the Reality Solutions SDK](#2) \n- [How do I access the SDK?](#3) \n- [Discussion and support resources](#4) \n\n\n<center>\n<img src=\"img/point_cloud_feature_extraction_crop.png\" alt=\"Point cloud\" width=\"400\">\n</center>"
+  },
+  {
+    "original_filename": "1685_reality_sdk_rcp",
+    "header_text": "<a name=\"2\"></a> Announcing the Reality Solutions SDK",
+    "local_header_href": "#a-name2a-announcing-the-reality-solutions-sdk",
+    "chunk_text": "#### <a name=\"2\"></a> Announcing the Reality Solutions SDK\n\nReality data continues to be an integral part of the workflow supported by Autodesk.\nBy making our technology available to partners, we accelerate our ability to bring solutions to our customers.\nWe’re deepening our engagement with partners to collaboratively solve for the breadth of problems and challenges customers face.\n\nAutodesk partners now have access that was previously not available.\nFor example, this enables reading the point cloud format, converting point clouds to meshes, and pushing the resulting data to BIM 360.\nWorkflows like this enable partners to build their own feature extraction solutions.\n\nStarting now, partners can gain access to our RCP point cloud format.\nThis serves as an entry point to Autodesk collections and key products including Revit, AutoCAD, Civil 3D, InfraWorks, and 3ds Max.\nUse of the ReCap point cloud format spans across all industries from design to construction, manufacturing, and production.\nAll of these essential products access point clouds through the RCP file format."
+  },
+  {
+    "original_filename": "1685_reality_sdk_rcp",
+    "header_text": "<a name=\"3\"></a> How do I access the SDK?",
+    "local_header_href": "#a-name3a-how-do-i-access-the-sdk",
+    "chunk_text": "#### <a name=\"3\"></a> How do I access the SDK?\n\nTwo ways:\n\nGet in touch! [Email ask.recap@autodesk.com](mailto:ask.recap@autodesk.com) mentioning 'Reality Solutions SDK' in the subject line.\n\n[Sign up for ADN](http://autodesk.com/joinadn),\nthe [Autodesk Developer Network](http://autodesk.com/adn).\nOur reality solutions SDK is freely accessible to Standard and Professional-level ADN members.\nFor more details, please refer\nto [Autodesk.com/developer-network/membership-options](http://autodesk.com/developer-network/membership-options)."
+  },
+  {
+    "original_filename": "1685_reality_sdk_rcp",
+    "header_text": "<a name=\"4\"></a> Discussion and Support Resources",
+    "local_header_href": "#a-name4a-discussion-and-support-resources",
+    "chunk_text": "#### <a name=\"4\"></a> Discussion and Support Resources\n\n- [Reality Solutions SDK discussion forum](https://forums.autodesk.com/t5/reality-solutions-sdk-group/gp-p/6025)\n- [Reality Solutions SDK developer center](https://www.autodesk.com/developer-network/platform-technologies/reality-solutions-sdk)"
+  }
+]

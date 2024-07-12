@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0197_online_api_help",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0197_online_api_help",
+    "header_text": "Online Revit API Help",
+    "local_header_href": "#online-revit-api-help",
+    "chunk_text": "<h3>Online Revit API Help</h3><p>On Monday, we pointed out that the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/online-revit-help.html\">\nRevit product help is available online</a>.</p><p><a href=\"http://roddotnet.blogspot.com\">\nRod Howarth</a>\n\nresponded with a comment mentioning his very useful custom Google search for\n\n<a href=\"http://www.google.com/coop/cse?cx=003379886482190238526:wi7yjrtrkd8\">\nglobal online Revit API help</a>.\n\n<p>Rod also published a \n\n<a href=\"http://roddotnet.blogspot.com/2009/07/revit-api-search-engine.html\">\nblog post</a>\n\nproviding some background info on his centralised search engine.\n\n<p>Many thanks to Rod for providing this powerful time-saving tool!</p>\n</p></p>"
+  }
+]

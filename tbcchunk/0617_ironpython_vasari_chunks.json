@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0617_ironpython_vasari",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0617_ironpython_vasari",
+    "header_text": "Python Shell in Revit and Vasari",
+    "local_header_href": "#python-shell-in-revit-and-vasari",
+    "chunk_text": "<h3>Python Shell in Revit and Vasari</h3><p>Finally! \nI was always so excited about \n\n<a href=\"http://code.google.com/p/revitpythonshell\">Daren Thomas' RevitPythonShell</a> which \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/revit-python-shell.html\">\nI pointed to</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/03/dynamically-load-and-debug-plugins.html\">\nnow and then</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/09/access-to-curtain-grid-panels.html\">\nin the past</a>.\n\n<p>Now \n\n<a href=\"http://buildz.blogspot.com/2011/07/iron-python-scripting-in-revit.html\">\nZach Kron of buildz</a> and \n\n<a href=\"http://nmillerarch.blogspot.com/2011/07/ironpython-with-vasari.html\">\nNathan Miller</a> picked \n\nup this theme again and show how to \n\n<a href=\"http://nmillerarch.blogspot.com/2011/07/ironpython-with-vasari.html\">\ninstall and run</a> RevitPythonShell \n\nusing IronPython in Vasari:</p>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"300\" src=\"http://www.youtube.com/embed/IuVwn-U91Hc\" width=\"480\"></iframe>\n<p>Too good to miss!\n</p></p>"
+  }
+]

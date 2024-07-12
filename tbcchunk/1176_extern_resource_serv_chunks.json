@@ -1,0 +1,134 @@
+[
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Referenced Files as a Service",
+    "local_header_href": "#referenced-files-as-a-service",
+    "chunk_text": "<h3>Referenced Files as a Service</h3><p>Many presentations at the Autodesk Technical Summit were confidential, but not all.</p><p>One important class on published functionality of general interest that we can share here is <i>1-3 Referenced Files as a Service – a new way to provide data to Revit</i> by Diane Christoforo, Revit Senior Software Engineer.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Abstract",
+    "local_header_href": "#abstract",
+    "chunk_text": "<h4>Abstract</h4><p>How did we transform Revit to reference data from services instead of files? When one Revit project can consist of many different files – CAD links, other linked Revit models, the keynote table, assembly codes, rendering decals  – how do you manage all that data in a cloud environment?</p><p>In this talk, we'd like to introduce the Referenced Files as a Service project. With this new service, anyone can create a Revit add-on to allow Revit to reference data from any source. It supports arbitrary data sources such as a website, database or Vault. (Normal files still work too!)</p><p>As an added bonus, Revit can think of these resources as \"resources\" and not specifically as \"files\". In the case of keynotes and assembly codes, no file ever has to exist on disk at any point in the process.</p><p>In this talk, we'll cover two interesting examples. First, we'll show you how to get Revit links straight off of the Autodesk wiki. Second, we'll show how to build a keynote \"file\" from a database. We'll talk about how Revit's architecture changed to support these examples, and how transforming the product to a service architecture simplifies the process of working with new data.</p><p>We'll also talk about the challenges we encountered working on the project. We had to do some creative testing to work with functionality that wasn't compatible with our normal test framework. This was also the first time most of the team was working on the referenced files code, and we learned some useful lessons about getting team-members up to speed.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Structure",
+    "local_header_href": "#structure",
+    "chunk_text": "<h4>Structure</h4><ol>\n<li>Overview – why do we want to get away from files</li>\n<li>Revit projects before Referenced Files as a Service</li>\n<ol type=\"a\">\n<li>Many external files</li>\n<li>Several different implementations</li>\n<li>How Revit links work</li>\n<li>How keynotes work</li>\n</ol>\n<li>The External Resources architecture</li>\n<ol type=\"a\">\n<li>Built off of the existing External Services framework</li>\n<li>DB layer</li>\n<ol style=\"list-style-type:lower-roman\">\n<li>Servers handle Revit links, assembly codes, keynotes, or any combination</li>\n<li>ExternalResourceReference replaces file paths</li>\n<li>Servers define their resource format</li>\n<li>How servers tell Revit what resources they provide</li>\n</ol>\n<li>UI layer</li>\n<ol type=\"i\">\n<li>Servers can provide their own error handling</li>\n<li>Revit does not have to know about all possible problems</li>\n</ol>\n</ol>\n<li>Development challenges</li>\n<ol type=\"a\">\n<li>Other considered proposals</li>\n<li>Working on code you don't know</li>\n<li>Creative testing – what to do when your feature doesn't work with the test framework</li>\n</ol>\n<li>Demo / in-depth examples</li>\n<ol type=\"a\">\n<li>Revit links from a wiki</li>\n<ol type=\"i\">\n<li>Shared coordinates and \"open (and unload)\"</li>\n</ol>\n<li>Keynotes from a database</li>\n<ol type=\"i\">\n<li>No actual files</li>\n<li>Can build one keynote table from multiple sources</li>\n</ol>\n</ol>\n</ol><p>Here is an effective summary of the ideas underlying this framework.</p><p>Old concept:</p><center>\n<img alt=\"Old concept\" src=\"img/extern_resource_serv_1.png\" width=\"400\"/>\n</center><p>New concept:</p><center>\n<img alt=\"New concept\" src=\"img/extern_resource_serv_2.png\" width=\"400\"/>\n</center><p>Click here to browse the full\n\n<a href=\"zip/1-3_Diane_Christoforo_Referenced_Files_Public.pdf\">slide deck</a> presented\n\nat the Autodesk Technical Summit in Toronto.</p><p>For more immediate access, I extracted and reformatted the pure text content below.</p><p>For optimal understanding, you might want to go through the slide deck and text below in parallel:</p><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "The Whole Talk, In Three Sentences",
+    "local_header_href": "#the-whole-talk-in-three-sentences",
+    "chunk_text": "<h4>The Whole Talk, In Three Sentences</h4><ul>\n<li>Revit models contain data from many external sources.</li>\n<li>We built a framework that allows third parties to register plugins to provide this data.</li>\n<li>Now we don't have to be responsible for handling every format someone will ever want.</li>\n</ul>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Outline",
+    "local_header_href": "#outline",
+    "chunk_text": "<h4>Outline</h4><ol>\n<li><a href=\"#4.1\">The Problem</a>: It's hard to parse data from many sources</li>\n<li><a href=\"#4.2\">The Idea</a>: We don't care where the data comes from</li>\n<li><a href=\"#4.3\">Framework Design &amp; Implementation</a></li>\n</ol><a name=\"4.1\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "1. The Problem",
+    "local_header_href": "#1-the-problem",
+    "chunk_text": "<h4>1. The Problem</h4>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Anatomy of a Revit project",
+    "local_header_href": "#anatomy-of-a-revit-project",
+    "chunk_text": "<h4>Anatomy of a Revit project</h4><p>Here's a very misleading picture of a Revit model showing one single Revit RVT project file:</p><ul>\n<li>Very large hospital.rvt</li>\n</ul><p>A real customer project uses data from many sources – other linked Revit models, DWGs, DWF markups, keynotes, rendering decals, shared parameters, etc.</p><ul>\n<li>Very large hospital.rvt</li>\n<ul>\n<li>East Wing.rvt</li>\n<li>Furniture Layout.rvt</li>\n<li>Core and Shell.rvt</li>\n<li>West Wing.rvt</li>\n<li>Site.dwg</li>\n<li>Site2.dwg</li>\n<li>2014 Imperial keynotes.txt</li>\n<li>2013 assembly codes.txt</li>\n<li>Second floor hallway art.jpg</li>\n<li>Original.ifc</li>\n</ul>\n</ul>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Typical Issues in Q&A Format",
+    "local_header_href": "#typical-issues-in-qa-format",
+    "chunk_text": "<h4>Typical Issues in Q&amp;A Format</h4><p>Here are some questions from users and corresponding hypothetical answers from previous versions of Revit:</p><p><strong>[Q]</strong> I'm going to download this model from Autodesk 360. You can automatically get all the links and set them up, right?</p><p><strong>[A]</strong> The developers haven't taught me how to use A360.</p><p><strong>[Q]</strong> We want to put our files on this website. You can get them from there, right?</p><p><strong>[A]</strong> What's a website?</p><p><strong>[Q]</strong> We want Revit to build one keynote table from two files so we don't have to put it together by hand. You can do that, right?</p><p><strong>[A]</strong> The developers haven't taught me how to do that.</p><p>Revit only knows how to handle files on disk or models on Revit server.</p><p>Every time we want to get data from someplace new, we have to:</p><ul>\n<li>Add new UI so the user can browse to the right place</li>\n<li>Add new code to get and parse the data</li>\n<li>Understand what errors can occur and handle them</li>\n<li>Add new UI to explain any errors</li>\n</ul>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Where we're going, we don't need files",
+    "local_header_href": "#where-were-going-we-dont-need-files",
+    "chunk_text": "<h4>Where we're going, we don't need files</h4><p>The cloud doesn't have 'files', so even if we did implement all the individual features people request, we still have a problem.</p><a name=\"4.2\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "2. The Idea – Move to a Service Model",
+    "local_header_href": "#2-the-idea-move-to-a-service-model",
+    "chunk_text": "<h4>2. The Idea – Move to a Service Model</h4><ol>\n<li>Think of external data as a 'resource', not a 'file'.</li>\n<li>Revit no longer handles all data itself.</li>\n<li>Developers register a plugin to provide resources.</li>\n<li>Revit doesn't care where the data started out.</li>\n</ol><p>Now people can provide the data from whatever source they like!</p><a name=\"4.3\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "3. Design and Implementation",
+    "local_header_href": "#3-design-and-implementation",
+    "chunk_text": "<h4>3. Design and Implementation</h4><p>Design Goals</p><ol>\n<li>Impose as few format restrictions on the user as possible.</li>\n<li>Local files should also use the new framework – 'eat your own dog food'.</li>\n</ol><p>Converting our own code to use the new framework was both a good proof-of-concept and a good bug-finder.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "ExternalResourceService",
+    "local_header_href": "#externalresourceservice",
+    "chunk_text": "<h4>ExternalResourceService</h4><p>The new external resource service framework is built on top of Revit's existing ExternalServices framework.</p><p>We added two interfaces:</p><ul>\n<li>IExternalResourceServer</li>\n<ul>\n<li>Tells Revit what resources it can provide</li>\n<li>Loads resources when requested</li>\n</ul>\n<li>IExternalResourceUIServer</li>\n<ul>\n<li>Provides feedback to the user after resources have been loaded</li>\n</ul>\n</ul><p>All of the plugins are Revit API add-ons. We added a new ExternalService called the ExternalResourceService. Plugin developers can write their own instance of IExternalResourceServer (and optionally IExternalResourceUIServer, if they want to provide any feedback to the user.)</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Usage in Revit 2015",
+    "local_header_href": "#usage-in-revit-2015",
+    "chunk_text": "<h4>Usage in Revit 2015</h4><p>You can use the External Resources framework to build a plugin supplying:</p><ul>\n<li>Revit links</li>\n<li>Keynotes</li>\n<li>Assembly codes</li>\n</ul><p>What are these things?</p><p>Well:</p><ul>\n<li>Revit links – you can link one Revit model into another in a read-only fashion.</li>\n<li>Keynotes – keynotes are a special kind of tag that indicates information about the purpose of an object, e.g., 1001010 'Fire Safety'.</li>\n<li>Assembly codes – assembly codes are a classification system for families. They're based on Uniformat.</li>\n</ul><p>Revit uses each of these as follows:</p><ul>\n<li>Revit links – links can be used to break up a large model for performance reasons; it is also used to divide a project for collaboration – the architect will link in the structural engineer's model, for example.</li>\n<li>Keynotes – non-keynote tags display an existing property of a door, wall, window, etc. When you place a keynote tag, you choose new information to associate with that object.</li>\n</ul><p>Keynotes and assembly codes have virtually the same implementation, so the following examples will focus on Revit links and keynotes.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Demo Video",
+    "local_header_href": "#demo-video",
+    "chunk_text": "<h4>Demo Video</h4><p>This two-minute <a href=\"http://youtu.be/pK0OdAe4fWM\">demo video</a> shows loading the keynote table from a wiki page on the Autodesk wiki, modifying the wiki content, reloading the data into the model, and modifying a linked file through the external resource service:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"http://www.youtube.com/embed/pK0OdAe4fWM\" width=\"420\"></iframe>\n</center><p>This demo was also shown in the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/revit-2015-api-news-devdays-online-recording.html\">\nRevit 2015 News and DevDays presentations</a>.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Workflow sequence:",
+    "local_header_href": "#workflow-sequence",
+    "chunk_text": "<h4>Workflow sequence:</h4><ol>\n<li>Revit asks the plugin for the list of resources it provides.</li>\n<li>User selects a resource</li>\n<li>Revit asks the plugin to load the resource</li>\n<li>The plugin gives Revit the resource</li>\n<li>Revit asks the plugin to handle any errors</li>\n<li>The plugin handles errors or displays UI</li>\n</ol>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Describing a Resource – ExternalResourceReference",
+    "local_header_href": "#describing-a-resource-externalresourcereference",
+    "chunk_text": "<h4>Describing a Resource – ExternalResourceReference</h4><p>An ExternalResourceReference object describes a resource:</p><p>Instead of storing file paths, external resources now store a new structure called an ExternalResourceReference encapsulating 'filename', 'path' and 'path on disk or Revit Server'.</p><p>Local resources have these as well.</p><p>Inside the ExternalResourceReference:</p><ul>\n<li>(Guid) serverId – which plugin provides the resource.</li>\n<li>(String) version – the version of the resource.</li>\n<li>(String) inSessionPath – the 'display name' of the resource – what the user will see.</li>\n<li>(IDictionary&lt;String, String&gt;) referenceInformation – info to identify the resource. The plugin defines the format.</li>\n</ul><p>Resource maps can be as simple as:</p><pre>\n  'resource' = '4'\n</pre><p>They can also be more complicated:</p><pre>\n  'name' = 'hospital third floor restroom'\n  'user' = 'dchris'\n  'language' = 'en-us'\n  'format' = 'txt'\n  'last-accessed' = '3-26-14'\n</pre><p>With regards to the reference map, our local resources store the path on disk, and whether the path is relative or absolute.</p><p>The plugin that works with the wiki stores the id of the wiki page in its ExternalResourceReference. This means that, even if the title of the page changes, Revit still gets any updates made to that page.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Loading a Resource – IExternalResourceServer.LoadResource",
+    "local_header_href": "#loading-a-resource-iexternalresourceserverloadresource",
+    "chunk_text": "<h4>Loading a Resource – IExternalResourceServer.LoadResource</h4><pre>\n  void IExternalResourceServer.LoadResource(\n    Guid loadRequestId,\n    ExternalResourceType resourceType,\n    ExternalResourceReference desiredResource,\n    ExternalResourceLoadContext loadContext,\n    ExternalResourceLoadContent loadContent)\n</pre><ul>\n<li>loadRequestId – Revit sends a Guid with every load request so they can be uniquely identified.</li>\n<li>resourceType – useful for plugins that handle multiple types of resource.</li>\n<li>desiredResource – the resource which Revit would like the plugin to load.</li>\n<li>loadContext – information about the state of Revit at the time of the request.</li>\n<li>loadResults – the results of loading the resource. Each resource type has its own subclass.</li>\n</ul><p>ExternalResourceLoadContext provides information such as: what was the previous resource (so the plugin can tell if it's loading the same resource), whether the load was an automatic or explicit action (The plugin may want to do different actions on file open versus when the user presses the 'reload' button), and the name of the Revit model requesting the resource.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "ExternalResourceLoadContent",
+    "local_header_href": "#externalresourceloadcontent",
+    "chunk_text": "<h4>ExternalResourceLoadContent</h4><p>Each resource type has its own subclass.</p><p>Keynotes and assembly codes can be built directly.</p><p>The plugin builds a table of key/value pairs and returns it to Revit.</p><p>No files needed anywhere!</p><p>Revit links have to return a locally cached path.</p><p>Revit's still the only thing that can build a Revit model.</p><p>The user doesn't need to know or care that there's a local copy of the model.</p><p>The plugin also sets a success/failure value, so Revit can quickly see whether the operation succeeded or not. The default value is 'uninitialized', so we also have some idea of whether something went terribly wrong on the server's end.</p><p>Other IExternalResourceServer functions:</p><ul>\n<li>IsResourceWellFormed – we don't know what format the server is using, so it has to answer this question for us.</li>\n<li>AreSameResources – again, the server needs to tell us if two resources are the same.</li>\n<li>GetResourceVersionStatus – Revit skips loading if we already have the most recent version of a resource.</li>\n<li>SetUpBrowserData – this is how the server tells Revit what resources it can provide. Revit then lists the resources in the UI.</li>\n<li>SupportsExternalResourceType – servers can provide any or all of keynotes, assembly codes, and Revit links.</li>\n</ul><p>For AreSameResources – originally we just compared the referenceInformation, but we realized that two resources might have different strings but still be considered 'the same' by the server. As an example, internally you can use relative or absolute paths. But the relative and absolute versions of the same file are still ... the same file, even though their reference information would be different.</p>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Reponses and Error handling",
+    "local_header_href": "#reponses-and-error-handling",
+    "chunk_text": "<h4>Reponses and Error handling</h4><p>We don't know what will go wrong.</p><p>How can Revit respond to errors like these?</p><ul>\n<li>Revit model 'MyServer://myhouse.rvt' is missing from the server.</li>\n<li>The network connection is very slow, so the operation was cancelled. Try again?</li>\n<li>You aren't logged into the website. Log in.</li>\n<li>Your subscription to 'Keynotes for Everybody' has expired. Would you like to renew?</li>\n<li>We couldn't reverse the polarity of the neutron flow.</li>\n<li>Your computer is full of bees. Please reboot.</li>\n</ul><p>Revit can't anticipate everything that can go wrong on the server end. We let the plugin do error handling because the plugin knows how to fix its own problems.</p><p>These situations are managed using the IExternalResourceUIServer.HandleLoadResourceResults method:</p><pre>\n  void IExternalResourceUIServer.HandleLoadResourceResults(\n    Document document,\n    IList&lt;ExternalResourceLoadData&gt; loadData)\n</pre><ul>\n<li>document – The Revit model which the resource is loaded into.</li>\n<li>loadData – A list of load results. The plugin can see any Revit-internal errors that occurred, and decide what UI, if any, to display.</li>\n</ul><p>These are the details of the function the plugin uses to provide results back to Revit.</p><p>There are two notable things here:</p><ol>\n<li>The plugin has full access to the Revit model at this point, so it can do its own link reloading if, for example, the user just needed to log in to a service.</li>\n<li>We give the plugin all resources it loaded. This enables the add-in to avoid displaying the same 'Your resource is missing' dialogue five times over if it tried to load five links and they all failed.</li>\n</ol><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Where to Learn More",
+    "local_header_href": "#where-to-learn-more",
+    "chunk_text": "<h4>Where to Learn More</h4><p>You can download the Revit 2015 SDK including the ExternalResourceServer add-in SDK sample add-in from the\n\n<a href=\"http://www.autodesk.com/developrevit\">Revit Developer Centre</a>.</p><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "1176_extern_resource_serv",
+    "header_text": "Add-in Demonstrating Real-world Use",
+    "local_header_href": "#add-in-demonstrating-real-world-use",
+    "chunk_text": "<h4>Add-in Demonstrating Real-world Use</h4><p>The Kiwi Solutions\n\n<a href=\"http://www.kcsl.biz/#!easy-keynoter/com5\">Easy Keynoter</a> add-in\n\nshows one impressive practical use of the Revit 2015 'referenced files as a service' feature and solves several long standing issues with regards to keynotes in Revit.</p>"
+  }
+]

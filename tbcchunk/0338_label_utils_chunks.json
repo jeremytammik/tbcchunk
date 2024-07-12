@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0338_label_utils",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0338_label_utils",
+    "header_text": "User Visible Enumeration Value Labels",
+    "local_header_href": "#user-visible-enumeration-value-labels",
+    "chunk_text": "<h3>User Visible Enumeration Value Labels</h3><p>The first Revit 2011 Programming Introduction class in Warsaw last week went well.\nIn a way, it was quite an extreme event, because on one hand the training material is still new and under development for updating to the new version, and on the other, we had 40 participants, which is the largest group I have ever led single-handedly through a hands-on programming training.\nSo I was pretty busy and very happy that all were satisfied.\n\n<p>Getting back into everyday life again, here is an answer by my colleague Joe Ye to an issue that has come up a few times in the past and now has a very satisfying new resolution:\n\n<p><strong>Question:</strong> How can I determine the element property group names as they are displayed in the 'Element Properties' window? \nWhen iterating through parameters of an element, we can only access the BuiltInParameterGroup of the parameter definition, such as PG_CONSTRAINTS, PG_MECHANICAL or PG_GEOMETRY.\nIs there a way, no matter how complicated, to obtain a true group name? \nI need a general, language independent, method. \n\n<p><strong>Answer:</strong> In previous version, there was no way to achieve what you are asking for, but it is resolved now in the Revit 2011 release by the introduction of the LabelUtils class, which is described as follows in the Revit API help file What's New section:\n\n<h4>Labels matching commonly used enumerated type values</h4>\n<p>The new class LabelUtils provides methods to obtain the user-visible label corresponding to certain enum values.  \nThese routines obtain the label corresponding to the name in the current Revit language.  \nSupport is offered for:\n\n<ul>\n<li>BuiltInParameter \n<li>BuiltInParameterGroup \n<li>DisplayUnitType \n<li>gbXMLBuildingType \n<li>ParameterType \n<li>UnitType \n</li></li></li></li></li></li></ul>\n<p>Many thanks to Joe for handling this case!\n</p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0338_label_utils",
+    "header_text": "Labels matching commonly used enumerated type values",
+    "local_header_href": "#labels-matching-commonly-used-enumerated-type-values",
+    "chunk_text": "<h4>Labels matching commonly used enumerated type values</h4><p>The new class LabelUtils provides methods to obtain the user-visible label corresponding to certain enum values.  \nThese routines obtain the label corresponding to the name in the current Revit language.  \nSupport is offered for:\n\n<ul>\n<li>BuiltInParameter \n<li>BuiltInParameterGroup \n<li>DisplayUnitType \n<li>gbXMLBuildingType \n<li>ParameterType \n<li>UnitType \n</li></li></li></li></li></li></ul>\n<p>Many thanks to Joe for handling this case!\n</p></p>"
+  }
+]

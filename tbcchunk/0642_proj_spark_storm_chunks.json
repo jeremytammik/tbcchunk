@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0642_proj_spark_storm",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0642_proj_spark_storm",
+    "header_text": "Autodesk Lab Projects Spark and Storm",
+    "local_header_href": "#autodesk-lab-projects-spark-and-storm",
+    "chunk_text": "<h3>Autodesk Lab Projects Spark and Storm</h3><p>Two new interesting BIM projects are now available on Autodesk Labs:\n\n<h4>Project Spark</h4>\n<p>\n<a href=\"http://labs.autodesk.com/utilities/spark\">Project Spark</a> is \na technology preview of a simplified 3D building information modelling (BIM) solution. \nIt enables building professionals to create designs efficiently with real-world building objects, produce more reliable documentation faster, and share files with consultants using Revit or AutoCAD-based products.\nIt does not support conceptual design, analysis, rendering, advanced collaboration, and, unfortunately for us developers, API.\n\n<p>Project Spark is intended to help users who are new to BIM get up and running efficiently.  \nIn addition to simplified functionality it includes additional user assistance such as\n\n<a href=\"http://wikihelp.autodesk.com/Spark/enu/Community/Videos/Essential_Skills\">\nessential skills videos</a> and a \n\n<a href=\"http://wikihelp.autodesk.com/Spark/enu/TP_1.0/Help/0000-Getting_0\">\nGetting Started Guide</a> which \n\nhas step by step instructions for creating a model with accompanying video demonstrations.\n\n\n<a name=\"storm\"></a>\n<h4>Project Storm</h4>\n<p>\n<a href=\"http://labs.autodesk.com/utilities/revit_storm\">Project Storm</a> for \nRevit Structure is available on Autodesk Labs!\n\n<p>It is a technology preview that provides cloud-based structural analysis to structural engineers as a part of the BIM process. \nIt enables structural engineers and designers to perform static analysis in the cloud directly within Revit Structure.\nResults can be visualized and explored within Revit Structure.\nDisruptions to workflows are minimized by performing analysis as you continue designing.</p>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"300\" src=\"http://www.youtube.com/embed/886oDncpyws\" width=\"480\"></iframe></p></p></p></p>"
+  },
+  {
+    "original_filename": "0642_proj_spark_storm",
+    "header_text": "Project Spark",
+    "local_header_href": "#project-spark",
+    "chunk_text": "<h4>Project Spark</h4><p>\n<a href=\"http://labs.autodesk.com/utilities/spark\">Project Spark</a> is \na technology preview of a simplified 3D building information modelling (BIM) solution. \nIt enables building professionals to create designs efficiently with real-world building objects, produce more reliable documentation faster, and share files with consultants using Revit or AutoCAD-based products.\nIt does not support conceptual design, analysis, rendering, advanced collaboration, and, unfortunately for us developers, API.\n\n<p>Project Spark is intended to help users who are new to BIM get up and running efficiently.  \nIn addition to simplified functionality it includes additional user assistance such as\n\n<a href=\"http://wikihelp.autodesk.com/Spark/enu/Community/Videos/Essential_Skills\">\nessential skills videos</a> and a \n\n<a href=\"http://wikihelp.autodesk.com/Spark/enu/TP_1.0/Help/0000-Getting_0\">\nGetting Started Guide</a> which \n\nhas step by step instructions for creating a model with accompanying video demonstrations.\n\n\n<a name=\"storm\"></a>\n<h4>Project Storm</h4>\n<p>\n<a href=\"http://labs.autodesk.com/utilities/revit_storm\">Project Storm</a> for \nRevit Structure is available on Autodesk Labs!\n\n<p>It is a technology preview that provides cloud-based structural analysis to structural engineers as a part of the BIM process. \nIt enables structural engineers and designers to perform static analysis in the cloud directly within Revit Structure.\nResults can be visualized and explored within Revit Structure.\nDisruptions to workflows are minimized by performing analysis as you continue designing.</p>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"300\" src=\"http://www.youtube.com/embed/886oDncpyws\" width=\"480\"></iframe></p></p></p>"
+  },
+  {
+    "original_filename": "0642_proj_spark_storm",
+    "header_text": "Project Storm",
+    "local_header_href": "#project-storm",
+    "chunk_text": "<h4>Project Storm</h4><p>\n<a href=\"http://labs.autodesk.com/utilities/revit_storm\">Project Storm</a> for \nRevit Structure is available on Autodesk Labs!\n\n<p>It is a technology preview that provides cloud-based structural analysis to structural engineers as a part of the BIM process. \nIt enables structural engineers and designers to perform static analysis in the cloud directly within Revit Structure.\nResults can be visualized and explored within Revit Structure.\nDisruptions to workflows are minimized by performing analysis as you continue designing.</p>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"300\" src=\"http://www.youtube.com/embed/886oDncpyws\" width=\"480\"></iframe></p>"
+  }
+]

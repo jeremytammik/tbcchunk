@@ -1,0 +1,50 @@
+[
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "Cloning a Solid, AngelHack, 3D Web Fest and Dubai",
+    "local_header_href": "#cloning-a-solid-angelhack-3d-web-fest-and-dubai",
+    "chunk_text": "<h3>Cloning a Solid, AngelHack, 3D Web Fest and Dubai</h3><p>The Revit 2016 offers a whole host of exciting new functionality that I am dying to try out, e.g.:</p><ul>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html#5.04\">Custom exporter supports 2D output</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html#4.10\">Improved ReferenceIntersector linked model support</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html#4.16\">DirectShape supports curves, points and references</a></li>\n<li><a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html#5.03\">Cool new Geometry API functionality</a></li>\n</ul><p>And <a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html\">much, much more...</a></p><p>Too little time!</p><p>At least I can mention one useful aspect of the new geometry API that came in handy for an issue that came up yesterday.</p><p>I am in Dubai right now, preparing for the AngelHack Hackathon.</p><p>Here are the topics for today:</p><ul>\n<li><a href=\"#2\">3D Web Festival in San Francisco</a></li>\n<li><a href=\"#3\">AngelHack in Dubai</a></li>\n<li><a href=\"#4\">AngelHack in Athens</a></li>\n<li><a href=\"#5\">Autodesk University proposals</a></li>\n<li><a href=\"#6\">Cloning a solid</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "3D Web Festival in San Francisco",
+    "local_header_href": "#3d-web-festival-in-san-francisco",
+    "chunk_text": "<h4>3D Web Festival in San Francisco</h4><p>Hey, there is this really cool event coming up in San Francisco on May 13<sup>th</sup>,\nthe <a href=\"http://www.3dwebfest.com\">3D Web Festival</a>,\nsponsored by Autodesk, Goo Technologies and Leap Motion:</p><center>\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"270\" src=\"https://www.youtube.com/embed/yHB05PBldqA\" width=\"480\"></iframe>\n</center><p>If you know any folks in the Bay Area who might be interested in seeing and experiencing what's possible today with 3D on the web, please let them know.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "AngelHack and I♥3D in Dubai",
+    "local_header_href": "#angelhack-and-i3d-in-dubai",
+    "chunk_text": "<h4>AngelHack and I♥3D in Dubai</h4><p>As said, I am in Dubai right now, for the first time in my life.</p><p>Here are my\n<a href=\"https://www.facebook.com/media/set/?set=a.10205533066578928.1073741833.1019863650&amp;type=1&amp;l=507a3cff85\">first impressions</a> wandering\naround\n<a href=\"https://en.wikipedia.org/wiki/Jumeirah_Beach_Residence\">Jumeirah Beach Residence</a> aka JBR.</p><center>\n<img alt=\"Jumeirah Beach Residence, Dubai\" src=\"file:////j/photo/jeremy/2015/2015-05-07_dubai/33.jpg\" width=\"400\"/>\n</center><p>Tonight we hold the\n<a href=\"http://www.meetup.com/I-love-3D-Dubai/events/221497781\">AngelHack Dubai Pre-Hackathon Meetup and Workshop</a>\nto get all interested\n<a href=\"http://angelhack.com/hackathon/dubai-2015\">AngelHack Dubai Hackathon</a> participants\nup to speed on the View and Data API in preparation for two hot and frantic days of hacking over the weekend – which is Friday and Saturday here, of course.</p><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "AngelHack and I♥3D in Athens",
+    "local_header_href": "#angelhack-and-i3d-in-athens",
+    "chunk_text": "<h4>AngelHack and I♥3D in Athens</h4><p>We also just held the inaugural\n<a href=\"http://www.meetup.com/I-love-3D-Athens\">I love 3D – Athens</a> meetup,\non April 24<sup>th</sup>, at\n<a href=\"http://thecube.gr\">The Cube</a>,\nGreece's biggest coworking space.</p><p>Cyrille Fauvel and Peter Schlipf presented the View and Data API, Fusion360, AutoCAD I/O and Recap360 to a group 30 enthusiastic local developers:</p><center>\n<img alt=\"I♥3D Athens inaugural meetup\" src=\"img/ilove3d_athens_inauguration_406.jpg\" width=\"406\"/>\n</center><p>They loved it.</p><p>I will be going there too soon, for the\n<a href=\"http://angelhack.com/hackathon/athens-2015\">Angelhack in Athens</a>, on June 5-7.</p><p>Again, we have scheduled an\n\n<a href=\"http://www.meetup.com/I-love-3D-Athens/events/221674308\">AngelHack workshop</a> meetup\nsession on Friday evening to get us all well prepared and up to speed for the subsequent hackathon.</p><p>I am looking forward to meeting you there!</p><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "Autodesk University proposals",
+    "local_header_href": "#autodesk-university-proposals",
+    "chunk_text": "<h4>Autodesk University proposals</h4><p>The\n<a href=\"http://au.autodesk.com/speaker-resource-center/call-for-proposals\">Autodesk University Call for Proposals</a> has opened.</p><p>I am already busy preparing mine   :-)</p><a name=\"6\"></a>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "Cloning a solid",
+    "local_header_href": "#cloning-a-solid",
+    "chunk_text": "<h4>Cloning a solid</h4><p>Now, finally, back to the Revit API, with a question on cloning solids, very well addressed by one of the Revit 2016 API enhancements:</p><p><strong>Question:</strong> To clone solids, we have been using the following workaround in the past:</p><pre class=\"code\">\n  <span class=\"blue\">static</span> <span class=\"blue\">public</span> <span class=\"teal\">Solid</span> Clone( <span class=\"blue\">this</span> <span class=\"teal\">Solid</span> solid )\n  {\n    <span class=\"blue\">if</span>( solid == <span class=\"blue\">null</span> )\n    {\n      <span class=\"blue\">return</span> <span class=\"blue\">null</span>;\n    }\n    <span class=\"blue\">return</span> <span class=\"teal\">BooleanOperationsUtils</span>\n      .ExecuteBooleanOperation( solid, solid,\n        <span class=\"teal\">BooleanOperationsType</span>.Union );\n  }\n</pre><p>This function allows us to clone solids to later use them to create or modify DirectShape elements.\nIt works very well in the majority of the cases; however, the ExecuteBooleanOperation function throws an exception on some specific DirectShape elements, saying:</p><ul><li>Exception: \"Failed to perform the Boolean operation for the two solids. Error: Autodesk.Revit.Exceptions.InvalidOperationException: Failed to perform the Boolean operation for the two solids\"</li></ul><p>I would be very grateful if you can give me some directions how to fix this issue.</p><p><strong>Answer:</strong> Have you noticed the following new functionality provided by the\n<a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html\">Revit 2016 API</a>\n<a href=\"http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html#5.03\">Geometry API additions</a>?</p><div class=\"darkblue\">\n<h4>Solid – copy</h4>\n<p>The new method:</p>\n<ul><li>SolidUtils.Clone()</li></ul>\n<p>creates a new Solid that is a copy of the input Solid.</p>\n</div><p>That looks as if it should solve your problem for you more elegantly and efficiently.</p><p><strong>Response:</strong>\n\nThanks for the quick answer.</p><p>The SolidUtils.Clone method does indeed solve the issue for Revit 2016. It works perfectly. Thanks!</p><p>However, what can I do to fix it in Revit 2015?</p><p><strong>Answer:</strong> I am very glad to hear that the issue is solved in Revit 2016 by the SolidUtils.Clone enhancement.</p><p>For Revit 2015 and previous versions, a better workaround, rather than unioning the original solid with itself, might be to union the shape with a small cube (1\" x 1\" would work for most shapes) located in the interior of the shape.</p><p><strong>Response:</strong> Thank you!</p><p>I can confirm that the workaround solves the issue I was having with the Revit 2015 API.</p>"
+  },
+  {
+    "original_filename": "1315_2016_au_dubai_ah8",
+    "header_text": "Solid – copy",
+    "local_header_href": "#solid-copy",
+    "chunk_text": "<h4>Solid – copy</h4><p>The new method:</p><ul><li>SolidUtils.Clone()</li></ul><p>creates a new Solid that is a copy of the input Solid.</p>"
+  }
+]

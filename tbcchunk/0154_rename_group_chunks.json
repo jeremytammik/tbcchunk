@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0154_rename_group",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n</style>"
+  },
+  {
+    "original_filename": "0154_rename_group",
+    "header_text": "Rename a Group",
+    "local_header_href": "#rename-a-group",
+    "chunk_text": "<h3>Rename a Group</h3><p>I have very busy this last week answering cases and preparing training material.\nLots of interesting issues are cropping up that I would love to blog about, but I can hardly find the time to do so.\nHere is one little item of interest raised by Henrik Bengtsson of \n\n<a href=\"http://www.lindab.se\">\nLindab</a>\n\non renaming a group:</p><p><strong>Question:</strong>\nIs there a way to change the name of a group that is created via the API?\nIf you use the Document.Create.CreateNewGroup method and provide an ElementSet argument, it returns a Group object. \nIf you then call Group.Name = \"Test\", it will raise an error saying that this operation is not valid due to the current state of the object.\n\nIs there perhaps some other method of changing the name of the group?</p><p>This group issue is of great importance since I am working on creating walls with studs and beams, so called structural framing. \nI want all these profiles to be connected in some way and this is one method. \nThey both graphically and parametrically belong to each other, since you can use the Group.Members property to find all the different members in the group. \nGood when you are specifying products.</p><p><strong>Answer:</strong>\nWe already discussed the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/02/creating-a-group-and-how-to-fish.html\">\ncreation of a group</a>.\n\nChanging the name of a group is not achieved by using the Name property on the group itself, but on the group type, like this:\n\n<pre class=\"code\">\n  <span class=\"teal\">Group</span> g = &lt;wherever you got the group from&gt;\n  <span class=\"teal\">Symbol</span> groupType = g.ObjectType;\n  groupType.Name = <span class=\"maroon\">\"New group name\"</span>;\n</pre>\n<p>There is no real difference between these two properties, even though one can be changed and the other cannot.\nThey return the same value and are probably pointing to the same data field somewhere.\n\n<p>The split into Group and GroupType classes was probably made to reuse the typical Revit family structure, similar to the relationship between Wall and WallType or family instance and family symbol. \nIn the case of a group, the distinction between Group and GroupType may seem a bit contrived, but it certainly has valid internal reasons.\n</p></p></p>"
+  }
+]

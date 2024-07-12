@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0802_new_group_view",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0802_new_group_view",
+    "header_text": "View of NewGroup Duplicated Elements",
+    "local_header_href": "#view-of-newgroup-duplicated-elements",
+    "chunk_text": "<h3>View of NewGroup Duplicated Elements</h3><p>I already mentioned that you can work around the lack of programmatic creation possibilities for some element types by grouping existing ones, creating new instances of that group, and then ungrouping it again.\n\n<p>One question that came up in that context is what view the new group appears in:\n\n<p><strong>Question:</strong> I am using code like this to duplicate one or more elements:\n\n<pre class=\"code\">\n  <span class=\"blue\">void</span> CreateGroup( \n    <span class=\"teal\">Document</span> doc,\n    <span class=\"teal\">ICollection</span>&lt;<span class=\"teal\">ElementId</span>&gt; ids,\n    <span class=\"teal\">XYZ</span> offset )\n  {\n    <span class=\"teal\">Group</span> group = doc.Create.NewGroup( ids );\n \n    <span class=\"teal\">LocationPoint</span> location = group.Location \n      <span class=\"blue\">as</span> <span class=\"teal\">LocationPoint</span>;\n \n    <span class=\"teal\">XYZ</span> p = location.Point + offset;\n \n    <span class=\"teal\">Group</span> newGroup = doc.Create.PlaceGroup( \n      p, group.GroupType );\n \n    group.UngroupMembers();\n  }\n</pre>\n<p>However, under certain circumstances, the new group is not placed in the same view as the old one. \n\n<p>Is there any way to specify the target view?\n\n\n<p><strong>Answer:</strong> Sorry, there is currently no direct API access to control the view used when placing a group.\n\n<p>The active view will be used to place the new group, so all you have to do is ensure that the target view really is activated.\n\n<p>To be on the really safe side, you might want to try closing all other views to absolutely force the open one to be used.\n\n<p>The Revit API calls should in theory obviously not be influenced by any of the user interface settings, but there may still be some obsolete remnants of such dependencies left.\n</p></p></p></p></p></p></p></p></p>"
+  }
+]

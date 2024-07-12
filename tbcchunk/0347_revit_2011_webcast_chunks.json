@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0347_revit_2011_webcast",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0347_revit_2011_webcast",
+    "header_text": "Revit 2011 API Webcast",
+    "local_header_href": "#revit-2011-api-webcast",
+    "chunk_text": "<h3>Revit 2011 API Webcast</h3><p>Here is a last-minute reminder to register for the Revit 2011 API webcast that we are holding on Wednesday April 21<sup>st</sup>, in eleven hour's time.\nTo register, you can visit the Autodesk Developer Network (ADN) DevTech API \n\n<a href=\"http://www.adskconsulting.com/adn/cs/api_course_sched.php\">\ntraining schedule site</a>,\n\nfilter for 'Revit 2011 New APIs', and click on the \n\n<a href=\"http://usa.autodesk.com/adsk/servlet/item?id=10417086&amp;siteID=123112&amp;cname=Revit 2011 New APIs, Webcast, Apr 21 2010, 201020\">\nregister</a> link.\n\nThis webcast is open to all developers, regardless of ADN membership.</p><p>Sorry for the late notice, I was too caught up in the discussion on the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/manual-regeneration-mode-danger.html\">\nregeneration option</a> yesterday, \n\nor I would have posted this reminder a bit earlier.\nMore on the regeneration option anon...</p>"
+  }
+]

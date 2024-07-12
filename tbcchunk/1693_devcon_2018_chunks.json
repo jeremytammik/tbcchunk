@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1693_devcon_2018",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js\" type=\"text/javascript\"></script>\n</head>\n\n<!---\n\nI am making my last preparations for DevCon Europe in Darmstadt next week and DevCon las vegas is coming up next month #RevitAPI @AutodeskForge @AutodeskRevit #bim #DynamoBim #ForgeDevCon http://bit.ly/forgedevcon2018\n\nI am making my last preparations for going to DevCon Europe in Darmstadt next week; DevCon Asia took place in Tokyo in August, and DevCon for the rest of the universe is coming up next month\n&ndash; DevCon Europe at AU Germany in Darmstadt\n&ndash; DevCon at Autodesk University in Las Vegas...\n\n-->"
+  },
+  {
+    "original_filename": "1693_devcon_2018",
+    "header_text": "Forge DevCon in Darmstadt and Las Vegas",
+    "local_header_href": "#forge-devcon-in-darmstadt-and-las-vegas",
+    "chunk_text": "### Forge DevCon in Darmstadt and Las Vegas\n\nI am making my last preparations for going to DevCon Europe in Darmstadt next week; DevCon Asia took place in Tokyo in August, and DevCon for the rest of the universe is coming up next month:\n\n- [DevCon Europe at AU Germany in Darmstadt](#2) \n- [DevCon at Autodesk University in Las Vegas](#3)"
+  },
+  {
+    "original_filename": "1693_devcon_2018",
+    "header_text": "<a name=\"2\"></a> DevCon Europe at AU Germany in Darmstadt",
+    "local_header_href": "#a-name2a-devcon-europe-at-au-germany-in-darmstadt",
+    "chunk_text": "#### <a name=\"2\"></a> DevCon Europe at AU Germany in Darmstadt\n\nAs I [mentioned last month](http://thebuildingcoder.typepad.com/blog/2018/09/devcon-europe-and-typepad-versus-google-search.html#2),\nI will be attending the Forge DevCon Europe next week,\nthe second European edition of the [Forge DevCon](https://forge.autodesk.com/devcon-2018).\n\nIt is being held in Darmstadt on Tuesday, October 16th, the day before this year’s AU Germany on Wednesday and Thursday.\n \nThis is a free, English-language event where you can learn all about the capabilities that are currently (and soon will be) available through the Forge platform (the entire DevCon event is in English language, whereas the Autodesk University following it is in German).\n\nYou can still [register via this link](https://www.rayseven.com/r7/runtime/autodesk/devcon2018/registration.visitor.php).\n\nFor more details and reasons to attend, please [refer to the previous post](http://thebuildingcoder.typepad.com/blog/2018/09/devcon-europe-and-typepad-versus-google-search.html#2).\n\n<center>\n<img src=\"img/forge_devcon_europe_2018.png\" alt=\"Autodesk Forge Devcon Europe 2018\" width=\"400\">\n</center>"
+  },
+  {
+    "original_filename": "1693_devcon_2018",
+    "header_text": "<a name=\"3\"></a> DevCon at Autodesk University in Las Vegas",
+    "local_header_href": "#a-name3a-devcon-at-autodesk-university-in-las-vegas",
+    "chunk_text": "#### <a name=\"3\"></a> DevCon at Autodesk University in Las Vegas\n\nThe next exciting event is coming up just one month later,\nthe [Forge DevCon](https://au.autodesk.com/las-vegas/forge-devcon)\nat [Autodesk University Las Vegas](https://au.autodesk.com/las-vegas/overview).\n\nAU is taking place November 13-15, and the DevCon at AU is the day before, on Monday, November 12.\n\nHere is the list of classes that you can filter further according to your interests to whet your appetite:\n\n- [All DevCon classes](https://autodeskuniversity.smarteventscloud.com/connect/search.ww#loadSearch-searchPhrase=&searchType=session&i(59817)=448340)\n\nHere are further notes from Stephen and Kean expressing their enthusiasm and highlighting their favourite classes:\n \n- [Don’t miss these sessions at the Forge DevCon in Las Vegas](http://www.keanw.com/2018/09/dont-miss-these-sessions-at-the-forge-devcon-in-las-vegas.html)\n- [Forge DevCon basics track](https://forge.autodesk.com/blog/forge-devcon-forge-basics-track)\n\nYou can still [register for AU and DevCon today](https://forge.autodesk.com/devcon-2018#tickets).\n\nRemember that the early bird discounts end next Monday, on October 15, so don’t wait too long!\n\n<center>\n<img src=\"img/forge_devcon_2018.jpg\" alt=\"Autodesk Forge Devcon 2018\" width=\"400\">\n</center>"
+  }
+]

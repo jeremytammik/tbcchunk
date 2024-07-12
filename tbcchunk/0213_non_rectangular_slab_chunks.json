@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0213_non_rectangular_slab",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0213_non_rectangular_slab",
+    "header_text": "Creating a Non-rectangular Slab",
+    "local_header_href": "#creating-a-non-rectangular-slab",
+    "chunk_text": "<h3>Creating a Non-rectangular Slab</h3><p>Here is a question raised and answered by my colleagues Katsuaki Takamizawa and Phil Xia on creating and editing a slab.\n\nSome related topics that we already discussed are related to the analysis of the geometry of existing slabs, e.g. the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/10/slab-boundary.html\">\nslab boundary</a>\n\nand its \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/11/slab-side-faces.html\">\nside faces</a>,\n\nexplorations of the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/04/cylindrical-column.html\">\ngeometry of other elements</a>,\n\nthe \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/08/roof-eave-cut-in-revit-and-aca.html\">\neave cut property</a> of roof slabs,\n\nand how to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2008/11/editing-a-floor-profile.html\">\nedit a floor profile</a>.\n\nNow let's look at this generic slab issue:</p><p><strong>Question:</strong>\nIn the user interface, we can use the shape editing tools to modify slab surfaces and to create non-rectangular slabs. \nIs it possible to create slabs like these through the API as well?</p><center>\n<img alt=\"Two\" slabs\"=\"\" src=\"img/two_slabs.jpg\"/>\n</center><p>Also, can we define slope angles on these non-rectangular slabs?</p><p><strong>Answer:</strong>\nYou can modify the slab surface with the slab editor, accessible through the SlabShapeEditor property on the Floor class.\nThe SDK sample SlabShapeEditing shows how to use it.\n\n<p>There is no way to modify the slope of an existing slab, but it can be specified when a new slab is created with NewSlab method:\n\n<pre>\npublic Floor NewSlab(\n  CurveArray profile,\n  Level level,\n  Line slopedArrow,\n  double slope,\n  bool isStructural\n)\n</pre>\n\nThe parameters are:\n\n<ul>\n<li>profile: an array of planar lines and arcs that represent the horizontal profile of the slab.\n<li>level: the level on which the slab is to be placed.\n<li>slopedArrow: a line to control the sloped angle of the slab. It should be in the same face as the profile.\n<li>slope: defines the slope. \n<li>isStructural: specifies whether the slab is structural.\n</li></li></li></li></li></ul>\n<p>Many thanks to Phil and Katsu-san for this overview!</p>\n</p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0962_bc_migr_2014_deprec",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n</head>"
+  },
+  {
+    "original_filename": "0962_bc_migr_2014_deprec",
+    "header_text": "Removing Deprecated API Compilation Warnings",
+    "local_header_href": "#removing-deprecated-api-compilation-warnings",
+    "chunk_text": "<h3>Removing Deprecated API Compilation Warnings</h3><p>I completed\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/04/migrating-the-building-coder-samples-to-revit-2014.html\">\nThe Building Coder sample migration to Revit 2014</a> back\n\nin April, but it was still generating\n\n<a href=\"zip/bc_migr_2014_d.txt\">111 warnings</a> due\n\nto use of obsolete API calls.\n\n<p>After\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/06/migrating-the-adn-training-labs-to-revit-2014.html\">\nmigrating the ADN training lab material</a> last\n\nweek, I thought I could now turn my attention back to resolving these warnings.</p>\n<p>I replaced 27 calls to the get_EndPoint method, which actually refers to the EndPoint property, by the new GetEndPoint method.</p>\n<p>That reduced the count to\n\n<a href=\"zip/bc_migr_2014_e.txt\">84 warnings</a>.\n\n<p></p>Replacing the obsolete creation application NewLineBound and NewLineUnbound calls and adding an element id to the argument to all calls to Document.Delete\n\nreduced the error list to\n\n<a href=\"zip/bc_migr_2014_f.txt\">48 warnings</a>.</p>\n<p>Replacing the calls to NewSketchPlane by SketchPlane.Create reduces it to\n\n<a href=\"zip/bc_migr_2014_g.txt\">24 warnings</a>.</p>\n<p>Addressing almost all the rest produced the final result for today with just\n\n<a href=\"zip/bc_migr_2014_h.txt\">5 warnings</a>,\n\nthree of which are the infamous 'mismatch between the processor architecture of the project being built \"MSIL\" and the processor architecture' of the referenced Revit API assemblies that I cannot fix myself.</p>\n<p>One of the other two refers to a call to the obsolete Document.TitleBlocks, which is intentionally left in to compare with the new approach using the filtered element collector instead.\n\n<p>The second warns about use of the obsolete FindReferencesWithContextByDirection method.\nIt should be converted to use the ReferenceIntersector class instead, which we postpone to some other time.</p>\n<p>Here is the result,\n\n<a href=\"zip/bc_14_100_3.zip\">\nversion 2014.0.100.3</a> of\n\nThe Building Coder samples.\n\n<p>Many of the changes have been marked with a trailing comment stating '2013' and '2014', respectively.</p>\n<p>Enjoy!</p>\n</p></p></p>"
+  }
+]

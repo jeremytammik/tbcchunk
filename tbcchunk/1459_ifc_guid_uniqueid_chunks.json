@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1459_ifc_guid_uniqueid",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<title>The Building Coder</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"3dwc.css\"/>\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true\" defer=\"defer\"></script>\n</head>\n\n<!---\n\nAngel Velez RE: Case 11876523  help:  Anormal modification of Element.UniqueId\n\n11876523 [Anormal modification of Element.UniqueId]\n\nhttp://forums.autodesk.com/t5/revit-api/anormal-modification-of-element-uniqueid/m-p/6372628\n\nConsistency of IFC GUID and UniqueId #revitapi #3dwebcoder @AutodeskRevit @AutodeskForge #aec #bim\n\nAngel Velez provided further clarification on the relationship between the Revit element UniqueId and the IFC GUID generated from it, prompted by the Revit API discussion forum thread on abnormal modification of Element.UniqueId...\n\n-->"
+  },
+  {
+    "original_filename": "1459_ifc_guid_uniqueid",
+    "header_text": "Consistency of IFC GUID and UniqueId",
+    "local_header_href": "#consistency-of-ifc-guid-and-uniqueid",
+    "chunk_text": "### Consistency of IFC GUID and UniqueId\n\nAngel Velez provided further clarification on the relationship between the Revit element `UniqueId` and the IFC GUID generated from it, prompted by\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api/bd-p/160) thread \non [abnormal modification of `Element.UniqueId`](http://forums.autodesk.com/t5/revit-api/anormal-modification-of-element-uniqueid/m-p/6372628):"
+  },
+  {
+    "original_filename": "1459_ifc_guid_uniqueid",
+    "header_text": "<a name=\"2\"></a>Question",
+    "local_header_href": "#a-name2aquestion",
+    "chunk_text": "#### <a name=\"2\"></a>Question\n\nWe encounter a problem with the management of the GUID returned by `Element.UniqueId`.\n\n- When deleting an element, and then using the Undo function, the element that reappears still has the same element id and the same `UniqueId`.\n- In another case, if after deleting, we save the project and then use the Undo function, the element that reappears still has the same Id but the `UniqueId` changed!\n- The same problem also exists with IFC GUID.\n \nThis bug obviously causes problems in plugins that manage an external database or other tools using the IFC export."
+  },
+  {
+    "original_filename": "1459_ifc_guid_uniqueid",
+    "header_text": "<a name=\"3\"></a>Answer",
+    "local_header_href": "#a-name3aanswer",
+    "chunk_text": "#### <a name=\"3\"></a>Answer\n\nFirst of all, here are some previous discussions on the relationship between the unique id and the IFC GUID:\n\n- [UniqueId, DWF and IFC GUID](http://thebuildingcoder.typepad.com/blog/2009/02/uniqueid-dwf-and-ifc-guid.html)\n- [IFC GUID Algorithm in C#](http://thebuildingcoder.typepad.com/blog/2010/06/ifc-guid-algorithm-in-c.html)\n- [IFC GUID Generation and Uniqueness](http://thebuildingcoder.typepad.com/blog/2012/09/ifc-guid-generation-and-uniqueness.html)\n- [IFC GUID Algorithm Update and Family Modification](http://thebuildingcoder.typepad.com/blog/2014/07/ifc-guid-algorithm-update-and-family-modification.html)\n\nIn them, we explain that the GUID generation routines have an internal cache that prevents duplicate GUIDs from being generated. In IFC, these functions are called once per element, and then a call to the `ExporterIFCUtils.EndExportInternal` method clears this cache for the next IFC export. Please note that the first time you call these routines, they have consistent values from previous sessions.\n\nFor now, there are two workarounds:\n\n1. Only call the functions once per session, and store their values.\n2. Call `ExporterIFCUtils.EndExportInternal` to reset the internal cache.\n\nTo recapitulate, the IFC GUID is based on the Revit `UniqueId`.\nIf the `UniqueId` is changing, then so will the IFC GUID.\n\nI suspect that when you save a file, you change the `EpisodeId` of the document.\nThe unique id of an element is based on the `EpisodeId` and the `ElementId`.\nIf the `EpisodeId` is reset on an undo of a delete, that would explain it.  \n \nFor the issue of consistent GUIDs, Revit ensures that:\n \n1. No two GUIDs in the IFC file are ever the same. This is a 100% guarantee.\n2. For all IFC entities that are created from Revit elements, we create a consistent GUID (it doesn't change between exports).  Note that that is based on the `UniqueId` being consistent, so if there is an issue there, then that will clearly affect IFC export.\n3. For other entities, on a case-by-case basis, we can make some of them have consistent GUIDs.  For many, though, it isn't possible (or extremely difficult). \n \nI looked at your sample files and note a couple of cases that could be improved.\nIn general, though, most of the GUIDs are consistent and unique as per rules 1 and 2.\nWe will improve this over time to reduce the noise in 3, but it is very difficult to remove all of the noise without a lot of extra storage in the Revit file."
+  }
+]

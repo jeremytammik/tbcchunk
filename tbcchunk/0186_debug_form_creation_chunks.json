@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0186_debug_form_creation",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n\npre { \n  font-size : 95%; \n  line-height : 120%; \n  background-color : lightgrey;\n  white-space : wrap;\n  color: darkblue;\n  background-color : linen;\n}\n\npre.code { \n  color: black;\n  background-color : white; \n}\n\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n\n</style>"
+  },
+  {
+    "original_filename": "0186_debug_form_creation",
+    "header_text": "Debug Geometric Form Creation",
+    "local_header_href": "#debug-geometric-form-creation",
+    "chunk_text": "<h3>Debug Geometric Form Creation</h3><p>Here is a useful hint on debugging the generation of geometric shapes from Harry Mattison.</p><p><strong>Question:</strong>\nI am trying to create multiple swept blends in a family document.\nThe first call to FamilyCreate.NewSweptBlendForm() succeeds, but the second call is failing with the following exception:</p><center>\n<img alt=\"Swept blend creation error\" src=\"img/swept_blend_creation_error.png\"/>\n</center><p><strong>Answer:</strong>\nFor problems like this I suggest commenting out the code that creates the form so that the command creates only the lines being used to create the form. \nThen you can run the command, verify the geometry of the lines, and use the Revit UI to select them and push the Create Form button. \nIf Create Form fails, then the bug probably has nothing to do with the API.</p><p>In this case, there are many overlapping line warnings:</p><center>\n<img alt=\"Swept blend creation warnings\" src=\"img/swept_blend_creation_warnings.png\"/>\n</center><p>I'd expect that you will get better results if the geometry forms closed loops without overlaps.</p><p>Finally, this will be easier to debug if the lines are created in the active document instead of a new document created in the external command that is not visible without saving and reopening the file. \nThin Lines mode might also be helpful because the lines are quite short.</p><p>Thank you very much Harry for these valuable suggestions!</p>"
+  }
+]

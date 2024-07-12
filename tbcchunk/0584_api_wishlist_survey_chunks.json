@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0584_api_wishlist_survey",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0584_api_wishlist_survey",
+    "header_text": "API Wishlist Survey",
+    "local_header_href": "#api-wishlist-survey",
+    "chunk_text": "<h3>API Wishlist Survey</h3><p>This year's \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2010/05/api-wishlist-surveys-for-autodesk-products.html\">\nAPI wishlist surveys</a> are \n\nnow ready for several Autodesk products, as Kean just pointed out, and will remain open until <strong>June 3<sup>rd</sup>, 2011</strong>.\n\nHere are direct links to the Revit and Navisworks surveys:\n\n<ul>\n<li>\n<a href=\"http://www.zoomerang.com/Survey/WEB22C9QACTE6V\">\nRevit API wishlist survey</a>\n<li>\n<a href=\"http://www.zoomerang.com/Survey/WEB22C9QBRTF2C\">\nNavisworks API wishlist survey</a>\n</li></li></ul>\n<p>The API wishlist survey has a strong influence on the direction of the future API. so please take the time to fill it out.\n\n<p>To \n\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2010/05/api-wishlist-surveys-for-autodesk-products.html\">\nquote Kean</a>, \n\nit really is worth providing us with your input: it's one of the most direct ways to influence the direction of the Autodesk products you customize or for which you develop applications. Tell us which APIs are most important to you: your feedback will not fall on deaf ears. And if you (optionally) provide your email address in the survey, Kean will send you a copy of the results once they've been compiled.\n\n<p>Thank you in advance for your participation!\n\n\n\n<h4>Useful Revit API FAQ</h4>\n<p>I just came across the \n\n<a href=\"http://bbs.revitapp.com/viewtopic.php?f=1&amp;t=10\">\nRevit APP BBS Revit API development FAQ</a>\n\n(<a href=\"http://en.wikipedia.org/wiki/FAQ\">frequently asked questions</a>) \n\nwhich includes some really useful and succinct information, such as a very clear explanation of the master and slave symbol geometry used for displaying family instances.\nOther topics cover shared parameters, regeneration, vertex order, from and to room properties, structural elements end releases and beam orientation.\n</p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0584_api_wishlist_survey",
+    "header_text": "Useful Revit API FAQ",
+    "local_header_href": "#useful-revit-api-faq",
+    "chunk_text": "<h4>Useful Revit API FAQ</h4><p>I just came across the \n\n<a href=\"http://bbs.revitapp.com/viewtopic.php?f=1&amp;t=10\">\nRevit APP BBS Revit API development FAQ</a>\n\n(<a href=\"http://en.wikipedia.org/wiki/FAQ\">frequently asked questions</a>) \n\nwhich includes some really useful and succinct information, such as a very clear explanation of the master and slave symbol geometry used for displaying family instances.\nOther topics cover shared parameters, regeneration, vertex order, from and to room properties, structural elements end releases and beam orientation.\n</p>"
+  }
+]

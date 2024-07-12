@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0654_analytical_model_is_enabled",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0654_analytical_model_is_enabled",
+    "header_text": "Analytical Model IsEnabled Method and Parameter",
+    "local_header_href": "#analytical-model-isenabled-method-and-parameter",
+    "chunk_text": "<h3>Analytical Model IsEnabled Method and Parameter</h3><p>I recently mentioned the changes in \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/08/reference-to-analytical-curve.html\">\naccessing the analytical model</a> in \n\nthe Revit Structure 2012 API.\n\n<p>We just discovered a little issue and an effective workaround related to the AnalyticalModel IsEnabled method, which reports whether the analytical model is currently enabled or disabled.\nRight now, it does not do that, but throws an exception for all members except walls.\nThe Enable and CanDisable methods have similar problems.\nThis will soon be resolved.\nMeanwhile, here is a simple workaround to avoid the issue by accessing the underlying data directly:\n\n<p>The correct \"enable\" parameter is on the physical element, not its analytical model, and accessible through the built-in parameter STRUCTURAL_ANALYTICAL_MODEL. \nTo enable the analytical model, e.g. for a wall, simply set STRUCTURAL_ANALYTICAL_MODEL to true on the wall element, not on the analytical wall element.\n</p></p></p>"
+  }
+]

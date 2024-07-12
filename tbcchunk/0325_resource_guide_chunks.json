@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0325_resource_guide",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0325_resource_guide",
+    "header_text": "Revit API Resource and Getting Started Guide",
+    "local_header_href": "#revit-api-resource-and-getting-started-guide",
+    "chunk_text": "<h3>Revit API Resource and Getting Started Guide</h3><p>I was very enthusiastic about \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/12/au-winds-down.html\">\nRod Howarth's Autodesk University presentation</a>, \n\nand especially the Revit API resource guide and suggestions for getting started with the Revit API that he presented in the second half.\n\n<p>Rod has now very friendlily published his \n\n<a href=\"http://roddotnet.blogspot.com/2010/03/revit-api-resource-guide-free-download.html\">\nRevit API Resource Guide</a>.\n\n<p>To whet your appetite for having a closer look at this invaluable information, here is a table of contents I put together:\n\n<h4>Resource Overview</h4>\n<ul>\n<li>C# / VB.Net Resources\n\n <ol>\n<li>Get a good book\n <li>View information online\n </li></li></ol>\n<li>SDK Samples\n\n <ul>\n<li>SamplesReadme.htm\n <li>Developers Guide\n <li>Compiled HTML Help File\n </li></li></li></ul>\n<li>Webcasts\n<li>Autodesk University\n<li>Blogs\n<li>Revit API search engine\n<li>Online Forums\n<li>Autodesk Developer Network\n<li>RvtMgdDbg\n</li></li></li></li></li></li></li></li></li></ul>\n<h4>The Process</h4>\n<ol>\n<li>Learn how to do it manually\n<li>Identify key words / areas\n<li>RvtMgdDbg\n<li>Search SDK Samples + Developers Guide\n\n<ol>\n<li>Search through the SamplesContent.htm file\n<li>Search through Visual Studio\n<li>Search through Windows Explorer\n<li>Search CHM\n<li>Search Online\n<li>IntelliSense / Experimentation\n<li>ADN / Forums\n</li></li></li></li></li></li></li></ol>\n</li></li></li></li></ol>\n<p>Very highly recommended! \n\n<p>Thank you very much, Rod, for making this available!\n</p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0325_resource_guide",
+    "header_text": "Resource Overview",
+    "local_header_href": "#resource-overview",
+    "chunk_text": "<h4>Resource Overview</h4><ul>\n<li>C# / VB.Net Resources\n\n <ol>\n<li>Get a good book\n <li>View information online\n </li></li></ol>\n<li>SDK Samples\n\n <ul>\n<li>SamplesReadme.htm\n <li>Developers Guide\n <li>Compiled HTML Help File\n </li></li></li></ul>\n<li>Webcasts\n<li>Autodesk University\n<li>Blogs\n<li>Revit API search engine\n<li>Online Forums\n<li>Autodesk Developer Network\n<li>RvtMgdDbg\n</li></li></li></li></li></li></li></li></li></ul>"
+  },
+  {
+    "original_filename": "0325_resource_guide",
+    "header_text": "The Process",
+    "local_header_href": "#the-process",
+    "chunk_text": "<h4>The Process</h4><ol>\n<li>Learn how to do it manually\n<li>Identify key words / areas\n<li>RvtMgdDbg\n<li>Search SDK Samples + Developers Guide\n\n<ol>\n<li>Search through the SamplesContent.htm file\n<li>Search through Visual Studio\n<li>Search through Windows Explorer\n<li>Search CHM\n<li>Search Online\n<li>IntelliSense / Experimentation\n<li>ADN / Forums\n</li></li></li></li></li></li></li></ol>\n</li></li></li></li></ol><p>Very highly recommended! \n\n<p>Thank you very much, Rod, for making this available!\n</p></p>"
+  }
+]

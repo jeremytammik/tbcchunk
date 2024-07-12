@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1335_responsive",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n<style type=\"text/css\">p.en { font-style: italic; }</style>\n<script src=\"google-code-prettify/run_prettify.js\"></script>\n<!-- <script src=\"http://thebuildingcoder.typepad.com/google-code-prettify/run_prettify.js\"></script> -->\n</head>"
+  },
+  {
+    "original_filename": "1335_responsive",
+    "header_text": "The Responsive Building Coder",
+    "local_header_href": "#the-responsive-building-coder",
+    "chunk_text": "<h3>The Responsive Building Coder</h3><p>I suffer from acute and chronic responsiveness.</p><p>That is unpleasant for me, although hopefully pleasing and useful for the rest of humanity.</p><p>What I mean is, I tend to answer other people's questions and needs before taking care of my own.</p><p>I am forever trying to stop doing that.</p><p>One of these days, I certainly will.</p><p>The topic I refer to above is not me, personally, though, but The Building Coder blog.</p><p>Nowadays, web pages should be based on a\n<a href=\"https://en.wikipedia.org/wiki/Responsive_web_design\">responsive web design</a> or\ntheir Google search ranking will suffer.</p><p>Kean Walmsley explained the\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2015/02/reading-from-mobile-devices-time-for-a-redesign.html\">\ngrowing usage of mobile devices</a>, leading to the recent\n<a href=\"http://through-the-interface.typepad.com/through_the_interface/2015/02/reading-from-mobile-devices-time-for-a-redesign.html\">\nresponsive redesign of Through the Interface</a>.</p><p>Following his lead, I switched The Building Coder to a responsive design now as well, as you can see.</p><p>I hope you like it!</p><p>Just like Kean's blog, I use the Typepad 'Snap' template with Lato and Open Sans fonts.\nThe latter requires a reference to the Google font stylesheet.</p><p>I struggled a bit with the banner image, especially to suppress the default header text that Typepad generates automatically and puts on top of the image.</p><p>I finally found the following simple CSS solution for that:</p><pre class=\"prettyprint\">\n.jumbotron h1, .jumbotron h2 { display: none }\n</pre><p>The next main issue I had was with the Microsoft Bing translation widget.</p><p>I set it up on their web page and added the resulting HTML and JavaScript to my blog design.</p><p>It did weird things, and even after significant tweaking was still displaying two user interfaces on top of each other.</p><p>After too much of that mess, I opted for the Google translation service instead.</p><p>I hope you like the result, especially if you are on a mobile device.</p><p>Please do let me know what you think. Thank you!</p>"
+  }
+]

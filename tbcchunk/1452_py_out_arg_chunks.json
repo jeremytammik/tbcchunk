@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1452_py_out_arg",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<title>The Building Coder</title>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"3dwc.css\"/>\n<script src=\"https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true\" defer=\"defer\"></script>\n</head>\n\n<!---\n\n- 10536988 [Door/Window Areas]\n  http://forums.autodesk.com/t5/revit-api/door-window-areas/m-p/5535565\n  out param in python\n  http://stackoverflow.com/questions/2857287/writing-iron-python-method-with-ref-or-out-parameter\n\n- beyond bending: ETH zurich erects sandstone vault at venice architecture biennale\n  http://www.designboom.com/architecture/venice-architecture-biennale-beyond-bending-eth-zurich-block-research-group-05-26-2016/\n\nRetrieving a C# `out` Argument Value in #Python #revitapi #3dwebcoder @AutodeskRevit #dynamobim\n\nHere is a short note on two interesting little items that just cropped up\n&ndash; Retrieving a C# <code>out</code> argument value in Python\n&ndash; ETH Zurich Sandstone Vault at the Venice Architecture Biennale...\n\n-->"
+  },
+  {
+    "original_filename": "1452_py_out_arg",
+    "header_text": "Retrieving a C# `out` Argument Value in Python",
+    "local_header_href": "#retrieving-a-c-out-argument-value-in-python",
+    "chunk_text": "### Retrieving a C# `out` Argument Value in Python\n\nHere is a short note on two interesting little items that just cropped up:\n\n- [Retrieving a C# `out` argument value in Python](#2)\n- [ETH Zurich Sandstone Vault at the Venice Architecture Biennale](#3)"
+  },
+  {
+    "original_filename": "1452_py_out_arg",
+    "header_text": "<a name=\"2\"></a>Retrieving a C# `out` Argument Value in Python",
+    "local_header_href": "#a-name2aretrieving-a-c-out-argument-value-in-python",
+    "chunk_text": "#### <a name=\"2\"></a>Retrieving a C# `out` Argument Value in Python\n\nThis issue was raised and solved by Peter aka KOP in\nthe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api/bd-p/160) thread\non [door and window areas](http://forums.autodesk.com/t5/revit-api/door-window-areas/m-p/5535565):\n\n**Question:** I understand that this code returns the curve loop of a cutout:\n \n<pre class=\"prettyprint\">\n  curveLoop = I.ExporterIFCUtils\n    .GetInstanceCutoutFromWall(\n      doc, wall, familyInstance, out basisY );\n</pre>\n \nunfortunately, i am trying to achieve the result from the python side.\n\nmy efforts end in errors for the `out basisY`.\n\nas my coding skills are still limited, can anyone help me out on this?\n\n**Answer:** Issue is solved for the Python code required.\n\nmy solution went like:\n \n<pre class=\"prettyprint\">\n  for i in openingIds:\n    try:\n      bounding, orient = I.ExporterIFCUtils.GetInstanceCutoutFromWall(doc, element, doc.GetElement(i),)\n      print \"success\"\n    except:\n      print (\" failed for wall %s and opening %s\" %(element.Id, i))\n</pre>\n\nMany thanks to Peter for sharing this useful result.\n\nBy the way, here is another explanation of writing\nan [IronPython method with `ref` or `out` parameter](http://stackoverflow.com/questions/2857287/writing-iron-python-method-with-ref-or-out-parameter),\nnot related to Revit."
+  },
+  {
+    "original_filename": "1452_py_out_arg",
+    "header_text": "<a name=\"3\"></a>ETH Zurich Sandstone Vault at the Venice Architecture Biennale",
+    "local_header_href": "#a-name3aeth-zurich-sandstone-vault-at-the-venice-architecture-biennale",
+    "chunk_text": "#### <a name=\"3\"></a>ETH Zurich Sandstone Vault at the Venice Architecture Biennale\n\nI recently mentioned\nmy [visit to the Block Research Group at ETHZ](http://thebuildingcoder.typepad.com/blog/2016/03/adn-becomes-forge-and-barcelona-accelerator.html#4) and\nthe fascinating architectural research they are practicing there, on building extremely efficient material-saving vaults.\n\nNow they are [exhibiting custom beautiful vaults at the Venice Architecture Biennale](http://www.designboom.com/architecture/venice-architecture-biennale-beyond-bending-eth-zurich-block-research-group-05-26-2016):\n\n<center>\n<img src=\"img/brg_venice_2016_960x540.jpg\" alt=\"BRG at the Venice Architecture Biennale 2016\" width=\"480\">\n</center>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0629_underlay_none",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0629_underlay_none",
+    "header_text": "Set Underlay Display Property to None",
+    "local_header_href": "#set-underlay-display-property-to-none",
+    "chunk_text": "<h3>Set Underlay Display Property to None</h3><p>Here is a short and sweet question handled by Joe Ye:\n\n<p><strong>Question:</strong> I am creating new levels using the API.\nAll my existing levels have their underlay display property set to None, but the new ones all have it set to the previous level.\n\n<p>How can I programmatically change this setting to None as well?\n\n<p><strong>Answer:</strong> This property is stored in the \"Underlay\" parameter on the level.\nYou can set it to None by assigning a null ElementId. \nHere is a sample code snippet showing how to create a null ElementId and assign it to the parameter:\n\n<pre class=\"code\">\n  <span class=\"teal\">ElementId</span> id = <span class=\"blue\">new</span> <span class=\"teal\">ElementId</span>( -1 );\n  e.get_Parameter( <span class=\"maroon\">\"Underlay\"</span> ).Set( id ); \n</pre>\n<p>For production code, I would suggest using the built-in parameter instead of the user visible display name to identify the parameter.\nFurthermore, the ElementId class defines a static property InvalidElementId which returns the invalid ElementId whose IntegerValue is -1.\nUsing these two improvements, the language independent code would look like this:\n\n<pre class=\"code\">\n  e.get_Parameter( <span class=\"teal\">BuiltInParameter</span>.VIEW_UNDERLAY_ID )\n    .Set( <span class=\"teal\">ElementId</span>.InvalidElementId ); \n</pre>\n<p>ElementId.InvalidElementId is commonly used in the Revit API to denote an invalid or void element reference, for instance to mark the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/extensible-storage-features.html#7\">\ndeletion of an element referenced in extensible storage</a>.\n</p></p></p></p></p></p>"
+  }
+]

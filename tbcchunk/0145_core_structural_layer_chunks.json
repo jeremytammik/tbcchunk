@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0145_core_structural_layer",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n</style>"
+  },
+  {
+    "original_filename": "0145_core_structural_layer",
+    "header_text": "Core Structural Layer",
+    "local_header_href": "#core-structural-layer",
+    "chunk_text": "<h3>Core Structural Layer</h3><p><strong>Question:</strong>\nHow can I identify the core structural layer in a Revit host element such as a floor or a wall?</p><p><strong>Answer:</strong>\nA heuristic method for this might be searching for the thickest layer.\nHere is a VB example of searching for the thickest layer of a given floor type and identifying its material, using its CompoundStructureLayerArray layers:</p><pre>\nDim m As Material = Nothing \nDim layers as CompoundStructureLayerArray = floorType.CompoundStructure.Layers\nDim thicknesses(layers.Size) As Single \nFor i As Integer = 1 To layers.Size \n  thicknesses(i) = layers.Item(i - 1).Thickness \nNext \nDim maxIndex As Integer \nDim maxV As Single \nMaxValOfIntArray(thicknesses, maxIndex, maxV) \nm = layers.Item(maxIndex - 1).Material \n</pre><p>Unfortunately, the core structure layer may not always be the thickest.\nSometimes some other layer such as an insulation of type ThermalOrAir or similar may be thicker.</p><p>A more reliable method is to use the CompoundStructureLayer.Function property, which indicates the actual usage of the layer. \nThe core structure layers property value is CompoundStructureLayerFunction.Structure. \nYou can go through the wall type or floor type layers as in the example above and determine the layer whose CompoundStructureLayer.Function equals CompoundStructureLayerFunction.Structure.</p>"
+  }
+]

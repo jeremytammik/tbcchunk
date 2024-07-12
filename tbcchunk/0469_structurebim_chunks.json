@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0469_structurebim",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0469_structurebim",
+    "header_text": "Bienvenue à StructureBIM",
+    "local_header_href": "#bienvenue-à-structurebim",
+    "chunk_text": "<h3>Bienvenue à StructureBIM</h3><p>A new French language Structural Engineering BIM blog is born: \n\n<a href=\"http://structurebim.typepad.com\">StructureBIM</a>.\n\n<p>It is  mainly focused on Autodesk Revit Structure, Autodesk Robot Structural Analysis, AutoCAD Structural Detailing, and authored by Alexandre Mihalache, Olivier Bayle, Stéphane Balmain and Emmanuel Lagardette. \n\n<p>Welcome to the Revit blogosphere!\n</p></p></p>"
+  }
+]

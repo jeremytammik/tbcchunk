@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0646_textnote_location",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0646_textnote_location",
+    "header_text": "TextNote Lost in Space?",
+    "local_header_href": "#textnote-lost-in-space",
+    "chunk_text": "<h3>TextNote Lost in Space?</h3><p>Here is the result of another interesting discussion I had with Rudolf Honke of\n\n<a href=\"http://www.acadgraph.de\">\nMensch und Maschine acadGraph GmbH</a>. \n\n<p>We already looked at some aspects of text formatting such as \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/04/revitlookup-and-textnote-alignment.html\">\nalignment</a>,\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/06/textnote-rotation.html\">\nrotation</a> and\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/07/text-size.html\">\nsize</a> in \n\nthe past.\n\n<p>So whilst there are some manipulations we can perform on text notes, it is rather irking that their Location property is not accessible.\n\n<p>Seen through the API, the Location property value is always either a LocationPoint or LocationCurve instance.\nI assume that neither of these two fit the internal location data structure of a text note position, and therefore its location is simply not exposed at all by the API.\nVery sad.\n\n<p>As Rudolf pointed out, however, the TextNote provides a Coord property instead.\n\n<p>You can retrieve the X and Y coordinates of a TextNote element from its Coord property.\n\n<p>The Z value of the Coord property is sometimes valid, e.g. for a text note in a section view, and sometimes not, e.g. in plan view, where it is zero, in all cases we have seen so far.\n\n<p>These coordinate values are 'model space' coordinates, i.e. they really represent the text note location in 3D space.\n\n<p>As said, the Coord.Z property depends on the view type.\nIn a floor plan, the correct Z value may be obtained via the GenLevel.Elevation property.\nThe Z behaviour for other 2D view types such as drafting, detail and area plan is still unknown  :-)\n\n<p>I also noticed that room tags in plan views have invalid Z coordinate values.\nThey have a valid Location property, but like the TextNote.Coord, the Z coordinate is zero.\nI observe this on all my RoomTags, independent of the RoomTag.Room.Level.\n\n<p>So the position of several different kinds of text objects seems to be a mixture of 2D and 3D if they belong to plan views.\n\n<p>One hypothesis is that the 'zero Z in plan view' behaviour is shared by all types derived from SpatialElementTag, i.e. area, room and space tags.\n\n<p>No guarantees on any of this information, but it might a least provide some additional understanding and a starting point to locate your text note elements.\n\n<p>Thank you Rudolf for raising this issue and pointing out the workaround!\n\n\n<h4>Registration for Autodesk University 2011</h4>\n<p>Registration for \n\n<a href=\"http://autode.sk/nftv78\">\nAutodesk University 2011</a> in Las Vegas opens today.\n</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>"
+  },
+  {
+    "original_filename": "0646_textnote_location",
+    "header_text": "Registration for Autodesk University 2011",
+    "local_header_href": "#registration-for-autodesk-university-2011",
+    "chunk_text": "<h4>Registration for Autodesk University 2011</h4><p>Registration for \n\n<a href=\"http://autode.sk/nftv78\">\nAutodesk University 2011</a> in Las Vegas opens today.\n</p>"
+  }
+]

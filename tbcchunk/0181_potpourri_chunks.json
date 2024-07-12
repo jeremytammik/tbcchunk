@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0181_potpourri",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n\npre { \n  font-size : 95%; \n  line-height : 120%; \n  background-color : lightgrey;\n  white-space : wrap;\n  color: darkblue;\n  background-color : linen;\n}\n\npre.code { \n  color: black;\n  background-color : white; \n}\n\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n\n</style>"
+  },
+  {
+    "original_filename": "0181_potpourri",
+    "header_text": "Practical Notes on Impractical Things",
+    "local_header_href": "#practical-notes-on-impractical-things",
+    "chunk_text": "<h3>Practical Notes on Impractical Things</h3><p>I just learned that the two introductory images presented in the article on the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2009/07/revit-form-creation-api.html\">\nRevit form creation API</a>\n\ncame from Zach Kron, whose blog\n\n<a href=\"http://buildz.blogspot.com\">\nBuildz</a>\n\npresents lots of interesting 'practical notes on making impractical things' in Revit.</p><p>Here is a pointer to a completely different kind of practical note on another blog:</p>"
+  },
+  {
+    "original_filename": "0181_potpourri",
+    "header_text": "Disable Auto Setback in Framing Template",
+    "local_header_href": "#disable-auto-setback-in-framing-template",
+    "chunk_text": "<h4>Disable Auto Setback in Framing Template</h4><p>Several developers have been struggling with some of the hard-coded Revit behaviour.\nMiroslav Schonauer just pointed out that he and Sarah Capes found a solution for one specific problem on an Autodesk Consulting project, which is documented in this article on \n\n<a href=\"http://bimandbeam.typepad.com/bim_beam/2009/07/framing-templatehow-to-disable-auto-setback.html\">\nhow to disable auto setback in a framing template</a>.\n\n<p>And to round off today's \n\n<a href=\"http://en.wikipedia.org/wiki/Potpourri\">\npotpourri</a>,\n\nhere is another issue around the topic of form creation:</p>\n<h4>NewSweptBlend Failure</h4>\n<p><strong>Question:</strong>\nI am trying to use the NewSweptBlend method, but it throws an exception saying The attempted operation is not permitted in this type of family. What can I do to solve this?</p>\n<p><strong>Answer:</strong>\nThis indicates that swept blends are not supported in the category type of the family where you are attempting to create it.</p>\n<p>If it is a 2D family type, you would get this exception, and maybe also on a few other types as well.</p>\n<p>In your specific case, the code uses a Conceptual Mass template and tries to create a SweptBlend in it. \nIf you want to work in a Conceptual Mass template, you must use the NewSweptBlendForm method instead. \nIf you want to use NewSweptBlend, then use a non-mass template.\nNote the difference between a generic model and conceptual mass.</p>\n</p>"
+  },
+  {
+    "original_filename": "0181_potpourri",
+    "header_text": "NewSweptBlend Failure",
+    "local_header_href": "#newsweptblend-failure",
+    "chunk_text": "<h4>NewSweptBlend Failure</h4><p><strong>Question:</strong>\nI am trying to use the NewSweptBlend method, but it throws an exception saying The attempted operation is not permitted in this type of family. What can I do to solve this?</p><p><strong>Answer:</strong>\nThis indicates that swept blends are not supported in the category type of the family where you are attempting to create it.</p><p>If it is a 2D family type, you would get this exception, and maybe also on a few other types as well.</p><p>In your specific case, the code uses a Conceptual Mass template and tries to create a SweptBlend in it. \nIf you want to work in a Conceptual Mass template, you must use the NewSweptBlendForm method instead. \nIf you want to use NewSweptBlend, then use a non-mass template.\nNote the difference between a generic model and conceptual mass.</p>"
+  }
+]

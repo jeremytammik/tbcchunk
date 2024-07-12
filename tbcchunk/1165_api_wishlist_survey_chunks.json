@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1165_api_wishlist_survey",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1165_api_wishlist_survey",
+    "header_text": "Revit API Wishlist Survey",
+    "local_header_href": "#revit-api-wishlist-survey",
+    "chunk_text": "<h3>Revit API Wishlist Survey</h3><p>Once again, the time has come for another round of API wishlist surveys.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1165_api_wishlist_survey",
+    "header_text": "Revit 2015 Add-In Manager",
+    "local_header_href": "#revit-2015-add-in-manager",
+    "chunk_text": "<h4>Revit 2015 Add-In Manager</h4><p>Before getting into the details of that, let me mention\n\n<a href=\"http://adndevblog.typepad.com/aec/augusto-goncalves.html\">Augusto Gonçalves</a>'s\n\nuseful note on the modified installation procedure for the\n\n<a href=\"http://adndevblog.typepad.com/aec/2014/05/revit-2015-add-in-manager.html\">\nRevit 2015 Add-In Manager</a> included\n\nin the May 14\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/05/updated-sdk-devtv-bim-360-news-and-viewer.html#2\">\nRevit 2015 SDK Update Release 2</a>,\n\nwhich now just provides the .dll and .addin files, no longer any MSI installer.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1165_api_wishlist_survey",
+    "header_text": "The Spring 2014 Revit API Wishlist Survey",
+    "local_header_href": "#the-spring-2014-revit-api-wishlist-survey",
+    "chunk_text": "<h4>The Spring 2014 Revit API Wishlist Survey</h4><p>This year's\n\n<a href=\"https://www.surveymonkey.com/s/RevitAPI2014Spring\">\nRevit API wishlist survey</a> is\n\nnow open.\n\n<center>\n<img alt=\"Wishlist survey\" src=\"img/wishlist_survey.png\"/>\n</center>\n<p>Please take a moment to participate and complete this survey and let us hear your feedback.\nIt will take less than 5 minutes.</p>\n<p>The Revit engineering team will use the results to understand your needs and help prioritize the areas of API enhancements in future planning, so is has a strong and immediate influence on the future API direction.</p>\n<p>We also encourage you to mention any other wishes, ideas or needs you may have using the free-form feedback section.</p>\n<p>If you leave your email address, we will send you the final result after it is concluded.\nThe email address you leave will be used solely for this purpose and not shared or used in any other way.</p>\n<p>The survey will remain open for three weeks until <b>June 20<sup>th</sup>, 2014</b>.</p>\n<p>We look forward to hearing from you!!</p>\n<p>Thank you!</p>\n</p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0758_edit_family",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0758_edit_family",
+    "header_text": "Edit Family Requires No Transaction",
+    "local_header_href": "#edit-family-requires-no-transaction",
+    "chunk_text": "<h3>Edit Family Requires No Transaction</h3><p>I recently received a note from Matt Mason pointing out that the behaviour of the EditFamily method changed in Revit 2013, and a suggestion to highlight this fact.\nThe suggestion is very valid, since his note was quickly followed up by a matching \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/reloading-a-family.html?cid=6a00e553e1689788330168eaefdf61970c#comment-6a00e553e1689788330168eaefdf61970c\">\nquestion</a> by \n\n<a href=\"mailto:noclew@mit.edu\">\nWoong Ki Sung</a> on\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/reloading-a-family.html?cid=6a00e553e1689788330168eaefdf61970c#comment-6a00e553e1689788330168eaefdf61970c\">\nreloading a family</a>, \n\nwho ran into the very same issue:\n\n<p><strong>Question:</strong> I am testing some code to edit family types in Revit 2013, and I have a transaction problem even though I set up manual transactions properly. \n\n<p><a href=\"http://dl.dropbox.com/u/39185526/familyEdit.cs\">The code</a> is \n\nvery simple, so could you please check? In advance, thank for your help.\n\n<p>Here is the answer by Matt:\n\n<p><strong>Answer:</strong> A quick note after I saw your recent post on upgrading add-ins.\n\n<p>I had an interesting case the other day:\nthere is a new API requirement in 2013 that all transactions must be closed before calling EditFamily \n– it throws an exception to that effect.\n\n<p>I hadn't really focused on this before, and the add-in in question was actually still set up for Automatic mode \n– I had to convert my add-in to manual transaction mode so that I could control the transactions and close them all prior to calling EditFamily.\n\n<p>The remarks on the EditFamily method in the Revit 2013 API help file RevitAPI.chm now clearly state:\n\n<p style=\"color:darkblue\">Gets the document of a loaded family to edit. This creates an independent copy of the family for editing. To apply the changes back to the family stored in the document, use the LoadFamily overload accepting IFamilyLoadOptions. \n\n<p style=\"color:darkblue\">This method may not be called if the document is currently modifiable (has an open transaction) or is in a read-only state. The method may not be called during dynamic updates. To test the document's current status, check the values of IsModifiable and IsReadOnly properties.\n\n<p>Many thanks to Matt for pointing this out!\n</p></p></p></p></p></p></p></p></p></p></p>"
+  }
+]

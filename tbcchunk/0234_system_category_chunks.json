@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0234_system_category",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0234_system_category",
+    "header_text": "System Versus User Family Category",
+    "local_header_href": "#system-versus-user-family-category",
+    "chunk_text": "<h3>System Versus User Family Category</h3><p>Here is a simple question and suggestion on classifying categories into built-in system versus user defined.\n\n<p><strong>Question:</strong> Given an arbitrary element, how can I determine whether it belongs to a system family as opposed to a user-defined family?\nI thought I might look at its category, but how can I see whether that is system-defined?\nFor example, I see that a duct has a category id of -2008000.\nCan I depend on the fact that this category id value is negative?\nOr is there any other way to determine this?</p>\n<p><strong>Answer:</strong> There is currently no API method to distinguish system categories from user defined ones short of creating your own hardcoded list.\nAll built-in categories have negative values, but this includes system family types, family types, and subcategories of each, so that will not help you resolve this issue.</p>\n<p>How could such a list be created?</p>\n<p>Unfortunately, that would have to be done manually.\nThis Family Category and Parameters dialogue lists all the family based categories:</p>\n<center>\n<img alt=\"Family categories\" src=\"img/categories.jpg\"/>\n</center>\n<p>If the category is a top level category and not in this list, then it is probably a system family category.</p>\n</p>"
+  }
+]

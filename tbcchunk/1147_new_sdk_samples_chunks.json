@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1147_new_sdk_samples",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1147_new_sdk_samples",
+    "header_text": "New Revit 2015 SDK Samples",
+    "local_header_href": "#new-revit-2015-sdk-samples",
+    "chunk_text": "<h3>New Revit 2015 SDK Samples</h3><p>Rather belatedly, I went through my usual analysis of the Revit SDK to determine the <a href='#2\"'>new samples added to the Revit 2015 SDK</a>.</p><p>While I was at it, I also migrated the <a href=\"#3\">DevDays samples for Revit 2015 UR1</a>,\n\nsince some new SDK functionality is not yet covered by new SDK samples, and the ones posted with the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/revit-2015-api-news-devdays-online-recording.html\">\nDevDays online recording</a> were\n\nstill compiled for one of the early pre-release versions of Revit.</p><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1147_new_sdk_samples",
+    "header_text": "New Samples in the Revit 2015 SDK",
+    "local_header_href": "#new-samples-in-the-revit-2015-sdk",
+    "chunk_text": "<h4>New Samples in the Revit 2015 SDK</h4><p>To cut a long story short, the initial release of the Revit 2015 SDK includes four new samples demonstrating part of the most important\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/whats-new-in-the-revit-2015-api.html\">\nnew Revit 2015 API functionality</a>:</p><ul>\n<li>ExternalResourceServer</li>\n<ul>\n<li>ExternalResourceDBServer – demonstrates a concrete class derived from the IExternalResourceServer interface.  The class simulates the provision of keynote data and Revit link models from files in a remote storage location, as well as keynote data created from a database.</li>\n<li>ExternalResourceUIServer – provides messages and other UI in support of the SampleExternalResourceServer in the ExternalResourceDBServer project.</li>\n</ul>\n<li>FamilyParametersOrder – demonstrates how to define and sort family parameter order.</li>\n<li>GetSetDefaultTypes – demonstrates how to get and set default family and element types.</li>\n<li>Structural Analysis SDK/Examples/ASCE-7-10 – new RST sample.</li>\n</ul><p>Furthermore, the trusty old RevitLookup sample, an important database exploration and debugging tool in its own right, was removed from the Revit SDK and now lives all on its own in its cosy\n\n<a href=\"https://github.com/jeremytammik/RevitLookup\">RevitLookup GitHub repository</a>.</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1147_new_sdk_samples",
+    "header_text": "DevDays Online Samples Updated for Revit 2015 UR1",
+    "local_header_href": "#devdays-online-samples-updated-for-revit-2015-ur1",
+    "chunk_text": "<h4>DevDays Online Samples Updated for Revit 2015 UR1</h4><p>The new SDK samples listed above do not cover all the new Revit 2015 API features.</p><p>For instance, nothing to illustrate the important new DirectShape functionality is included above.</p><p>I therefore took another look at the samples that we used to demonstrate some of the new functionality at the DevDays Online conferences and posted with the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/04/revit-2015-api-news-devdays-online-recording.html\">\nDevDays online recording</a>,\n\nand migrated them to the current Revit 2015 UR1 release.</p><p>Here are the two updated archive files with and without the sample models included:</p><ul>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_Samples_UR1.zip\">Sample code incl. RVT models</a> (45 MB)  \n<a href=\"file:////a/devdays/2013/online/Revit_2015_API_Samples_UR1.zip\">^</a>\n</li>\n<li>\n<a href=\"http://thebuildingcoder.typepad.com/devday/2013/online/Revit_2015_API_News/Revit_2015_API_Samples_No_RVT_UR1.zip\">Sample code excl. RVT models</a> (1.5 MB)  \n<a href=\"zip/Revit_2015_API_Samples_No_RVT_UR1.zip\">^</a> <!-- file:////a/devdays/2013/online/Revit_2015_API_Samples_No_RVT_UR1.zip -->\n</li>\n</ul><a href=\"\">\n</a>"
+  }
+]

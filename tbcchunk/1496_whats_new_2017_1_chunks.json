@@ -1,0 +1,182 @@
+[
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\nWhat's New in the Revit 2017.1 API #REVITAPI @AutodeskRevit #aec #bim #dynamobim @AutodeskForge @adskdevnetwrk\n\nI recently mentioned the updated Revit 2017.1 SDK and its API enhancements. They are documented in full detail in the section <i>Major additions to the 2017.1 Revit API</i> of the Revit 2017.1 API help file <code>RevitAPI.chm</code> included with the SDK, which is also provided there in the separate stand-alone document <i>Revit Platform API Changes and Additions.docx</i>. For convenient, easy and effective web searching, here is the online version of that information...\n\n-->"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "What's New in the Revit 2017.1 API",
+    "local_header_href": "#whats-new-in-the-revit-20171-api",
+    "chunk_text": "### What's New in the Revit 2017.1 API\n\nI recently mentioned the\nupdated [Revit 2017.1 SDK](http://thebuildingcoder.typepad.com/blog/2016/10/au-revit-20171-and-rex-freezedrawing.html#4) and\nits API enhancements.\n\nThey are documented in full detail in the section *Major additions to the 2017.1 Revit API* of the Revit 2017.1 API help file `RevitAPI.chm` included with the SDK, which is also provided there in the separate stand-alone document *Revit Platform API Changes and Additions.docx*.\n\nFor convenient, easy and effective web searching, here is the online version of that information.\n\nI am only including that specific section here.\n\nThe rest of the document contents are identical with the original information\nabout [What's New in the Revit 2017 API](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html) provided\nwith the initial release of the Revit 2017 API.\n\nI made one small enhancement to that existing blog post as well, though:"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"2\"></a>Small Addendum to What's New in the Revit 2017 API",
+    "local_header_href": "#a-name2asmall-addendum-to-whats-new-in-the-revit-2017-api",
+    "chunk_text": "#### <a name=\"2\"></a>Small Addendum to What's New in the Revit 2017 API\n\nI just [made a small modification](https://github.com/jeremytammik/tbc/commit/b530c96b219422e9bc76eaf7698113fce4cf4968),\nadding the following note to [What's New in the Revit 2017 API](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html):\n\n- [TextNote creation behaviour change](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html#2.9.2)\n&ndash; The various `TextNote.Create` methods now need to be followed by a call to `Document.Regenerate` before the newly created `TextNote` can be queried for data.\n\nIt was missing in the version I originally published.\nI don't know when it slunk in there without me noticing."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"3\"></a>More About What's New",
+    "local_header_href": "#a-name3amore-about-whats-new",
+    "chunk_text": "#### <a name=\"3\"></a>More About What's New\n\nThe *What's New* section always provides very important information, both for discovering and exploring the newly added API functionality and for later reference.\n\nIf you encounter any issues migrating your existing add-ins between different versions, this is one of the first ports of call.\n\nHere are links to the preceding 'What's New in the API' discussions:\n\n- [What's New in the Revit 2010 API](http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2010-api.html)\n- [What's New in the Revit 2011 API](http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2011-api.html)\n- [What's New in the Revit 2012 API](http://thebuildingcoder.typepad.com/blog/2013/02/whats-new-in-the-revit-2012-api.html)\n- [What's New in the Revit 2013 API](http://thebuildingcoder.typepad.com/blog/2013/03/whats-new-in-the-revit-2013-api.html)\n- [What's New in the Revit 2014 API](http://thebuildingcoder.typepad.com/blog/2013/04/whats-new-in-the-revit-2014-api.html)\n- [What's New in the Revit 2015 API](http://thebuildingcoder.typepad.com/blog/2014/04/whats-new-in-the-revit-2015-api.html)\n- [What's New in the Revit 2016 API](http://thebuildingcoder.typepad.com/blog/2015/04/whats-new-in-the-revit-2016-api.html)\n- [What's New in the Revit 2017 API](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html)\n\nFor more detailed information, please refer to the complete API documentation and samples collection in the SDK and the\nonline [Revit API Developers Guide](http://help.autodesk.com/view/RVT/2017/ENU/?guid=GUID-F0A122E0-E556-4D0D-9D0F-7E72A9315A42) provided\nas part of the [Revit 2017 Help](http://help.autodesk.com/view/RVT/2017/ENU)."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4\"></a>Major Additions to the 2017.1 Revit API",
+    "local_header_href": "#a-name4amajor-additions-to-the-20171-revit-api",
+    "chunk_text": "### <a name=\"4\"></a>Major Additions to the 2017.1 Revit API\n\n- [API enabled in perspective views](#4.1)\n    - [Element modifications and contextual commands](#4.1.1)\n    - [External commands and applications](#4.1.2)\n- [Geometry API additions](#4.2)\n    - [BRepBuilder API additions](#4.2.1)\n    - [BRepBuilderSurfaceGeometry API additions](#4.2.2)\n    - [Ellipse API additions](#4.2.3)\n    - [RevolvedSurface API additions](#4.2.4)\n- [Dimension API additions](#4.3)\n    - [DimensionEqualityLabelFormating API](#4.3.1)\n    - [UnitsFormatOptions in DimensionType](#4.3.2)\n    - [OrdinateDimensionSetting](#4.3.3)\n- [FabricationPart detailing API](#4.4)\n    - [Split Parts API](#4.4.1)\n    - [Detailed Fabrication additions](#4.4.2)\n    - [Ancillary usage additions](#4.4.3)\n    - [Part status](#4.4.4)\n    - [Hanger rod additions](#4.4.5)\n- [Import API additions](#4.5)\n    - [ShapeImporter additions](#4.5.1)\n- [Worksharing events addition](#4.6)\n    - [WorksharedOperationProgressChangedEventArgs](#4.6.1)\n    - [DocumentSaveToLocalProgessChangedEventArgs](#4.6.2)\n    - [DocumentReloadLatestProgressChangedEventArgs](#4.6.3)\n    - [DocumentSaveToCentralProgessChangedEventArgs](#4.6.4)"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.1\"></a>API enabled in perspective views",
+    "local_header_href": "#a-name41aapi-enabled-in-perspective-views",
+    "chunk_text": "### <a name=\"4.1\"></a>API enabled in perspective views\n\n"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.1.1\"></a>Element modifications and contextual commands",
+    "local_header_href": "#a-name411aelement-modifications-and-contextual-commands",
+    "chunk_text": "#### <a name=\"4.1.1\"></a>Element modifications and contextual commands\n\nModification of many different object types is now allowed in perspective views. Most commands allowed in 3D orthographic views are now also allowed in perspective views. This includes contextual commands. Annotations are an exception and cannot be created in perspective views."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.1.2\"></a>External commands and applications",
+    "local_header_href": "#a-name412aexternal-commands-and-applications",
+    "chunk_text": "#### <a name=\"4.1.2\"></a>External commands and applications\n\nExternal API commands and applications are now enabled by default in perspective views. The following behaviour applies:\n\n- Any external command that was automatically disabled by Revit when a perspective view is active will now be active. No code changes are necessary to make this happen.\n- Any external command that was explicitly disabled in perspective views will remain disabled. For example, if your command has an accessibility function limiting it to use in certain view types, the command will not be accessible in perspective views unless that function accepts ViewType.ThreeD as a view type that is allowed.\n- Macros, the Macro Manager tools, Dynamo scripts and the Dynamo editor are also newly enabled when a perspective view is active."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.2\"></a>Geometry API additions",
+    "local_header_href": "#a-name42ageometry-api-additions",
+    "chunk_text": "### <a name=\"4.2\"></a>Geometry API additions\n\n"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.2.1\"></a>BRepBuilder API additions",
+    "local_header_href": "#a-name421abrepbuilder-api-additions",
+    "chunk_text": "#### <a name=\"4.2.1\"></a>BRepBuilder API additions\n\nTwo new methods have been added to handle problematic faces:\n\n- BRepBuilder.AllowRemovalOfProblematicFaces() &ndash; Allows BRepBuilder to remove problematic faces (e.g., due to inaccurate edge geometry).\n- BRepBuilder.RemovedSomeFaces() &ndash; Returns true if BRepBuilder removed some problematic faces from the output geometry.\nOne new method has been added to relax validation criteria on the input geometry:\n- BRepBuilder.SetAllowShortEdges() &ndash; Makes the BRepBuilder allow edges that it would normally disallow as being too short for Revit geometry."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.2.2\"></a>BRepBuilderSurfaceGeometry API additions",
+    "local_header_href": "#a-name422abrepbuildersurfacegeometry-api-additions",
+    "chunk_text": "#### <a name=\"4.2.2\"></a>BRepBuilderSurfaceGeometry API additions\n\nA new overload of the method:\n\n- static BRepBuilderSurfaceGeometry.CreateNURBSSurface()\n\nconstructs a BRepBuilderSurfaceGeometry based on NURBS surface data, where the weights are not supplied."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.2.3\"></a>Ellipse API additions",
+    "local_header_href": "#a-name423aellipse-api-additions",
+    "chunk_text": "#### <a name=\"4.2.3\"></a>Ellipse API additions\n\nThe new method:\n\n- static Ellipse.CreateCurve()\n\ncreates a new geometric ellipse or elliptical arc object."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.2.4\"></a>RevolvedSurface API additions",
+    "local_header_href": "#a-name424arevolvedsurface-api-additions",
+    "chunk_text": "#### <a name=\"4.2.4\"></a>RevolvedSurface API additions\n\nThe new method:\n\n- RevolvedSurface.GetProfileCurveInWorldCoordinates()\n\nreturns a copy of the profile curve expressed in the world coordinate system."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.3\"></a>Dimension API additions",
+    "local_header_href": "#a-name43adimension-api-additions",
+    "chunk_text": "### <a name=\"4.3\"></a>Dimension API additions\n\n"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.3.1\"></a>DimensionEqualityLabelFormating API",
+    "local_header_href": "#a-name431adimensionequalitylabelformating-api",
+    "chunk_text": "#### <a name=\"4.3.1\"></a>DimensionEqualityLabelFormating API\n\nThe new class:\n\n- DimensionEqualityLabelFormatting\n\nallows users to set dimension equality formulas for continuous linear or angular dimensions.\n\nNew methods and properties include:\n\n- DimensionEqualityLabelFormatting.LeadingSpaces\n- DimensionEqualityLabelFormatting.LabelType\n- DimensionEqualityLabelFormatting.Prefix\n- DimensionEqualityLabelFormatting.Suffix\n- DimensionEqualityLabelFormatting.GetFormatOptions()\n- DimensionEqualityLabelFormatting.SetFormatOptions()\n\nThe following new methods in DimensionType allow access to equality formulas:\n\n- DimensionType.GetEqualityFormula()\n- DimensionType.SetEqualityFormula()"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.3.2\"></a>UnitsFormatOptions in DimensionType",
+    "local_header_href": "#a-name432aunitsformatoptions-in-dimensiontype",
+    "chunk_text": "#### <a name=\"4.3.2\"></a>UnitsFormatOptions in DimensionType\n\nThe new functions:\n\n- DimensionType.GetUnitsFormatOptions()\n- DimensionType.SetUnitsFormatOptions()\n\nallow users to get or set the FormatOptions for a DimensionType."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.3.3\"></a>OrdinateDimensionSetting",
+    "local_header_href": "#a-name433aordinatedimensionsetting",
+    "chunk_text": "#### <a name=\"4.3.3\"></a>OrdinateDimensionSetting\n\nThe new class:\n\n- OrdinateDimensionSetting\n\nallows users to customize ordinate dimensions.\n\nThe new enum:\n\n- OrdinateDimensionLineStyle\n\nallows users to choose continuous or segmented line styles for their dimensions.\n\nThe new enums:\n\n- OrdinateTextOrientation\n- OrdinateTextPosition\n\nallows users to orient text in relation to the dimension lines or witness lines.\n\nThe new enum:\n\n- OrdinateOriginVisibility\n\nallows users to control visibility of their dimensions.\n\nNew properties in OrdinateDimensionSetting include:\n\n- OrdinateDimensionSetting.DimLineLength\n- OrdinateDimensionSetting.DimLineStyle\n- OrdinateDimensionSetting.TextOrientation\n- OrdinateDimensionSetting.TextPosition\n- OrdinateDimensionSetting.OriginVisibility\n- OrdinateDimensionSetting.OriginTickMarkId\n\nThe following new methods in DimensionType allow access to the OrdinateDimensionSetting:\n\n- DimensionType.GetOrdinateDimensionSetting()\n- DimensionType.SetOrdinateDimensionSetting()"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4\"></a>FabricationPart detailing API",
+    "local_header_href": "#a-name44afabricationpart-detailing-api",
+    "chunk_text": "### <a name=\"4.4\"></a>FabricationPart detailing API\n\n"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4.1\"></a>Split Parts API",
+    "local_header_href": "#a-name441asplit-parts-api",
+    "chunk_text": "#### <a name=\"4.4.1\"></a>Split Parts API\n\nThe following methods have been added to support splitting fabrication parts:\n\n- FabricationPart.SplitStraight() &ndash; Splits the straight into two at the passed in point.\n- FabricationPart.IsStraightSegment() &ndash; Validates if the part is a straight.\n- FabricationPart.CanSplitStraight() &ndash; Validates if the straight can be split into two at the passed in point."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4.2\"></a>Detailed Fabrication additions",
+    "local_header_href": "#a-name442adetailed-fabrication-additions",
+    "chunk_text": "#### <a name=\"4.4.2\"></a>Detailed Fabrication additions\n\nSeveral methods, properties classes and enumerations have been added to allow the user to access detailed fabrication information defined in the fabrication configuration and in use on the fabrication parts.\n\nThe following methods allow access fabrication data defined by the currently loaded fabrication configuration. These can be used to query what fabrication data is available for fabrication parts to use:\n\n- FabricationConfiguration.GetAllDampers() &ndash; Lists all damper identifiers.\n- FabricationConfiguration.GetDamperName() &ndash; Gets damper name from its identifier.\n- FabricationConfiguration.GetAncillaries() &ndash; Lists all ancillary identifiers (by enumerated type).\n- FabricationConfiguration.GetAncillaryName() &ndash; Gets ancillary name from its identifier.\n- FabricationConfiguration.GetAllPartStatuses() &ndash; Lists all part status identifiers.\n- FabricationConfiguration.GetPartStatusDescription() &ndash; Gets part status description from its identifier.\n- FabricationConfiguration.GetAllPartCustomData() &ndash; Lists all part custom data identifiers.\n- FabricationConfiguration.GetPartCustomDataName() &ndash; Gets part custom data name from its identifier.\n- FabricationConfiguration.GetPartCustomDataType() &ndash; Gets part custom data type enumeration from its identifier.\n\nThe following methods allow access to Fabrication Part custom data defined per part (for querying and changing values):\n\n- FabricationPart.HasCustomData() &ndash; Queries if a part has a certain optional custom data.\n- FabricationPart.Get/SetPartCustomDataText/Integer/Real() &ndash; Gets or sets fabrication part's custom data.\n- FabricationPart.Add/RemovePartCustomData() &ndash; Adds or removes optional custom data on fabrication parts.\n\nAdded a new API to override routing exclusions\n\n- FabricationService.IsGroupExcluded() &ndash; Gets whether a service group is excluded from routing.\n- FabricationService.SetServiceGroupExclusions() &ndash; Sets the service group exclusions.\n- FabricationService.ResetServiceExclusionOverrides() &ndash; Resets the overridden service group and button exclusions back to default.\n- FabricationService.OverrideServiceButtonExclusion() &ndash; Overrides the default service button exclusions.\n- FabricationServiceButton.IsExcluded() &ndash; Gets if the service button is excluded from routing."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4.3\"></a>Ancillary usage additions",
+    "local_header_href": "#a-name443aancillary-usage-additions",
+    "chunk_text": "#### <a name=\"4.4.3\"></a>Ancillary usage additions\n\nA method was added to query fabrication part ancillary usage. This method can be used to populate cut lists and procure ancillaries needed to fabricate and install the fabrication part:\n\n- FabricationPart.GetPartAncillaryUsage() &ndash; Gets a list of FabricationAncillaryUsage structures that lists the\nancillaries that the fabrication part uses.\n\nThe ancillary usage is held in a new class:\n\n- FabricationAncillaryUsage\n\nIt has the following read-only properties:\n\n- FabricationAncillaryUsage.Type &ndash; A new enumerated type FabricationAncillaryType which describes what kind of ancillary it is (e.g., a fixing, airturn vane or support material).\n- FabricationAncillaryUsage.UsageType &ndash; A new enumerated type FabricationAncillaryUsageType describing the usage of the ancillary (e.g., in a support, connector or airturn).\n- FabricationAncillaryUsage.AncillaryId &ndash; The ancillary database identifier as listed by FabricationConfiguration.GetAncillaries().\n- FabricationAncillaryUsage.AncillaryWidthOrDiameter &ndash; The width / diameter of the ancillary (e.g., rod thickness).\n- FabricationAncillaryUsage.AncillaryDepth &ndash; The depth/height of the ancillary.\n- FabricationAncillaryUsage.Quantity &ndash; The quantity of the ancillary in this part.\n- FabricationAncillaryUsage.Length &ndash; The total length of the ancillary, if applicable, in this part.\n- FabricationAncillaryUsage.ProductCode &ndash; The product code identifier used to procure the ancillary."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4.4\"></a>Part status",
+    "local_header_href": "#a-name444apart-status",
+    "chunk_text": "#### <a name=\"4.4.4\"></a>Part status\n\nTwo properties were added to fabrication part to allow the user to query and set the part fabrication status field:\n\n- FabricationPart.PartStatus &ndash; Query and change the part fabrication status field current value. Setting the value will track when it was changed.\n- FabricationPart.PartGuid &ndash; Query the part's fabrication globally unique identifier, as used in applications such as Tracker."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.4.5\"></a>Hanger rod additions",
+    "local_header_href": "#a-name445ahanger-rod-additions",
+    "chunk_text": "#### <a name=\"4.4.5\"></a>Hanger rod additions\n\nTo give the user better control over hanger rod thicknesses a new property was added to fabrication part to get and set the ancillary kit used:\n\n- FabricationPart.HangerRodKit &ndash; get/set support rod kit override."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.5\"></a>Import API additions",
+    "local_header_href": "#a-name45aimport-api-additions",
+    "chunk_text": "### <a name=\"4.5\"></a>Import API additions\n\n"
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.5.1\"></a>ShapeImporter additions",
+    "local_header_href": "#a-name451ashapeimporter-additions",
+    "chunk_text": "#### <a name=\"4.5.1\"></a>ShapeImporter additions\n\nTwo new methods:\n\n- ShapeImporter.GetDefaultLengthUnit()\n- ShapeImporter.SetDefaultLengthUnit()\n\nget or set the length unit to be used, if not specified in the input SAT file."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.6\"></a>Worksharing events addition",
+    "local_header_href": "#a-name46aworksharing-events-addition",
+    "chunk_text": "### <a name=\"4.6\"></a>Worksharing events addition\n\nSubscribe to the Autodesk.Revit.DB.Events.WorksharedOperationProgressChanged event to be notified when progress has changed during Collaboration for Revit's synchronizing with central operation.\n\nThis event consists of several phases. Different event arguments are used during each phase."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.6.1\"></a>WorksharedOperationProgressChangedEventArgs",
+    "local_header_href": "#a-name461aworksharedoperationprogresschangedeventargs",
+    "chunk_text": "#### <a name=\"4.6.1\"></a>WorksharedOperationProgressChangedEventArgs\n\nThe new class:\n\n- Autodesk.Revit.DB.Events.WorksharedOperationProgressChangedEventArgs\n\nprovides a base class for event arguments for worksharing-based progress events."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.6.2\"></a>DocumentSaveToLocalProgessChangedEventArgs",
+    "local_header_href": "#a-name462adocumentsavetolocalprogesschangedeventargs",
+    "chunk_text": "#### <a name=\"4.6.2\"></a>DocumentSaveToLocalProgessChangedEventArgs\n\nThe new class:\n\n- Autodesk.Revit.DB.Events.DocumentSaveToLocalProgessChangedEventArgs provides information during the save to local phase of the DocumentSynchronizingWithCentralProgessChanged event.\n\nIt has the following properties:\n\n- DocumentSaveToLocalProgessChangedEventArgs.Location &ndash; Full path of the central model which is to be synchronized.\n- DocumentSaveToLocalProgessChangedEventArgs.Status &ndash; Gets the API event status, which reflects the current operation execution status.\n- DocumentSaveToLocalProgessChangedEventArgs.BeforeSaveToCentral &ndash; True if the \"save to local\" operation is occurring before \"save to central\"; false if after.\n- DocumentSaveToLocalProgessChangedEventArgs.FinishedStreams &ndash; The number of streams finished since the last time this event was raised.\n- DocumentSaveToLocalProgessChangedEventArgs.TotalStreams &ndash; The total expected number of streams to save to local.\n- DocumentSaveToLocalProgessChangedEventArgs.SaveToLocalFinished &ndash; Indicates if the current \"save to local\" operation has finished."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.6.3\"></a>DocumentReloadLatestProgressChangedEventArgs",
+    "local_header_href": "#a-name463adocumentreloadlatestprogresschangedeventargs",
+    "chunk_text": "#### <a name=\"4.6.3\"></a>DocumentReloadLatestProgressChangedEventArgs\n\nThe new class:\n\n- Autodesk.Revit.DB.Events.DocumentReloadLatestProgessChangedEventArgs provides information during the reload latest phase of the DocumentSynchronizingWithCentralProgessChanged event.\n\nIt has the following properties:\n\n- DocumentReloadLatestProgessChangedEventArgs.Location &ndash; The full path of the central model which is to be synchronized.\n- DocumentReloadLatestProgessChangedEventArgs.Status &ndash; Gets API event status, reflecting the current operation execution status.\n- DocumentReloadLatestProgessChangedEventArgs.RetryTimes &ndash; The number of times Revit has tried to Reload Latest. Its value is '0' at the first time.\n- DocumentReloadLatestProgessChangedEventArgs.DownloadSpeed &ndash; Download speed(bytes/second) in this event.\n- DocumentReloadLatestProgessChangedEventArgs.FinishedSize &ndash; The downloaded data size, in bytes, since the last time this event was raised.\n- DocumentReloadLatestProgessChangedEventArgs.TotalSize &ndash; Total expected data size to download, in bytes.\n- DocumentReloadLatestProgessChangedEventArgs.IsMerging &ndash; Indicates if Revit is merging downloaded data.\n- DocumentReloadLatestProgessChangedEventArgs.ReloadLatestFinished &ndash; Indicates if current 'reload latest' progress is finished or not."
+  },
+  {
+    "original_filename": "1496_whats_new_2017_1",
+    "header_text": "<a name=\"4.6.4\"></a>DocumentSaveToCentralProgessChangedEventArgs",
+    "local_header_href": "#a-name464adocumentsavetocentralprogesschangedeventargs",
+    "chunk_text": "#### <a name=\"4.6.4\"></a>DocumentSaveToCentralProgessChangedEventArgs\n\nThe new class:\n\n- Autodesk.Revit.DB.Events.DocumentSaveToCentralProgessChangedEventArgs provides information during the save to central phase of the DocumentSynchronizingWithCentralProgessChanged event.\n\nIt has the following properties:\n\n- DocumentSaveToCentralProgessChangedEventArgs.Location &ndash; Full path of the central model which is to be synchronized.\n- DocumentSaveToCentralProgessChangedEventArgs.Status &ndash; Gets API event status, reflecting the current operation execution status.\n- DocumentSaveToCentralProgessChangedEventArgs.RetryTimes &ndash; The number of times Revit has tried to Save to Central.\" Its value is '0' at the first time.\n- DocumentSaveToCentralProgessChangedEventArgs.UploadSpeed &ndash; Upload speed(bytes/second) of saving to central.\n- DocumentSaveToCentralProgessChangedEventArgs.FinishedSize &ndash; The uploaded data size, in bytes, since the last time this event was raised.\n- DocumentSaveToCentralProgessChangedEventArgs.TotalSize &ndash; Total expected uploaded data size to save to central, in bytes.\n- DocumentSaveToCentralProgessChangedEventArgs.SaveToCentralFinished &ndash; Indicates if current 'save to central' is finished or not.\n- DocumentSaveToCentralProgessChangedEventArgs.FailureDueToConflicts &ndash; Indicates the 'save to central' failure is caused by submission, that is because another user finished saving to central first.\n\nThe rest of the document continues with the [Revit 2017 API changes](http://thebuildingcoder.typepad.com/blog/2016/04/whats-new-in-the-revit-2017-api.html)."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0307_unmodified_geometry",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0307_unmodified_geometry",
+    "header_text": "Unmodified Element Geometry",
+    "local_header_href": "#unmodified-element-geometry",
+    "chunk_text": "<h3>Unmodified Element Geometry</h3><p>Still on vacation in Andalusia, and still not finished fixing the roof, since it never stops raining.\nThe weather is so bad I have nothing better to do than write a brand new post on how to obtain the original unmodified geometry of an object intersected by another building element:\n\n<p><strong>Question:</strong> I have two building elements which intersect, for instance like this:</p>\n<center>\n<img alt=\"Intersecting elements\" src=\"img/intersecting_elements.jpg\"/>\n</center>\n<p>The two may be walls, slabs, columns, beams or other elements.\nI am trying to obtain the coordinates of the corner points of the top face of element2, i.e. (p1, p2, p3, p4).\nInstead, the Tessellate method is returning the vertices (p1, pp1, pp2, pp3, p3, p4) of the modified geometry.\nWhat can I do to obtain the vertices of the original, unmodified geometry?\n\n<p><strong>Answer:</strong> I see that you have two elements which are mutually intersecting. \nThe geometry being returned to you is the result of subtracting the other element geometry from the one you are interested in. \nWhat you are trying to obtain is the original, unmodified geometry. \n\n<p>Probably the most reliable way to solve this problem is to use the doc.Delete approach for temporary element deletion described by Scott Conover on obtaining the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/02/material-quantity-extraction.html\">\ngross material quantities</a>\n\nof an element.\n\n<p>Some other aspects of mutually intersecting elements in the specific case of family instances are discussed in the post on\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/02/retrieving-column-and-stair-geometry.html\">\ncolumn and stair geometry</a>.\n\n<p>If the element2 that you are analysing is a wall, and the element1 cutting off part of it is a column, you might also find the FindReferencesByDirection technique useful to determine the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/01/findreferencesbydirection.html\">\ncolumns intersecting the wall</a>, \n\ni.e. which columns to temporarily delete.\n</p></p></p></p></p></p>"
+  }
+]

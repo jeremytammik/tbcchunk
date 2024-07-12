@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0601_rex_2012",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0601_rex_2012",
+    "header_text": "Extensions for Revit 2012",
+    "local_header_href": "#extensions-for-revit-2012",
+    "chunk_text": "<h3>Extensions for Revit 2012</h3><p>I recently mentioned the availability of the \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/06/subscription-packs.html\">\nsubscription packs</a> for \n\nRevit 2012.\n\n<p>Yesterday, another important set of subscription packs were released: the Revit Extensions:\n\n<ul>\n<li>Revit Extensions for Revit Architecture 2012\n<li>Revit Extensions for Revit MEP 2012\n<li>Revit Extensions for Revit Structure 2012\n</li></li></li></ul>\n<center>\n<img alt=\"Revit 2012 Extensions\" src=\"img/revit_2012_extensions.png\"/>\n</center>\n<p>As always, they are available through the \n\n<a href=\"http://subscription.autodesk.com\">Autodesk subscription center</a>,\n\nto which ADN members also have access by going to the\n\n<a href=\"http://adn.autodesk.com/adn/servlet/index?siteID=4814862&amp;id=5396918\">ADN home page</a> and selecting the\n\n<a href=\"http://adn.autodesk.com/adn/servlet/item?siteID=4814862&amp;id=11950902\">Autodesk Subscription Center</a> link.\n\n<p>Once again, even though all of this is \"user stuff\", many of the tools included in these extensions address workflows you might also be tempted to tackle through programming macros, so it is important for product users and application developers alike to be aware of them.\n\n<p>Here are <a href=\"http://revitclinic.typepad.com/my_weblog/2011/06/2012-revit-extensions-.html\">feature lists</a> for each of the three flavours.</p></p></p></p></p>"
+  }
+]

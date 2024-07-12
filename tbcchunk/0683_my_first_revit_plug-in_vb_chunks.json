@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0683_my_first_revit_plug-in_vb",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0683_my_first_revit_plug-in_vb",
+    "header_text": "My First Revit Plug-in in VB",
+    "local_header_href": "#my-first-revit-plug-in-in-vb",
+    "chunk_text": "<h3>My First Revit Plug-in in VB</h3><p>Back in May, we published the wonderful new Revit API training tool, the self-paced \n\n<!-- <a href=\"http://www.autodesk.com/myfirstrevitplugin\"> -->\n<a href=\"http://thebuildingcoder.typepad.com/blog/2011/05/my-first-revit-plug-in.html\">\nMy First Revit Plug-in</a> guide,\n\noriginally based on the C# programming language.\n\n<p>Based on popular demand, we have now added new VB.NET samples.\n\n<p>So regardless whether you are new to this training or have already gone through it once with the C# code, now is your chance to choose the language you prefer, C# or VB.Net, at\n\n<a href=\"http://www.autodesk.com/myfirstrevitplugin\">www.autodesk.com/myfirstrevitplugin</a>.\n\n<p>The explanations in the lessons are still written for C#, but now depending on your language preference you can follow along in VB.Net!</p>\n<center>\n<a href=\"http://www.autodesk.com/myfirstrevitplugin\">\n<img alt=\"My First Revit Plug-in in VB\" src=\"img/my_first_revit_plug-in_vb.png\"/>\n</a>\n</center>\n</p></p></p>"
+  }
+]

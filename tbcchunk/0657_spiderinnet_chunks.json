@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0657_spiderinnet",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0657_spiderinnet",
+    "header_text": "Spiderinnet",
+    "local_header_href": "#spiderinnet",
+    "chunk_text": "<h3>Spiderinnet</h3><p>Have you ever looked at the \n\n<a href=\"http://spiderinnet.typepad.com\">\nSpiderinnet</a>?</p><center>\n<img alt=\"Spiderinnet\" src=\"img/spiderinnet.png\"/>\n</center><p>Neither had I, until now, but the intro sounds really promising, and the list of articles is very impressive:\n\n<p style=\"color:darkblue\">This blog focuses on Revit Addin Wizards, Coders, and API Widgets. \nCoding languages exercised in the various Wizards/Coders/Widgets include but are not limited to C#, VB.NET and C++/Managed C++/CLI. \nDifferent Revit versions, flavors (Revit Architecture, Revit Structure and Revit MEP) and bitnesses (x86 or x64), different Visual Studio versions such as 2008 and 2010 and editions such as full fledged and Express will also be addressed when necessary. \n\n<p>The articles cover topics such as:\n\n<ul>\n<li>Revit Addin Project Wizards\n<li>Revit Addin Item Wizards\n<li>Revit Event Handlers\n<li>Revit Interface Implementers\n<li>Revit Element Filters And Finders\n<li>Revit Command and Application Wizards\n<li>Revit Manifest Creator Wizards\n<li>Revit Ribbon Creators\n<li>Revit Object Pickers\n<li>Revit Parameter Coders\n<ul>\n<li>Family Parameter Coders\n<li>Shared Parameter Coders\n<li>Project Parameter Coders\n<li>Various Parameter Coverters (oops, a typo)\n</li></li></li></li></ul>\n<li>TaskDialog and TaskDialoger\n<li>ElementParameterFilter Coders\n<li>Splash Window Coder\n<li>Parameter Categorizer\n<li>Coders And VB.NET\n<li>Revit API Widgets\n<li>Deploy &amp; Install &amp; Revit Manifest Organizer\n</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>\n<p>Very impressive indeed.\n\n<p>I look forward to hearing what you think of it!\n</p></p></p></p></p>"
+  }
+]

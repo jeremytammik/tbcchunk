@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0929_param_type_inst",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0929_param_type_inst",
+    "header_text": "Changing a Family Parameter from Type to Instance",
+    "local_header_href": "#changing-a-family-parameter-from-type-to-instance",
+    "chunk_text": "<h3>Changing a Family Parameter from Type to Instance</h3><p>Here is a short and simple question that just cropped up and required some digging around until my colleague Phil Xia came up with the right answer:\n\n<p><strong>Question:</strong> Is it possible to change the type of a family parameter programmatically?\n\n<p>This is possible in the family editor.\n\n<p>I only see the IsInstance property, though, and it is read-only.\n\n<p>I could achieve the same effect by deleting the parameter and creating a new one.\nObviously that would require updating all the existing values, though, if there are any, to change from the old parameter to the new one.\nI don't really see this as an option.\nBesides, the parameter could be referenced from other parameters.\n\n<p>Seeing that this is possible from within the family editor, I actually don’t see any need for this property to be read-only.\n\n<p>I don't think changing a family parameter from type to instance and vice versa should not be so hard.\n\n<p>Is there some other method that allows me to achieve this?\n\n\n<p><strong>Answer:</strong> Yes, sure, you are lucky, and so are we all: the following two FamilyManager methods set the given family parameter to instance or type:\n\n<ul>\n<li>MakeInstance – Set the family parameter as an instance parameter.\n<li>MakeType – Set the family parameter as a type parameter.\n</li></li></ul>\n<p>I hope this will save you from repeating the same digging all over again  :-)</p>\n<p>Many thanks to Phil for explicitly pointing this out!</p>\n</p></p></p></p></p></p></p></p></p>"
+  }
+]

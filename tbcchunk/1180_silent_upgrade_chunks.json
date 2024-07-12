@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1180_silent_upgrade",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1180_silent_upgrade",
+    "header_text": "Upgrading Family Files Silently",
+    "local_header_href": "#upgrading-family-files-silently",
+    "chunk_text": "<h3>Upgrading Family Files Silently</h3><p>Here is a recent case that I like and can share with you just as it is:</p><p><strong>Question:</strong> My add-in loads a number of predefined families into the current document.\nHowever, if many of them were saved in a previous version of Revit, a popup message saying the family file is being upgraded is displayed for each one.</p><p>Is there a way to load the families silently, so that the upgrade is still performed but the prompt is either not shown, or only shown once for the whole batch of family files?</p><p>Alternatively, if that is not possible, is there a way to find out if a model requires upgrading before loading it?</p><p><strong>Answer:</strong> Thank you for your very pertinent query.\nI like it very much that you care about that  :-)</p><p>I can think of two completely different approaches.</p><p><strong>1.</strong> Google for\n\n<a href=\"http://lmgtfy.com/?q=revit+file+updater\">\nrevit file updater</a>.</p><p>Numerous results are available.</p><p>The\n\n<a href=\"http://labs.blogs.com/its_alive_in_the_lab/2011/07/updated-file-upgrader-for-revit-now-available.html\">\nfile upgrader on Autodesk labs</a> was\n\nwritten by us, the ADN DevTech team, and is provided with full source code included as a learning tool.</p><p><strong>2.</strong> Handle the pop-up messages, so that the user never sees them, using one of the techniques suggested for\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/about-the-author.html#5.32\">handling dialogues and failures</a>.</p><p><strong>3.</strong>  Yes, you can\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/01/basic-file-info-and-rvt-file-version.html\">\ndetermine the Revit version</a> used\n\nto save a model.</p><p>The post describes two different approaches:\nyou can either use the documented and supported Revit API functionality provided by the BasicFileInfo class, or the unsupported approach parsing the RVT file yourself and extracting the desired information from its OLE document Structured Storage data.</p><p><strong>Addendum:</strong> Please don't miss the\n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2014/07/upgrading-family-files-silently-part-2.html\">\ncontinuation of this discussion</a>.</p>"
+  }
+]

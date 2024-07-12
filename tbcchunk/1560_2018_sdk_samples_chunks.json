@@ -1,0 +1,68 @@
+[
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"bc.css\">\n<script src=\"run_prettify.js\" type=\"text/javascript\"></script>\n<!--\n<script src=\"https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js\" type=\"text/javascript\"></script>\n-->\n</head>\n\n<!---\n\n- https://forums.autodesk.com/t5/revit-api-forum/draw-render-over-the-activeview/m-p/7088026\n  DuplicateGraphics SDK sample\n\nDuplicateGraphics DirectContext3D SDK sample @AutodeskForge #ForgeDevCon #RevitAPI @AutodeskRevit #bim #dynamobim http://bit.ly/2018sdksamples\n\nRevit 2018 SDK sample overview @AutodeskForge #ForgeDevCon #RevitAPI @AutodeskRevit #adsk #aec #bim #dynamobim http://bit.ly/2018sdksamples\n\nThe Revit API discussion forum thread on drawing or rendering over the active view brought to my attention that an important new SDK sample created to demonstrate the use of the Revit 2018 functionality <code>DirectContext3D</code> for display of externally managed 3D graphics in Revit is missing in the SDK.\nI added it right here, in DuplicateGraphics.zip, and also provide an overview of the new SDK samples\n&ndash; CapitalizeAllTextNotes\n&ndash; DuplicateGraphics\n&ndash; GenericStructuralConnection\n&ndash; BRepBuilderExample\n&ndash; MultistoryStairs\n&ndash; PlacementOptions\n&ndash; Structural Analysis CodeCheckingConcreteExample and CalculationPointsSelector\n&ndash; REX SDK DRevitFreezeDrawing...\n\n-->"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "Revit 2017 and 2018 SDK Samples",
+    "local_header_href": "#revit-2017-and-2018-sdk-samples",
+    "chunk_text": "### Revit 2017 and 2018 SDK Samples\n\nThe [Revit API discussion forum](http://forums.autodesk.com/t5/revit-api-forum/bd-p/160) thread\non [drawing or rendering over the active view](https://forums.autodesk.com/t5/revit-api-forum/draw-render-over-the-activeview/m-p/7088026) brought\nto my attention that an important new SDK sample created to demonstrate the use of the Revit 2018 functionality\n[`DirectContext3D` for display of externally managed 3D graphics in Revit](http://thebuildingcoder.typepad.com/blog/2017/04/whats-new-in-the-revit-2018-api.html#3.26) is\nmissing in the current version of the SDK.\n\nI added it as an attachment to that discussion thread, and am also providing it right here, in [DuplicateGraphics.zip](zip/DuplicateGraphics.zip).\n\nHere is an overview of the new SDK samples added in the past year or two:\n\n- [Revit 2017 and Revit 2017.1 SDK Samples](#2)\n- [Revit 2018 SDK Samples](#3)\n- [New Samples Overview](#4)\n    - [CapitalizeAllTextNotes](#4.1)\n    - [DuplicateGraphics](#4.2)\n    - [GenericStructuralConnection](#4.3)\n    - [BRepBuilderExample](#4.4)\n    - [MultistoryStairs](#4.5)\n    - [PlacementOptions](#4.6)"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"2\"></a>Revit 2017 and Revit 2017.1 SDK Samples",
+    "local_header_href": "#a-name2arevit-2017-and-revit-20171-sdk-samples",
+    "chunk_text": "#### <a name=\"2\"></a>Revit 2017 and Revit 2017.1 SDK Samples\n\nHere is a repetition of the list\nof [new Revit SDK samples added in Revit 2017](http://thebuildingcoder.typepad.com/blog/2016/06/point-boundary-condition-and-revit-2017-sdk.html#2) and\nthe [REX SDK `DRevitFreezeDrawing` sample](http://thebuildingcoder.typepad.com/blog/2016/10/au-revit-20171-and-rex-freezedrawing.html#5), described in more detail and added in Revit 2017.1:\n\n- Samples/CapitalizeAllTextNotes\n- Samples/GenericStructuralConnection\n- Samples/GeometryAPI/BRepBuilderExample\n- Samples/PlacementOptions\n- Structural Analysis SDK/Examples/CodeCheckingConcreteExample and CalculationPointsSelector\n- REX SDK/Samples/DRevitFreezeDrawing"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"3\"></a>Revit 2018 SDK Samples",
+    "local_header_href": "#a-name3arevit-2018-sdk-samples",
+    "chunk_text": "#### <a name=\"3\"></a>Revit 2018 SDK Samples\n\nThe first customer shipment of the Revit 2018 SDK includes one new sample:\n\n- MultistoryStairs\n\nAs mentioned above, another new sample was initially omitted:\n\n- DuplicateGraphics"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4\"></a>New Samples Overview",
+    "local_header_href": "#a-name4anew-samples-overview",
+    "chunk_text": "#### <a name=\"4\"></a>New Samples Overview\n\nFor future reference, let's quickly summarise what each one of these does (skipping the structural ones):\n\n- [CapitalizeAllTextNotes](#4.1)\n- [DuplicateGraphics](#4.2)\n- [GenericStructuralConnection](#4.3)\n- [BRepBuilderExample](#4.4)\n- [MultistoryStairs](#4.5)\n- [PlacementOptions](#4.6)"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.1\"></a>CapitalizeAllTextNotes",
+    "local_header_href": "#a-name41acapitalizealltextnotes",
+    "chunk_text": "#### <a name=\"4.1\"></a>CapitalizeAllTextNotes\n\nCapitalizes all the text of all the TextNotes in the project by formatting the text to use 'AllCaps'.\n\n- Find all `TextNote` instances in the document\n- Change the text formatting to 'AllCaps' on the entire range of text.\n\nAll TextNotes will have their text formatted to be rendered using upper case characters."
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.2\"></a>DuplicateGraphics",
+    "local_header_href": "#a-name42aduplicategraphics",
+    "chunk_text": "#### <a name=\"4.2\"></a>DuplicateGraphics\n\nDemonstrate the basic usage of `DirectContext3D`. The external application creates `DirectContext3D` servers that extract geometry from selected Revit elements, encode it in pairs of vertex and index buffers, and submit it for rendering using `DirectContext3D`. This process is triggered using an ExternalCommand and displays the geometry content of selected Revit elements at an offset, so that the graphics appear to be duplicated."
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.3\"></a>GenericStructuralConnection",
+    "local_header_href": "#a-name43agenericstructuralconnection",
+    "chunk_text": "#### <a name=\"4.3\"></a>GenericStructuralConnection\n\nDemonstrates basic Create, Read, Update and Delete operations on a generic or detailed structural connection.\n\n- Create, Read, Update, Delete generic structural connections.\n- Create, change, copy, match properties, reset detailed structural connections.\n\nIn detail:\n\n1. Create generic structural connection: A generic structural connection is created for the selected structural elements.\n2. Delete generic structural connection: The structural connections should get erased and the former connected elements should be independent.\n3. Read generic structural connection information: A dialog displaying connection information should appear on screen.\n4. Update generic structural connection information: The structural connection is updated to include the additional selected elements.\n5. Create detailed structural connection: A detailed structural connection (clip angle) should be created.\n6. Copy detailed structural connection: The structural connection and the connected elements should be copied to another place in the current project.\n7. Match properties on a detailed structural connection: The properties of the destination connection should be matched to the source one.\n8. Change detailed structural connection: The type and graphic representation of the detailed structural connection should change from 'clip angle' to 'shear plate'.\n9. Reset detailed structural connection: The type and graphic representation of the detailed structural connection should change from 'clip angle' to generic"
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.4\"></a>BRepBuilderExample",
+    "local_header_href": "#a-name44abrepbuilderexample",
+    "chunk_text": "#### <a name=\"4.4\"></a>BRepBuilderExample\n\nDemonstrate several cases of `BRepBuilder` usage for constructing Revit geometry using API.\n\n- Simple cubical solid\n\n<center>\n<img src=\"img/brep_builder_cube.png\" alt=\"BRepBuilder cube\" width=\"150\">\n</center>\n\n- Nurbs surface (open shell)\n\n<center>\n<img src=\"img/brep_builder_nurbs.png\" alt=\"BRepBuilder NURBS surface\" width=\"173\">\n</center>\n\n- Two solids, truncated cone and cylinder, with periodic face surfaces\n\n<center>\n<img src=\"img/brep_builder_cone_cylinder.png\" alt=\"BRepBuilder cone and cylinder\" width=\"231\">\n</center>\n\nThe geometry created by `BRepBuilder` is then set in a `DirectShape` element to make it visible in Revit views."
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.5\"></a>MultistoryStairs",
+    "local_header_href": "#a-name45amultistorystairs",
+    "chunk_text": "#### <a name=\"4.5\"></a>MultistoryStairs\n\nMultistoryStairs editing utilities, including creating multistory stairs by a standard stair, adding and removing stairs by picking levels.\n\n- Create a multistory stair by a standard stair.\n- Pick some levels to add aligned stairs into the multistory stairs.\n- Pick some levels to remove aligned stairs from the multistory stairs."
+  },
+  {
+    "original_filename": "1560_2018_sdk_samples",
+    "header_text": "<a name=\"4.6\"></a>PlacementOptions",
+    "local_header_href": "#a-name46aplacementoptions",
+    "chunk_text": "#### <a name=\"4.6\"></a>PlacementOptions\n\nThis sample demonstrates how to place a family instance via options:\n\n- Place face based family instance via the face, vertical face, or work plane option.\n- Place face sketch based family instance via the line, arc, and other sketching options.\n\nThe external command `Execute` method shows the options dialog for user to choose the option of placing the family instance.\n\n- OptionsForm.cs implements the dialog for choosing the face based family instance or sketch based family instance.\n- FacebasedForm.cs implements the dialog for setting the `FaceBasedPlacementType` option for a face based family instance.\n- SketchbasedForm.cs implements the dialog for setting the `SketchGalleryOptions` option for a face based family instance.\n\nI hope you find this overview inspiring and useful and encourage you to explore further yourself.\n\nHave fun!"
+  }
+]

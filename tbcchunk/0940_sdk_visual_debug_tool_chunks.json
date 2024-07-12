@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0940_sdk_visual_debug_tool",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0940_sdk_visual_debug_tool",
+    "header_text": "Revit 2014 SDK and Visual Debugging Tools",
+    "local_header_href": "#revit-2014-sdk-and-visual-debugging-tools",
+    "chunk_text": "<h3>Revit 2014 SDK and Visual Debugging Tools</h3><p>Two hot topics for today, especially the first:</p><ul>\n<li><a href=\"#2\">Updated Revit 2014 SDK</a></li>\n<li><a href=\"#3\">Visual debugging tools</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "0940_sdk_visual_debug_tool",
+    "header_text": "Updated Revit 2014 SDK",
+    "local_header_href": "#updated-revit-2014-sdk",
+    "chunk_text": "<h4>Updated Revit 2014 SDK</h4><p>An updated Revit 2014 SDK is live on the ADN Open\n\n<a href=\"http://www.autodesk.com/developrevit\">Revit developer page</a> now:</p><center>\n<a href=\"http://www.autodesk.com/developrevit\" style=\"text-align:center; font-size:large; font-weight:bold; color:orange; text-decoration:blink;\">www.autodesk.com/developrevit</a>\n</center><p>This version includes RevitLookup and the AddInManager!</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "0940_sdk_visual_debug_tool",
+    "header_text": "Visual Debugging Tools",
+    "local_header_href": "#visual-debugging-tools",
+    "chunk_text": "<h4>Visual Debugging Tools</h4><p>Rudolf Honke of\n\n<a href=\"http://www.acadgraph.de\">\nMensch und Maschine acadGraph GmbH</a> discovered\n\na glitch in the definition of the room solids in one of the standard sample RVT project files.</p><p><strong>Rudi says:</strong> When testing VRML exporter with Revit 2014, I noticed that the brand new rac_sample_project.rvt has some inconsistencies.\n\n<p>I export the ClosedShells of the rooms into VRML format to display then in my browser.\nOn the left side you see overlapping room volumes from 'Hall' and 'Entry Hall':</p>\n<center>\n<img alt=\"Overlapping room volumes\" src=\"img/visual_debugging_1.png\" width=\"300\"/>\n</center>\n<p>'Kitchen and dining' has an upper edge that needs to be cut off:</p>\n<center>\n<img alt=\"Upper edge sticks out\" src=\"img/visual_debugging_2.png\" width=\"300\"/>\n</center>\n<p>'Hall' has two ears protruding into the sky:</p>\n<center>\n<img alt=\"Hall with ears\" src=\"img/visual_debugging_3.png\" width=\"300\"/>\n</center>\n<p>I noticed this when debugging the funny results my application was producing.</p>\n<p>Since it is not the code, I concluded it must be the input that was corrupted…</p>\n<p>Without a visual tool like this, it is quite hard to evaluate what's wrong.</p>\n<p><strong>Jeremy adds:</strong> You can also observe this using the Export &gt; gbXML command:</p>\n<center>\n<img alt=\"Overlapping room volumes\" src=\"img/visual_debugging_4.png\" width=\"300\"/>\n</center>\n<p>'Kitchen and dining' has an upper edge that needs to be cut off:</p>\n<center>\n<img alt=\"Upper edge sticks out\" src=\"img/visual_debugging_5.png\" width=\"300\"/>\n</center>\n<p>'Hall' has two ears protruding into the sky:</p>\n<center>\n<img alt=\"Hall with ears\" src=\"img/visual_debugging_6.png\" width=\"300\"/>\n</center>\n<p>Furthermore, the Revit 2014 program folder contains a utility named <b>gbXML2dwfx.exe</b>.\n\n<p>If you drag and drop a gbXML file onto this it will create a DWFx file that can be viewed in\n\n<a href=\"http://usa.autodesk.com/design-review\">\nAutodesk Design Review</a>,\n\nthe free 2D and 3D DWF viewer, which provides more functionality than many VRML viewers.</p>\n<p><strong>Response:</strong> Interesting.\nGbXML2Dwfx.exe appears to be new in Revit 2014.\n\n<p>Regarding the geometry, it is important to note that you cannot rely on geometrical integrity of your Revit Elements.\n\n<p>I faced this problem previously, not only with rooms but also with walls.\n\n<p>Every cut-off and every Boolean operation makes the geometry more complex, and rounding errors may occur.\n\n<p>This totally confirms the GiGo principle of\n\n<a href=\"http://en.wikipedia.org/wiki/Garbage_in,_garbage_out\">\nGarbage in, garbage out</a>,\n\nslightly less helpful than\n\n<a href=\"http://en.wikipedia.org/wiki/FIFO\">\nFiFo</a>...\n\n</p></p></p></p></p></p></p>"
+  }
+]

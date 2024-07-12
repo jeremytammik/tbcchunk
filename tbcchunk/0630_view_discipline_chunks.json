@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0630_view_discipline",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0630_view_discipline",
+    "header_text": "View Discipline Enumeration Values",
+    "local_header_href": "#view-discipline-enumeration-values",
+    "chunk_text": "<h3>View Discipline Enumeration Values</h3><p>In his workaround to \n\n<a href=\"http://thebuildingcoder.typepad.com/blog/2010/11/refresh-referencing-sheet-parameter-display.html\">\nrefresh the referencing sheet parameter display</a>,\n\nPiotr Zurek pointed out that you can change the discipline of the view back and forth using the built-in parameter VIEW_DISCIPLINE.\nThat leads to the following query on which values to use for the different disciplines:\n\n\n<p><strong>Question:</strong> I can create a new plan view using Document.Create.NewViewPlan. \nHow can I set the discipline of the resulting view?\n\n<p>I noticed the built-in parameter VIEW_DISCIPLINE. \nIt values seem to reflect the view discipline in some way, maybe as an enumeration, but I cannot find the corresponding values in the Revit API documentation. \n\n<p>Can you tell me which enumeration values I can use here?\n\n\n<p><strong>Answer:</strong> You are perfectly right, and you can use the built-in parameter VIEW_DISCIPLINE to determine discipline of a view.\nIts storage type is Integer.\nThe most direct and effective method for you to determine which values to use would be to simply set the different disciplines through the user interface one by one and make a note of the resulting parameter values.\nHere is such a list of the values to use and their corresponding disciplines:\n\n<ol>\n<li>Architecture\n<li>Structure\n<li value=\"4\">Mechanical\n<li value=\"8\">Electrical\n<li value=\"4095\">Coordination\n</li></li></li></li></li></ol>\n<p>As far as I can tell, the Revit API currently does not define an explicit enumeration of these values anywhere, so you can simply define your own or use the integer values directly, for example like this:\n\n<pre class=\"code\">\n  <span class=\"teal\">Document</span> doc = commandData.Application\n    .ActiveUIDocument.Document;\n \n  <span class=\"teal\">Transaction</span> trans = <span class=\"blue\">new</span> <span class=\"teal\">Transaction</span>( doc );\n  trans.Start( <span class=\"maroon\">\"Change Discipline\"</span> );\n \n  doc.ActiveView.get_Parameter( \n    <span class=\"teal\">BuiltInParameter</span>.VIEW_DISCIPLINE )\n      .Set( 4 );\n \n  trans.Commit();\n</pre>\n</p></p></p></p></p></p>"
+  }
+]

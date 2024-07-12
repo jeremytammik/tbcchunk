@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1346_base_link_host_coord",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1346_base_link_host_coord",
+    "header_text": "Internal vs. Base Point and Link to Host Coordinates",
+    "local_header_href": "#internal-vs-base-point-and-link-to-host-coordinates",
+    "chunk_text": "<h3>Internal vs. Base Point and Link to Host Coordinates</h3><p>Let's look at two questions on various coordinate systems raised by Simon Jones and Miroslav Schonauer:</p><ul>\n<li><a href=\"#2\">Translate coordinates from link to host</a></li>\n<li><a href=\"#3\">Project Base Point versus Project Internal</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1346_base_link_host_coord",
+    "header_text": "Translate Coordinates from Link to Host",
+    "local_header_href": "#translate-coordinates-from-link-to-host",
+    "chunk_text": "<h4>Translate Coordinates from Link to Host</h4><p><strong>Question:</strong>\n\nTake this snippet of code:</p><pre class=\"code\">\n  <span class=\"blue\">foreach</span> (<span class=\"teal\">RevitLinkInstance</span> lnk <span class=\"blue\">in</span> selectedLinks)\n  {\n    <span class=\"teal\">Document</span> doc = lnk.GetLinkDocument();\n    mDocumentList.Add(doc);\n    projectLocation = doc.ActiveProjectLocation;\n    <span class=\"teal\">XYZ</span> origin = newXYZ(0, 0, 0);\n \n    <span class=\"teal\">ProjectPosition</span> position = projectLocation\n      .get_ProjectPosition(origin);\n \n    <span class=\"teal\">LocationPoint</span> linkLocationPt = lnk.Location\n      <span class=\"blue\">as</span> <span class=\"teal\">LocationPoint</span>;\n \n    <span class=\"teal\">Location</span> loc = lnk.Location;\n \n    <span class=\"teal\">SiteLocation</span> siteLocation = doc.SiteLocation;\n  }\n</pre><p>I'm trying to determine the position of elements within a link in relation to the host file for which I'm assuming I need the link's location and rotation (perhaps I'm still thinking too much like AutoCAD with the insertion and rotation of an xref).</p><p>However, the LocationPoint is always coming back as zero.</p><p>What is it I need to use to translate coordinates from the link to the host?</p><p><strong>Answer:</strong>\n\nNice problem.</p><p>Does the discussion on\n<a href=\"http://thebuildingcoder.typepad.com/blog/2013/11/determining-host-document-location-of-a-linked-element.html\">\ndetermining host document location of a linked element</a> help?</p><p><strong>Response:</strong>\n\nThanks – that did the trick.</p><p>The key function was:</p><pre class=\"code\">\n  <span class=\"teal\">Transform</span> t = lnk.GetTotalTransform();\n</pre><p>Then the points can be transformed to the host's coordinates with:</p><pre class=\"code\">\n  pt1 = t.OfPoint( pt1 );\n</pre><p>Seems to be working fine   :-)</p><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1346_base_link_host_coord",
+    "header_text": "Project Base Point versus Project Internal",
+    "local_header_href": "#project-base-point-versus-project-internal",
+    "chunk_text": "<h4>Project Base Point versus Project Internal</h4><p>Coordinates received from and requested by the API should indeed always be in Project Internal.</p><p><strong>Question:</strong>\n\nSorry for a silly question.</p><p>I discovered that the Project Base Point (PBP) in the Revit UI can be unclipped and moved away from the Project Internal (PI) – I even don't want to go there and ask why, nor about unclipping Survey Point from Shared Coords – which raised a simple API question:</p><p>Do all Revit API coordinates need to be provided in and are returned relative to:</p><ul>\n<li>PI (I hope so!)</li>\n<li>PBP</li>\n</ul><p><strong>Answer:</strong>\n\nI'm 99.9% sure it's PI as I've done some tests confirming that assumption.</p><p>For all API methods, it doesn't matter if one unclips the PBP from PI and/or unclips the Survey Point from the Shared Coordinates – a.k.a 'Sites' in UI or ProjectLocation's ProjectPosition in API terms, to make it all completely inconsistent in naming terminology – the only difference is that such unclipped-then-moved PBP and SP will reflect in the Parameters (this time given in Shared Coords!) of the API BasePoint's equivalents of PBP and SP (there are always two BasePoints in the model, IsShared=true is SP, IsShared=false is PBP, as already mentioned in the discussion on the <a href=\"http://thebuildingcoder.typepad.com/blog/2012/11/survey-and-project-base-point.html\">survey and project base point</a>).</p><p>Phew, I hope this will help spare other people the effort of having to find all this out.</p><p>Thank you for these helpful explanations, Simon and Miro!</p>"
+  }
+]

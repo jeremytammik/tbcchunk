@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "1043_move_tag_to_host",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1043_move_tag_to_host",
+    "header_text": "Move Tag to Host Location",
+    "local_header_href": "#move-tag-to-host-location",
+    "chunk_text": "<h3>Move Tag to Host Location</h3><p>After a number of pretty lengthy heavy-duty discussions in the past few days, here is a short and quick summary of a useful result from the discussion forum thread on\n\n<a href=\"http://forums.autodesk.com/t5/Autodesk-Revit-API/Move-tag-to-host-location-point/td-p/4440217\">\nmoving a tag to its host location point</a>:</p><p><strong>Question:</strong> I'm trying to move a tag to the host location point.\nCan anyone show me what the syntax is to do this?\nI already have 'tag' and 'hostLocation' assigned.\nI've tried this but get an error:</p><pre class=\"code\">\n  tag.Location = new LocationPoint(\n    hostLocation.Point );\n</pre><p><strong>Answer:</strong> You can use the ElementTransformUtils.MoveElement or Location.Move methods instead.\n\n<p>The trick though is knowing how far to move it as the tag's Location property cannot be cast to either LocationPoint or LocationLine. You instead need to use the point returned by the TagHeadPosition property for the location of the tag.</p>\n<p>Then you can do something like this:</p>\n<pre class=\"code\">\n  tag.Location.Move( hostLocation\n    - tag.TagHeadPosition )\n</pre>\n<p>Thanks to <a href=\"http://forums.autodesk.com/t5/user/viewprofilepage/user-id/1236248\">\nsdwil2k5</a> for\n\nconfirming and clarifying this.</p>\n</p>"
+  }
+]

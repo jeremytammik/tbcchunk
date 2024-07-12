@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0731_mixed_mode",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "0731_mixed_mode",
+    "header_text": "Mixed Mode C++ in Revit 2012",
+    "local_header_href": "#mixed-mode-c-in-revit-2012",
+    "chunk_text": "<h3>Mixed Mode C++ in Revit 2012</h3><p>Here is a short note to start the week, on an issue that arose a couple of times using mixed mode C++ development in Revit 2012.\nThis information was originally published on the members-only \n\n<a href=\"http://www.autodesk.com/joinadn\">\nADN web site</a> as \n\na technical solution on the\n\n<a href=\"http://adn.autodesk.com/adn/servlet/devnote?siteID=4814862&amp;id=16977078&amp;linkID=4901650\">\ndevelopment environment for mixed mode C++ for Revit 2012</a>:\n\n<p><strong>Question:</strong> I have a mixed mode C++ application. \nWhen I run it on a machine where no version of Visual Studio was ever installed, I see the following error message:\n\n<p style=\"color:darkblue\">Revit cannot run the external application \"SimpleTest\". \n<br/>Contact the provider for assistance.\n<br/>System.IO.FileNotFoundException:\n<br/>Could not load file or assembly 'SimpleTest.dll' or one of its dependencies. \nThe specified module could not be found.\n\n<p>It seems as if some components that come with VS2010 are missing in the Revit installation. \nHow can I solve this, please?\n\n<p><strong>Answer:</strong> Even though Revit 2012 uses the VS 2010 IDE and .NET 4.0, the native Revit code is compiled with the VS 2008 C++ compiler, and not with VS 2010. \nWhen an add-in makes use of unmanaged C++ code built with VS 2010 components, those components are not provided by the Revit installation. \n\n<p>There are two ways to solve this: you can either (1) set up your native C++ projects to use the VS 2008 compiler, or (2) install the VS 2010 redistributables yourself together with your add-in. \n</p></p></p></p></p></p>"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "original_filename": "0122_happy_easter",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<style>\n.blue { color: blue; }\n.teal { color: teal; }\n.maroon { color: maroon; }\n.green { color: green; }\n.gray { color: gray; }\n</style>"
+  },
+  {
+    "original_filename": "0122_happy_easter",
+    "header_text": "Happy Easter",
+    "local_header_href": "#happy-easter",
+    "chunk_text": "<h3>Happy Easter</h3><p>No work or post today, or next Monday, too busy chasing \n\n<a href=\"http://en.wikipedia.org/wiki/Easter\">\nEaster bunny rabbits</a> \n\nand searching for eggs in the garden:</p><img alt=\"Easter eggs\" src=\"img/easter_eggs.jpg\"/>"
+  }
+]

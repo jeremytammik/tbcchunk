@@ -1,0 +1,44 @@
+[
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "Introduction",
+    "local_header_href": "#introduction",
+    "chunk_text": "<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<link href=\"bc.css\" rel=\"stylesheet\" type=\"text/css\"/>\n</head>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "Upcoming DevDay, Meetup and Hackathon Event Calendar",
+    "local_header_href": "#upcoming-devday-meetup-and-hackathon-event-calendar",
+    "chunk_text": "<h3>Upcoming DevDay, Meetup and Hackathon Event Calendar</h3><p>Here is a list of upcoming events, most of which I will be involved in in one way or another:</p><ul>\n<li><a href=\"#2\">DevDays 2014</a></li>\n<li><a href=\"#3\">DevDay &amp; DevHack in Las Vegas</a></li>\n<li><a href=\"#4\">Meetups and Hackathons</a></li>\n</ul><a name=\"2\"></a>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "DevDays 2014",
+    "local_header_href": "#devdays-2014",
+    "chunk_text": "<h4>DevDays 2014</h4><p>Here is the list of cities and dates where our DevDays events 2014 will be held around the world later this year.</p><p>These events are accessible to ADN members.\nIf you are not an ADN member and still would be interested in learning more about  application development related to Autodesk products and technology, please\n\n<a href=\"http://www.autodesk.com/joinadn\">contact us</a> and\n\nlet's discuss.</p><p>The DevDays conferences are the best way to learn about Autodesk's newest technologies and future products.\nTo get a feel for what goes on at these events, ADN members can check out the presentations from last year on the\n\n<a href=\"http://adn.autodesk.com/adn\">\nADN extranet</a> at\n\n<a href=\"http://adn.autodesk.com/adn/servlet/index?siteID=4814862&amp;id=5105692\">Events</a>.</p><p>A complete DevDays 2014 agenda will be posted soon, and online registration will go live in late September. Note that the registration for the ADN Conference at AU in Las Vegas will go live on August 27, 2014.\nSee <a href=\"#3\">below</a> for more information on that.</p><p>New for 2014: We will be hosting Meetup events in most locations.\nThese events are open to everyone, not just ADN partners.\nSo, invite your technology friends along for an evening of learning and sharing in a casual environment.</p><a name=\"2.1\"></a>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "DevDays 2014 Locations and Dates",
+    "local_header_href": "#devdays-2014-locations-and-dates",
+    "chunk_text": "<h4>DevDays 2014 Locations and Dates</h4><ul>\n<li>North America</li>\n<ul>\n<li>2014-12-01 – ADN Conference at AU, Las Vegas, USA</li>\n<li>2014-12-02 – DevHack at AU, Las Vegas, USA</li>\n</ul>\n<li>North Asia</li>\n<ul>\n<li>2014-11-06 – Beijing, China, with evening Meetup</li>\n<li>2014-11-07 – Beijing, China, DevHack at AU China</li>\n<li>2014-11-10 – Shanghai, China, with evening Meetup</li>\n<li>2014-11-11 – Shanghai, China DevHack</li>\n<li>2014-11-17 – Seoul, South Korea</li>\n<li>2014-11-19 – Tokyo, Japan</li>\n<li>2014-11-20 – Tokyo, Japan, DevHack</li>\n<li>2014-11-28 – Osaka, Japan</li>\n</ul>\n<li>South Asia</li>\n<ul>\n<li>2014-11-11 – Sydney, Australia, DevHack at AUx Sydney</li>\n<li>2014-11-12 – Sydney, Australia</li>\n<li>2014-11-14 – Singapore, Singapore</li>\n<li>2014-11-21 – Bangalore, India, with evening Meetup</li>\n</ul>\n<li>Western Europe</li>\n<ul>\n<li>2014-12-08 – Paris, France, with evening Meetup</li>\n<li>2014-12-09 – London, United Kingdom, evening Meetup</li>\n<li>2014-12-10 – Farnborough, United Kingdom</li>\n<li>2014-12-11 – Gothenburg, Sweden, with evening Meetup</li>\n<li>2014-12-15 – Munich, Germany, with evening Meetup</li>\n<li>2014-12-16 – Milan, Italy, evening Meetup</li>\n<li>2014-12-17 – Milan, Italy</li>\n</ul>\n<li>Eastern Europe</li>\n<ul>\n<li>January 2015 – Moscow, Russia (exact date to be confirmed)</li>\n</ul>\n<li>Latin America</li>\n<ul>\n<li>2015-01-14 – São Paulo, Brazil</li>\n</ul>\n</ul><a name=\"3\"></a>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "DevDay & DevHack in Las Vegas",
+    "local_header_href": "#devday-devhack-in-las-vegas",
+    "chunk_text": "<h4>DevDay &amp; DevHack in Las Vegas</h4><p>The ADN Conference at Autodesk University in Las Vegas, Nevada, USA, is taking place on December 1, with two separate DevHack events on December 2, for Design &amp; Engineering and Media &amp; Entertainment, respectively.</p><p>Registration will open today, on August 27, 2014.\nVisit the registration website at\n\n<a href=\"http://au.autodesk.com/plan/pre-conference/adn-conference-devdays\">http://au.autodesk.com/plan/pre-conference/adn-conference-devdays</a>.</p><p>Note:</p><ul>\n<li>Sign in with your Autodesk ID or create one when prompted (this is <b>not</b> your ADN number).</li>\n<li>Make sure you check the ADN box and enter your ADN number. If you don't, you will not see the registration option for the ADN Conference and DevHack.</li>\n<li>Select your ADN Conference classes from the class catalogue.</li>\n</ul><a name=\"4\"></a>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "Meetups and Hackathons",
+    "local_header_href": "#meetups-and-hackathons",
+    "chunk_text": "<h4>Meetups and Hackathons</h4><p>Over the coming months we DevTech engineers and ADN evangelists will be attending a number of different meetup and hackathon events. Here's a list of some of them:</p><ul>\n<li>August 22 – September 5, 2014\n<br/>China Roadshow + DevLab + Meetup + Classroom Training in Beijing, Wuhan, Chengdu, and Xian, China\n<br/>In attendance: Xianhua Tang, Xiaodong Liang, Daniel Du, Joe Ye</li>\n<li>September 6-7, 2014\n<br/><a href=\"http://techcrunch.com/events/disrupt-sf-hackathon-2014/event-home\">TechCrunch</a> Hackathon – San Francisco, CA\n<br/>In attendance: Jim Quanci, Stephen Preston, Cyrille Fauvel, Philippe Leefsma</li>\n<li>September 8-10, 2014\n<br/><a href=\"http://iloveapis2014.com\">I♥3 APIs</a> Conference, San Francisco, CA\n<br/>In attendance: Jim Quanci, Stephen Preston, Cyrille Fauvel, Philippe Leefsma</li>\n<li>September 9, 2014\n<br/>HTML5 Meetup Group, San Francisco, CA (Autodesk sponsoring the event)\n<br/>In attendance: Jim Quanci, Stephen Preston, Cyrille Fauvel, Philippe Leefsma</li>\n<li>September 10, 2014\n<br/>Tokyo 2nd Meet Up, Tokyo, Japan\n<br/>In attendance: Toshiaki Isezaki</li>\n<li>September 12-14, 2014\n<br/><a href=\"http://www.aechackathon.com/seattle.html\">AEC Hackathon</a>, Seattle, WA\n<br/>In attendance: Augusto Goncalves</li>\n<li>October 10-12, 2014\n<br/><a href=\"http://hackzurich.com\">hackzurich</a> Hackathon, Zurich, Switzerland\n<br/>In attendance: Philippe Leefsma, Jeremy Tammik</li>\n<li>October 17-18, 2014\n<br/><a href=\"http://www.transformabxl.be/agenda/event/hackathon-open-data-brussels\">\nOpen Data</a> Hackathon, Brussels, Belgium\n<br/>In attendance: Cyrille Fauvel, Philippe Leefsma, Jeremy Tammik</li>\n<li>October 23-24, 2014\n<br/><a href=\"https://cluster.ems-secure.de/registrations/autodesk/au.2014/ems.registration.php\">Autodesk University Germany</a>, Darmstadt, Germany\n<br/>In attendance: Jeremy Tammik</li>\n<li>October 25-26, 2014\n<br/><a href=\"http://www.meetup.com/TechMeetups-Berlin/events/161213342\">\n#TMUhack</a> TechMeetups Hackathon, Berlin, Germany\n<br/>In attendance: Adam Nagy, Cyrille Fauvel</li>\n</ul><a name=\"5\"></a>"
+  },
+  {
+    "original_filename": "1199_devdays_hack_calendar",
+    "header_text": "Toggling Annotation Categories per View",
+    "local_header_href": "#toggling-annotation-categories-per-view",
+    "chunk_text": "<h4>Toggling Annotation Categories per View</h4><p>One little pure Revit API issue before closing...</p><p><strong>Question:</strong> Is it possible to programmatically control the toggle determining whether to 'Show annotation categories in this view' in the Visibility/Graphics Overrides dialogue,  marked in red below?</p><center>\n<img alt=\"Visibility/Graphics Overrides dialogue\" src=\"img/visibility_graphics_overrides_show_annotation_categories.png\"/>\n</center><p><strong>Answer:</strong> Please try the read-write View.AreAnnotationCategoriesHidden  property.</p>"
+  }
+]
